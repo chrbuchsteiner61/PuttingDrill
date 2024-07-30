@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'database_helper.dart';
+import '../methods_and_helper/database_helper.dart';
 
 enum DistanceLabel {
   onem('1 m', 1),
@@ -16,10 +16,10 @@ class InputScreen extends StatefulWidget {
   const InputScreen({super.key});
 
   @override
-  _InputScreenState createState() => _InputScreenState();
+  InputScreenState createState() => InputScreenState();
 }
 
-class _InputScreenState extends State<InputScreen> {
+class InputScreenState extends State<InputScreen> {
   final _formKey = GlobalKey<FormState>();
   DistanceLabel? _selectedDistance;
   int _putts = 5;

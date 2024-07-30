@@ -1,0 +1,15 @@
+{
+   "@@locale": "en", 
+   
+  "page1Header" : "Your Putting Drills",
+
+  "drillOneName": "Drill 1",
+  "drillTwoName": "Drill 2",
+  "drillThreeName": "Drill 3",
+  "drillFourName": "Drill 4",
+  "drillFiveName": "Drill 5",
+
+  "inputResults": "Input Results",
+  "viewResults": "View Results"
+
+}

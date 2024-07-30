@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'database_helper.dart';
+import '../methods_and_helper/database_helper.dart';
 import 'package:intl/intl.dart';
 
 class ResultsScreen extends StatelessWidget {

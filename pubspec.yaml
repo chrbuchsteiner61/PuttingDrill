@@ -22,6 +22,7 @@ dependencies:
     sdk: flutter
   logger: ^2.4.0
   shared_preferences: ^2.2.3
+  country_flags: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -45,9 +46,20 @@ flutter:
         weight: 700
 
   assets:
-    - asset/pics/Drill1.png
-    - asset/pics/Drill2.png
-    - asset/pics/Drill3.png
-    - asset/pics/Drill4.png
-    - asset/pics/Drill5.png
+    - asset/pics/Symbol_Drill1.png
+    - asset/pics/putting_green.jpg
+    - asset/pics/Symbol_Drill2.png
+    - asset/pics/Symbol_Drill3.png
+    - asset/pics/Symbol_Drill4.png
+    - asset/pics/Symbol_Drill5.png
+    - asset/pics/thePreparePic1.jpg
+    - asset/pics/thePreparePic2.jpg
+    - asset/pics/thePreparePic3.jpg
+    - asset/pics/thePreparePic4.jpg
+    - asset/pics/thePreparePic5.jpg
+    - asset/pics/theExercisePic1.png
+    - asset/pics/theExercisePic2.png
+    - asset/pics/theExercisePic3.png
+    - asset/pics/theExercisePic4.png
+    - asset/pics/theExercisePic5.png
 

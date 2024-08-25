@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:myapp/methods_and_helper/language_helper.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+import 'package:myapp/user_areas/the_info_drawer.dart';
+import 'package:myapp/methods_and_helper/language_helper.dart';
 import 'ui_elements/drill_line.dart';
 
 void main() => runApp(const PuttingDrillApp());
@@ -62,6 +62,7 @@ class PuttingDrillAppState extends State<PuttingDrillApp> {
       ],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        scaffoldBackgroundColor: const Color.fromARGB(255, 208, 243, 218),
         primarySwatch: Colors.blue,
         textTheme: const TextTheme(
           bodyLarge: TextStyle(
@@ -75,7 +76,7 @@ class PuttingDrillAppState extends State<PuttingDrillApp> {
               color: Colors.black,
               fontFamily: 'Noto-Sans'),
           headlineLarge: TextStyle(
-              fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.black),
+              fontSize: 22.0, fontWeight: FontWeight.bold, color: Colors.white),
           headlineMedium: TextStyle(
               fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.black),
           titleLarge: TextStyle(
@@ -100,29 +101,64 @@ class StartingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
-    final String localizedTitle = localizations!.page1Header;
     return Scaffold(
-      appBar: AppBar(title: Text(localizedTitle)),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            DrillLine(
-                drillName: localizations.drillOneName,
-                drillPicture: "asset/pics/Drill1.png"),
-            DrillLine(
-                drillName: localizations.drillTwoName,
-                drillPicture: "asset/pics/Drill2.png"),
-            DrillLine(
-                drillName: localizations.drillThreeName,
-                drillPicture: "asset/pics/Drill.3png"),
-            DrillLine(
-                drillName: localizations.drillFourName,
-                drillPicture: "asset/pics/Drill4.png"),
-            DrillLine(
-                drillName: localizations.drillFiveName,
-                drillPicture: "asset/pics/Drill5.png"),
-          ],
+      appBar: AppBar(
+        title: Text(
+          localizations!.page1Header,
+          style: Theme.of(context).textTheme.headlineLarge!,
+        ),
+        backgroundColor: Colors.green,
+      ),
+      drawer: const TheInfoDrawer(),
+      body: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          image: DecorationImage(
+            image: AssetImage("asset/pics/putting_green.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              DrillLine(
+                  drillName: localizations.drillOneName,
+                  drillPicture: "asset/pics/Symbol_Drill1.png",
+                  aPreparationText: localizations.thePreparation_1,
+                  aCountingText: localizations.theExplainCounting_1,
+                  aPreparePicName: "asset/pics/thePreparePic1.jpg",
+                  anExercisePicName: "asset/pics/theExercisePic1.png"),
+              DrillLine(
+                  drillName: localizations.drillTwoName,
+                  drillPicture: "asset/pics/Symbol_Drill2.png",
+                  aPreparationText: localizations.thePreparation_2,
+                  aCountingText: localizations.theExplainCounting_2,
+                  aPreparePicName: "asset/pics/thePreparePic2.jpg",
+                  anExercisePicName: "asset/pics/theExercisePic2.png"),
+              DrillLine(
+                  drillName: localizations.drillThreeName,
+                  drillPicture: "asset/pics/Symbol_Drill3.png",
+                  aPreparationText: localizations.thePreparation_3,
+                  aCountingText: localizations.theExplainCounting_3,
+                  aPreparePicName: "asset/pics/thePreparePic3.jpg",
+                  anExercisePicName: "asset/pics/theExercisePic3.png"),
+              DrillLine(
+                  drillName: localizations.drillFourName,
+                  drillPicture: "asset/pics/Symbol_Drill4.png",
+                  aPreparationText: localizations.thePreparation_4,
+                  aCountingText: localizations.theExplainCounting_4,
+                  aPreparePicName: "asset/pics/thePreparePic4.jpg",
+                  anExercisePicName: "asset/pics/theExercisePic4.png"),
+              DrillLine(
+                  drillName: localizations.drillFiveName,
+                  drillPicture: "asset/pics/Symbol_Drill5.png",
+                  aPreparationText: localizations.thePreparation_5,
+                  aCountingText: localizations.theExplainCounting_5,
+                  aPreparePicName: "asset/pics/thePreparePic5.jpg",
+                  anExercisePicName: "asset/pics/theExercisePic5.png"),
+            ],
+          ),
         ),
       ),
     );

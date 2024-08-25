@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../methods_and_helper/database_helper.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 enum DistanceLabel {
   onem('1 m', 1),
@@ -27,85 +28,73 @@ class InputScreenState extends State<InputScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('Input Putting Results')),
+      appBar: AppBar(title: Text(localizations!.inputPageHeader)),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
           child: Column(
             children: <Widget>[
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: DropdownButtonFormField<DistanceLabel>(
-                      decoration: const InputDecoration(labelText: 'Distance'),
-                      value: _selectedDistance,
-                      onChanged: (DistanceLabel? newValue) {
-                        setState(() {
-                          _selectedDistance = newValue!;
-                        });
-                      },
-                      items: DistanceLabel.values.map((DistanceLabel distance) {
-                        return DropdownMenuItem<DistanceLabel>(
-                          value: distance,
-                          child: Text(distance.label),
-                        );
-                      }).toList(),
-                      validator: (value) {
-                        if (value == null) {
-                          return 'Please select a distance';
-                        }
-                        return null;
-                      },
-                    ),
-                  ),
-                  const SizedBox(width: 16.0),
-                  Expanded(
-                    flex: 1,
-                    child: DropdownButtonFormField<int>(
-                      decoration: const InputDecoration(labelText: 'Putts'),
-                      value: _putts,
-                      onChanged: (int? newValue) {
-                        setState(() {
-                          _putts = newValue!;
-                        });
-                      },
-                      items: [5, 6, 7, 8, 9, 10].map((int value) {
-                        return DropdownMenuItem<int>(
-                          value: value,
-                          child: Text(value.toString()),
-                        );
-                      }).toList(),
-                    ),
-                  ),
-                  const SizedBox(width: 16.0),
-                  Expanded(
-                    flex: 1,
-                    child: TextFormField(
-                      decoration: const InputDecoration(labelText: 'Successful'),
-                      keyboardType: TextInputType.number,
-                      onSaved: (value) => _successfulPutts = int.parse(value!),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter the number of successful putts';
-                        }
-                        int? successfulPutts = int.tryParse(value);
-                        if (successfulPutts == null) {
-                          return 'Please enter a valid number';
-                        }
-                        if (successfulPutts < 0) {
-                          return 'Number of successful putts cannot be negative';
-                        }
-                        if (successfulPutts > _putts) {
-                          return 'Number of successful putts cannot be more than number of putts';
-                        }
-                        return null;
-                      },
-                    ),
-                  ),
-                ],
+              DropdownButtonFormField<DistanceLabel>(
+                decoration: const InputDecoration(labelText: 'Distance'),
+                value: _selectedDistance,
+                onChanged: (DistanceLabel? newValue) {
+                  setState(() {
+                    _selectedDistance = newValue!;
+                  });
+                },
+                items: DistanceLabel.values.map((DistanceLabel distance) {
+                  return DropdownMenuItem<DistanceLabel>(
+                    value: distance,
+                    child: Text(distance.label),
+                  );
+                }).toList(),
+                validator: (value) {
+                  if (value == null) {
+                    return 'Please select a distance';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(width: 16.0),
+              DropdownButtonFormField<int>(
+                decoration: const InputDecoration(labelText: 'Putts'),
+                value: _putts,
+                onChanged: (int? newValue) {
+                  setState(() {
+                    _putts = newValue!;
+                  });
+                },
+                items: [5, 6, 7, 8, 9, 10].map((int value) {
+                  return DropdownMenuItem<int>(
+                    value: value,
+                    child: Text(value.toString()),
+                  );
+                }).toList(),
+              ),
+              const SizedBox(width: 16.0),
+              TextFormField(
+                decoration: const InputDecoration(labelText: 'Successful'),
+                keyboardType: TextInputType.number,
+                onSaved: (value) => _successfulPutts = int.parse(value!),
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter the number of successful putts';
+                  }
+                  int? successfulPutts = int.tryParse(value);
+                  if (successfulPutts == null) {
+                    return 'Please enter a valid number';
+                  }
+                  if (successfulPutts < 0) {
+                    return 'Number of successful putts cannot be negative';
+                  }
+                  if (successfulPutts > _putts) {
+                    return 'Number of successful putts cannot be more than number of putts';
+                  }
+                  return null;
+                },
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),

@@ -5,27 +5,76 @@
 
   "drillOneName": "Short putts",
   "drillTwoName": "Distance putts",
-  "drillThreeName": "Drill 3",
+  "drillThreeName": "Through the gates",
   "drillFourName": "Drill 4",
   "drillFiveName": "Drill 5",
 
   "preparationHeader": "Preparation",
   "countingHeader": "Counting",
 
-  "thePreparation_1": "Take some tees and ..1",
-  "thePreparation_2": "Take some tees and ..2", 
-  "thePreparation_3": "Take some tees and ..3", 
+  "purpose1": "Better your short putting",
+  "purpose2": "Come closer to the hole",
+  "purpose3": "Get a better line",
+  "purpose4": "none",
+  "purpose5": "none",
+
+  "thePreparation_1": "Hit five or more balls from a short distance. \nChoose a distance for the exercise.\nChoose between one, two or three club lengths.\nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.",
+  "thePreparation_2": "Hit five or more balls from a long distance. \nChoose a distance for the exercise. \nChoose between six, nine or 12 club lengths. \nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.", 
+  "thePreparation_3": "Take four tees and build two gates,\nclubhead width and a distance of one or two club length.", 
   "thePreparation_4": "Take some tees and ..4",
   "thePreparation_5": "Take some tees and ..5",
 
-  "theExplainCounting_1": "Count every stroke and count your ..1",
-  "theExplainCounting_2": "Count every stroke and count your ..2",
-  "theExplainCounting_3": "Count every stroke and count your ..3",
+  "theExplainCounting_1": "Count your strokes and \ncount your succesfull puts.",
+  "theExplainCounting_2": "Count your strokes and \nmeassure the distance from your ball to the hole \nwith your feet.",
+  "theExplainCounting_3": "Count every stroke and \ncount every ball going thru the gates.",
   "theExplainCounting_4": "Count every stroke and count your ..4",
   "theExplainCounting_5": "Count every stroke and count your ..5",
 
   "inputResults": "Input result",
-  "inputPageHeader": "Put in your results of the drill",
+  "inputAppBarText": "Put in your results of the drill",
+  "inputButtonText": "Save your results",
+  
+  "inputDrill1Criteria1": "Distance to the hole (meassured in club lengths)",
+  "inputDrill1Criteria2": "Strokes",
+  "inputDrill1Criteria3": "Successfull",
+  
+  "inputDrill1Input1": "none",
+  "inputDrill1Input2": "none",
+  "inputDrill1Input3": "none",
+
+  "inputDrill2Criteria1": "Distance to the hole (meassured in club lengths)",
+  "inputDrill2Criteria2": "2Strokes",
+  "inputDrill2Criteria3": "Successfull",
+  
+  "inputDrill2Input1": "none",
+  "inputDrill2Input2": "none",
+  "inputDrill2Input3": "none",
+
+  "inputDrill3Criteria1": "Distance to the hole (meassured in club lengths)",
+  "inputDrill3Criteria2": "3Strokes",
+  "inputDrill3Criteria3": "Successfull",
+  
+  "inputDrill3Input1": "none",
+  "inputDrill3Input2": "none",
+  "inputDrill3Input3": "none",
+
+  "inputDrill4Criteria1": "4Distance",
+  "inputDrill4Criteria2": "4Strokes",
+  "inputDrill4Criteria3": "Successfull",
+  
+  "inputDrill4Input1": "none",
+  "inputDrill4Input2": "none",
+  "inputDrill4Input3": "none",
+
+  "inputDrill5Criteria1": "5Distance",
+  "inputDrill5Criteria2": "5Strokes",
+  "inputDrill5Criteria3": "Successfull",
+  
+  "inputDrill5Input1": "none",
+  "inputDrill5Input2": "none",
+  "inputDrill5Input3": "none",
+
+
   "viewResults": "Your stats",
 
   "drawerHeader": "Informations",

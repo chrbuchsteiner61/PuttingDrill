@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import '../methods_and_helper/database_helper.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:myapp/methods_and_helper/database_helper.dart';
 
 enum DistanceLabel {
-  onem('1 m', 1),
-  twom('2 m', 2),
-  threem('3 m', 3);
+  one('1 ', 1),
+  two('2 ', 2),
+  three('3 ', 3);
 
   final String label;
   final int value;
@@ -14,7 +13,26 @@ enum DistanceLabel {
 }
 
 class InputScreen extends StatefulWidget {
-  const InputScreen({super.key});
+  final String appBarText;
+  final String inputDrillCriteria1;
+  final String inputDrillCriteria2;
+  final String inputDrillCriteria3;
+  final String buttonText;
+  final String drillInput1;
+  final String drillInput2;
+  final String drillInput3;
+
+  const InputScreen({
+    super.key,
+    required this.appBarText,
+    required this.buttonText,
+    required this.inputDrillCriteria1,
+    required this.inputDrillCriteria2,
+    required this.inputDrillCriteria3,
+    required this.drillInput1,
+    required this.drillInput2,
+    required this.drillInput3,
+  });
 
   @override
   InputScreenState createState() => InputScreenState();
@@ -28,9 +46,9 @@ class InputScreenState extends State<InputScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final localizations = AppLocalizations.of(context);
+    //  final localizations = AppLocalizations.of(context);
     return Scaffold(
-      appBar: AppBar(title: Text(localizations!.inputPageHeader)),
+      appBar: AppBar(title: Text(widget.appBarText)),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
@@ -38,7 +56,8 @@ class InputScreenState extends State<InputScreen> {
           child: Column(
             children: <Widget>[
               DropdownButtonFormField<DistanceLabel>(
-                decoration: const InputDecoration(labelText: 'Distance'),
+                decoration:
+                    InputDecoration(labelText: widget.inputDrillCriteria1),
                 value: _selectedDistance,
                 onChanged: (DistanceLabel? newValue) {
                   setState(() {
@@ -60,7 +79,8 @@ class InputScreenState extends State<InputScreen> {
               ),
               const SizedBox(width: 16.0),
               DropdownButtonFormField<int>(
-                decoration: const InputDecoration(labelText: 'Putts'),
+                decoration:
+                    InputDecoration(labelText: widget.inputDrillCriteria2),
                 value: _putts,
                 onChanged: (int? newValue) {
                   setState(() {
@@ -76,7 +96,8 @@ class InputScreenState extends State<InputScreen> {
               ),
               const SizedBox(width: 16.0),
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Successful'),
+                decoration:
+                    InputDecoration(labelText: widget.inputDrillCriteria3),
                 keyboardType: TextInputType.number,
                 onSaved: (value) => _successfulPutts = int.parse(value!),
                 validator: (value) {

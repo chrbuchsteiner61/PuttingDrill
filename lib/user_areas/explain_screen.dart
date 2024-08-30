@@ -7,15 +7,16 @@ class ExplainScreen extends StatelessWidget {
   final String countingText;
   final String preparePicName;
   final String exercisePicName;
+  final String drillPurpose;
 
-  const ExplainScreen({
-    super.key,
-    required this.drillName,
-    required this.preparationText,
-    required this.countingText,
-    required this.preparePicName,
-    required this.exercisePicName,
-  });
+  const ExplainScreen(
+      {super.key,
+      required this.drillName,
+      required this.preparationText,
+      required this.countingText,
+      required this.preparePicName,
+      required this.exercisePicName,
+      required this.drillPurpose});
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +29,13 @@ class ExplainScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
+              drillPurpose,
+              style: const TextStyle(fontSize: 18.0),
+            ),
+            Text(
               localizations!.preparationHeader,
               style:
-                  const TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                  const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
             Text(
               preparationText,
@@ -53,7 +58,7 @@ class ExplainScreen extends StatelessWidget {
             Text(
               localizations.countingHeader,
               style:
-                  const TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                  const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
             Text(
               countingText,

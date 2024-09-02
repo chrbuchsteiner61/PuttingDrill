@@ -18,14 +18,21 @@
   "purpose4": "none",
   "purpose5": "none",
 
-  "thePreparation_1": "Hit five or more balls from a short distance. \nChoose a distance for the exercise.\nChoose between one, two or three club lengths.\nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.",
-  "thePreparation_2": "Hit five or more balls from a long distance. \nChoose a distance for the exercise. \nChoose between six, nine or 12 club lengths. \nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.", 
+  "task1": "Putt into the hole.\nHit five or more balls from a short distance",
+  "task2": "Putt at nearest to the hole.\nHit five or more balls from a long distance.",
+  "task3": "Putt through the gates.",
+  "task4": "",
+  "task5": "",
+
+
+  "thePreparation_1": "Choose a distance for the exercise.\nChoose between one, two or three club lengths.\nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.",
+  "thePreparation_2": "Choose a distance for the exercise. \nChoose between six, nine or 12 club lengths. \nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.", 
   "thePreparation_3": "Take four tees and build two gates,\nclubhead width and a distance of one or two club length.", 
   "thePreparation_4": "Take some tees and ..4",
   "thePreparation_5": "Take some tees and ..5",
 
   "theExplainCounting_1": "Count your strokes and \ncount your succesfull puts.",
-  "theExplainCounting_2": "Count your strokes and \nmeassure the distance from your ball to the hole \nwith your feet.",
+  "theExplainCounting_2": "Count your strokes, \nmeassure the distance from the position of the balls to the hole \nwith your feet and sum up.",
   "theExplainCounting_3": "Count every stroke and \ncount every ball going thru the gates.",
   "theExplainCounting_4": "Count every stroke and count your ..4",
   "theExplainCounting_5": "Count every stroke and count your ..5",

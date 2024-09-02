@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 
-const String version = '0.80/ 21.08.2024';
+const String version = '0.82/ 01.09.2024';
 
 const infoDrawerBackgroundColor = Colors.lightBlueAccent;
 
-const SizedBox spaceBetween = SizedBox(width: 16);
-
-const double thePadding = 8.0;
+const SizedBox spaceBetween = SizedBox(width: 8);
+const SizedBox spaceAfter = SizedBox(height: 8);
+const double theMargin = 8.0;
+const double thePadding = 6.0;
 
 ButtonStyle appsButtonStyle = const ButtonStyle(
   padding: WidgetStatePropertyAll(EdgeInsets.all(thePadding)),
   shape: WidgetStatePropertyAll(
     RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(2)),
-      side: BorderSide(color: Colors.white, width: 2),
+      borderRadius: BorderRadius.all(Radius.circular(6)),
+      side: BorderSide(color: Colors.white, width: 3),
     ),
   ),
   backgroundColor: WidgetStatePropertyAll(Colors.green),

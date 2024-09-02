@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
 import 'package:myapp/user_areas/input_screen.dart';
 import 'package:myapp/user_areas/results_screen.dart';
@@ -7,6 +8,8 @@ class DrillLine extends StatelessWidget {
   final String drillName;
   final String thePurpose;
   final String drillPicture;
+  final String preparationHeader;
+  final String countingHeader;
   final String aPreparationText;
   final String aCountingText;
   final String aPreparePicName;
@@ -16,6 +19,7 @@ class DrillLine extends StatelessWidget {
   final String buttonViewResultsText;
   final String inputAppBarText;
   final String inputButtonText;
+  final String aTask;
   final String inputDrillCriteria1;
   final String inputDrillCriteria2;
   final String inputDrillCriteria3;
@@ -28,6 +32,8 @@ class DrillLine extends StatelessWidget {
     required this.drillName,
     required this.thePurpose,
     required this.drillPicture,
+    required this.preparationHeader,
+    required this.countingHeader,
     required this.aPreparationText,
     required this.aCountingText,
     required this.aPreparePicName,
@@ -37,6 +43,7 @@ class DrillLine extends StatelessWidget {
     required this.buttonViewResultsText,
     required this.inputAppBarText,
     required this.inputButtonText,
+    required this.aTask,
     required this.inputDrillCriteria1,
     required this.inputDrillCriteria2,
     required this.inputDrillCriteria3,
@@ -47,43 +54,57 @@ class DrillLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double theMargin = 8.0;
+    const double elementHeight = 50.0;
+    const SizedBox aSpacer = SizedBox(width: 8, height: elementHeight + 8);
+
     // final localizations = AppLocalizations.of(context);
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            margin: const EdgeInsets.all(theMargin),
+          aSpacer,
+          SizedBox(
+            height: elementHeight,
+            width: elementHeight,
             child: Image(
               image: AssetImage(drillPicture),
-              width: 50,
-              height: 50,
             ),
           ),
+          spaceBetween,
           SizedBox(
-            width: 80,
+            width: 120,
+            height: elementHeight,
             child: TextButton(
               style: theButtonStyle,
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => ExplainScreen(
-                            drillName: drillName,
-                            drillPurpose: thePurpose,
-                            preparationText: aPreparationText,
-                            countingText: aCountingText,
-                            preparePicName: aPreparePicName,
-                            exercisePicName: anExercisePicName,
-                          )),
+                    builder: (context) => ExplainScreen(
+                      drillName: drillName,
+                      drillPurpose: thePurpose,
+                      theTask: aTask,
+                      preparationHeader: preparationHeader,
+                      countingHeader: countingHeader,
+                      preparePicName: aPreparePicName,
+                      exercisePicName: anExercisePicName,
+                      preparationText: aPreparationText,
+                      countingText: aCountingText,
+                    ),
+                  ),
                 );
               },
-              child: Text(drillName),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(drillName),
+              ),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.only(left: theMargin),
+          spaceBetween,
+          SizedBox(
+            height: elementHeight,
+            width: 70.0,
+            // margin: const EdgeInsets.only(left: theMargin),
             child: ElevatedButton(
               style: theButtonStyle,
               onPressed: () {
@@ -106,8 +127,11 @@ class DrillLine extends StatelessWidget {
               child: Text(buttonInputResultsText),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.only(left: theMargin),
+          spaceBetween,
+          SizedBox(
+            height: elementHeight,
+            width: 70.0,
+            // margin: const EdgeInsets.only(left: theMargin),
             child: ElevatedButton(
               style: theButtonStyle,
               onPressed: () {

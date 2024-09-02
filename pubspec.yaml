@@ -35,7 +35,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  uses-material-design: true
   generate: true
 
   fonts:
@@ -46,8 +46,8 @@ flutter:
         weight: 700
 
   assets:
-    - asset/pics/Symbol_Drill1.png
     - asset/pics/putting_green.jpg
+    - asset/pics/Symbol_Drill1.png
     - asset/pics/Symbol_Drill2.png
     - asset/pics/Symbol_Drill3.png
     - asset/pics/Symbol_Drill4.png

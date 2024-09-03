@@ -23,6 +23,7 @@ dependencies:
   logger: ^2.4.0
   shared_preferences: ^2.2.3
   country_flags: ^3.0.0
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -47,7 +48,14 @@ flutter:
 
   assets:
     - asset/pics/putting_green.jpg
-    - asset/pics/Symbol_Drill1.png
+    - asset/pics/page1_background.png
+    - asset/pics/icons_page1/Drill1.svg
+    - asset/pics/icons_page1/Drill2.svg 
+    - asset/pics/icons_page1/Drill3.svg
+    - asset/pics/icons_page1/Drill4.svg
+    - asset/pics/icons_page1/Drill5.svg
+    - asset/pics/icons_page1/Drill6.svg
+    - asset/pics/Symbol_Drill1.png  
     - asset/pics/Symbol_Drill2.png
     - asset/pics/Symbol_Drill3.png
     - asset/pics/Symbol_Drill4.png

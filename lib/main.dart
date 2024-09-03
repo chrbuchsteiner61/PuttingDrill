@@ -110,6 +110,7 @@ class StartingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -121,7 +122,7 @@ class StartingPage extends StatelessWidget {
         decoration: const BoxDecoration(
           color: Colors.white,
           image: DecorationImage(
-            image: AssetImage("asset/pics/putting_green.jpg"),
+            image: AssetImage("asset/pics/page1_background.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -132,7 +133,7 @@ class StartingPage extends StatelessWidget {
               DrillLine(
                 drillName: localizations.drillOneName,
                 thePurpose: localizations.purpose1,
-                drillPicture: "asset/pics/Symbol_Drill1.png",
+                drillPicture: "asset/pics/icons_page1/Drill1.svg",
                 preparationHeader: localizations.preparationHeader,
                 countingHeader: localizations.countingHeader,
                 aPreparationText: localizations.thePreparation_1,
@@ -148,6 +149,7 @@ class StartingPage extends StatelessWidget {
                 // no 1
                 aTask: localizations.task1,
                 inputDrillCriteria1: localizations.inputDrill1Criteria1,
+                inputDrillDistanceText: localizations.inputDrillDistanceText1,
                 inputDrillCriteria2: localizations.inputDrill1Criteria2,
                 inputDrillCriteria3: localizations.inputDrill1Criteria3,
 
@@ -158,7 +160,7 @@ class StartingPage extends StatelessWidget {
               DrillLine(
                 drillName: localizations.drillTwoName,
                 thePurpose: localizations.purpose2,
-                drillPicture: "asset/pics/Symbol_Drill2.png",
+                drillPicture: "asset/pics/icons_page1/Drill2.svg",
                 preparationHeader: localizations.preparationHeader,
                 countingHeader: localizations.countingHeader,
                 aPreparationText: localizations.thePreparation_2,
@@ -174,6 +176,7 @@ class StartingPage extends StatelessWidget {
                 // no 2
                 aTask: localizations.task2,
                 inputDrillCriteria1: localizations.inputDrill2Criteria1,
+                inputDrillDistanceText: localizations.inputDrillDistanceText2,
                 inputDrillCriteria2: localizations.inputDrill2Criteria2,
                 inputDrillCriteria3: localizations.inputDrill2Criteria3,
 
@@ -184,7 +187,7 @@ class StartingPage extends StatelessWidget {
               DrillLine(
                 drillName: localizations.drillThreeName,
                 thePurpose: localizations.purpose3,
-                drillPicture: "asset/pics/Symbol_Drill3.png",
+                drillPicture: "asset/pics/icons_page1/Drill3.svg",
                 preparationHeader: localizations.preparationHeader,
                 countingHeader: localizations.countingHeader,
                 aPreparationText: localizations.thePreparation_3,
@@ -200,6 +203,7 @@ class StartingPage extends StatelessWidget {
                 // no 3
                 aTask: localizations.task3,
                 inputDrillCriteria1: localizations.inputDrill3Criteria1,
+                inputDrillDistanceText: localizations.inputDrillDistanceText3,
                 inputDrillCriteria2: localizations.inputDrill3Criteria2,
                 inputDrillCriteria3: localizations.inputDrill3Criteria3,
 
@@ -210,7 +214,7 @@ class StartingPage extends StatelessWidget {
               DrillLine(
                 drillName: localizations.drillFourName,
                 thePurpose: localizations.purpose4,
-                drillPicture: "asset/pics/Symbol_Drill4.png",
+                drillPicture: "asset/pics/icons_page1/Drill4.svg",
                 preparationHeader: localizations.preparationHeader,
                 countingHeader: localizations.countingHeader,
                 aPreparationText: localizations.thePreparation_4,
@@ -226,6 +230,7 @@ class StartingPage extends StatelessWidget {
                 // no 4
                 aTask: localizations.task4,
                 inputDrillCriteria1: localizations.inputDrill4Criteria1,
+                inputDrillDistanceText: localizations.inputDrillDistanceText4,
                 inputDrillCriteria2: localizations.inputDrill4Criteria2,
                 inputDrillCriteria3: localizations.inputDrill4Criteria3,
 
@@ -236,7 +241,7 @@ class StartingPage extends StatelessWidget {
               DrillLine(
                 drillName: localizations.drillFiveName,
                 thePurpose: localizations.purpose5,
-                drillPicture: "asset/pics/Symbol_Drill5.png",
+                drillPicture: "asset/pics/icons_page1/Drill5.svg",
                 preparationHeader: localizations.preparationHeader,
                 countingHeader: localizations.countingHeader,
                 aPreparationText: localizations.thePreparation_5,
@@ -252,6 +257,7 @@ class StartingPage extends StatelessWidget {
                 // no 5
                 aTask: localizations.task5,
                 inputDrillCriteria1: localizations.inputDrill5Criteria1,
+                inputDrillDistanceText: localizations.inputDrillDistanceText5,
                 inputDrillCriteria2: localizations.inputDrill5Criteria2,
                 inputDrillCriteria3: localizations.inputDrill5Criteria3,
 

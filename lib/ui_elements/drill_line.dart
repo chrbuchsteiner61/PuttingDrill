@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
 import 'package:myapp/user_areas/input_screen.dart';
 import 'package:myapp/user_areas/results_screen.dart';
@@ -22,7 +23,7 @@ class DrillLine extends StatelessWidget {
   final String inputButtonText;
   final String aTask;
   final String inputDrillCriteria1;
-  final String inputDrillDistanceText;
+
   final String inputDrillCriteria2;
   final String inputDrillCriteria3;
   final String inputDrillInput1;
@@ -47,7 +48,6 @@ class DrillLine extends StatelessWidget {
     required this.inputButtonText,
     required this.aTask,
     required this.inputDrillCriteria1,
-    required this.inputDrillDistanceText,
     required this.inputDrillCriteria2,
     required this.inputDrillCriteria3,
     required this.inputDrillInput1,
@@ -66,17 +66,7 @@ class DrillLine extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           aSpacer,
-          SizedBox(
-            height: elementHeight,
-            width: elementHeight,
-            child: SvgPicture.asset(
-              drillPicture,
-              semanticsLabel: 'Icon for Drill',
-              fit: BoxFit.fill,
-              width: elementHeight,
-              height: elementHeight,
-            ),
-          ),
+          ADrillIcon(elementHeight: elementHeight, drillPicture: drillPicture),
           spaceBetween,
           SizedBox(
             width: 120,
@@ -111,7 +101,6 @@ class DrillLine extends StatelessWidget {
           SizedBox(
             height: elementHeight,
             width: 70.0,
-            // margin: const EdgeInsets.only(left: theMargin),
             child: ElevatedButton(
               style: theButtonStyle,
               onPressed: () {
@@ -122,7 +111,6 @@ class DrillLine extends StatelessWidget {
                       appBarText: inputAppBarText,
                       buttonText: inputButtonText,
                       inputDrillCriteria1: inputDrillCriteria1,
-                      inputDrillDistanceText: inputDrillDistanceText,
                       inputDrillCriteria2: inputDrillCriteria2,
                       inputDrillCriteria3: inputDrillCriteria3,
                       drillInput1: inputDrillInput1,
@@ -139,7 +127,6 @@ class DrillLine extends StatelessWidget {
           SizedBox(
             height: elementHeight,
             width: 70.0,
-            // margin: const EdgeInsets.only(left: theMargin),
             child: ElevatedButton(
               style: theButtonStyle,
               onPressed: () {

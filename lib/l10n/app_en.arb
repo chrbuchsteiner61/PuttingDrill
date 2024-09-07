@@ -20,10 +20,9 @@
 
   "task1": "Putt into the hole.\nHit five or more balls from a short distance.",
   "task2": "Putt at nearest to the hole.\nHit five or more balls from a long distance.",
-  "task3": "Putt through the gates. \nHit five or more balls through both gates.",
+  "task3": "Putt through the gates.\nHit five or more balls through both gates.",
   "task4": "",
   "task5": "",
-
 
   "thePreparation_1": "Choose a distance for the exercise.\nChoose between one, two or three club lengths.\nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.",
   "thePreparation_2": "Choose a distance for the exercise. \nChoose between six, nine or 12 club lengths. \nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.", 
@@ -44,34 +43,30 @@
   "inputDrill1Criteria1": "Distance to the hole",
   "inputDrill1Criteria2": "Strokes",
   "inputDrill1Criteria3": "Successfull",
-  "inputDrillDistanceText1": "meassured in club lengths",
   
-  "inputDrill1Input1": "none",
-  "inputDrill1Input2": "none",
-  "inputDrill1Input3": "none",
+  "inputDrill1Input1": "meassured in club lengths",
+  "inputDrill1Input2": "",
+  "inputDrill1Input3": "Number of",
 
   "inputDrill2Criteria1": "Distance to the hole",
-  "inputDrill2Criteria2": "2Strokes",
-  "inputDrill2Criteria3": "Successfull",
-  "inputDrillDistanceText2": "meassured in club lengths",
+  "inputDrill2Criteria2": "Strokes",
+  "inputDrill2Criteria3": "Sum of missing distance to the hole",
   
-  "inputDrill2Input1": "none",
-  "inputDrill2Input2": "none",
-  "inputDrill2Input3": "none",
+  "inputDrill2Input1": "meassured in club lengths",
+  "inputDrill2Input2": "",
+  "inputDrill2Input3": "meassured in feet",
 
   "inputDrill3Criteria1": "Distance to the hole",
-  "inputDrill3Criteria2": "3Strokes",
+  "inputDrill3Criteria2": "",
   "inputDrill3Criteria3": "Successfull",
-  "inputDrillDistanceText3": "meassured in club lengths",
   
-  "inputDrill3Input1": "none",
-  "inputDrill3Input2": "none",
-  "inputDrill3Input3": "none",
+  "inputDrill3Input1": "meassured in club lengths",
+  "inputDrill3Input2": "",
+  "inputDrill3Input3": "Number of",
 
   "inputDrill4Criteria1": "4Distance",
   "inputDrill4Criteria2": "4Strokes",
   "inputDrill4Criteria3": "Successfull",
-  "inputDrillDistanceText4": "meassured in club lengths",
   
   "inputDrill4Input1": "none",
   "inputDrill4Input2": "none",
@@ -80,12 +75,12 @@
   "inputDrill5Criteria1": "5Distance",
   "inputDrill5Criteria2": "5Strokes",
   "inputDrill5Criteria3": "Successfull",
-  "inputDrillDistanceText5": "meassured in club lengths",
   
   "inputDrill5Input1": "none",
   "inputDrill5Input2": "none",
   "inputDrill5Input3": "none",
 
+  "savedResult" : "saved successful",
 
   "viewResults": "Your stats",
 

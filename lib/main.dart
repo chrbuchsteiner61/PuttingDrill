@@ -7,6 +7,7 @@ import 'package:myapp/user_areas/the_info_drawer.dart';
 import 'package:myapp/methods_and_helper/language_helper.dart';
 import 'package:myapp/ui_elements/drill_line.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/theme_data.dart';
 
 void main() => runApp(const PuttingDrillApp());
 
@@ -62,42 +63,7 @@ class PuttingDrillAppState extends State<PuttingDrillApp> {
         // Locale('sv'),
       ],
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-          shadowColor: Colors.transparent,
-          elevation: 1.0,
-          centerTitle: false,
-          color: Colors.green,
-          titleTextStyle: TextStyle(
-              fontSize: 22.0, fontWeight: FontWeight.bold, color: Colors.white),
-        ),
-        scaffoldBackgroundColor: const Color.fromARGB(255, 208, 243, 218),
-        primarySwatch: Colors.blue,
-        textTheme: const TextTheme(
-          bodyLarge: TextStyle(
-              fontSize: 16.0,
-              fontWeight: FontWeight.normal,
-              color: Colors.black,
-              fontFamily: 'Noto-Sans'),
-          bodyMedium: TextStyle(
-              fontSize: 14.0,
-              fontWeight: FontWeight.normal,
-              color: Colors.black,
-              fontFamily: 'Noto-Sans'),
-          headlineLarge: TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white),
-          headlineMedium: TextStyle(
-              fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.black),
-          titleLarge: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.normal,
-              color: Colors.black54),
-          titleMedium: TextStyle(
-              fontSize: 16.0,
-              fontWeight: FontWeight.normal,
-              color: Colors.black54),
-        ),
-      ),
+      theme: AppTheme.data,
       home: const StartingPage(),
       locale: _locale,
     );
@@ -149,7 +115,7 @@ class StartingPage extends StatelessWidget {
                 // no 1
                 aTask: localizations.task1,
                 inputDrillCriteria1: localizations.inputDrill1Criteria1,
-                inputDrillDistanceText: localizations.inputDrillDistanceText1,
+
                 inputDrillCriteria2: localizations.inputDrill1Criteria2,
                 inputDrillCriteria3: localizations.inputDrill1Criteria3,
 
@@ -176,7 +142,7 @@ class StartingPage extends StatelessWidget {
                 // no 2
                 aTask: localizations.task2,
                 inputDrillCriteria1: localizations.inputDrill2Criteria1,
-                inputDrillDistanceText: localizations.inputDrillDistanceText2,
+
                 inputDrillCriteria2: localizations.inputDrill2Criteria2,
                 inputDrillCriteria3: localizations.inputDrill2Criteria3,
 
@@ -203,7 +169,7 @@ class StartingPage extends StatelessWidget {
                 // no 3
                 aTask: localizations.task3,
                 inputDrillCriteria1: localizations.inputDrill3Criteria1,
-                inputDrillDistanceText: localizations.inputDrillDistanceText3,
+
                 inputDrillCriteria2: localizations.inputDrill3Criteria2,
                 inputDrillCriteria3: localizations.inputDrill3Criteria3,
 
@@ -230,7 +196,7 @@ class StartingPage extends StatelessWidget {
                 // no 4
                 aTask: localizations.task4,
                 inputDrillCriteria1: localizations.inputDrill4Criteria1,
-                inputDrillDistanceText: localizations.inputDrillDistanceText4,
+
                 inputDrillCriteria2: localizations.inputDrill4Criteria2,
                 inputDrillCriteria3: localizations.inputDrill4Criteria3,
 
@@ -257,7 +223,7 @@ class StartingPage extends StatelessWidget {
                 // no 5
                 aTask: localizations.task5,
                 inputDrillCriteria1: localizations.inputDrill5Criteria1,
-                inputDrillDistanceText: localizations.inputDrillDistanceText5,
+
                 inputDrillCriteria2: localizations.inputDrill5Criteria2,
                 inputDrillCriteria3: localizations.inputDrill5Criteria3,
 

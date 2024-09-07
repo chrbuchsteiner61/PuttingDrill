@@ -73,7 +73,7 @@
        id="path3"
        sodipodi:insensitive="true" />
     <rect
-       style="fill:#ffff00;stroke-width:0.264583"
+       style="fill:#ffff00;stroke-width:0.27"
        id="rect6"
        width="9.1070499"
        height="7.3884997"
@@ -84,50 +84,50 @@
     <ellipse
        style="fill:url(#linearGradient11);stroke-width:0.35;stroke-dasharray:none"
        id="ellipse7"
-       cx="79.607185"
-       cy="112.71246"
-       rx="34.504444"
-       ry="20"
+       cx="80.0"
+       cy="112.0"
+       rx="34.5"
+       ry="25.0"
        sodipodi:insensitive="true" />
     <ellipse
-       style="fill:#0000ff;stroke-width:0.323825"
+       style="fill:#0000ff;stroke-width:0.33"
        id="ellipse4"
-       cx="79.447365"
-       cy="113.049"
-       rx="31.916613"
-       ry="18.5"
+       cx="80.0"
+       cy="112.0"
+       rx="32.0"
+       ry="20.0"
        sodipodi:insensitive="true" />
     <ellipse
-       style="fill:#ffffff;stroke-width:0.264583"
+       style="fill:#ffffff;stroke-width:0.27"
        id="path4"
-       cx="79.202896"
-       cy="112.7542"
-       rx="26.077868"
-       ry="15.115658"
+       cx="80"
+       cy="112.0"
+       rx="26.0"
+       ry="15.0"
        sodipodi:insensitive="true" />
     <ellipse
-       style="fill:#0000ff;stroke-width:0.236303"
+       style="fill:#0000ff;stroke-width:0.24"
        id="ellipse8"
-       cx="78.989342"
-       cy="112.73197"
-       rx="23.290499"
+       cx="80.0"
+       cy="112.0"
+       rx="23.3"
        ry="13.5"
        sodipodi:insensitive="true" />
     <ellipse
-       style="fill:#ffffff;stroke-width:0.179386"
+       style="fill:#ffffff;stroke-width:0.18"
        id="path4-2"
-       cx="79.218422"
-       cy="112.65135"
-       rx="17.680086"
-       ry="10.248"
+       cx="80.0"
+       cy="112.0"
+       rx="17.7"
+       ry="10.3"
        sodipodi:insensitive="true" />
     <ellipse
        style="fill:#0000ff;stroke-width:0.151932"
        id="ellipse6"
-       cx="79.198906"
-       cy="112.79017"
-       rx="14.975197"
-       ry="8.6801558"
+       cx="80.0"
+       cy="112.0"
+       rx="15.0"
+       ry="8.7"
        sodipodi:insensitive="true" />
     <rect
        style="fill:#ffffff;stroke-width:0.264583"
@@ -141,10 +141,10 @@
     <ellipse
        style="fill:#ffffff;stroke-width:0.264583"
        id="path8"
-       cx="79.476311"
-       cy="113.33759"
-       rx="2.5422361"
-       ry="1.4998564"
+       cx="80.0"
+       cy="112.0"
+       rx="2.5"
+       ry="1.5"
        sodipodi:insensitive="true" />
   </g>
 </svg>

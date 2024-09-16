@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
-// import 'package:myapp/ui_elements/colored_container.dart';
 
 enum DistanceLabel {
   one('1 ', 1),
@@ -211,31 +210,52 @@ class InputScreenState extends State<InputScreen> {
               spaceAfter,
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: SizedBox(
-                  width: 125.0,
-                  height: 45.0,
-                  child: ElevatedButton(
-                    style: appsButtonStyle,
-                    onPressed: () async {
-                      if (_formKey.currentState!.validate()) {
-                        _formKey.currentState!.save();
-                        double successRate = (_successfulPutts! / _putts) * 100;
-                        PuttingResult newResult = PuttingResult(
-                          distance: _selectedDistance!.value,
-                          successRate: successRate,
-                          dateOfPractice: DateTime.now().toIso8601String(),
-                        );
-                        await DatabaseHelper().insertResult(newResult);
+                child: Row(
+                  children: <Widget>[
+                    SizedBox(
+                      width: 125.0,
+                      height: 45.0,
+                      child: ElevatedButton(
+                        style: appsButtonStyle,
+                        onPressed: () async {
+                          if (_formKey.currentState!.validate()) {
+                            _formKey.currentState!.save();
+                            double successRate =
+                                (_successfulPutts! / _putts) * 100;
+                            PuttingResult newResult = PuttingResult(
+                              drillNo: 2,
+                              criteria1: '5',
+                              criteria2: '3',
+                              criteria3: 23.toString(),
+                              success: _successfulPutts!.toDouble(),
+                              successRate: successRate,
+                              dateOfPractice: DateTime.now().toIso8601String(),
+                            );
+                            await DatabaseHelper().insertResult(newResult);
 
-                        if (!mounted) return;
+                            if (!mounted) return;
 
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Result saved!')),
-                        );
-                      }
-                    },
-                    child: const Text('Save Result'),
-                  ),
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Result saved!')),
+                            );
+                          }
+                        },
+                        child: const Text('Save Result'),
+                      ),
+                    ),
+                    spaceBetween,
+                    SizedBox(
+                      width: 250.0,
+                      height: 45.0,
+                      child: ElevatedButton(
+                        style: appsButtonStyle,
+                        onPressed: () async {
+                          DatabaseHelper().deleteDB();
+                        },
+                        child: const Text('Delete Database'),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],

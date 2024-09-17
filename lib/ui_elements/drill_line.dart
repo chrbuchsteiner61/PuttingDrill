@@ -6,6 +6,7 @@ import 'package:myapp/user_areas/explain_screen.dart';
 import 'package:myapp/user_areas/input_screen.dart';
 //import 'package:myapp/user_areas/results_screen.dart';
 import 'package:myapp/user_areas/results_test.dart';
+import 'package:myapp/methods_and_helper/drills.dart';
 
 class DrillLine extends StatelessWidget {
   final String drillName;
@@ -24,12 +25,12 @@ class DrillLine extends StatelessWidget {
   final String inputButtonText;
   final String aTask;
   final String inputDrillCriteria1;
-
   final String inputDrillCriteria2;
   final String inputDrillCriteria3;
   final String inputDrillInput1;
   final String inputDrillInput2;
   final String inputDrillInput3;
+  final Drills aDrill;
 
   const DrillLine({
     super.key,
@@ -54,6 +55,7 @@ class DrillLine extends StatelessWidget {
     required this.inputDrillInput1,
     required this.inputDrillInput2,
     required this.inputDrillInput3,
+    required this.aDrill,
   });
 
   @override
@@ -117,6 +119,7 @@ class DrillLine extends StatelessWidget {
                       drillInput1: inputDrillInput1,
                       drillInput2: inputDrillInput2,
                       drillInput3: inputDrillInput3,
+                      aDrill: aDrill,
                     ),
                   ),
                 );
@@ -133,8 +136,7 @@ class DrillLine extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const ResultsTest()),
+                  MaterialPageRoute(builder: (context) => const ResultsTest()),
                 );
               },
               child: Text(buttonViewResultsText),

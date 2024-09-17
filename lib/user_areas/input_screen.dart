@@ -2,29 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
-
-enum DistanceLabel {
-  one('1 ', 1),
-  two('2 ', 2),
-  three('3 ', 3);
-
-  final String label;
-  final int value;
-
-  const DistanceLabel(this.label, this.value);
-}
+import 'package:myapp/methods_and_helper/drills.dart';
 
 class InputScreen extends StatefulWidget {
   final String appBarText;
+  final String buttonText;
   final String inputDrillCriteria1;
-
   final String inputDrillCriteria2;
   final String inputDrillCriteria3;
-  final String buttonText;
   final String drillInput1;
   final String drillInput2;
   final String drillInput3;
-  //final String savedSuccess;
+  final Drills aDrill;
 
   const InputScreen({
     super.key,
@@ -36,7 +25,7 @@ class InputScreen extends StatefulWidget {
     required this.drillInput1,
     required this.drillInput2,
     required this.drillInput3,
-    //required this.savedSuccess,
+    required this.aDrill,
   });
 
   @override
@@ -45,7 +34,8 @@ class InputScreen extends StatefulWidget {
 
 class InputScreenState extends State<InputScreen> {
   final _formKey = GlobalKey<FormState>();
-  DistanceLabel? _selectedDistance = DistanceLabel.one;
+  String _selectedDistance = "";
+  List<int> numberOfExercise = [5, 6, 7, 8, 9, 10];
   int _putts = 5;
   int? _successfulPutts;
   double col1 = 180;
@@ -57,7 +47,8 @@ class InputScreenState extends State<InputScreen> {
     Color selectAreaColor = Theme.of(context).scaffoldBackgroundColor;
     InputDecoration inputDecoration = InputDecoration(
         border: InputBorder.none, fillColor: selectAreaColor, filled: true);
-
+    _selectedDistance = widget.aDrill.distance[0];
+    // Build the input screen widgetd
     return Scaffold(
       appBar: AppBar(title: Text(widget.appBarText)),
       body: Padding(
@@ -79,20 +70,19 @@ class InputScreenState extends State<InputScreen> {
                     ),
                     SizedBox(
                       width: col2,
-                      child: DropdownButtonFormField<DistanceLabel>(
+                      child: DropdownButtonFormField<String>(
                         style: Theme.of(context).textTheme.headlineMedium!,
                         decoration: inputDecoration,
                         value: _selectedDistance,
-                        onChanged: (DistanceLabel? newValue) {
+                        onChanged: (String? newValue) {
                           setState(() {
                             _selectedDistance = newValue!;
                           });
                         },
-                        items:
-                            DistanceLabel.values.map((DistanceLabel distance) {
-                          return DropdownMenuItem<DistanceLabel>(
+                        items: widget.aDrill.distance.map((String distance) {
+                          return DropdownMenuItem<String>(
                             value: distance,
-                            child: Text(distance.label),
+                            child: Text(distance),
                           );
                         }).toList(),
                         validator: (value) {
@@ -136,7 +126,7 @@ class InputScreenState extends State<InputScreen> {
                             _putts = newValue!;
                           });
                         },
-                        items: [5, 6, 7, 8, 9, 10].map((int value) {
+                        items: numberOfExercise.map((int value) {
                           return DropdownMenuItem<int>(
                             value: value,
                             child: Text(value.toString()),
@@ -221,9 +211,9 @@ class InputScreenState extends State<InputScreen> {
                           if (_formKey.currentState!.validate()) {
                             _formKey.currentState!.save();
                             double successRate =
-                                (_successfulPutts! / _putts) * 100;
+                                widget.aDrill.calculateSuccessRate();
                             PuttingResult newResult = PuttingResult(
-                              drillNo: 2,
+                              drillNo: widget.aDrill.drillNo,
                               criteria1: '5',
                               criteria2: '3',
                               criteria3: 23.toString(),

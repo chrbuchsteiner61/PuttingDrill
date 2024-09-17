@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:myapp/methods_and_helper/drills.dart';
 
 import 'package:myapp/user_areas/the_info_drawer.dart';
 import 'package:myapp/methods_and_helper/language_helper.dart';
@@ -77,6 +78,12 @@ class StartingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
 
+    Drills drill1 = Drills(1,0,5,5);
+    Drills drill2 = Drills(2,0,5,5);
+    Drills drill3 = DrillThree(3,0,5,5);
+    Drills drill4 = Drills(4,0,5,5);
+    Drills drill5 = Drills(5,0,5,5); 
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -122,6 +129,7 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput1: localizations.inputDrill1Input1,
                 inputDrillInput2: localizations.inputDrill1Input2,
                 inputDrillInput3: localizations.inputDrill1Input3,
+                aDrill: drill1,
               ),
               DrillLine(
                 drillName: localizations.drillTwoName,
@@ -149,6 +157,7 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput1: localizations.inputDrill2Input1,
                 inputDrillInput2: localizations.inputDrill2Input2,
                 inputDrillInput3: localizations.inputDrill2Input3,
+                aDrill: drill2,
               ),
               DrillLine(
                 drillName: localizations.drillThreeName,
@@ -176,6 +185,7 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput1: localizations.inputDrill3Input1,
                 inputDrillInput2: localizations.inputDrill3Input2,
                 inputDrillInput3: localizations.inputDrill3Input3,
+                aDrill: drill3,
               ),
               DrillLine(
                 drillName: localizations.drillFourName,
@@ -203,6 +213,7 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput1: localizations.inputDrill4Input1,
                 inputDrillInput2: localizations.inputDrill4Input2,
                 inputDrillInput3: localizations.inputDrill4Input3,
+                aDrill: drill4,
               ),
               DrillLine(
                 drillName: localizations.drillFiveName,
@@ -230,6 +241,7 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput1: localizations.inputDrill5Input1,
                 inputDrillInput2: localizations.inputDrill5Input2,
                 inputDrillInput3: localizations.inputDrill5Input3,
+                aDrill: drill5,
               ),
             ],
           ),

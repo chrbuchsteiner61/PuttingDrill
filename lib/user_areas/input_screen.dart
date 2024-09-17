@@ -14,6 +14,7 @@ class InputScreen extends StatefulWidget {
   final String drillInput2;
   final String drillInput3;
   final Drills aDrill;
+  final String errorInputMessageNonEmptyNegativ;
 
   const InputScreen({
     super.key,
@@ -26,6 +27,7 @@ class InputScreen extends StatefulWidget {
     required this.drillInput2,
     required this.drillInput3,
     required this.aDrill,
+    required this.errorInputMessageNonEmptyNegativ,
   });
 
   @override
@@ -34,7 +36,7 @@ class InputScreen extends StatefulWidget {
 
 class InputScreenState extends State<InputScreen> {
   final _formKey = GlobalKey<FormState>();
-  String _selectedDistance = "";
+  int _selectedDistance = 0;
   List<int> numberOfExercise = [5, 6, 7, 8, 9, 10];
   int _putts = 5;
   int? _successfulPutts;
@@ -73,16 +75,16 @@ class InputScreenState extends State<InputScreen> {
                       child: DropdownButtonFormField<String>(
                         style: Theme.of(context).textTheme.headlineMedium!,
                         decoration: inputDecoration,
-                        value: _selectedDistance,
+                        value: _selectedDistance.toString(),
                         onChanged: (String? newValue) {
                           setState(() {
-                            _selectedDistance = newValue!;
+                            _selectedDistance = newValue! as int;
                           });
                         },
-                        items: widget.aDrill.distance.map((String distance) {
+                        items: widget.aDrill.distance.map((int distance) {
                           return DropdownMenuItem<String>(
-                            value: distance,
-                            child: Text(distance),
+                            value: distance.toString(),
+                            child: Text(distance.toString()),
                           );
                         }).toList(),
                         validator: (value) {
@@ -126,10 +128,10 @@ class InputScreenState extends State<InputScreen> {
                             _putts = newValue!;
                           });
                         },
-                        items: numberOfExercise.map((int value) {
+                        items: numberOfExercise.map((int attemps) {
                           return DropdownMenuItem<int>(
-                            value: value,
-                            child: Text(value.toString()),
+                            value: attemps,
+                            child: Text(attemps.toString()),
                           );
                         }).toList(),
                       ),
@@ -170,14 +172,14 @@ class InputScreenState extends State<InputScreen> {
                             _successfulPutts = int.parse(value!),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
-                            return 'Please enter the number of successful putts';
+                            return widget.errorInputMessageNonEmptyNegativ;
                           }
                           int? successfulPutts = int.tryParse(value);
                           if (successfulPutts == null) {
-                            return 'Please enter a valid number';
+                            return widget.errorInputMessageNonEmptyNegativ;
                           }
                           if (successfulPutts < 0) {
-                            return 'Number of successful putts cannot be negative';
+                            return widget.errorInputMessageNonEmptyNegativ;
                           }
                           if (successfulPutts > _putts) {
                             return 'Number of successful putts cannot be more than number of putts';
@@ -210,13 +212,17 @@ class InputScreenState extends State<InputScreen> {
                         onPressed: () async {
                           if (_formKey.currentState!.validate()) {
                             _formKey.currentState!.save();
+                            widget.aDrill.criteria1 = _selectedDistance;
+                            widget.aDrill.numberOfExercises = _putts;
+                            widget.aDrill.success = _successfulPutts!.toDouble();
                             double successRate =
                                 widget.aDrill.calculateSuccessRate();
                             PuttingResult newResult = PuttingResult(
                               drillNo: widget.aDrill.drillNo,
-                              criteria1: '5',
-                              criteria2: '3',
-                              criteria3: 23.toString(),
+                              criteria1: _selectedDistance,
+                              criteria2: _putts,
+                              //unused criteria 3
+                              criteria3: -99,
                               success: _successfulPutts!.toDouble(),
                               successRate: successRate,
                               dateOfPractice: DateTime.now().toIso8601String(),

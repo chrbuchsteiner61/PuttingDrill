@@ -1,26 +1,28 @@
 class Drills {
   final int drillNo;
-  final double criteria1;
-  final double numberOfExercises;
-  final double success;
-  final List<String> distance = ['1', '2', '3'];
+  int criteria1;
+  int numberOfExercises;
+  double success;
+  final List<int> distance = [1, 2, 3];
+  static const perCent = 100.0;
 
-  Drills(this.drillNo, this.criteria1,this.numberOfExercises, this.success);
+  Drills(this.drillNo, this.criteria1, this.numberOfExercises, this.success);
 
   double calculateSuccessRate() {
-    return (success / numberOfExercises) * 100;
+    return (success / numberOfExercises.toDouble()) * perCent;
   }
 }
 
-class DrillThree extends Drills {
-  
+class DrillDistancePutt extends Drills {
   @override
-  List<String> get distance => ['6', '9', '12'];
+  List<int> get distance => [6, 9, 12];
 
-  DrillThree(super.drillNo, super.numberOfExercises, super.success, super.criteria1);
+  DrillDistancePutt(
+      super.drillNo, super.numberOfExercises, super.success, super.criteria1);
 
   @override
   double calculateSuccessRate() {
-    return (success / (numberOfExercises * criteria1)) * 100;
+    return (success / (numberOfExercises.toDouble() * criteria1.toDouble())) *
+        Drills.perCent;
   }
 }

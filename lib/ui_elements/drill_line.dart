@@ -31,6 +31,7 @@ class DrillLine extends StatelessWidget {
   final String inputDrillInput2;
   final String inputDrillInput3;
   final Drills aDrill;
+  final String errorInputMessageNonEmptyNegativ;
 
   const DrillLine({
     super.key,
@@ -56,6 +57,7 @@ class DrillLine extends StatelessWidget {
     required this.inputDrillInput2,
     required this.inputDrillInput3,
     required this.aDrill,
+    required this.errorInputMessageNonEmptyNegativ,
   });
 
   @override
@@ -120,6 +122,8 @@ class DrillLine extends StatelessWidget {
                       drillInput2: inputDrillInput2,
                       drillInput3: inputDrillInput3,
                       aDrill: aDrill,
+                      errorInputMessageNonEmptyNegativ:
+                          errorInputMessageNonEmptyNegativ,
                     ),
                   ),
                 );

@@ -6,9 +6,9 @@ import 'package:path/path.dart';
 class PuttingResult {
   final int? id;
   final int drillNo;
-  final String criteria1;
-  final String criteria2;
-  final String criteria3;
+  final int criteria1;
+  final int criteria2;
+  final int criteria3;
   final double success;
   final double successRate;
   final String dateOfPractice;
@@ -65,7 +65,7 @@ class DatabaseHelper {
       path,
       onCreate: (db, version) {
         return db.execute(
-          'CREATE TABLE results(id INTEGER PRIMARY KEY AUTOINCREMENT, drillNo INTEGER, criteria1 Text,criteria2 Text, criteria3 Text, success REAL, successRate REAL, dateOfPractice TEXT)',
+          'CREATE TABLE results(id INTEGER PRIMARY KEY AUTOINCREMENT, drillNo INTEGER, criteria1 INTEGER,criteria2 INTEGER, criteria3 INTEGER, success REAL, successRate REAL, dateOfPractice TEXT)',
         );
       },
       version: 1,

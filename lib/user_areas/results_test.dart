@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import '../methods_and_helper/database_helper.dart';
 
 class ResultsTest extends StatelessWidget {
@@ -36,27 +37,40 @@ class ResultsFromDB extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double dateInMillis = 0;
+    int dateInMillis = 0;
+    var exceriseDateTime = "";
+    int drillNo = 0;
     double success = 0;
-    String criteria1 = "";
-    String criteria2 = "";
-    String criteria3 = "";
+    int criteria1 = 0;
+    int criteria2 = 0;
+    //int criteria3 = 0;
+    double successrate = 0;
+
+    List<String> someLines = [];
 
     for (var result in results!) {
-      dateInMillis = DateTime.parse(result.dateOfPractice)
-          .millisecondsSinceEpoch
-          .toDouble();
+      dateInMillis =
+          DateTime.parse(result.dateOfPractice).millisecondsSinceEpoch;
+      exceriseDateTime = DateFormat('MM/dd/yyyy, hh:mm a')
+          .format(DateTime.fromMillisecondsSinceEpoch(dateInMillis));
+      drillNo = result.drillNo;
       criteria1 = result.criteria1;
       criteria2 = result.criteria2;
-      criteria3 = result.criteria3;
-
+     // criteria3 = result.criteria3;
       success = result.success;
+      successrate = result.successRate;
+      someLines.add(
+          "$exceriseDateTime\n$drillNo\n$criteria1\n$criteria2\n$success\n$successrate");
     }
 
-    return Padding(
-      padding: const EdgeInsets.all(36.0),
-      child:
-          Text("$dateInMillis\n$criteria1 \n$criteria2\n$criteria3\n$success"),
+    return Column(
+      children: <Widget>[
+        for (var i in someLines)
+          Padding(
+            padding: const EdgeInsets.all(36.0),
+            child: Text(i),
+          ),
+      ],
     );
   }
 }

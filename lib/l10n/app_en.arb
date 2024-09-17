@@ -39,6 +39,8 @@
   "inputResults": "Input result",
   "inputAppBarText": "Put in your results of the drill",
   "inputButtonText": "Save your results",
+
+  "errorInputMessageNonEmptyNegativ": "Please enter a valid non-negativ number",
   
   "inputDrill1Criteria1": "Distance to the hole",
   "inputDrill1Criteria2": "Strokes",
@@ -47,6 +49,7 @@
   "inputDrill1Input1": "meassured in club lengths",
   "inputDrill1Input2": "",
   "inputDrill1Input3": "Number of",
+
 
   "inputDrill2Criteria1": "Distance to the hole",
   "inputDrill2Criteria2": "Strokes",
@@ -58,11 +61,11 @@
 
   "inputDrill3Criteria1": "Distance to the hole",
   "inputDrill3Criteria2": "Strokes",
-  "inputDrill3Criteria3": "Successfull",
+  "inputDrill3Criteria3": "Missing the hole",
   
   "inputDrill3Input1": "meassured in club lengths",
   "inputDrill3Input2": "",
-  "inputDrill3Input3": "Number of",
+  "inputDrill3Input3": "Sum of missed distances in feet",
 
   "inputDrill4Criteria1": "4Distance",
   "inputDrill4Criteria2": "4Strokes",

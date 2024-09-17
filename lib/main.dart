@@ -78,11 +78,11 @@ class StartingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
 
-    Drills drill1 = Drills(1,0,5,5);
-    Drills drill2 = Drills(2,0,5,5);
-    Drills drill3 = DrillThree(3,0,5,5);
-    Drills drill4 = Drills(4,0,5,5);
-    Drills drill5 = Drills(5,0,5,5); 
+    Drills drill1 = Drills(1, 0, 5, 5);
+    Drills drill2 = Drills(2, 0, 5, 5);
+    Drills drill3 = DrillDistancePutt(3, 0, 5, 5);
+    Drills drill4 = Drills(4, 0, 5, 5);
+    Drills drill5 = Drills(5, 0, 5, 5);
 
     return Scaffold(
       appBar: AppBar(
@@ -130,6 +130,8 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput2: localizations.inputDrill1Input2,
                 inputDrillInput3: localizations.inputDrill1Input3,
                 aDrill: drill1,
+                errorInputMessageNonEmptyNegativ:
+                    localizations.errorInputMessageNonEmptyNegativ,
               ),
               DrillLine(
                 drillName: localizations.drillTwoName,
@@ -158,6 +160,8 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput2: localizations.inputDrill2Input2,
                 inputDrillInput3: localizations.inputDrill2Input3,
                 aDrill: drill2,
+                errorInputMessageNonEmptyNegativ:
+                    localizations.errorInputMessageNonEmptyNegativ,
               ),
               DrillLine(
                 drillName: localizations.drillThreeName,
@@ -186,6 +190,8 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput2: localizations.inputDrill3Input2,
                 inputDrillInput3: localizations.inputDrill3Input3,
                 aDrill: drill3,
+                errorInputMessageNonEmptyNegativ:
+                    localizations.errorInputMessageNonEmptyNegativ,
               ),
               DrillLine(
                 drillName: localizations.drillFourName,
@@ -214,6 +220,8 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput2: localizations.inputDrill4Input2,
                 inputDrillInput3: localizations.inputDrill4Input3,
                 aDrill: drill4,
+                errorInputMessageNonEmptyNegativ:
+                    localizations.errorInputMessageNonEmptyNegativ,
               ),
               DrillLine(
                 drillName: localizations.drillFiveName,
@@ -242,6 +250,8 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput2: localizations.inputDrill5Input2,
                 inputDrillInput3: localizations.inputDrill5Input3,
                 aDrill: drill5,
+                errorInputMessageNonEmptyNegativ:
+                    localizations.errorInputMessageNonEmptyNegativ,
               ),
             ],
           ),

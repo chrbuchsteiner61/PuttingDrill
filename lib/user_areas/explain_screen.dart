@@ -62,16 +62,11 @@ class ExplainScreen extends StatelessWidget {
               width: pictureWidth,
               child: SvgPicture.asset(
                 preparePic,
-                semanticsLabel: 'Icon for Drill',
+                semanticsLabel: 'show preparation',
                 fit: BoxFit.fill,
                 width: pictureWidth,
                 height: pictureHeight,
               ),
-            ),
-            Image(
-              image: AssetImage(preparePic),
-              width: 300,
-              height: 150,
             ),
             spaceAfter,
             Text(

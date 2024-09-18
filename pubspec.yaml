@@ -48,7 +48,6 @@ flutter:
         weight: 700
 
   assets:
-    - asset/pics/putting_green.jpg
     - asset/pics/page1_background.png
     - asset/pics/page1_background.svg
     - asset/pics/icons_page1/Drill1.svg
@@ -56,14 +55,9 @@ flutter:
     - asset/pics/icons_page1/Drill3.svg
     - asset/pics/icons_page1/Drill4.svg
     - asset/pics/icons_page1/Drill5.svg
-    - asset/pics/Symbol_Drill1.png  
-    - asset/pics/Symbol_Drill2.png
-    - asset/pics/Symbol_Drill3.png
-    - asset/pics/Symbol_Drill4.png
-    - asset/pics/Symbol_Drill5.png
-    - asset/pics/perparePics/thePreparePic1.svg
-    - asset/pics/perparePics/thePreparePic2.svg
-    - asset/pics/perparePics/thePreparePic3.svg
-    - asset/pics/perparePics/thePreparePic4.svg
-    - asset/pics/perparePics/thePreparePic5.svg
+    - asset/pics/preparePics/thePreparePic1.svg
+    - asset/pics/preparePics/thePreparePic2.svg
+    - asset/pics/preparePics/thePreparePic3.svg
+    - asset/pics/preparePics/thePreparePic4.svg
+    - asset/pics/preparePics/thePreparePic5.svg
 

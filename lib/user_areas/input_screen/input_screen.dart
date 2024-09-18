@@ -42,10 +42,18 @@ class InputScreen extends StatefulWidget {
 
 class InputScreenState extends State<InputScreen> {
   final _formKey = GlobalKey<FormState>();
-  int _selectedDistance = 0;
+
+  late int selectedDistance;
+
+  @override
+  void initState() {
+    super.initState();
+    selectedDistance = widget.aDrill.distances[0];
+  }
+
   List<int> numberOfExercise = [5, 6, 7, 8, 9, 10];
-  int? _putts;
-  int? _successfulPutts;
+  int _putts = 5;
+  int _successfulPutts = 5;
   double col1 = 180;
   double col2 = 70;
   double col3 = 200;
@@ -55,9 +63,7 @@ class InputScreenState extends State<InputScreen> {
     Color selectAreaColor = Theme.of(context).scaffoldBackgroundColor;
     InputDecoration inputDecoration = InputDecoration(
         border: InputBorder.none, fillColor: selectAreaColor, filled: true);
-
-    _selectedDistance = widget.aDrill.distances[0];
-    _putts = 5;
+    //selectedDistance = widget.aDrill.distances[2];
 
     // Build the input screen
     return Scaffold(
@@ -76,10 +82,22 @@ class InputScreenState extends State<InputScreen> {
                         columnWidth: col1,
                         inputDrillCriteria1: widget.inputDrillCriteria1),
                     InputDropDownWidget(
-                        boxWidth: col2,
-                        inputDecoration: inputDecoration,
-                        choices: widget.aDrill.distances,
-                        errorMessage: widget.errorInputMessageNonEmptyNegativ),
+                      boxWidth: col2,
+                      inputDecoration: inputDecoration,
+                      items: widget.aDrill.distances,
+                      value: selectedDistance,
+                      onChanged: (value) {
+                        setState(() {
+                          selectedDistance = value!;
+                        });
+                      },
+                      validator: (value) {
+                        if (value == null) {
+                          return widget.errorInputMessageNonEmptyNegativ;
+                        }
+                        return null;
+                      },
+                    ),
                     spaceBetween,
                     SizedBox(
                       width: col3,
@@ -100,10 +118,22 @@ class InputScreenState extends State<InputScreen> {
                         columnWidth: col1,
                         inputDrillCriteria1: widget.inputDrillCriteria2),
                     InputDropDownWidget(
-                        boxWidth: col2,
-                        inputDecoration: inputDecoration,
-                        choices: numberOfExercise,
-                        errorMessage: widget.errorInputMessageNonEmptyNegativ),
+                      boxWidth: col2,
+                      inputDecoration: inputDecoration,
+                      items: numberOfExercise,
+                      value: _putts,
+                      onChanged: (value) {
+                        setState(() {
+                          _putts = value!;
+                        });
+                      },
+                      validator: (value) {
+                        if (value == null) {
+                          return widget.errorInputMessageNonEmptyNegativ;
+                        }
+                        return null;
+                      },
+                    ),
                     spaceBetween,
                     SizedBox(
                       width: col3,
@@ -135,14 +165,10 @@ class InputScreenState extends State<InputScreen> {
                           if (value == null || value.isEmpty) {
                             return widget.errorInputMessageNonEmptyNegativ;
                           }
-                          int? successfulPutts = int.tryParse(value);
-                          if (successfulPutts == null) {
+                          if (_successfulPutts < 0) {
                             return widget.errorInputMessageNonEmptyNegativ;
                           }
-                          if (successfulPutts < 0) {
-                            return widget.errorInputMessageNonEmptyNegativ;
-                          }
-                          if (successfulPutts > _putts!) {
+                          if (_successfulPutts > _putts) {
                             return 'Number of successful putts cannot be more than number of putts';
                           }
                           return null;
@@ -173,19 +199,18 @@ class InputScreenState extends State<InputScreen> {
                         onPressed: () async {
                           if (_formKey.currentState!.validate()) {
                             _formKey.currentState!.save();
-                            widget.aDrill.criteria1 = _selectedDistance;
-                            widget.aDrill.numberOfExercises = _putts!;
-                            widget.aDrill.success =
-                                _successfulPutts!.toDouble();
+                            widget.aDrill.criteria1 = selectedDistance;
+                            widget.aDrill.numberOfExercises = _putts;
+                            widget.aDrill.success = _successfulPutts.toDouble();
                             double successRate =
                                 widget.aDrill.calculateSuccessRate();
                             PuttingResult newResult = PuttingResult(
                               drillNo: widget.aDrill.drillNo,
-                              criteria1: _selectedDistance,
-                              criteria2: _putts!,
+                              criteria1: selectedDistance,
+                              criteria2: _putts,
                               //unused criteria 3
                               criteria3: -99,
-                              success: _successfulPutts!.toDouble(),
+                              success: _successfulPutts.toDouble(),
                               successRate: successRate,
                               dateOfPractice: DateTime.now().toIso8601String(),
                             );

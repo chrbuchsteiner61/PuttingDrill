@@ -1,5 +1,5 @@
 <svg width="300" height="150">
-  <path style="fill:#0f0;stroke-width:.2" d="M0 0h100v100H0z"/>
+  <path style="fill:#0a0;stroke-width:.2" d="M0 0h300v150H0z"/>
   <ellipse style="fill:#fff;stroke-width:.3" cx="50" cy="60" rx="48" ry="32"/>
   <ellipse style="fill:#00f;stroke-width:.3" cx="50" cy="60" rx="42" ry="28"/>
   <ellipse style="fill:#fff;stroke-width:.3" cx="50" cy="60" rx="36" ry="24"/>

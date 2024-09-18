@@ -84,7 +84,7 @@ class StartingPage extends StatelessWidget {
     Drills drill4 = Drills(4, 0, 5, 5);
     Drills drill5 = Drills(5, 0, 5, 5);
 
-    const String preParePics = "asset/pics/preparepics/thePreparePic";
+    const String preParePics = "asset/pics/preparePics/thePreparePic";
     const String iconPath = "asset/pics/icons_page1/Drill";
 
     return Scaffold(

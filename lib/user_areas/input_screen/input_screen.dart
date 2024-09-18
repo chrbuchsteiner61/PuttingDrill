@@ -3,6 +3,12 @@ import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
 import 'package:myapp/methods_and_helper/drills.dart';
+import 'package:myapp/user_areas/input_screen/input_box1.dart';
+import 'package:myapp/user_areas/input_screen/input_drop_down_widget.dart';
+
+import 'package:logger/logger.dart';
+
+var logger = Logger();
 
 class InputScreen extends StatefulWidget {
   final String appBarText;
@@ -38,7 +44,7 @@ class InputScreenState extends State<InputScreen> {
   final _formKey = GlobalKey<FormState>();
   int _selectedDistance = 0;
   List<int> numberOfExercise = [5, 6, 7, 8, 9, 10];
-  int _putts = 5;
+  int? _putts;
   int? _successfulPutts;
   double col1 = 180;
   double col2 = 70;
@@ -49,8 +55,11 @@ class InputScreenState extends State<InputScreen> {
     Color selectAreaColor = Theme.of(context).scaffoldBackgroundColor;
     InputDecoration inputDecoration = InputDecoration(
         border: InputBorder.none, fillColor: selectAreaColor, filled: true);
-    _selectedDistance = widget.aDrill.distance[0];
-    // Build the input screen widgetd
+
+    _selectedDistance = widget.aDrill.distances[0];
+    _putts = 5;
+
+    // Build the input screen
     return Scaffold(
       appBar: AppBar(title: Text(widget.appBarText)),
       body: Padding(
@@ -63,38 +72,14 @@ class InputScreenState extends State<InputScreen> {
                 child: Row(
                   children: <Widget>[
                     spaceBetween,
-                    SizedBox(
-                      width: col1,
-                      child: Text(
-                        widget.inputDrillCriteria1,
-                        style: Theme.of(context).textTheme.bodyMedium!,
-                      ),
-                    ),
-                    SizedBox(
-                      width: col2,
-                      child: DropdownButtonFormField<String>(
-                        style: Theme.of(context).textTheme.headlineMedium!,
-                        decoration: inputDecoration,
-                        value: _selectedDistance.toString(),
-                        onChanged: (String? newValue) {
-                          setState(() {
-                            _selectedDistance = newValue! as int;
-                          });
-                        },
-                        items: widget.aDrill.distance.map((int distance) {
-                          return DropdownMenuItem<String>(
-                            value: distance.toString(),
-                            child: Text(distance.toString()),
-                          );
-                        }).toList(),
-                        validator: (value) {
-                          if (value == null) {
-                            return 'Please select a distance';
-                          }
-                          return null;
-                        },
-                      ),
-                    ),
+                    InputBoxNo1(
+                        columnWidth: col1,
+                        inputDrillCriteria1: widget.inputDrillCriteria1),
+                    InputDropDownWidget(
+                        boxWidth: col2,
+                        inputDecoration: inputDecoration,
+                        choices: widget.aDrill.distances,
+                        errorMessage: widget.errorInputMessageNonEmptyNegativ),
                     spaceBetween,
                     SizedBox(
                       width: col3,
@@ -111,31 +96,14 @@ class InputScreenState extends State<InputScreen> {
                 child: Row(
                   children: <Widget>[
                     spaceBetween,
-                    SizedBox(
-                        width: col1,
-                        child: Text(
-                          widget.inputDrillCriteria2,
-                          style: Theme.of(context).textTheme.bodyMedium!,
-                        )),
-                    SizedBox(
-                      width: col2,
-                      child: DropdownButtonFormField<int>(
-                        style: Theme.of(context).textTheme.headlineMedium!,
-                        decoration: inputDecoration,
-                        value: _putts,
-                        onChanged: (int? newValue) {
-                          setState(() {
-                            _putts = newValue!;
-                          });
-                        },
-                        items: numberOfExercise.map((int attemps) {
-                          return DropdownMenuItem<int>(
-                            value: attemps,
-                            child: Text(attemps.toString()),
-                          );
-                        }).toList(),
-                      ),
-                    ),
+                    InputBoxNo1(
+                        columnWidth: col1,
+                        inputDrillCriteria1: widget.inputDrillCriteria2),
+                    InputDropDownWidget(
+                        boxWidth: col2,
+                        inputDecoration: inputDecoration,
+                        choices: numberOfExercise,
+                        errorMessage: widget.errorInputMessageNonEmptyNegativ),
                     spaceBetween,
                     SizedBox(
                       width: col3,
@@ -152,16 +120,9 @@ class InputScreenState extends State<InputScreen> {
                 child: Row(
                   children: <Widget>[
                     spaceBetween,
-                    ColoredBox(
-                      color: Colors.white,
-                      child: SizedBox(
-                        width: col1,
-                        child: Text(
-                          widget.inputDrillCriteria3,
-                          style: Theme.of(context).textTheme.bodyMedium!,
-                        ),
-                      ),
-                    ),
+                    InputBoxNo1(
+                        columnWidth: col1,
+                        inputDrillCriteria1: widget.inputDrillCriteria3),
                     SizedBox(
                       width: col2,
                       child: TextFormField(
@@ -181,7 +142,7 @@ class InputScreenState extends State<InputScreen> {
                           if (successfulPutts < 0) {
                             return widget.errorInputMessageNonEmptyNegativ;
                           }
-                          if (successfulPutts > _putts) {
+                          if (successfulPutts > _putts!) {
                             return 'Number of successful putts cannot be more than number of putts';
                           }
                           return null;
@@ -213,14 +174,15 @@ class InputScreenState extends State<InputScreen> {
                           if (_formKey.currentState!.validate()) {
                             _formKey.currentState!.save();
                             widget.aDrill.criteria1 = _selectedDistance;
-                            widget.aDrill.numberOfExercises = _putts;
-                            widget.aDrill.success = _successfulPutts!.toDouble();
+                            widget.aDrill.numberOfExercises = _putts!;
+                            widget.aDrill.success =
+                                _successfulPutts!.toDouble();
                             double successRate =
                                 widget.aDrill.calculateSuccessRate();
                             PuttingResult newResult = PuttingResult(
                               drillNo: widget.aDrill.drillNo,
                               criteria1: _selectedDistance,
-                              criteria2: _putts,
+                              criteria2: _putts!,
                               //unused criteria 3
                               criteria3: -99,
                               success: _successfulPutts!.toDouble(),

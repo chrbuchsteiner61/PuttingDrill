@@ -3,26 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
-import 'package:myapp/user_areas/input_screen.dart';
+import 'package:myapp/user_areas/input_screen/input_screen.dart';
 //import 'package:myapp/user_areas/results_screen.dart';
 import 'package:myapp/user_areas/results_test.dart';
 import 'package:myapp/methods_and_helper/drills.dart';
 
 class DrillLine extends StatelessWidget {
+  final Map<String, String> parameterForAllDrills;
   final String drillName;
   final String thePurpose;
   final String drillPicture;
-  final String preparationHeader;
-  final String countingHeader;
   final String aPreparationText;
   final String aCountingText;
   final String aPreparePicName;
   final String anExercisePicName;
   final ButtonStyle theButtonStyle;
-  final String buttonInputResultsText;
-  final String buttonViewResultsText;
-  final String inputAppBarText;
-  final String inputButtonText;
   final String aTask;
   final String inputDrillCriteria1;
   final String inputDrillCriteria2;
@@ -31,24 +26,18 @@ class DrillLine extends StatelessWidget {
   final String inputDrillInput2;
   final String inputDrillInput3;
   final Drills aDrill;
-  final String errorInputMessageNonEmptyNegativ;
 
   const DrillLine({
     super.key,
+    required this.parameterForAllDrills,
     required this.drillName,
     required this.thePurpose,
     required this.drillPicture,
-    required this.preparationHeader,
-    required this.countingHeader,
     required this.aPreparationText,
     required this.aCountingText,
     required this.aPreparePicName,
     required this.anExercisePicName,
     required this.theButtonStyle,
-    required this.buttonInputResultsText,
-    required this.buttonViewResultsText,
-    required this.inputAppBarText,
-    required this.inputButtonText,
     required this.aTask,
     required this.inputDrillCriteria1,
     required this.inputDrillCriteria2,
@@ -57,7 +46,6 @@ class DrillLine extends StatelessWidget {
     required this.inputDrillInput2,
     required this.inputDrillInput3,
     required this.aDrill,
-    required this.errorInputMessageNonEmptyNegativ,
   });
 
   @override
@@ -86,8 +74,8 @@ class DrillLine extends StatelessWidget {
                       drillName: drillName,
                       drillPurpose: thePurpose,
                       theTask: aTask,
-                      preparationHeader: preparationHeader,
-                      countingHeader: countingHeader,
+                      preparationHeader: parameterForAllDrills['preparationHeader'],
+                      countingHeader: parameterForAllDrills['countingHeader'],
                       preparePicName: aPreparePicName,
                       exercisePicName: anExercisePicName,
                       preparationText: aPreparationText,
@@ -113,8 +101,8 @@ class DrillLine extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => InputScreen(
-                      appBarText: inputAppBarText,
-                      buttonText: inputButtonText,
+                      appBarText: parameterForAllDrills['inputAppBarText'],
+                      buttonText: parameterForAllDrills['inputButtonText'],
                       inputDrillCriteria1: inputDrillCriteria1,
                       inputDrillCriteria2: inputDrillCriteria2,
                       inputDrillCriteria3: inputDrillCriteria3,
@@ -123,12 +111,12 @@ class DrillLine extends StatelessWidget {
                       drillInput3: inputDrillInput3,
                       aDrill: aDrill,
                       errorInputMessageNonEmptyNegativ:
-                          errorInputMessageNonEmptyNegativ,
+                          parameterForAllDrills['errorInputMessageNonEmptyNegativ'],
                     ),
                   ),
                 );
               },
-              child: Text(buttonInputResultsText),
+              child: Text(parameterForAllDrills['buttonInputResultsText']!),
             ),
           ),
           spaceBetween,
@@ -143,7 +131,7 @@ class DrillLine extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const ResultsTest()),
                 );
               },
-              child: Text(buttonViewResultsText),
+              child: Text(parameterForAllDrills['buttonViewResultsText']!),
             ),
           ),
         ],

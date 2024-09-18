@@ -1,40 +1,35 @@
 import 'package:flutter/material.dart';
 
-class InputDropDownWidget extends StatefulWidget {
+class InputDropDownWidget extends StatelessWidget {
   final double boxWidth;
   final InputDecoration inputDecoration;
   final List<int> choices;
   final String errorMessage;
 
-  const InputDropDownWidget(
-      {super.key,
-      required this.boxWidth,
-      required this.inputDecoration,
-      required this.choices,
-      required this.errorMessage});
-
-  @override
-  InputDropDownWidgetState createState() => InputDropDownWidgetState();
-}
-
-class InputDropDownWidgetState extends State<InputDropDownWidget> {
-  int theDropDownValue = 0;
+  const InputDropDownWidget({
+    super.key,
+    required this.boxWidth,
+    required this.inputDecoration,
+    required this.choices,
+    required this.errorMessage,
+  });
 
   @override
   Widget build(BuildContext context) {
-    theDropDownValue = widget.choices[0];
+    int theDropDownValue = 0;
+    theDropDownValue = choices[0];
     return SizedBox(
-      width: widget.boxWidth,
+      width: boxWidth,
       child: DropdownButtonFormField<int>(
         style: Theme.of(context).textTheme.headlineMedium!,
-        decoration: widget.inputDecoration,
+        decoration: inputDecoration,
         value: theDropDownValue,
-        onChanged: (int? newValue) {
-          setState(() {
-            theDropDownValue = newValue!;
-          });
+        onChanged: (value) {
+          if (value != null) {
+            theDropDownValue = value;
+          }
         },
-        items: widget.choices.map((int aChoice) {
+        items: choices.map((int aChoice) {
           return DropdownMenuItem<int>(
             value: aChoice,
             child: Text(aChoice.toString()),
@@ -42,7 +37,7 @@ class InputDropDownWidgetState extends State<InputDropDownWidget> {
         }).toList(),
         validator: (value) {
           if (value == null) {
-            return widget.errorMessage;
+            return errorMessage;
           }
           return null;
         },

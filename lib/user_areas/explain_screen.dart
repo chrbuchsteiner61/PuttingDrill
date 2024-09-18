@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 
 class ExplainScreen extends StatelessWidget {
@@ -7,8 +8,7 @@ class ExplainScreen extends StatelessWidget {
   final String countingHeader;
   final String preparationText;
   final String countingText;
-  final String preparePicName;
-  final String exercisePicName;
+  final String preparePic;
   final String drillPurpose;
   final String theTask;
 
@@ -19,13 +19,15 @@ class ExplainScreen extends StatelessWidget {
       required this.countingHeader,
       required this.preparationText,
       required this.countingText,
-      required this.preparePicName,
-      required this.exercisePicName,
+      required this.preparePic,
       required this.drillPurpose,
       required this.theTask});
 
   @override
   Widget build(BuildContext context) {
+    const pictureWidth = 300.0;
+    const pictureHeight = 150.0;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -55,19 +57,21 @@ class ExplainScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyMedium!,
             ),
             spaceAfter,
-            Row(
-              children: [
-                Image(
-                  image: AssetImage(preparePicName),
-                  width: 200,
-                  height: 100,
-                ),
-                Image(
-                  image: AssetImage(exercisePicName),
-                  width: 200,
-                  height: 100,
-                ),
-              ],
+            SizedBox(
+              height: pictureHeight,
+              width: pictureWidth,
+              child: SvgPicture.asset(
+                preparePic,
+                semanticsLabel: 'Icon for Drill',
+                fit: BoxFit.fill,
+                width: pictureWidth,
+                height: pictureHeight,
+              ),
+            ),
+            Image(
+              image: AssetImage(preparePic),
+              width: 300,
+              height: 150,
             ),
             spaceAfter,
             Text(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
@@ -9,14 +10,12 @@ import 'package:myapp/user_areas/results_test.dart';
 import 'package:myapp/methods_and_helper/drills.dart';
 
 class DrillLine extends StatelessWidget {
-  final Map<String, String> parameterForAllDrills;
   final String drillName;
   final String thePurpose;
   final String drillPicture;
   final String aPreparationText;
   final String aCountingText;
-  final String aPreparePicName;
-  final String anExercisePicName;
+  final String aPreparePic;
   final ButtonStyle theButtonStyle;
   final String aTask;
   final String inputDrillCriteria1;
@@ -29,14 +28,12 @@ class DrillLine extends StatelessWidget {
 
   const DrillLine({
     super.key,
-    required this.parameterForAllDrills,
     required this.drillName,
     required this.thePurpose,
     required this.drillPicture,
     required this.aPreparationText,
     required this.aCountingText,
-    required this.aPreparePicName,
-    required this.anExercisePicName,
+    required this.aPreparePic,
     required this.theButtonStyle,
     required this.aTask,
     required this.inputDrillCriteria1,
@@ -53,7 +50,7 @@ class DrillLine extends StatelessWidget {
     const double elementHeight = 50.0;
     const SizedBox aSpacer = SizedBox(width: 8, height: elementHeight + 8);
 
-    // final localizations = AppLocalizations.of(context);
+    final localizations = AppLocalizations.of(context);
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -74,10 +71,9 @@ class DrillLine extends StatelessWidget {
                       drillName: drillName,
                       drillPurpose: thePurpose,
                       theTask: aTask,
-                      preparationHeader: parameterForAllDrills['preparationHeader'],
-                      countingHeader: parameterForAllDrills['countingHeader'],
-                      preparePicName: aPreparePicName,
-                      exercisePicName: anExercisePicName,
+                      preparationHeader: localizations!.preparationHeader,
+                      countingHeader: localizations.countingHeader,
+                      preparePic: aPreparePic,
                       preparationText: aPreparationText,
                       countingText: aCountingText,
                     ),
@@ -101,8 +97,8 @@ class DrillLine extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => InputScreen(
-                      appBarText: parameterForAllDrills['inputAppBarText'],
-                      buttonText: parameterForAllDrills['inputButtonText'],
+                      appBarText: localizations.inputAppBarText,
+                      buttonText: localizations.inputButtonText,
                       inputDrillCriteria1: inputDrillCriteria1,
                       inputDrillCriteria2: inputDrillCriteria2,
                       inputDrillCriteria3: inputDrillCriteria3,
@@ -111,12 +107,12 @@ class DrillLine extends StatelessWidget {
                       drillInput3: inputDrillInput3,
                       aDrill: aDrill,
                       errorInputMessageNonEmptyNegativ:
-                          parameterForAllDrills['errorInputMessageNonEmptyNegativ'],
+                          localizations.errorInputMessageNonEmptyNegativ,
                     ),
                   ),
                 );
               },
-              child: Text(parameterForAllDrills['buttonInputResultsText']!),
+              child: Text(localizations!.inputResults),
             ),
           ),
           spaceBetween,
@@ -131,7 +127,7 @@ class DrillLine extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const ResultsTest()),
                 );
               },
-              child: Text(parameterForAllDrills['buttonViewResultsText']!),
+              child: Text(localizations.viewResults),
             ),
           ),
         ],

@@ -21,8 +21,8 @@
   "task1": "Putt into the hole.\nHit five or more balls from a short distance.",
   "task2": "Putt at nearest to the hole.\nHit five or more balls from a long distance.",
   "task3": "Putt through the gates.\nHit five or more balls through both gates.",
-  "task4": "",
-  "task5": "",
+  "task4": "none",
+  "task5": "none",
 
   "thePreparation_1": "Choose a distance for the exercise.\nChoose between one, two or three club lengths.\nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.",
   "thePreparation_2": "Choose a distance for the exercise. \nChoose between six, nine or 12 club lengths. \nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.", 

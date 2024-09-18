@@ -61,14 +61,9 @@ flutter:
     - asset/pics/Symbol_Drill3.png
     - asset/pics/Symbol_Drill4.png
     - asset/pics/Symbol_Drill5.png
-    - asset/pics/thePreparePic1.jpg
-    - asset/pics/thePreparePic2.jpg
-    - asset/pics/thePreparePic3.jpg
-    - asset/pics/thePreparePic4.jpg
-    - asset/pics/thePreparePic5.jpg
-    - asset/pics/theExercisePic1.png
-    - asset/pics/theExercisePic2.png
-    - asset/pics/theExercisePic3.png
-    - asset/pics/theExercisePic4.png
-    - asset/pics/theExercisePic5.png
+    - asset/pics/perparePics/thePreparePic1.svg
+    - asset/pics/perparePics/thePreparePic2.svg
+    - asset/pics/perparePics/thePreparePic3.svg
+    - asset/pics/perparePics/thePreparePic4.svg
+    - asset/pics/perparePics/thePreparePic5.svg
 

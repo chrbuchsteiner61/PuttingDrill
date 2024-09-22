@@ -1,0 +1,10 @@
+svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+    <!-- Putter shaft -->
+    <rect x="97" y="32" transform= "rotate(13, -5, 92)" width="2" height="49" fill="white" />
+
+    <!-- Putter grip -->
+    <rect x="97" y="54" transform = "rotate(13,95, 100)" width="3" height="15" fill="white" />
+
+    <!-- Putter head -->
+    <rect x="90" y="102" width="11" height="3" rx="1" ry="1" fill="white" />
+</svg>

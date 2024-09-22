@@ -13,7 +13,7 @@ class AppTheme {
             fontSize: 22.0, fontWeight: FontWeight.bold, color: Colors.white),
       ),
       scaffoldBackgroundColor: const Color.fromARGB(255, 208, 243, 218),
-      primarySwatch: Colors.blue,
+      primarySwatch: Colors.lightBlue,
       colorScheme: ColorScheme.fromSeed(
         seedColor: Colors.green,
         primary: Colors.green,

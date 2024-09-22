@@ -45,13 +45,13 @@ class ResultsChart extends StatelessWidget {
     for (var result in results!) {
       double dateInMillis = DateTime.parse(result.dateOfPractice).millisecondsSinceEpoch.toDouble();
 
-      /* if (result.distance == 1) {
+      if (result.criteria1 == 1) {
         spots1m.add(FlSpot(dateInMillis, result.successRate));
-      } else if (result.distance == 2) {
+      } else if (result.criteria1 == 2) {
         spots2m.add(FlSpot(dateInMillis, result.successRate));
-      } else if (result.distance == 3) {
+      } else if (result.criteria1 == 3) {
         spots3m.add(FlSpot(dateInMillis, result.successRate));
-      } */
+      } 
     }
 
     return Padding(

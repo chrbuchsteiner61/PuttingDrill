@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const String version = '0.82/ 01.09.2024';
 
-const infoDrawerBackgroundColor = Colors.indigo;
+const infoDrawerBackgroundColor = Colors.lightBlue;
 
 const SizedBox spaceBetween = SizedBox(width: 8);
 const SizedBox spaceAfter = SizedBox(height: 8);

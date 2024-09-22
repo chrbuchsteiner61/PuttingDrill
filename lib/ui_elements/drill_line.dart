@@ -5,8 +5,8 @@ import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
 import 'package:myapp/user_areas/input_screen/input_screen.dart';
-//import 'package:myapp/user_areas/results_screen.dart';
-import 'package:myapp/user_areas/results_test.dart';
+import 'package:myapp/user_areas/results_screen.dart';
+//import 'package:myapp/user_areas/results_test.dart';
 import 'package:myapp/methods_and_helper/drills.dart';
 
 class DrillLine extends StatelessWidget {
@@ -124,7 +124,7 @@ class DrillLine extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ResultsTest()),
+                  MaterialPageRoute(builder: (context) => const ResultsScreen()),
                 );
               },
               child: Text(localizations.viewResults),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
-import 'package:myapp/methods_and_helper/test_data.dart';
 import 'package:myapp/ui_elements/input_row.dart';
 import 'package:myapp/methods_and_helper/drills.dart';
 import 'package:myapp/user_areas/input_screen/input_box1.dart';
@@ -227,35 +226,7 @@ class InputScreenState extends State<InputScreen> {
                         child: const Text('Save Result'),
                       ),
                     ),
-                    spaceBetween,
-                    SizedBox(
-                      width: 150.0,
-                      height: 45.0,
-                      child: ElevatedButton(
-                        style: appsButtonStyle,
-                        onPressed: () async {
-                          DatabaseHelper().deleteDB();
-                        },
-                        child: const Text('Delete Database'),
-                      ),
-                    ),
                   ],
-                ),
-              ),
-              SizedBox(
-                width: 150.0,
-                height: 45.0,
-                child: ElevatedButton(
-                  style: appsButtonStyle,
-                  onPressed: () async {
-                    List<PuttingResult> resultsForTest = generateTestData(50);
-                    for (var result in resultsForTest) {
-                      logger.d(result.criteria1 + result.criteria2);
-                      logger.d(result.dateOfPractice);
-                      await DatabaseHelper().insertResult(result);
-                    }
-                  },
-                  child: const Text('Add Test Data'),
                 ),
               ),
             ],

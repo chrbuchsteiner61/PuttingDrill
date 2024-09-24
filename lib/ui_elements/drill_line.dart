@@ -124,7 +124,9 @@ class DrillLine extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ResultsScreen()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ResultsScreen(numberOfDrill: aDrill.drillNo)),
                 );
               },
               child: Text(localizations.viewResults),

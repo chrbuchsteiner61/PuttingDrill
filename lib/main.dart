@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:myapp/dev_area/test_screen.dart';
 import 'package:myapp/methods_and_helper/drills.dart';
 
 import 'package:myapp/user_areas/the_info_drawer.dart';
@@ -195,6 +196,25 @@ class StartingPage extends StatelessWidget {
                 inputDrillInput2: localizations.inputDrill5Input2,
                 inputDrillInput3: localizations.inputDrill5Input3,
                 aDrill: drill5,
+              ),
+
+              // kill for production
+              const SizedBox(width: 10.0, height: 40.0),
+              SizedBox(
+                width: 150.0,
+                height: 45.0,
+                child: ElevatedButton(
+                  style: appsButtonStyle,
+                  onPressed: () async {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TestScreen(),
+                      ),
+                    );
+                  },
+                  child: const Text('Manage Test Data'),
+                ),
               ),
             ],
           ),

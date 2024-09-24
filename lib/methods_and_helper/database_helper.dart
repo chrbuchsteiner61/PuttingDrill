@@ -43,16 +43,12 @@ class DatabaseHelper {
   factory DatabaseHelper() => _instance;
   static Database? _database;
 
- 
-
   DatabaseHelper._internal();
 
   Future<Database> get database async {
     if (Platform.isWindows || Platform.isLinux) {
       // Initialize FFI
       sqfliteFfiInit();
-      
-      
     }
     if (_database != null) return _database!;
     _database = await _initDatabase();

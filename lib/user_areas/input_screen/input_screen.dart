@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/methods_and_helper/test_data.dart';
 import 'package:myapp/ui_elements/input_row.dart';
 import 'package:myapp/methods_and_helper/drills.dart';
 import 'package:myapp/user_areas/input_screen/input_box1.dart';
@@ -54,9 +55,9 @@ class InputScreenState extends State<InputScreen> {
   List<int> numberOfExercise = [5, 6, 7, 8, 9, 10];
   int _putts = 5;
   int _successfulPutts = 5;
-  double col1 = 180;
-  double col2 = 70;
-  double col3 = 200;
+  double col1 = 130;
+  double col2 = 60;
+  double col3 = 120;
 
   @override
   Widget build(BuildContext context) {
@@ -228,7 +229,7 @@ class InputScreenState extends State<InputScreen> {
                     ),
                     spaceBetween,
                     SizedBox(
-                      width: 250.0,
+                      width: 150.0,
                       height: 45.0,
                       child: ElevatedButton(
                         style: appsButtonStyle,
@@ -239,6 +240,22 @@ class InputScreenState extends State<InputScreen> {
                       ),
                     ),
                   ],
+                ),
+              ),
+              SizedBox(
+                width: 150.0,
+                height: 45.0,
+                child: ElevatedButton(
+                  style: appsButtonStyle,
+                  onPressed: () async {
+                    List<PuttingResult> resultsForTest = generateTestData(50);
+                    for (var result in resultsForTest) {
+                      logger.d(result.criteria1 + result.criteria2);
+                      logger.d(result.dateOfPractice);
+                      await DatabaseHelper().insertResult(result);
+                    }
+                  },
+                  child: const Text('Add Test Data'),
                 ),
               ),
             ],

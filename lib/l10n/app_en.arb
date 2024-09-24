@@ -24,15 +24,15 @@
   "task4": "none",
   "task5": "none",
 
-  "thePreparation_1": "Choose a distance for the exercise.\nChoose between one, two or three club lengths.\nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.\nLook at the example for two club lengnth",
-  "thePreparation_2": "Choose a distance for the exercise. \nChoose between six, nine or 12 club lengths. \nIf your putter is about 34 inches long, that is 0.86m or 2.83ft.", 
-  "thePreparation_3": "Take four tees and build two gates,\nclubhead width and a distance of one or two club length.", 
+  "thePreparation_1": "Choose a distance for the exercise.\nChoose a distance of one, two or three club lengths.\nIf your putter is about 34 inches long, the distance of one club is about 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
+  "thePreparation_2": "Choose a distance for the exercise.\nChoose a distance of six, nine or 12 club lengths. \nIf your putter is about 34 inches long, the distance of one club is about 0.86m or 2.83ft.\nLook at the example for a distance of six clubs.", 
+  "thePreparation_3": "Take four tees. Build two gates, clubhead width.\nChoose a distance between the gates of one, two or three club lengths.\nIf your putter is about 34 inches long, the distance of one club is about 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.", 
   "thePreparation_4": "Take some tees and ..4",
   "thePreparation_5": "Take some tees and ..5",
 
   "theExplainCounting_1": "Count your strokes and \ncount your succesfull puts.",
   "theExplainCounting_2": "Count your strokes, \nmeassure the distance from the position of the balls to the hole \nwith your feet and sum up.",
-  "theExplainCounting_3": "Count every stroke and \ncount every ball going thru both gates.",
+  "theExplainCounting_3": "Count every stroke and \ncount every ball going through both gates.",
   "theExplainCounting_4": "Count every stroke and count your ..4",
   "theExplainCounting_5": "Count every stroke and count your ..5",
 
@@ -42,30 +42,30 @@
 
   "errorInputMessageNonEmptyNegativ": "Please enter a valid non-negativ number",
   
-  "inputDrill1Criteria1": "Distance to the hole",
+  "inputDrill1Criteria1": "Distance to\nthe hole",
   "inputDrill1Criteria2": "Strokes",
   "inputDrill1Criteria3": "Successfull",
   
-  "inputDrill1Input1": "meassured in club lengths",
+  "inputDrill1Input1": "club lengths",
   "inputDrill1Input2": "",
-  "inputDrill1Input3": "Number of",
+  "inputDrill1Input3": "number of",
 
 
-  "inputDrill2Criteria1": "Distance to the hole",
+  "inputDrill2Criteria1": "Distance to\nthe hole",
   "inputDrill2Criteria2": "Strokes",
-  "inputDrill2Criteria3": "Sum of missing distance to the hole",
+  "inputDrill2Criteria3": "Sum of missing\ndistance",
   
-  "inputDrill2Input1": "meassured in club lengths",
+  "inputDrill2Input1": "club lengths",
   "inputDrill2Input2": "",
-  "inputDrill2Input3": "meassured in feet",
+  "inputDrill2Input3": "feet",
 
-  "inputDrill3Criteria1": "Distance to the hole",
+  "inputDrill3Criteria1": "Distance\nbetween the gates",
   "inputDrill3Criteria2": "Strokes",
-  "inputDrill3Criteria3": "Missing the hole",
+  "inputDrill3Criteria3": "Through\nboth gates",
   
-  "inputDrill3Input1": "meassured in club lengths",
+  "inputDrill3Input1": "club lengths",
   "inputDrill3Input2": "",
-  "inputDrill3Input3": "Sum of missed distances in feet",
+  "inputDrill3Input3": "number of",
 
   "inputDrill4Criteria1": "4Distance",
   "inputDrill4Criteria2": "4Strokes",

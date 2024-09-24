@@ -1,12 +1,33 @@
-<svg width="300" height="150">
-  <path style="fill:#0f0;stroke-width:.2" d="M0 0h100v100H0z"/>
-  <ellipse style="fill:#fff;stroke-width:.3" cx="50" cy="60" rx="48" ry="32"/>
-  <ellipse style="fill:#00f;stroke-width:.3" cx="50" cy="60" rx="42" ry="28"/>
-  <ellipse style="fill:#fff;stroke-width:.3" cx="50" cy="60" rx="36" ry="24"/>
-  <ellipse style="fill:#00f;stroke-width:.3" cx="50" cy="60" rx="30" ry="20"/>
-  <ellipse style="fill:#fff;stroke-width:.3" cx="50" cy="60" rx="24" ry="16"/>
-  <ellipse style="fill:#00f;stroke-width:.3" cx="50" cy="60" rx="18" ry="12"/>
-  <path stroke="#fff" stroke-width="3" d="m50 60 10-45"/>
-  <path style="fill:#ff0;stroke-width:.27" transform="rotate(5)" d="M61 10h12v7.5H61z"/>
-  <ellipse style="fill:#fff;stroke-width:.1" cx="50" cy="60" rx="4.5" ry="3"/>
+<svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="150" fill="green"/>
+
+<!--golfballs-->
+  <circle cx="90" cy="120" r="5" fill="white"/>
+ 
+<!-- tees -->
+  <circle cx="105" cy="100" r="3" fill="yellow"/>
+  <circle cx="120" cy="120" r="3" fill="yellow"/>
+  <circle cx="217" cy="48" r="3" fill="yellow"/>
+  <circle cx="231" cy="67" r="3" fill="yellow"/>
+<!--Putter 1-->
+  <g fill="white" transform="scale (1.2 1.2) rotate(50, 55, 55)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+<!--Putter 2-->
+  <g fill="white" transform="scale (1.2 1.2) rotate(50, 105, 95)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+
+
+  <text x="20" y="40" fill="white" stroke="white" font-size="18">2 x</text>
 </svg>

@@ -27,13 +27,9 @@ class ResultsScreen extends StatelessWidget {
             return Center(child: Text('Error: ${snapshot.error}'));
           }
           results = snapshot.data;
-          return Column(
-            children: [
-              ResultsChart(
-                results: results,
-                drillNo: numberOfDrill,
-              ),
-            ],
+          return ResultsChart(
+            results: results,
+            drillNo: numberOfDrill,
           );
         },
       ),

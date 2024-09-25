@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 //import 'package:intl/intl.dart';
 import '../methods_and_helper/database_helper.dart';
@@ -15,7 +13,7 @@ class TestChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     dynamic results;
-    //int aDrill = 1;
+    
     return Scaffold(
       appBar: AppBar(title: const Text('Putting Results')),
       body: FutureBuilder<List<PuttingResult>>(
@@ -46,8 +44,8 @@ class ChartFromDB extends StatelessWidget {
     logger.d("Anzahl der Elemente ${results!.length}");
 
     List<double> exerciseTime = [];
-    double logExerciseTime = 0;
-    double deltaExerciseTime = 0.0;
+
+    //double deltaExerciseTime = 0.0;
     List<double> successRate = [];
     double dateInMillis = 0.0;
     List<FlSpot> xyPoints = [];
@@ -68,24 +66,19 @@ class ChartFromDB extends StatelessWidget {
 // Anpassung für den Test
     int lengthOfList = exerciseTime.length;
     exerciseTime.sort();
-    deltaExerciseTime = exerciseTime.last - exerciseTime.first;
+    //deltaExerciseTime = exerciseTime.last - exerciseTime.first;
 
     for (int i = 0; i < lengthOfList; i++) {
-      logExerciseTime = exerciseTime.last *
-          (1 - log((exerciseTime.last - exerciseTime[i]) / deltaExerciseTime));
-     
-logger.d("logExerciseTime ${logExerciseTime}");
-
-      xyPoints.add(FlSpot(logExerciseTime, successRate[i]));
+      xyPoints.add(FlSpot(exerciseTime[i], successRate[i]));
     }
 
     LineChartBarData xyValue = LineChartBarData(
       spots: xyPoints,
       isStepLineChart: false,
       isCurved: true,
-      barWidth: 2.0,
-      color: Colors.yellow,
-      belowBarData: BarAreaData(show: false),
+      barWidth: 3.0,
+      color: Colors.red,
+      belowBarData: BarAreaData(show: true, color: Colors.red),
     );
 
     return LineChart(LineChartData(

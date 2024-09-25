@@ -5,9 +5,19 @@ List<PuttingResult> generateTestData(int count) {
   final random = Random();
   final List<PuttingResult> testData = [];
 
+  List<String> ofDates = [];
+
+  for (int i = 0; i < count; i++) {
+    ofDates.add(DateTime.now()
+        .subtract(Duration(days: random.nextInt(30)))
+        .toIso8601String());
+  }
+
+  ofDates.sort();
+
   for (int i = 0; i < count; i++) {
     final successRate = random.nextDouble();
-    
+
     PuttingResult puttingResult = PuttingResult(
       drillNo: random.nextInt(2) + 1,
       criteria1: random.nextInt(2),
@@ -15,11 +25,10 @@ List<PuttingResult> generateTestData(int count) {
       criteria3: random.nextInt(9) + 1,
       success: random.nextDouble(),
       successRate: (successRate * 100),
-      dateOfPractice: DateTime.now().subtract(Duration(days: random.nextInt(30))).toIso8601String(),
+      dateOfPractice: ofDates[i],
     );
 
     testData.add(puttingResult);
-      
   }
 
   return testData;

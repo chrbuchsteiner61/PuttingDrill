@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import '../../methods_and_helper/database_helper.dart';
+
+import '../methods_and_helper/database_helper.dart';
+
+import 'package:logger/logger.dart';
+
+var logger = Logger();
 
 class ResultsTest extends StatelessWidget {
   const ResultsTest({super.key});
@@ -13,7 +18,7 @@ class ResultsTest extends StatelessWidget {
         future: DatabaseHelper().getResults(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: Text('Loading'));
           }
           if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
@@ -40,34 +45,34 @@ class ResultsFromDB extends StatelessWidget {
     int dateInMillis = 0;
     var exceriseDateTime = "";
     int drillNo = 0;
-    double success = 0;
+
     int criteria1 = 0;
-    int criteria2 = 0;
+
     //int criteria3 = 0;
     double successrate = 0;
 
     List<String> someLines = [];
 
+    logger.d("Anzahl der Elemente ${results!.length}");
+
     for (var result in results!) {
       dateInMillis =
           DateTime.parse(result.dateOfPractice).millisecondsSinceEpoch;
-      exceriseDateTime = DateFormat('MM/dd/yyyy, hh:mm a')
+      exceriseDateTime = DateFormat('MM/dd/yy, hh:mm a')
           .format(DateTime.fromMillisecondsSinceEpoch(dateInMillis));
       drillNo = result.drillNo;
       criteria1 = result.criteria1;
-      criteria2 = result.criteria2;
-     // criteria3 = result.criteria3;
-      success = result.success;
-      successrate = result.successRate;
+
+      successrate = result.successRate.roundToDouble();
       someLines.add(
-          "$exceriseDateTime\n$drillNo\n$criteria1\n$criteria2\n$success\n$successrate");
+          "$exceriseDateTime Drill $drillNo Criteria1 $criteria1 Erfolg $successrate");
     }
 
     return Column(
       children: <Widget>[
         for (var i in someLines)
           Padding(
-            padding: const EdgeInsets.all(36.0),
+            padding: const EdgeInsets.all(3.0),
             child: Text(i),
           ),
       ],

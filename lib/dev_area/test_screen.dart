@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
+
+import 'package:myapp/dev_area/results_test.dart';
+import 'package:myapp/dev_area/test_chart.dart';
 import 'package:myapp/dev_area/test_data.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
-
-var logger = Logger();
 
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});
@@ -42,6 +42,40 @@ class TestScreen extends StatelessWidget {
                   DatabaseHelper().deleteDB();
                 },
                 child: const Text('Delete Database'),
+              ),
+            ),
+            spaceBetween,
+            SizedBox(
+              width: 150.0,
+              height: 45.0,
+              child: ElevatedButton(
+                style: appsButtonStyle,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ResultsTest(),
+                    ),
+                  );
+                },
+                child: const Text('Show Database'),
+              ),
+            ),
+            spaceBetween,
+            SizedBox(
+              width: 150.0,
+              height: 45.0,
+              child: ElevatedButton(
+                style: appsButtonStyle,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TestChart(aDrill: 1),
+                    ),
+                  );
+                },
+                child: const Text('Show chart'),
               ),
             ),
           ],

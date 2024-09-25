@@ -9,7 +9,7 @@ import 'package:myapp/user_areas/the_info_drawer.dart';
 import 'package:myapp/methods_and_helper/language_helper.dart';
 import 'package:myapp/ui_elements/drill_line.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
-import 'package:myapp/theme_data.dart';
+import 'package:myapp/methods_and_helper/theme_data.dart';
 
 void main() => runApp(const PuttingDrillApp());
 

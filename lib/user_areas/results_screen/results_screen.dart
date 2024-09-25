@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:myapp/user_areas/results_screen/get_results_data.dart';
 import '../../methods_and_helper/database_helper.dart';
 import 'package:intl/intl.dart';
 import 'package:logger/logger.dart';
@@ -13,23 +14,25 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    dynamic results;
     return Scaffold(
       appBar: AppBar(title: const Text('Putting Results')),
       body: FutureBuilder<List<PuttingResult>>(
         future: DatabaseHelper().getResults(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: Text("Loading..."));
           }
           if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           }
-          final results = snapshot.data;
+          results = snapshot.data;
           return Column(
             children: [
-              Expanded(
-                  child:
-                      ResultsChart(results: results, drillNo: numberOfDrill)),
+              ResultsChart(
+                results: results,
+                drillNo: numberOfDrill,
+              ),
             ],
           );
         },
@@ -43,31 +46,44 @@ class ResultsChart extends StatelessWidget {
   final int drillNo;
 
   const ResultsChart({required this.results, required this.drillNo, super.key});
+  // const ResultsChart(this.results, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<FlSpot> pointsCriteria1 = [];
-    List<FlSpot> pointsCriteria2 = [];
-    List<FlSpot> pointsCriteria3 = [];
+    List<FlSpot> pointsCriteria11 = [];
+    List<FlSpot> pointsCriteria12 = [];
+    List<FlSpot> pointsCriteria13 = [];
+
+    int drillNo = 1;
+    int criteria1 = 0;
+    double successRate = 0.0;
 
     logger.d("Anzahl Ergebnisse  ${results!.length}");
 
     for (var result in results!) {
-      logger.d("Aus DB ${result.drillNo}  aus Oberflaeche $drillNo");
-
       if (result.drillNo == drillNo) {
         double dateInMillis = DateTime.parse(result.dateOfPractice)
             .millisecondsSinceEpoch
             .toDouble();
-        if (result.criteria1 == 1) {
-          pointsCriteria1.add(FlSpot(dateInMillis, result.successRate));
-        } else if (result.criteria1 == 2) {
-          pointsCriteria2.add(FlSpot(dateInMillis, result.successRate));
-        } else if (result.criteria1 == 3) {
-          pointsCriteria3.add(FlSpot(dateInMillis, result.successRate));
+        criteria1 = result.criteria1;
+        successRate = result.successRate;
+
+        switch (criteria1) {
+          case 1:
+            pointsCriteria11.add(FlSpot(dateInMillis, successRate));
+          case 2:
+            pointsCriteria12.add(FlSpot(dateInMillis, successRate));
+          case 3:
+            pointsCriteria13.add(FlSpot(dateInMillis, successRate));
+          default:
+            {}
         }
       }
     }
+
+    logger.d("Laenge 1 ${pointsCriteria11.length}");
+    logger.d("Laenge 2 ${pointsCriteria12.length}");
+    logger.d("Laenge 3 ${pointsCriteria13.length}");
 
     return Padding(
       padding: const EdgeInsets.all(36.0),
@@ -77,7 +93,7 @@ class ResultsChart extends StatelessWidget {
             bottomTitles: AxisTitles(
               sideTitles: SideTitles(
                 showTitles: true,
-                interval: calculateBottomInterval(results!),
+                interval: 1.0,
                 getTitlesWidget: (value, meta) {
                   return SideTitleWidget(
                     axisSide: meta.axisSide,
@@ -116,46 +132,10 @@ class ResultsChart extends StatelessWidget {
             ),
           ),
           borderData: FlBorderData(show: true),
-          lineBarsData: [
-            LineChartBarData(
-              spots: pointsCriteria1,
-              isStepLineChart: true,
-              barWidth: 3,
-              color: Colors.yellow,
-              belowBarData: BarAreaData(show: false),
-            ),
-            LineChartBarData(
-              spots: pointsCriteria2,
-              isStepLineChart: true,
-              isCurved: true,
-              barWidth: 3,
-              color: Colors.red,
-              belowBarData: BarAreaData(show: false),
-            ),
-            LineChartBarData(
-              spots: pointsCriteria3,
-              //  isStepLineChart: true,
-              isCurved: true,
-              barWidth: 3,
-              color: Colors.blue,
-              belowBarData: BarAreaData(show: false),
-            ),
-          ],
+          lineBarsData: getResultsData(
+              pointsCriteria11, pointsCriteria12, pointsCriteria13),
         ),
       ),
     );
   }
-
-  double calculateBottomInterval(List<PuttingResult> results) {
-    if (results.length < 2) {
-      return 1;
-    }
-    double totalMillis = DateTime.parse(results.last.dateOfPractice)
-            .millisecondsSinceEpoch
-            .toDouble() -
-        DateTime.parse(results.first.dateOfPractice)
-            .millisecondsSinceEpoch
-            .toDouble();
-    return totalMillis / 2; // Divide by the number of intervals you want
-  }
-}// TODO Implement this library.
+}

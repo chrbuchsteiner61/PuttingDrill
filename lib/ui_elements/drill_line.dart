@@ -6,7 +6,7 @@ import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
 import 'package:myapp/user_areas/input_screen/input_screen.dart';
 import 'package:myapp/user_areas/results_screen/results_screen.dart';
-//import 'package:myapp/user_areas/results_test.dart';
+// import 'package:myapp/user_areas/results_screen/results_test.dart';
 import 'package:myapp/methods_and_helper/drills.dart';
 
 class DrillLine extends StatelessWidget {
@@ -117,21 +117,21 @@ class DrillLine extends StatelessWidget {
           ),
           spaceBetween,
           SizedBox(
-            height: elementHeight,
-            width: 70.0,
-            child: ElevatedButton(
-              style: theButtonStyle,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          ResultsScreen(numberOfDrill: aDrill.drillNo)),
-                );
-              },
-              child: Text(localizations.viewResults),
-            ),
-          ),
+              height: elementHeight,
+              width: 70.0,
+              child: ElevatedButton(
+                style: theButtonStyle,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ResultsScreen(numberOfDrill: aDrill.drillNo,),
+                    ),
+                  );
+                },
+                child: Text(localizations.viewResults),
+              ),
+              ),
         ],
       ),
     );

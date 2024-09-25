@@ -1,6 +1,5 @@
-import 'dart:io';
-//import 'package:sqflite/sqflite.dart';
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+import 'package:sqflite/sqflite.dart';
+//import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 import 'package:path/path.dart';
 
 class PuttingResult {
@@ -46,10 +45,7 @@ class DatabaseHelper {
   DatabaseHelper._internal();
 
   Future<Database> get database async {
-    if (Platform.isWindows || Platform.isLinux) {
-      // Initialize FFI
-      sqfliteFfiInit();
-    }
+    
     if (_database != null) return _database!;
     _database = await _initDatabase();
     return _database!;

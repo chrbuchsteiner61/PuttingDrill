@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/dev_area/another_chart.dart';
 
 import 'package:myapp/dev_area/results_test.dart';
 import 'package:myapp/dev_area/test_chart.dart';
@@ -76,6 +77,23 @@ class TestScreen extends StatelessWidget {
                   );
                 },
                 child: const Text('Show chart'),
+              ),
+            ),
+            spaceBetween,
+            SizedBox(
+              width: 150.0,
+              height: 45.0,
+              child: ElevatedButton(
+                style: appsButtonStyle,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AnotherChart(),
+                    ),
+                  );
+                },
+                child: const Text('Show histogram'),
               ),
             ),
           ],

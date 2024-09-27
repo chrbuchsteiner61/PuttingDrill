@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/methods_and_helper/database_helper.dart';
 //import 'package:intl/intl.dart';
-import '../methods_and_helper/database_helper.dart';
+
 import 'package:fl_chart/fl_chart.dart';
 import 'package:logger/logger.dart';
 
 var logger = Logger();
 
-class TestChart extends StatelessWidget {
+class ResultsChartScreen extends StatelessWidget {
   final int aDrill;
-  const TestChart({required this.aDrill, super.key});
+  const ResultsChartScreen({required this.aDrill, super.key});
 
   @override
   Widget build(BuildContext context) {

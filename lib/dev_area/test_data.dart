@@ -19,8 +19,8 @@ List<PuttingResult> generateTestData(int count) {
     final successRate = random.nextDouble();
 
     PuttingResult puttingResult = PuttingResult(
-      drillNo: random.nextInt(2) + 1,
-      criteria1: random.nextInt(2),
+      drillNo: random.nextInt(3) + 1,
+      criteria1: random.nextInt(3) + 1,
       criteria2: 0,
       criteria3: random.nextInt(9) + 1,
       success: random.nextDouble(),

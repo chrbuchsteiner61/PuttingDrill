@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:myapp/dev_area/another_chart.dart';
 
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
 import 'package:myapp/user_areas/input_screen/input_screen.dart';
-import 'package:myapp/user_areas/results_screen/results_screen.dart';
+//import 'package:myapp/user_areas/results_screen/results_screen.dart';
 // import 'package:myapp/user_areas/results_screen/results_test.dart';
 import 'package:myapp/methods_and_helper/drills.dart';
 
@@ -125,7 +126,7 @@ class DrillLine extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ResultsScreen(numberOfDrill: aDrill.drillNo,),
+                      builder: (context) => AnotherChart(numberOfDrill: aDrill.drillNo,),
                     ),
                   );
                 },

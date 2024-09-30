@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:intl/intl.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
+import 'package:myapp/user_areas/results_screen/select_lines.dart';
 
 class HistogramChart extends StatelessWidget {
   // final List<ChartData> chartData;
@@ -13,8 +14,18 @@ class HistogramChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<List<PuttingResult>> drillResults = [];
+    for (var result in results) {
+      if (result.drillNo == aDrill) {
+        drillResults[result.criteria3].add(result);
+      }
+    }
+
     return Column(children: [
-      Text("Drill number: $aDrill"),
+      Row(children: [
+        Text("Drill number: $aDrill"),
+        const SelectLines(),
+      ]),
       const SizedBox(height: 15.0),
       Expanded(
         child: AspectRatio(
@@ -41,8 +52,8 @@ class HistogramChart extends StatelessWidget {
                       if (index >= 0 && index < results.length) {
                         return Text(
                           textAlign: TextAlign.center,
-                          DateFormat('dd.MM.').format(
-                              DateTime.parse(results[index].dateOfPractice)),
+                          DateFormat('dd.MM.').format(DateTime.parse(
+                              drillResults[1][index].dateOfPractice)),
                           style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.normal,
@@ -82,7 +93,7 @@ class HistogramChart extends StatelessWidget {
                 show: true,
                 border: Border.all(color: Colors.black, width: 1),
               ),
-              barGroups: results.asMap().entries.map((entry) {
+              barGroups: drillResults.asMap().entries.map((entry) {
                 final index = entry.key;
                 final chartData = entry.value;
 

@@ -89,7 +89,11 @@ class TestScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const AnotherChart(numberOfDrill: 1,),
+                      builder: (context) => const AnotherChart(
+                        numberOfDrill: 1,
+                        drillName: "Drill 1",
+                        drillInputLength: "Club length",
+                      ),
                     ),
                   );
                 },

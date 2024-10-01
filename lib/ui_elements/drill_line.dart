@@ -118,21 +118,24 @@ class DrillLine extends StatelessWidget {
           ),
           spaceBetween,
           SizedBox(
-              height: elementHeight,
-              width: 70.0,
-              child: ElevatedButton(
-                style: theButtonStyle,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AnotherChart(numberOfDrill: aDrill.drillNo,),
-                    ),
-                  );
-                },
-                child: Text(localizations.viewResults),
-              ),
-              ),
+            height: elementHeight,
+            width: 70.0,
+            child: ElevatedButton(
+              style: theButtonStyle,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AnotherChart(
+                        numberOfDrill: aDrill.drillNo,
+                        drillName: drillName,
+                        drillInputLength: inputDrillInput1),
+                  ),
+                );
+              },
+              child: Text(localizations.viewResults),
+            ),
+          ),
         ],
       ),
     );

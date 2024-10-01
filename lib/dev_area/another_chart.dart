@@ -1,30 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:intl/intl.dart';
+import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/user_areas/results_screen/select_lines.dart';
 
+import 'package:logger/logger.dart';
+
+var logger = Logger();
+
 class HistogramChart extends StatelessWidget {
-  // final List<ChartData> chartData;
   final int aDrill;
+  final String drillName;
   final List<PuttingResult> results;
+  final String drillInputLength;
 
   const HistogramChart(
-      {super.key, required this.aDrill, required this.results});
+      {super.key,
+      required this.aDrill,
+      required this.drillName,
+      required this.results,
+      required this.drillInputLength});
 
   @override
   Widget build(BuildContext context) {
-    List<List<PuttingResult>> drillResults = [];
+    List<Color> barColors = [
+      Colors.yellow,
+      Colors.red,
+      Colors.blue,
+    ];
+
+    List<List<PuttingResult>> drillResults = [[], [], []];
     for (var result in results) {
       if (result.drillNo == aDrill) {
-        drillResults[result.criteria3].add(result);
+        logger.d(result.criteria1);
+        drillResults[result.criteria1 - 1].add(result);
       }
     }
+// just for dev
+    const int selectedBar = 0;
+    logger.d(drillResults[selectedBar]);
 
     return Column(children: [
       Row(children: [
-        Text("Drill number: $aDrill"),
-        const SelectLines(),
+        spaceBetween,
+        Text(drillName),
+        const SelectLines(
+          strokes: [1, 2, 3],
+        ),
       ]),
       const SizedBox(height: 15.0),
       Expanded(
@@ -53,7 +76,7 @@ class HistogramChart extends StatelessWidget {
                         return Text(
                           textAlign: TextAlign.center,
                           DateFormat('dd.MM.').format(DateTime.parse(
-                              drillResults[1][index].dateOfPractice)),
+                              drillResults[selectedBar][index].dateOfPractice)),
                           style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.normal,
@@ -93,7 +116,7 @@ class HistogramChart extends StatelessWidget {
                 show: true,
                 border: Border.all(color: Colors.black, width: 1),
               ),
-              barGroups: drillResults.asMap().entries.map((entry) {
+              barGroups: drillResults[selectedBar].asMap().entries.map((entry) {
                 final index = entry.key;
                 final chartData = entry.value;
 
@@ -103,12 +126,9 @@ class HistogramChart extends StatelessWidget {
                   barRods: [
                     BarChartRodData(
                       toY: chartData.successRate,
-                      color: Colors.blue,
+                      color: barColors[selectedBar],
                       width: chartData.criteria3.toDouble(),
                       borderRadius: BorderRadius.circular(0),
-                      gradient: const LinearGradient(
-                        colors: [Colors.lightBlueAccent, Colors.blue],
-                      ),
                     ),
                   ],
                 );
@@ -123,12 +143,20 @@ class HistogramChart extends StatelessWidget {
 
 class AnotherChart extends StatelessWidget {
   final int numberOfDrill;
-  const AnotherChart({super.key, required this.numberOfDrill});
+  final String drillName;
+  final String drillInputLength;
+
+  const AnotherChart(
+      {super.key,
+      required this.numberOfDrill,
+      required this.drillInputLength,
+      required this.drillName});
 
   @override
   Widget build(BuildContext context) {
     dynamic results;
 
+    logger.d(numberOfDrill);
     return Scaffold(
       appBar: AppBar(title: const Text('Putting Results')),
       body: FutureBuilder<List<PuttingResult>>(
@@ -142,7 +170,11 @@ class AnotherChart extends StatelessWidget {
             }
             results = snapshot.data;
             // Expanded(child: ChartFromDB(results: results, aDrill: aDrill));
-            return HistogramChart(results: results, aDrill: numberOfDrill);
+            return HistogramChart(
+                results: results,
+                aDrill: numberOfDrill,
+                drillName: drillName,
+                drillInputLength: drillInputLength);
           }),
     );
   }

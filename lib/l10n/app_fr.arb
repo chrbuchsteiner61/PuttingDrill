@@ -1,9 +1,9 @@
 {
-   "@@locale": "en", 
+   "@@locale": "fr", 
    
   "page1Header" : "Your Putting Drill Dairy",
 
-  "drillOneName": "Short putts",
+  "drillOneName": "Putts courts",
   "drillTwoName": "Distance putts",
   "drillThreeName": "Through the gates",
   "drillFourName": "Drill 4",
@@ -47,7 +47,7 @@
   "inputDrill1Criteria3": "Successfull",
   
   "inputDrill1Input1": "club lengths",
-  "inputDrill1Input2": "none",
+  "inputDrill1Input2": "",
   "inputDrill1Input3": "number of",
 
 
@@ -56,7 +56,7 @@
   "inputDrill2Criteria3": "Sum of missing\ndistance",
   
   "inputDrill2Input1": "club lengths",
-  "inputDrill2Input2": "none",
+  "inputDrill2Input2": "",
   "inputDrill2Input3": "feet",
 
   "inputDrill3Criteria1": "Distance\nbetween the gates",
@@ -64,7 +64,7 @@
   "inputDrill3Criteria3": "Through\nboth gates",
   
   "inputDrill3Input1": "club lengths",
-  "inputDrill3Input2": "none",
+  "inputDrill3Input2": "",
   "inputDrill3Input3": "number of",
 
   "inputDrill4Criteria1": "4Distance",

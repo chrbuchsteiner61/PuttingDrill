@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:logger/logger.dart';
+
+var logger = Logger();
 
 class ExplainScreen extends StatelessWidget {
   final String drillName;
@@ -27,6 +30,8 @@ class ExplainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     const pictureWidth = 300.0;
     const pictureHeight = 150.0;
+
+    logger.d(drillName);
 
     return Scaffold(
       appBar: AppBar(

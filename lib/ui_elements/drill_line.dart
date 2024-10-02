@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:myapp/dev_area/another_chart.dart';
+import 'package:myapp/dev_area/the_result_chart.dart';
 
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
@@ -52,6 +52,7 @@ class DrillLine extends StatelessWidget {
     const SizedBox aSpacer = SizedBox(width: 8, height: elementHeight + 8);
 
     final localizations = AppLocalizations.of(context);
+    
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -126,7 +127,7 @@ class DrillLine extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AnotherChart(
+                    builder: (context) => TheResultChart(
                         numberOfDrill: aDrill.drillNo,
                         drillName: drillName,
                         drillInputLength: inputDrillInput1),

@@ -141,12 +141,12 @@ class HistogramChart extends StatelessWidget {
   }
 }
 
-class AnotherChart extends StatelessWidget {
+class TheResultChart extends StatelessWidget {
   final int numberOfDrill;
   final String drillName;
   final String drillInputLength;
 
-  const AnotherChart(
+  const TheResultChart(
       {super.key,
       required this.numberOfDrill,
       required this.drillInputLength,

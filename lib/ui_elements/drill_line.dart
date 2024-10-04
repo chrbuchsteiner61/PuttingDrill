@@ -35,8 +35,6 @@ class DrillLine extends StatelessWidget {
     const double elementHeight = 50.0;
     const SizedBox aSpacer = SizedBox(width: 8, height: elementHeight + 8);
 
-    //final localizations = AppLocalizations.of(context);
-
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -59,8 +57,8 @@ class DrillLine extends StatelessWidget {
                       preparationText: drillTexts["aPreparationText"]!,
                       countingText: drillTexts["aCountingText"]!,
                       theTask: drillTexts["aTask"]!,
-                      preparationHeader: drillTexts["preparationHeader"]!,
-                      countingHeader: drillTexts["countingHeader"]!,
+                      preparationHeader: textForDrillLine["preparationHeader"]!,
+                      countingHeader: textForDrillLine["countingHeader"]!,
                       preparePic: aPreparePic,
                     ),
                   ),
@@ -98,7 +96,7 @@ class DrillLine extends StatelessWidget {
                   ),
                 );
               },
-              child: Text(drillTexts["inputResults"]!),
+              child: Text(textForDrillLine["inputResults"]!),
             ),
           ),
           spaceBetween,
@@ -114,7 +112,7 @@ class DrillLine extends StatelessWidget {
                     builder: (context) => TheResultChart(
                       numberOfDrill: aDrill.drillNo,
                       drillName: drillTexts["drillName"]!,
-                      drillInputLength: drillTexts["drillInputLength"]!,
+                      drillInputLength: drillTexts["inputDrillInput1"]!,
                     ),
                   ),
                 );

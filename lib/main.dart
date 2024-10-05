@@ -61,9 +61,9 @@ class PuttingDrillAppState extends State<PuttingDrillApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [
-        Locale('fr'),
+        Locale('en'),
         // Locale('de'),
-        // Locale('fr'),
+        Locale('fr'),
         // Locale('es'),
         // Locale('it'),
         // Locale('da'),
@@ -108,156 +108,45 @@ class StartingPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              DrillLine(
-                // no 1
-                textForDrillLine: {
-                  "inputAppBarText": localizations.inputAppBarText,
-                  "inputButtonText": localizations.inputButtonText,
-                  "preparationHeader": localizations.preparationHeader,
-                  "countingHeader": localizations.countingHeader,
-                  "errorInputMessageNonEmptyNegativ":
-                      localizations.errorInputMessageNonEmptyNegativ,
-                  "viewResults": localizations.viewResults,
-                  "inputResults": localizations.inputResults,
-                },
-                drillPicture: "${iconPath}1.svg",
-                aPreparePic: "${preParePics}1.svg",
-                theButtonStyle: appsButtonStyle,
-                aDrill: drillsInitials[0],
-
-                drillTexts: {
-                  "drillName": localizations.drillOneName,
-                  "thePurpose": localizations.purpose1,
-                  "aPreparationText": localizations.thePreparation_1,
-                  "aCountingText": localizations.theExplainCounting_1,
-                  "aTask": localizations.task1,
-                  "inputDrillCriteria1": localizations.inputDrill1Criteria1,
-                  "inputDrillCriteria2": localizations.inputDrill1Criteria2,
-                  "inputDrillCriteria3": localizations.inputDrill1Criteria3,
-                  "inputDrillInput1": localizations.inputDrill1Input1,
-                  "inputDrillInput2": localizations.inputDrill1Input2,
-                  "inputDrillInput3": localizations.inputDrill1Input3
-                },
-              ),
-              DrillLine(
-                // no 2
-                textForDrillLine: {
-                  "inputAppBarText": localizations.inputAppBarText,
-                  "inputButtonText": localizations.inputButtonText,
-                  "preparationHeader": localizations.preparationHeader,
-                  "countingHeader": localizations.countingHeader,
-                  "errorInputMessageNonEmptyNegativ":
-                      localizations.errorInputMessageNonEmptyNegativ,
-                  "viewResults": localizations.viewResults,
-                  "inputResults": localizations.inputResults,
-                },
-                drillPicture: "${iconPath}2.svg",
-                aPreparePic: "${preParePics}2.svg",
-                theButtonStyle: appsButtonStyle,
-                aDrill: drillsInitials[1],
-                drillTexts: {
-                  "drillName": localizations.drillTwoName,
-                  "thePurpose": localizations.purpose2,
-                  "aPreparationText": localizations.thePreparation_2,
-                  "aCountingText": localizations.theExplainCounting_2,
-                  "aTask": localizations.task2,
-                  "inputDrillCriteria1": localizations.inputDrill2Criteria1,
-                  "inputDrillCriteria2": localizations.inputDrill2Criteria2,
-                  "inputDrillCriteria3": localizations.inputDrill2Criteria3,
-                  "inputDrillInput1": localizations.inputDrill2Input1,
-                  "inputDrillInput2": localizations.inputDrill2Input2,
-                  "inputDrillInput3": localizations.inputDrill2Input3
-                },
-              ),
-              DrillLine(
-                textForDrillLine: {
-                  "inputAppBarText": localizations.inputAppBarText,
-                  "inputButtonText": localizations.inputButtonText,
-                  "preparationHeader": localizations.preparationHeader,
-                  "countingHeader": localizations.countingHeader,
-                  "errorInputMessageNonEmptyNegativ":
-                      localizations.errorInputMessageNonEmptyNegativ,
-                  "viewResults": localizations.viewResults,
-                  "inputResults": localizations.inputResults,
-                },
-                drillPicture: "${iconPath}3.svg",
-                aPreparePic: "${preParePics}3.svg",
-                theButtonStyle: appsButtonStyle,
-                aDrill: drillsInitials[2],
-                drillTexts: {
-                  "drillName": localizations.drillThreeName,
-                  "thePurpose": localizations.purpose3,
-                  "aPreparationText": localizations.thePreparation_3,
-                  "aCountingText": localizations.theExplainCounting_3,
-                  "aTask": localizations.task3,
-                  "inputDrillCriteria1": localizations.inputDrill3Criteria1,
-                  "inputDrillCriteria2": localizations.inputDrill3Criteria2,
-                  "inputDrillCriteria3": localizations.inputDrill3Criteria3,
-                  "inputDrillInput1": localizations.inputDrill3Input1,
-                  "inputDrillInput2": localizations.inputDrill3Input2,
-                  "inputDrillInput3": localizations.inputDrill3Input3
-                },
-              ),
-              DrillLine(
-                textForDrillLine: {
-                  "inputAppBarText": localizations.inputAppBarText,
-                  "inputButtonText": localizations.inputButtonText,
-                  "preparationHeader": localizations.preparationHeader,
-                  "countingHeader": localizations.countingHeader,
-                  "errorInputMessageNonEmptyNegativ":
-                      localizations.errorInputMessageNonEmptyNegativ,
-                  "viewResults": localizations.viewResults,
-                  "inputResults": localizations.inputResults,
-                },
-                drillPicture: "${iconPath}4.svg",
-                aPreparePic: "${preParePics}4.svg",
-                theButtonStyle: appsButtonStyle,
-                // no 4
-                aDrill: drillsInitials[3],
-                drillTexts: {
-                  "drillName": localizations.drillFourName,
-                  "thePurpose": localizations.purpose4,
-                  "aPreparationText": localizations.thePreparation_4,
-                  "aCountingText": localizations.theExplainCounting_4,
-                  "aTask": localizations.task4,
-                  "inputDrillCriteria1": localizations.inputDrill4Criteria1,
-                  "inputDrillCriteria2": localizations.inputDrill4Criteria2,
-                  "inputDrillCriteria3": localizations.inputDrill4Criteria3,
-                  "inputDrillInput1": localizations.inputDrill4Input1,
-                  "inputDrillInput2": localizations.inputDrill4Input2,
-                  "inputDrillInput3": localizations.inputDrill4Input3
-                },
-              ),
-              DrillLine(
-                textForDrillLine: {
-                  "inputAppBarText": localizations.inputAppBarText,
-                  "inputButtonText": localizations.inputButtonText,
-                  "preparationHeader": localizations.preparationHeader,
-                  "countingHeader": localizations.countingHeader,
-                  "errorInputMessageNonEmptyNegativ":
-                      localizations.errorInputMessageNonEmptyNegativ,
-                  "viewResults": localizations.viewResults,
-                  "inputResults": localizations.inputResults,
-                },
-                drillPicture: "${iconPath}5.svg",
-                aPreparePic: "${preParePics}5.svg",
-                theButtonStyle: appsButtonStyle,
-                // no 5
-                aDrill: drillsInitials[4],
-                drillTexts: {
-                  "drillName": localizations.drillFiveName,
-                  "thePurpose": localizations.purpose5,
-                  "aPreparationText": localizations.thePreparation_5,
-                  "aCountingText": localizations.theExplainCounting_5,
-                  "aTask": localizations.task5,
-                  "inputDrillCriteria1": localizations.inputDrill5Criteria1,
-                  "inputDrillCriteria2": localizations.inputDrill5Criteria2,
-                  "inputDrillCriteria3": localizations.inputDrill5Criteria3,
-                  "inputDrillInput1": localizations.inputDrill5Input1,
-                  "inputDrillInput2": localizations.inputDrill5Input2,
-                  "inputDrillInput3": localizations.inputDrill5Input3
-                },
-              ),
+              for (int numberOfDrill = 1; numberOfDrill <= 5; numberOfDrill++)
+                DrillLine(
+                  // no 1
+                  textForDrillLine: {
+                    "inputAppBarText": localizations.inputAppBarText,
+                    "inputButtonText": localizations.inputButtonText,
+                    "preparationHeader": localizations.preparationHeader,
+                    "countingHeader": localizations.countingHeader,
+                    "errorInputMessageNonEmptyNegativ":
+                        localizations.errorInputMessageNonEmptyNegativ,
+                    "viewResults": localizations.viewResults,
+                    "inputResults": localizations.inputResults,
+                  },
+                  drillPicture: "$iconPath$numberOfDrill.svg",
+                  aPreparePic: "$preParePics$numberOfDrill.svg",
+                  theButtonStyle: appsButtonStyle,
+                  aDrill: drillsInitials[numberOfDrill - 1],
+                  drillName:
+                      localizations.getDrillTexts(numberOfDrill)["drill"]!,
+                  thePurpose:
+                      localizations.getDrillTexts(numberOfDrill)["purpose"]!,
+                  aPreparationText: localizations
+                      .getDrillTexts(numberOfDrill)["preparation"]!,
+                  aCountingText:
+                      localizations.getDrillTexts(numberOfDrill)["counting"]!,
+                  aTask: localizations.getDrillTexts(numberOfDrill)["task"]!,
+                  inputDrillCriteria1: localizations
+                      .getDrillTexts(numberOfDrill)["inputDrillCriteria1"]!,
+                  inputDrillCriteria2: localizations
+                      .getDrillTexts(numberOfDrill)["inputDrillCriteria2"]!,
+                  inputDrillCriteria3: localizations
+                      .getDrillTexts(numberOfDrill)["inputDrillCriteria3"]!,
+                  inputDrillInput1: localizations
+                      .getDrillTexts(numberOfDrill)["inputDrillInput1"]!,
+                  inputDrillInput2: localizations
+                      .getDrillTexts(numberOfDrill)["inputDrillInput2"]!,
+                  inputDrillInput3: localizations
+                      .getDrillTexts(numberOfDrill)["inputDrillInput3"]!,
+                ),
 
               // kill for production
               const SizedBox(width: 10.0, height: 40.0),
@@ -282,6 +171,97 @@ class StartingPage extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+extension on AppLocalizations {
+  Map<String, String> getDrillTexts(int numberOfDrill) {
+    switch (numberOfDrill) {
+      case 1:
+        return {
+          "drill": drillName1,
+          "task": task1,
+          "purpose": purpose1,
+          "preparation": thePreparation_1,
+          "counting": theExplainCounting_1,
+          "inputDrillCriteria1": inputDrill1Criteria1,
+          "inputDrillCriteria2": inputDrill1Criteria2,
+          "inputDrillCriteria3": inputDrill1Criteria3,
+          "inputDrillInput1": inputDrill1Input1,
+          "inputDrillInput2": inputDrill1Input2,
+          "inputDrillInput3": inputDrill1Input3,
+        };
+      case 2:
+        return {
+          "drill": drillName2,
+          "task": task2,
+          "purpose": purpose2,
+          "preparation": thePreparation_2,
+          "counting": theExplainCounting_2,
+          "inputDrillCriteria1": inputDrill2Criteria1,
+          "inputDrillCriteria2": inputDrill2Criteria2,
+          "inputDrillCriteria3": inputDrill2Criteria3,
+          "inputDrillInput1": inputDrill2Input1,
+          "inputDrillInput2": inputDrill2Input2,
+          "inputDrillInput3": inputDrill2Input3,
+        };
+      case 3:
+        return {
+          "drill": drillName3,
+          "task": task3,
+          "purpose": purpose3,
+          "preparation": thePreparation_3,
+          "counting": theExplainCounting_3,
+          "inputDrillCriteria1": inputDrill3Criteria1,
+          "inputDrillCriteria2": inputDrill3Criteria2,
+          "inputDrillCriteria3": inputDrill3Criteria3,
+          "inputDrillInput1": inputDrill3Input1,
+          "inputDrillInput2": inputDrill3Input2,
+          "inputDrillInput3": inputDrill3Input3,
+        };
+      case 4:
+        return {
+          "drill": drillName4,
+          "task": task4,
+          "purpose": purpose4,
+          "preparation": thePreparation_4,
+          "counting": theExplainCounting_4,
+          "inputDrillCriteria1": inputDrill4Criteria1,
+          "inputDrillCriteria2": inputDrill4Criteria2,
+          "inputDrillCriteria3": inputDrill4Criteria3,
+          "inputDrillInput1": inputDrill4Input1,
+          "inputDrillInput2": inputDrill4Input2,
+          "inputDrillInput3": inputDrill4Input3,
+        };
+      case 5:
+        return {
+          "drill": drillName5,
+          "task": task1,
+          "purpose": purpose5,
+          "preparation": thePreparation_5,
+          "counting": theExplainCounting_1,
+          "inputDrillCriteria1": inputDrill5Criteria1,
+          "inputDrillCriteria2": inputDrill5Criteria2,
+          "inputDrillCriteria3": inputDrill5Criteria3,
+          "inputDrillInput1": inputDrill5Input1,
+          "inputDrillInput2": inputDrill5Input2,
+          "inputDrillInput3": inputDrill5Input3,
+        };
+      default:
+        return {
+          "drill": error,
+          "task": error,
+          "purpose": error,
+          "preparation": error,
+          "counting": error,
+          "inputDrillCriteria1": error,
+          "inputDrillCriteria2": error,
+          "inputDrillCriteria3": error,
+          "inputDrillInput1": error,
+          "inputDrillInput2": error,
+          "inputDrillInput3": error,
+        };
+    }
   }
 }
 

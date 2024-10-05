@@ -1,98 +1,75 @@
 {
-   "@@locale": "fr", 
-   
-  "page1Header" : "Your Putting Drill Dairy",
-
-  "drillOneName": "Putts courts",
-  "drillTwoName": "Distance putts",
-  "drillThreeName": "Through the gates",
-  "drillFourName": "Drill 4",
-  "drillFiveName": "Drill 5",
-
+  "@@locale": "fr",
+  "page1Header": "Your Putting Drill Dairy",
+  "drillName1": "Putts court",
+  "drillName2": "Distance putts",
+  "drillName3": "Through the gates",
+  "drillName4": "Drill No 4",
+  "drillName5": "Drill 5",
   "preparationHeader": "Preparation",
   "countingHeader": "Counting",
-
   "purpose1": "Better your short putting",
   "purpose2": "Come closer to the hole",
   "purpose3": "Get a better line",
   "purpose4": "none",
   "purpose5": "none",
-
   "task1": "Putt into the hole.\nHit five or more balls from a short distance.",
   "task2": "Putt at nearest to the hole.\nHit five or more balls from a long distance.",
   "task3": "Putt through the gates.\nHit five or more balls through both gates.",
   "task4": "none",
   "task5": "none",
-
   "thePreparation_1": "Choose a distance for the exercise.\nChoose a distance of one, two or three club lengths.\nIf your putter is about 34 inches long, the distance of one club is about 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
-  "thePreparation_2": "Choose a distance for the exercise.\nChoose a distance of six, nine or 12 club lengths. \nIf your putter is about 34 inches long, the distance of one club is about 0.86m or 2.83ft.\nLook at the example for a distance of six clubs.", 
-  "thePreparation_3": "Take four tees. Build two gates, clubhead width.\nChoose a distance between the gates of one, two or three club lengths.\nIf your putter is about 34 inches long, the distance of one club is about 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.", 
+  "thePreparation_2": "Choose a distance for the exercise.\nChoose a distance of six, nine or 12 club lengths. \nIf your putter is about 34 inches long, the distance of one club is about 0.86m or 2.83ft.\nLook at the example for a distance of six clubs.",
+  "thePreparation_3": "Take four tees. Build two gates, clubhead width.\nChoose a distance between the gates of one, two or three club lengths.\nIf your putter is about 34 inches long, the distance of one club is about 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
   "thePreparation_4": "Take some tees and ..4",
   "thePreparation_5": "Take some tees and ..5",
-
   "theExplainCounting_1": "Count your strokes and \ncount your succesfull puts.",
   "theExplainCounting_2": "Count your strokes, \nmeassure the distance from the position of the balls to the hole \nwith your feet and sum up.",
   "theExplainCounting_3": "Count every stroke and \ncount every ball going through both gates.",
   "theExplainCounting_4": "Count every stroke and count your ..4",
   "theExplainCounting_5": "Count every stroke and count your ..5",
-
   "inputResults": "Input result",
   "inputAppBarText": "Put in your results of the drill",
   "inputButtonText": "Save your results",
-
   "errorInputMessageNonEmptyNegativ": "Please enter a valid non-negativ number",
-  
   "inputDrill1Criteria1": "Distance to\nthe hole",
   "inputDrill1Criteria2": "Strokes",
   "inputDrill1Criteria3": "Successfull",
-  
   "inputDrill1Input1": "club lengths",
-  "inputDrill1Input2": "",
+  "inputDrill1Input2": "none",
   "inputDrill1Input3": "number of",
-
-
   "inputDrill2Criteria1": "Distance to\nthe hole",
   "inputDrill2Criteria2": "Strokes",
   "inputDrill2Criteria3": "Sum of missing\ndistance",
-  
   "inputDrill2Input1": "club lengths",
-  "inputDrill2Input2": "",
+  "inputDrill2Input2": "none",
   "inputDrill2Input3": "feet",
-
   "inputDrill3Criteria1": "Distance\nbetween the gates",
   "inputDrill3Criteria2": "Strokes",
   "inputDrill3Criteria3": "Through\nboth gates",
-  
   "inputDrill3Input1": "club lengths",
-  "inputDrill3Input2": "",
+  "inputDrill3Input2": "none",
   "inputDrill3Input3": "number of",
-
   "inputDrill4Criteria1": "4Distance",
   "inputDrill4Criteria2": "4Strokes",
   "inputDrill4Criteria3": "Successfull",
-  
   "inputDrill4Input1": "none",
   "inputDrill4Input2": "none",
   "inputDrill4Input3": "none",
-
   "inputDrill5Criteria1": "5Distance",
   "inputDrill5Criteria2": "5Strokes",
   "inputDrill5Criteria3": "Successfull",
-  
   "inputDrill5Input1": "none",
   "inputDrill5Input2": "none",
   "inputDrill5Input3": "none",
-
-  "savedResult" : "saved successful",
-
+  "savedResult": "saved successful",
   "viewResults": "Your stats",
-
   "drawerHeader": "Informations",
   "privStHeader": "Data protection",
   "privStLine1": "This app saves the language you choose on your device.",
   "privStLine2": "All data you entered is stored on your device.",
   "privStLine3": "None of your data will be transfered. Nor will it be made available to third parties. There is no further processing.",
   "kontakt": "Contact",
-  "language": "Language"
-
+  "language": "Language",
+  "error" : "error"
 }

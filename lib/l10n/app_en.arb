@@ -3,11 +3,11 @@
    
   "page1Header" : "Your Putting Drill Dairy",
 
-  "drillOneName": "Short putts",
-  "drillTwoName": "Distance putts",
-  "drillThreeName": "Through the gates",
-  "drillFourName": "Drill 4",
-  "drillFiveName": "Drill 5",
+  "drillName1": "Short putts",
+  "drillName2": "Distance putts",
+  "drillName3": "Through the gates",
+  "drillName4": "Drill 4",
+  "drillName5": "Drill 5",
 
   "preparationHeader": "Preparation",
   "countingHeader": "Counting",
@@ -93,6 +93,7 @@
   "privStLine2": "All data you entered is stored on your device.",
   "privStLine3": "None of your data will be transfered. Nor will it be made available to third parties. There is no further processing.",
   "kontakt": "Contact",
-  "language": "Language"
+  "language": "Language",
 
+  "error": "error"
 }

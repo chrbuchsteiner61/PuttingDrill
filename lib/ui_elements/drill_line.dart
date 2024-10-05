@@ -12,8 +12,18 @@ import 'package:logger/logger.dart';
 var logger = Logger();
 
 class DrillLine extends StatelessWidget {
-  final Map<String, String> drillTexts;
+  final String drillName;
+  final String thePurpose;
+  final String aPreparationText;
+  final String aCountingText;
+  final String aTask;
 
+  final String inputDrillCriteria1;
+  final String inputDrillCriteria2;
+  final String inputDrillCriteria3;
+  final String inputDrillInput1;
+  final String inputDrillInput2;
+  final String inputDrillInput3;
   final String aPreparePic;
   final String drillPicture;
 
@@ -23,7 +33,17 @@ class DrillLine extends StatelessWidget {
 
   const DrillLine(
       {super.key,
-      required this.drillTexts,
+      required this.drillName,
+      required this.thePurpose,
+      required this.aPreparationText,
+      required this.aCountingText,
+      required this.aTask,
+      required this.inputDrillCriteria1,
+      required this.inputDrillCriteria2,
+      required this.inputDrillCriteria3,
+      required this.inputDrillInput1,
+      required this.inputDrillInput2,
+      required this.inputDrillInput3,
       required this.drillPicture,
       required this.aPreparePic,
       required this.theButtonStyle,
@@ -52,11 +72,11 @@ class DrillLine extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => ExplainScreen(
-                      drillName: drillTexts["drillName"]!,
-                      drillPurpose: drillTexts["thePurpose"]!,
-                      preparationText: drillTexts["aPreparationText"]!,
-                      countingText: drillTexts["aCountingText"]!,
-                      theTask: drillTexts["aTask"]!,
+                      drillName: drillName,
+                      drillPurpose: thePurpose,
+                      preparationText: aPreparationText,
+                      countingText: aCountingText,
+                      theTask: aTask,
                       preparationHeader: textForDrillLine["preparationHeader"]!,
                       countingHeader: textForDrillLine["countingHeader"]!,
                       preparePic: aPreparePic,
@@ -66,7 +86,7 @@ class DrillLine extends StatelessWidget {
               },
               child: Align(
                 alignment: Alignment.centerLeft,
-                child: Text(drillTexts["drillName"]!),
+                child: Text(drillName),
               ),
             ),
           ),
@@ -83,12 +103,12 @@ class DrillLine extends StatelessWidget {
                     builder: (context) => InputScreen(
                       appBarText: textForDrillLine["inputAppBarText"]!,
                       buttonText: textForDrillLine["inputButtonText"]!,
-                      inputDrillCriteria1: drillTexts["inputDrillCriteria1"]!,
-                      inputDrillCriteria2: drillTexts["inputDrillCriteria2"]!,
-                      inputDrillCriteria3: drillTexts["inputDrillCriteria3"]!,
-                      drillInput1: drillTexts["inputDrillInput1"]!,
-                      drillInput2: drillTexts["inputDrillInput2"]!,
-                      drillInput3: drillTexts["inputDrillInput3"]!,
+                      inputDrillCriteria1: inputDrillCriteria1,
+                      inputDrillCriteria2: inputDrillCriteria2,
+                      inputDrillCriteria3: inputDrillCriteria3,
+                      drillInput1: inputDrillInput1,
+                      drillInput2: inputDrillInput2,
+                      drillInput3: inputDrillInput3,
                       aDrill: aDrill,
                       errorInputMessageNonEmptyNegativ:
                           textForDrillLine["errorInputMessageNonEmptyNegativ"]!,
@@ -111,8 +131,8 @@ class DrillLine extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => TheResultChart(
                       numberOfDrill: aDrill.drillNo,
-                      drillName: drillTexts["drillName"]!,
-                      drillInputLength: drillTexts["inputDrillInput1"]!,
+                      drillName: drillName,
+                      drillInputLength: inputDrillInput1,
                     ),
                   ),
                 );

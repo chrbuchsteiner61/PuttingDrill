@@ -26,7 +26,7 @@ List<Map<String, String>> getTranslatedTexts(AppLocalizations? localizations) {
 // Drill 1
 
   translatedDrillTexts[0] = ({
-    "drillName": localizations!.drillOneName,
+    "drillName": localizations!.drillName1,
     "thePurpose": localizations.purpose1,
     "aPreparationText": localizations.thePreparation_1,
     "aCountingText": localizations.theExplainCounting_1,
@@ -40,7 +40,7 @@ List<Map<String, String>> getTranslatedTexts(AppLocalizations? localizations) {
   });
 // Drill 2
   translatedDrillTexts[1] = ({
-    "drillName": localizations.drillTwoName,
+    "drillName": localizations.drillName2,
     "thePurpose": localizations.purpose2,
     "aPreparationText": localizations.thePreparation_2,
     "aCountingText": localizations.theExplainCounting_2,
@@ -54,7 +54,7 @@ List<Map<String, String>> getTranslatedTexts(AppLocalizations? localizations) {
   });
   // Drill 3
   translatedDrillTexts[2] = ({
-    "drillName": localizations.drillThreeName,
+    "drillName": localizations.drillName3,
     "thePurpose": localizations.purpose3,
     "aPreparationText": localizations.thePreparation_3,
     "aCountingText": localizations.theExplainCounting_3,
@@ -68,7 +68,7 @@ List<Map<String, String>> getTranslatedTexts(AppLocalizations? localizations) {
   });
   // Drill 4
   translatedDrillTexts[3] = ({
-    "drillName": localizations.drillFourName,
+    "drillName": localizations.drillName4,
     "thePurpose": localizations.purpose4,
     "aPreparationText": localizations.thePreparation_4,
     "aCountingText": localizations.theExplainCounting_4,
@@ -82,7 +82,7 @@ List<Map<String, String>> getTranslatedTexts(AppLocalizations? localizations) {
   });
   // Drill 5
   translatedDrillTexts[4] = ({
-    "drillName": localizations.drillFiveName,
+    "drillName": localizations.drillName5,
     "thePurpose": localizations.purpose5,
     "aPreparationText": localizations.thePreparation_5,
     "aCountingText": localizations.theExplainCounting_5,

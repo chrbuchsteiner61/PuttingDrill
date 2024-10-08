@@ -156,20 +156,18 @@ class TheResultChart extends StatelessWidget {
   Widget build(BuildContext context) {
     dynamic results;
 
-    logger.d(numberOfDrill);
     return Scaffold(
       appBar: AppBar(title: const Text('Putting Results')),
       body: FutureBuilder<List<PuttingResult>>(
           future: DatabaseHelper().getResults(),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: Text('Loading'));
+              return const Center(child: Text('Connection is waiting'));
             }
             if (snapshot.hasError) {
               return Center(child: Text('Error: ${snapshot.error}'));
             }
             results = snapshot.data;
-            // Expanded(child: ChartFromDB(results: results, aDrill: aDrill));
             return HistogramChart(
                 results: results,
                 aDrill: numberOfDrill,

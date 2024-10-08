@@ -55,6 +55,8 @@ class DrillLine extends StatelessWidget {
     const double elementHeight = 50.0;
     const SizedBox aSpacer = SizedBox(width: 8, height: elementHeight + 8);
 
+   //  int drillNumber = aDrill.drillNo;
+
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -129,10 +131,14 @@ class DrillLine extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => TheResultChart(
-                      numberOfDrill: aDrill.drillNo,
-                      drillName: drillName,
-                      drillInputLength: inputDrillInput1,
+                    builder: (context) => const TheResultChart(
+                      //numberOfDrill: aDrill.drillNo,
+                      //drillName: drillName,
+                      //drillInputLength: inputDrillInput1,
+                  // test reasons
+                      numberOfDrill: 1,
+                      drillName: "something",
+                      drillInputLength: "beliebige Länge",
                     ),
                   ),
                 );

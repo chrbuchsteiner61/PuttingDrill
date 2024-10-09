@@ -9,7 +9,7 @@ import 'package:logger/logger.dart';
 
 var logger = Logger();
 
-class HistogramChart extends StatelessWidget {
+class HistogramChart extends StatefulWidget {
   final int aDrill;
   final String drillName;
   final List<PuttingResult> results;
@@ -23,6 +23,19 @@ class HistogramChart extends StatelessWidget {
       required this.drillInputLength});
 
   @override
+  State<HistogramChart> createState() => _HistogramChartState();
+}
+
+class _HistogramChartState extends State<HistogramChart> {
+  int selectedLengthOfDrill = 0;
+
+  void _updateSelectedLine(int newLine) {
+    setState(() {
+      selectedLengthOfDrill = newLine;
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     List<Color> barColors = [
       Colors.yellow,
@@ -31,22 +44,21 @@ class HistogramChart extends StatelessWidget {
     ];
 
     List<List<PuttingResult>> drillResults = [[], [], []];
-    for (var result in results) {
-      if (result.drillNo == aDrill) {
+    for (var result in widget.results) {
+      if (result.drillNo == widget.aDrill) {
         logger.d(result.criteria1);
         drillResults[result.criteria1 - 1].add(result);
       }
     }
-// just for dev
-    const int selectedBar = 0;
-    logger.d(drillResults[selectedBar]);
 
     return Column(children: [
       Row(children: [
         spaceBetween,
-        Text(drillName),
-        const SelectLines(
-          strokes: [1, 2, 3],
+        Text(widget.drillName),
+        SelectLines(
+          strokes: const [1, 2, 3],
+          onLineSelected: _updateSelectedLine,
+          currentLine: selectedLengthOfDrill,
         ),
       ]),
       const SizedBox(height: 15.0),
@@ -72,11 +84,11 @@ class HistogramChart extends StatelessWidget {
                     showTitles: true,
                     getTitlesWidget: (double value, TitleMeta meta) {
                       int index = value.toInt();
-                      if (index >= 0 && index < results.length) {
+                      if (index >= 0 && index < widget.results.length) {
                         return Text(
                           textAlign: TextAlign.center,
                           DateFormat('dd.MM.').format(DateTime.parse(
-                              drillResults[selectedBar][index].dateOfPractice)),
+                              drillResults[selectedLengthOfDrill][index].dateOfPractice)),
                           style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.normal,
@@ -116,7 +128,7 @@ class HistogramChart extends StatelessWidget {
                 show: true,
                 border: Border.all(color: Colors.black, width: 1),
               ),
-              barGroups: drillResults[selectedBar].asMap().entries.map((entry) {
+              barGroups: drillResults[selectedLengthOfDrill].asMap().entries.map((entry) {
                 final index = entry.key;
                 final chartData = entry.value;
 
@@ -126,7 +138,7 @@ class HistogramChart extends StatelessWidget {
                   barRods: [
                     BarChartRodData(
                       toY: chartData.successRate,
-                      color: barColors[selectedBar],
+                      color: barColors[selectedLengthOfDrill],
                       width: chartData.criteria3.toDouble(),
                       borderRadius: BorderRadius.circular(0),
                     ),

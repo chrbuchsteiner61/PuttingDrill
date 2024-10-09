@@ -5,11 +5,17 @@ var logger = Logger();
 
 class SelectLines extends StatefulWidget {
   final List<int> strokes;
+  final Function(int) onLineSelected; // Callback function
+  final int currentLine; // Current line from parent
 
-  const SelectLines({super.key, required this.strokes});
+  const SelectLines(
+      {super.key,
+      required this.strokes,
+      required this.onLineSelected,
+      required this.currentLine});
 
   @override
-  State<SelectLines> createState() => _SelectLinesState();
+    _SelectLinesState createState() => _SelectLinesState();
 }
 
 class _SelectLinesState extends State<SelectLines> {
@@ -29,9 +35,7 @@ class _SelectLinesState extends State<SelectLines> {
             width: 60.0,
             child: ElevatedButton(
               onPressed: () {
-                setState(() {
-                  lineNo = 0;
-                });
+                widget.onLineSelected(0);
               },
               style: ButtonStyle(
                 shape: WidgetStatePropertyAll(
@@ -51,9 +55,7 @@ class _SelectLinesState extends State<SelectLines> {
             width: 60.0,
             child: ElevatedButton(
               onPressed: () {
-                setState(() {
-                  lineNo = 1;
-                });
+               widget.onLineSelected(1);
               },
               style: ButtonStyle(
                 shape: WidgetStatePropertyAll(
@@ -75,9 +77,7 @@ class _SelectLinesState extends State<SelectLines> {
             width: 60.0,
             child: ElevatedButton(
               onPressed: () {
-                setState(() {
-                  lineNo = 2;
-                });
+                widget.onLineSelected(2);
               },
               style: ButtonStyle(
                 shape: WidgetStatePropertyAll(

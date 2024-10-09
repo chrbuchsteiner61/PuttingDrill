@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:myapp/dev_area/the_result_chart.dart';
+import 'package:myapp/user_areas/results_screen/the_result_chart.dart';
 
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';

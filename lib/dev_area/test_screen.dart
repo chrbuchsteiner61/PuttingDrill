@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/dev_area/the_result_chart.dart';
+import 'package:myapp/user_areas/results_screen/the_result_chart.dart';
 
 import 'package:myapp/dev_area/results_test.dart';
 import 'package:myapp/dev_area/test_chart.dart';

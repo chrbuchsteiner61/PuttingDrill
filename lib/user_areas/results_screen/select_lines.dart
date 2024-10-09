@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 
-class SelectLines extends StatelessWidget {
+var logger = Logger();
+
+class SelectLines extends StatefulWidget {
   final List<int> strokes;
 
   const SelectLines({super.key, required this.strokes});
 
-  get onPressed => null;
+  @override
+  State<SelectLines> createState() => _SelectLinesState();
+}
+
+class _SelectLinesState extends State<SelectLines> {
+  int lineNo = 0;
 
   @override
   Widget build(BuildContext context) {
     const SizedBox spaceBetween = SizedBox(width: 5.0);
+
+    logger.d(lineNo);
     return Padding(
       padding: const EdgeInsets.fromLTRB(30.0, 5.0, 1.0, 1.0),
       child: Row(
@@ -18,7 +28,11 @@ class SelectLines extends StatelessWidget {
             height: 36.0,
             width: 60.0,
             child: ElevatedButton(
-              onPressed: onPressed,
+              onPressed: () {
+                setState(() {
+                  lineNo = 0;
+                });
+              },
               style: ButtonStyle(
                 shape: WidgetStatePropertyAll(
                   RoundedRectangleBorder(
@@ -28,7 +42,7 @@ class SelectLines extends StatelessWidget {
                 foregroundColor: const WidgetStatePropertyAll(Colors.black),
                 backgroundColor: const WidgetStatePropertyAll(Colors.yellow),
               ),
-              child: Text(strokes[0].toString()),
+              child: Text(widget.strokes[0].toString()),
             ),
           ),
           spaceBetween,
@@ -36,7 +50,11 @@ class SelectLines extends StatelessWidget {
             height: 36.0,
             width: 60.0,
             child: ElevatedButton(
-              onPressed: onPressed,
+              onPressed: () {
+                setState(() {
+                  lineNo = 1;
+                });
+              },
               style: ButtonStyle(
                 shape: WidgetStatePropertyAll(
                   RoundedRectangleBorder(
@@ -47,7 +65,7 @@ class SelectLines extends StatelessWidget {
                 backgroundColor: const WidgetStatePropertyAll(Colors.red),
               ),
               child: Text(
-                strokes[1].toString(),
+                widget.strokes[1].toString(),
               ),
             ),
           ),
@@ -56,7 +74,11 @@ class SelectLines extends StatelessWidget {
             height: 36.0,
             width: 60.0,
             child: ElevatedButton(
-              onPressed: onPressed,
+              onPressed: () {
+                setState(() {
+                  lineNo = 2;
+                });
+              },
               style: ButtonStyle(
                 shape: WidgetStatePropertyAll(
                   RoundedRectangleBorder(
@@ -67,7 +89,7 @@ class SelectLines extends StatelessWidget {
                 backgroundColor: const WidgetStatePropertyAll(Colors.blue),
               ),
               child: Text(
-                strokes[2].toString(),
+                widget.strokes[2].toString(),
               ),
             ),
           ),

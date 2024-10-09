@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:myapp/user_areas/results_screen/get_results_data.dart';
+import 'package:myapp/user_areas/results_screen/depr_get_results_data.dart';
 import '../../methods_and_helper/database_helper.dart';
 import 'package:intl/intl.dart';
 import 'package:logger/logger.dart';

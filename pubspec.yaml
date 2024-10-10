@@ -49,21 +49,21 @@ flutter:
   fonts:
   - family: Noto-Sans
     fonts:
-      - asset: asset/fonts/NotoSans-Regular.ttf
-      - asset: asset/fonts/NotoSans-Bold.ttf
+      - asset: assets/fonts/NotoSans-Regular.ttf
+      - asset: assets/fonts/NotoSans-Bold.ttf
         weight: 700
 
   assets:
-    - asset/pics/page1_background.png
-    - asset/pics/page1_background.svg
-    - asset/pics/icons_page1/Drill1.svg
-    - asset/pics/icons_page1/Drill2.svg 
-    - asset/pics/icons_page1/Drill3.svg
-    - asset/pics/icons_page1/Drill4.svg
-    - asset/pics/icons_page1/Drill5.svg
-    - asset/pics/preparePics/thePreparePic1.svg
-    - asset/pics/preparePics/thePreparePic2.svg
-    - asset/pics/preparePics/thePreparePic3.svg
-    - asset/pics/preparePics/thePreparePic4.svg
-    - asset/pics/preparePics/thePreparePic5.svg
+    - assets/pics/page1_background.png
+    - assets/pics/page1_background.svg
+    - assets/pics/icons_page1/Drill1.svg
+    - assets/pics/icons_page1/Drill2.svg 
+    - assets/pics/icons_page1/Drill3.svg
+    - assets/pics/icons_page1/Drill4.svg
+    - assets/pics/icons_page1/Drill5.svg
+    - assets/pics/preparePics/thePreparePic1.svg
+    - assets/pics/preparePics/thePreparePic2.svg
+    - assets/pics/preparePics/thePreparePic3.svg
+    - assets/pics/preparePics/thePreparePic4.svg
+    - assets/pics/preparePics/thePreparePic5.svg
 

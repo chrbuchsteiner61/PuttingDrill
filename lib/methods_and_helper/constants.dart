@@ -27,9 +27,3 @@ ButtonStyle appsButtonStyle = const ButtonStyle(
     ),
   ),
 );
-
-class myColors {
-  static const golfGreen = Color.fromARGB(255, 76, 175, 80);
-  static const aBlue = Color.fromARGB(255, 36, 36, 173);
-
-}

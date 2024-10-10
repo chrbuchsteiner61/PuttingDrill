@@ -28,8 +28,8 @@ class ExplainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const pictureWidth = 300.0;
-    const pictureHeight = 150.0;
+    const pictureWidth = 350.0;
+    const pictureHeight = 175.0;
 
     logger.d(drillName);
 

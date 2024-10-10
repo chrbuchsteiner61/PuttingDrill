@@ -15,7 +15,7 @@ class InputBoxNo1 extends StatelessWidget {
       width: columnWidth,
       child: Text(
         inputDrillCriteria1,
-        style: Theme.of(context).textTheme.bodyMedium!,
+        style: Theme.of(context).textTheme.titleMedium!,
       ),
     );
   }

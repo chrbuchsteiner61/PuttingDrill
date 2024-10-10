@@ -103,7 +103,7 @@ class InputScreenState extends State<InputScreen> {
                       width: col3,
                       child: Text(
                         widget.drillInput1,
-                        style: Theme.of(context).textTheme.bodyMedium!,
+                        style: Theme.of(context).textTheme.bodySmall!,
                       ),
                     ),
                   ],
@@ -139,7 +139,7 @@ class InputScreenState extends State<InputScreen> {
                       width: col3,
                       child: Text(
                         widget.drillInput2,
-                        style: Theme.of(context).textTheme.bodyMedium!,
+                        style: Theme.of(context).textTheme.bodySmall!,
                       ),
                     ),
                   ],
@@ -180,7 +180,7 @@ class InputScreenState extends State<InputScreen> {
                       width: col3,
                       child: Text(
                         widget.drillInput3,
-                        style: Theme.of(context).textTheme.bodyMedium!,
+                        style: Theme.of(context).textTheme.bodySmall!,
                       ),
                     ),
                   ],

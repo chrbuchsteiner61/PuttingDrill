@@ -23,12 +23,17 @@ class AppTheme {
       useMaterial3: true,
       textTheme: const TextTheme(
         bodyLarge: TextStyle(
-            fontSize: 16.0,
+            fontSize: 20.0,
             fontWeight: FontWeight.normal,
             color: Colors.black,
             fontFamily: 'Noto-Sans'),
         bodyMedium: TextStyle(
-            fontSize: 14.0,
+            fontSize: 18.0,
+            fontWeight: FontWeight.normal,
+            color: Colors.black,
+            fontFamily: 'Noto-Sans'),
+        bodySmall: TextStyle(
+            fontSize: 16.0,
             fontWeight: FontWeight.normal,
             color: Colors.black,
             fontFamily: 'Noto-Sans'),
@@ -37,13 +42,9 @@ class AppTheme {
         headlineMedium: TextStyle(
             fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.black),
         titleLarge: TextStyle(
-            fontSize: 20.0,
-            fontWeight: FontWeight.normal,
-            color: Colors.black54),
+            fontSize: 20.0, fontWeight: FontWeight.normal, color: Colors.black),
         titleMedium: TextStyle(
-            fontSize: 16.0,
-            fontWeight: FontWeight.normal,
-            color: Colors.black54),
+            fontSize: 16.0, fontWeight: FontWeight.normal, color: Colors.black),
       ),
     );
   }

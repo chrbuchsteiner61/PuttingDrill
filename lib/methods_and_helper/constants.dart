@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const String version = '0.82/ 01.09.2024';
+const String version = '0.90/ 09.10.2024';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
@@ -27,3 +27,9 @@ ButtonStyle appsButtonStyle = const ButtonStyle(
     ),
   ),
 );
+
+class myColors {
+  static const golfGreen = Color.fromARGB(255, 76, 175, 80);
+  static const aBlue = Color.fromARGB(255, 36, 36, 173);
+
+}

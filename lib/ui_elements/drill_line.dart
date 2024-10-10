@@ -53,9 +53,7 @@ class DrillLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const double elementHeight = 50.0;
-    const SizedBox aSpacer = SizedBox(width: 8, height: elementHeight + 8);
-
-   //  int drillNumber = aDrill.drillNo;
+    const SizedBox aSpacer = SizedBox(width: 8, height: elementHeight + 18);
 
     return Center(
       child: Row(
@@ -135,7 +133,7 @@ class DrillLine extends StatelessWidget {
                       //numberOfDrill: aDrill.drillNo,
                       //drillName: drillName,
                       //drillInputLength: inputDrillInput1,
-                  // test reasons
+                      // test reasons
                       numberOfDrill: 1,
                       drillName: "something",
                       drillInputLength: "beliebige Länge",

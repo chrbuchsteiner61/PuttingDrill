@@ -86,8 +86,8 @@ class StartingPage extends StatelessWidget {
 
     List<DrillsInitialValue> drillsInitials = initializeDrills();
 
-    const String preParePics = "asset/pics/preparePics/thePreparePic";
-    const String iconPath = "asset/pics/icons_page1/Drill";
+    const String preParePics = "assets/pics/preparePics/thePreparePic";
+    const String iconPath = "assets/pics/icons_page1/Drill";
 
     return Scaffold(
       appBar: AppBar(
@@ -100,7 +100,7 @@ class StartingPage extends StatelessWidget {
         decoration: const BoxDecoration(
           color: Colors.white,
           image: DecorationImage(
-            image: AssetImage("asset/pics/page1_background.png"),
+            image: AssetImage("assets/pics/page1_background.png"),
             fit: BoxFit.cover,
           ),
         ),

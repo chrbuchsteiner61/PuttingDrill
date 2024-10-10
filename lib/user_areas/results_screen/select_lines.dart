@@ -15,10 +15,10 @@ class SelectLines extends StatefulWidget {
       required this.currentLine});
 
   @override
-    _SelectLinesState createState() => _SelectLinesState();
+    SelectLinesState createState() => SelectLinesState();
 }
 
-class _SelectLinesState extends State<SelectLines> {
+class SelectLinesState extends State<SelectLines> {
   int lineNo = 0;
 
   @override

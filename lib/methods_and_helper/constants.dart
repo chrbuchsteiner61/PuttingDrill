@@ -5,7 +5,7 @@ const String version = '0.90/ 09.10.2024';
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
 const SizedBox spaceBetween = SizedBox(width: 8);
-const SizedBox spaceAfter = SizedBox(height: 8);
+const SizedBox spaceAfter = SizedBox(height: 16);
 const double theMargin = 8.0;
 const double thePadding = 6.0;
 const BorderRadius theBorderRadius = BorderRadius.all(Radius.circular(6.0));

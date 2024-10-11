@@ -192,8 +192,8 @@ class InputScreenState extends State<InputScreen> {
                 child: Row(
                   children: <Widget>[
                     SizedBox(
-                      width: 125.0,
-                      height: 45.0,
+                      width: 200.0,
+                      height: 50.0,
                       child: ElevatedButton(
                         style: appsButtonStyle,
                         onPressed: () async {
@@ -223,7 +223,7 @@ class InputScreenState extends State<InputScreen> {
                             );
                           }
                         },
-                        child: const Text('Save Result'),
+                        child: Text(widget.buttonText),
                       ),
                     ),
                   ],

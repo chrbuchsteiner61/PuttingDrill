@@ -166,6 +166,7 @@ class StartingPage extends StatelessWidget {
                   child: const Text('Manage Test Data'),
                 ),
               ),
+              const Text(version),
             ],
           ),
         ),

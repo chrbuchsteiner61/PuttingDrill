@@ -89,6 +89,11 @@ class StartingPage extends StatelessWidget {
     const String preParePics = "assets/pics/preparePics/thePreparePic";
     const String iconPath = "assets/pics/icons_page1/Drill";
 
+    Text bottomText = Text(
+      version,
+      style: Theme.of(context).textTheme.bodyMedium,
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -166,11 +171,12 @@ class StartingPage extends StatelessWidget {
                   child: const Text('Manage Test Data'),
                 ),
               ),
-              const Text(version),
+              //  const Text(version),
             ],
           ),
         ),
       ),
+      bottomSheet: bottomText,
     );
   }
 }

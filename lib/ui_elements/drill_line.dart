@@ -60,6 +60,7 @@ class DrillLine extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           aSpacer,
+          aSpacer,
           ADrillIcon(elementHeight: elementHeight, drillPicture: drillPicture),
           spaceBetween,
           SizedBox(
@@ -130,7 +131,7 @@ class DrillLine extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const TheResultChart(
-                      // numberOfDrill: aDrill.drillNo,
+                      //numberOfDrill: aDrill.drillNo,
                       // drillName: drillName,
                       //  drillInputLength: inputDrillInput1,
                       // test reasons

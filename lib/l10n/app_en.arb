@@ -6,8 +6,8 @@
   "drillName1": "Short putts",
   "drillName2": "Distance putts",
   "drillName3": "Through the gates",
-  "drillName4": "Drill 4",
-  "drillName5": "Drill 5",
+  "drillName4": "Putts on undulating green",
+  "drillName5": "Downhill putts",
 
   "preparationHeader": "Preparation",
   "countingHeader": "Counting",
@@ -24,11 +24,11 @@
   "task4": "none",
   "task5": "none",
 
-  "thePreparation_1": "Choose a distance for the exercise from one, two or three club lengths.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
-  "thePreparation_2": "Choose a distance for the exercise from six, nine or 12 club lengths. \nIf your putter is about 34 inches long, this is about 0.86m or 2.83ft.\nLook at the example for a distance of six clubs.", 
-  "thePreparation_3": "Take four tees. Build two gates, clubhead width.\nChoose a distance between the gates of one, two or three club lengths.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.", 
-  "thePreparation_4": "Take some tees and ..4",
-  "thePreparation_5": "Take some tees and ..5",
+  "thePreparation_1": "On an even green choose a distance for the exercise from one, two or three club lengths.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
+  "thePreparation_2": "On an even green choose a distance for the exercise from six, nine or 12 club lengths. \nIf your putter is about 34 inches long, this is about 0.86m or 2.83ft.\nLook at the example for a distance of six clubs.", 
+  "thePreparation_3": "Take four tees. Build two gates on an even green, clubhead width.\nChoose a distance between the gates of one, two or three club lengths.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.", 
+  "thePreparation_4": "On an undulating green .4",
+  "thePreparation_5": "From a higher position ..5",
 
   "theExplainCounting_1": "Count your strokes and \ncount your made putts.",
   "theExplainCounting_2": "Count your strokes, \nmeassure the distance from the position of the balls to the hole \nwith your feet and sum up.",

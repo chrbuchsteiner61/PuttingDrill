@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const String version = '0.90/ 11.10.2024, 12:15';
+const String version = '0.91/ 14.10.2024, 14:15';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
@@ -27,3 +27,14 @@ ButtonStyle appsButtonStyle = const ButtonStyle(
     ),
   ),
 );
+
+class ParameterForChart {
+  final String drillName;
+  final int drillNumber;
+  final String drillInputLength;
+
+  ParameterForChart(
+      {required this.drillName,
+      required this.drillNumber,
+      required this.drillInputLength});
+}

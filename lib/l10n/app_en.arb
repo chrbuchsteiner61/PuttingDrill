@@ -6,7 +6,7 @@
   "drillName1": "Short putts",
   "drillName2": "Distance putts",
   "drillName3": "Through the gates",
-  "drillName4": "Putts on undulating green",
+  "drillName4": "On an undulating green",
   "drillName5": "Downhill putts",
 
   "preparationHeader": "Preparation",
@@ -15,26 +15,26 @@
   "purpose1": "Better your short putting",
   "purpose2": "Come closer to the hole",
   "purpose3": "Get a better line",
-  "purpose4": "none",
-  "purpose5": "none",
+  "purpose4": "Read the line",
+  "purpose5": "Feel the speed",
 
   "task1": "Putt into the hole.\nHit five or more balls from a short distance.",
   "task2": "Putt at nearest to the hole.\nHit five or more balls from a long distance.",
   "task3": "Putt through the gates.\nHit five or more balls through both gates.",
-  "task4": "none",
-  "task5": "none",
+  "task4": "Putt on an undulating green to a target.\nHit five or more balls",
+  "task5": "Putt downhill to a target.\nHit five or more balls.",
 
   "thePreparation_1": "On an even green choose a distance for the exercise from one, two or three club lengths.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
   "thePreparation_2": "On an even green choose a distance for the exercise from six, nine or 12 club lengths. \nIf your putter is about 34 inches long, this is about 0.86m or 2.83ft.\nLook at the example for a distance of six clubs.", 
   "thePreparation_3": "Take four tees. Build two gates on an even green, clubhead width.\nChoose a distance between the gates of one, two or three club lengths.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.", 
-  "thePreparation_4": "On an undulating green .4",
-  "thePreparation_5": "From a higher position ..5",
+  "thePreparation_4": "On an undulating green choose a distance for the exercise from one, two or three club lengths. Define your target with a tee.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
+  "thePreparation_5": "From a elevated position choose a distance for the exercise from one, two or three club lengths. Define your target with a tee.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
 
   "theExplainCounting_1": "Count your strokes and \ncount your made putts.",
   "theExplainCounting_2": "Count your strokes, \nmeassure the distance from the position of the balls to the hole \nwith your feet and sum up.",
   "theExplainCounting_3": "Count every stroke and \ncount every ball going through both gates.",
-  "theExplainCounting_4": "Count every stroke and count your ..4",
-  "theExplainCounting_5": "Count every stroke and count your ..5",
+  "theExplainCounting_4": "Count your strokes and \ncount your made putts.",
+  "theExplainCounting_5": "Count your strokes and \ncount your made putts.",
 
   "inputResults": "Input result",
   "inputAppBarText": "Put in your results of the drill",
@@ -67,21 +67,21 @@
   "inputDrill3Input2": "none",
   "inputDrill3Input3": "number of",
 
-  "inputDrill4Criteria1": "4Distance",
-  "inputDrill4Criteria2": "4Strokes",
+  "inputDrill4Criteria1": "Distance to\nthe target",
+  "inputDrill4Criteria2": "Strokes",
   "inputDrill4Criteria3": "Successfull",
   
-  "inputDrill4Input1": "none",
+  "inputDrill4Input1": "club lengths",
   "inputDrill4Input2": "none",
-  "inputDrill4Input3": "none",
+  "inputDrill4Input3": "number of",
 
-  "inputDrill5Criteria1": "5Distance",
-  "inputDrill5Criteria2": "5Strokes",
+  "inputDrill5Criteria1": "Distance to\nthe target",
+  "inputDrill5Criteria2": "Strokes",
   "inputDrill5Criteria3": "Successfull",
   
-  "inputDrill5Input1": "none",
+  "inputDrill5Input1": "club lengths",
   "inputDrill5Input2": "none",
-  "inputDrill5Input3": "none",
+  "inputDrill5Input3": "number of",
 
   "savedResult" : "saved successful",
 

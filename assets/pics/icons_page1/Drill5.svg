@@ -1,3 +1,16 @@
-<svg height="100" width="100" >
-  <circle r="45" cx="50" cy="50" fill="red" />
+<svg width="100" height="100">
+  <rect width="100" height="100" x="0" y="0" rx="10" ry="10" style="fill:#1167b1"/>
+  <defs>
+    <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="20%" stop-color="#888" />
+      <stop offset="100%" stop-color="white" />
+    </linearGradient>
+  </defs>
+  <g id="downhill" transform="translate(0 2)">
+<!--<polyline points="10,40 17,40 19,40.5 20,41 22,42 25,43 27,44 28,44.5 30,46 33,47 36,49 37,49.5 40,51 50,53 65,55 90,55" style="fill:none;stroke:white;stroke-width:4;stroke-linecap:round"/>-->
+    <polygon points="10,40 17,40 19,40.5 20,41 22,42 25,43 27,44 28,44.5 30,46 33,47 36,49 37,49.5 40,51 50,53 65,55 90,55 90,75 10,75 " style="fill:url(#grad1);"/>
+    <circle fill="white" cx="14" cy="30" r="7"/>
+
+    <circle fill="yellow" cx="84" cy="45" r="7"/>
+  </g>
 </svg>

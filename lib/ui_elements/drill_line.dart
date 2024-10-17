@@ -26,6 +26,7 @@ class DrillLine extends StatelessWidget {
   final String inputDrillInput3;
   final String aPreparePic;
   final String drillPicture;
+  final String theClubLength;
 
   final ButtonStyle theButtonStyle;
   final DrillsInitialValue aDrill;
@@ -45,6 +46,7 @@ class DrillLine extends StatelessWidget {
       required this.inputDrillInput2,
       required this.inputDrillInput3,
       required this.drillPicture,
+      required this.theClubLength,
       required this.aPreparePic,
       required this.theButtonStyle,
       required this.aDrill,
@@ -52,6 +54,7 @@ class DrillLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const List<double> boxWidth = [130.0, 80.0, 80.0];
     const double elementHeight = 50.0;
     const SizedBox aSpacer = SizedBox(width: 8, height: elementHeight + 18);
 
@@ -64,9 +67,9 @@ class DrillLine extends StatelessWidget {
           ADrillIcon(elementHeight: elementHeight, drillPicture: drillPicture),
           spaceBetween,
           SizedBox(
-            width: 120,
+            width: boxWidth[0],
             height: elementHeight,
-            child: TextButton(
+            child: ElevatedButton(
               style: theButtonStyle,
               onPressed: () {
                 Navigator.push(
@@ -76,6 +79,7 @@ class DrillLine extends StatelessWidget {
                       drillName: drillName,
                       drillPurpose: thePurpose,
                       preparationText: aPreparationText,
+                      clubLength: theClubLength,
                       countingText: aCountingText,
                       theTask: aTask,
                       preparationHeader: textForDrillLine["preparationHeader"]!,
@@ -94,7 +98,7 @@ class DrillLine extends StatelessWidget {
           spaceBetween,
           SizedBox(
             height: elementHeight,
-            width: 70.0,
+            width: boxWidth[1] ,
             child: ElevatedButton(
               style: theButtonStyle,
               onPressed: () {
@@ -123,7 +127,7 @@ class DrillLine extends StatelessWidget {
           spaceBetween,
           SizedBox(
             height: elementHeight,
-            width: 70.0,
+            width: boxWidth[2],
             child: ElevatedButton(
               style: theButtonStyle,
               onPressed: () {

@@ -24,12 +24,13 @@
   "task4": "Putt on an undulating green to a target.\nHit five or more balls",
   "task5": "Putt downhill to a target.\nHit five or more balls.",
 
-  "thePreparation_1": "On an even green choose a distance for the exercise from one, two or three club lengths.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
-  "thePreparation_2": "On an even green choose a distance for the exercise from six, nine or 12 club lengths. \nIf your putter is about 34 inches long, this is about 0.86m or 2.83ft.\nLook at the example for a distance of six clubs.", 
-  "thePreparation_3": "Take four tees. Build two gates on an even green, clubhead width.\nChoose a distance between the gates of one, two or three club lengths.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.", 
-  "thePreparation_4": "On an undulating green choose a distance for the exercise from one, two or three club lengths. Define your target with a tee.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
-  "thePreparation_5": "From a elevated position choose a distance for the exercise from one, two or three club lengths. Define your target with a tee.\nIf your putter is about 34 inches long, this is 0.86m or 2.83ft.\nLook at the example for a distance of two clubs.",
-
+  "thePreparation_1": "On an even green choose a distance for the exercise from one, two or three club lengths. Look at the example for a distance of two clubs.",
+  "thePreparation_2": "On an even green choose a distance for the exercise from six, nine or 12 club lengths. Look at the example for a distance of six clubs.", 
+  "thePreparation_3": "Take four tees. Build two gates on an even green, clubhead width.\nChoose a distance between the gates of one, two or three club lengths. Look at the example for a distance of two clubs.", 
+  "thePreparation_4": "On an undulating green choose a distance for the exercise from one, two or three club lengths. Define your target with a tee. Look at the example for a distance of two clubs.",
+  "thePreparation_5": "From a elevated position choose a distance for the exercise from one, two or three club lengths. Define your target with a tee. Look at the example for a distance of two clubs.",
+  "clubLength": "If your putter is about 34 inches long, this is 0.86m or 2.83ft.",
+  
   "theExplainCounting_1": "Count your strokes and \ncount your made putts.",
   "theExplainCounting_2": "Count your strokes, \nmeassure the distance from the position of the balls to the hole \nwith your feet and sum up.",
   "theExplainCounting_3": "Count every stroke and \ncount every ball going through both gates.",
@@ -85,7 +86,7 @@
 
   "savedResult" : "saved successful",
 
-  "viewResults": "Your stats",
+  "viewResults": "Stats",
 
   "drawerHeader": "Informations",
   "privStHeader": "Data protection",

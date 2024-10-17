@@ -33,7 +33,7 @@ class AppTheme {
               color: Colors.black,
               fontFamily: 'Noto-Sans'),
           bodySmall: TextStyle(
-              fontSize: 16.0,
+              fontSize: 12.0,
               fontWeight: FontWeight.normal,
               color: Colors.black,
               fontFamily: 'Noto-Sans'),

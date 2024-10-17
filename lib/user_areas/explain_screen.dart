@@ -10,6 +10,7 @@ class ExplainScreen extends StatelessWidget {
   final String preparationHeader;
   final String countingHeader;
   final String preparationText;
+  final String clubLength;
   final String countingText;
   final String preparePic;
   final String drillPurpose;
@@ -21,6 +22,7 @@ class ExplainScreen extends StatelessWidget {
       required this.preparationHeader,
       required this.countingHeader,
       required this.preparationText,
+      required this.clubLength,
       required this.countingText,
       required this.preparePic,
       required this.drillPurpose,
@@ -83,6 +85,8 @@ class ExplainScreen extends StatelessWidget {
               countingText,
               style: Theme.of(context).textTheme.bodyMedium!,
             ),
+            spaceAfter,
+            Text(clubLength, style: Theme.of(context).textTheme.bodySmall!)
           ],
         ),
       ),

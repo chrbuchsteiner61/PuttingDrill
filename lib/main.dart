@@ -128,6 +128,7 @@ class StartingPage extends StatelessWidget {
                   },
                   drillPicture: "$iconPath$numberOfDrill.svg",
                   aPreparePic: "$preParePics$numberOfDrill.svg",
+                  theClubLength: localizations.clubLength,
                   theButtonStyle: appsButtonStyle,
                   aDrill: drillsInitials[numberOfDrill - 1],
                   drillName:

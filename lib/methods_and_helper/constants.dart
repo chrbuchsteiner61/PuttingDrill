@@ -9,6 +9,7 @@ const SizedBox spaceAfter = SizedBox(height: 16);
 const double theMargin = 8.0;
 const double thePadding = 6.0;
 const BorderRadius theBorderRadius = BorderRadius.all(Radius.circular(6.0));
+const double theElevation = 10.0;
 
 ButtonStyle appsButtonStyle = const ButtonStyle(
   padding: WidgetStatePropertyAll(EdgeInsets.all(thePadding)),
@@ -20,9 +21,10 @@ ButtonStyle appsButtonStyle = const ButtonStyle(
   ),
   backgroundColor: WidgetStatePropertyAll(Colors.green),
   foregroundColor: WidgetStatePropertyAll(Colors.white),
+  elevation: WidgetStatePropertyAll(theElevation),
   textStyle: WidgetStatePropertyAll(
     TextStyle(
-      fontSize: 16,
+      fontSize: 15,
       fontWeight: FontWeight.bold,
     ),
   ),

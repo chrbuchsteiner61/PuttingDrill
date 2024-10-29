@@ -131,11 +131,10 @@ class DrillLine extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const TheResultChart(
-                      numberOfDrill: 1, // Replace with actual drill number
-                      drillName: "something", // Replace with actual drill name
-                      drillInputLength:
-                          "beliebige Länge", // Replace with actual drill input length
+                    builder: (context) => TheResultChart(
+                      numberOfDrill: aDrill.drillNumber,
+                      drillName: drillName, // Replace with actual drill name
+                      drillInputLength: theClubLength,
                     ),
                   ),
                 );

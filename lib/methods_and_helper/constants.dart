@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const String version = '0.911/ 16.10.2024, 14:20';
+const String version = '0.912/ 29.10.2024, 10:50';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
@@ -11,7 +11,7 @@ const double thePadding = 6.0;
 const BorderRadius theBorderRadius = BorderRadius.all(Radius.circular(6.0));
 const double theElevation = 10.0;
 
-ButtonStyle appsButtonStyle = const ButtonStyle(
+const ButtonStyle appsButtonStyle = ButtonStyle(
   padding: WidgetStatePropertyAll(EdgeInsets.all(thePadding)),
   shape: WidgetStatePropertyAll(
     RoundedRectangleBorder(

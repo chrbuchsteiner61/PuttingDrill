@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:myapp/user_areas/results_screen/the_result_chart.dart';
-
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
@@ -17,7 +15,6 @@ class DrillLine extends StatelessWidget {
   final String aPreparationText;
   final String aCountingText;
   final String aTask;
-
   final String inputDrillCriteria1;
   final String inputDrillCriteria2;
   final String inputDrillCriteria3;
@@ -27,47 +24,47 @@ class DrillLine extends StatelessWidget {
   final String aPreparePic;
   final String drillPicture;
   final String theClubLength;
-
   final ButtonStyle theButtonStyle;
   final DrillsInitialValue aDrill;
   final Map<String, String> textForDrillLine;
 
-  const DrillLine(
-      {super.key,
-      required this.drillName,
-      required this.thePurpose,
-      required this.aPreparationText,
-      required this.aCountingText,
-      required this.aTask,
-      required this.inputDrillCriteria1,
-      required this.inputDrillCriteria2,
-      required this.inputDrillCriteria3,
-      required this.inputDrillInput1,
-      required this.inputDrillInput2,
-      required this.inputDrillInput3,
-      required this.drillPicture,
-      required this.theClubLength,
-      required this.aPreparePic,
-      required this.theButtonStyle,
-      required this.aDrill,
-      required this.textForDrillLine});
+  const DrillLine({
+    super.key,
+    required this.drillName,
+    required this.thePurpose,
+    required this.aPreparationText,
+    required this.aCountingText,
+    required this.aTask,
+    required this.inputDrillCriteria1,
+    required this.inputDrillCriteria2,
+    required this.inputDrillCriteria3,
+    required this.inputDrillInput1,
+    required this.inputDrillInput2,
+    required this.inputDrillInput3,
+    required this.drillPicture,
+    required this.theClubLength,
+    required this.aPreparePic,
+    required this.theButtonStyle,
+    required this.aDrill,
+    required this.textForDrillLine,
+  });
 
   @override
   Widget build(BuildContext context) {
-    const List<double> boxWidth = [130.0, 80.0, 80.0];
+    const List<double> boxWidths = [130.0, 80.0, 80.0];
     const double elementHeight = 50.0;
-    const SizedBox aSpacer = SizedBox(width: 8, height: elementHeight + 18);
+    const SizedBox spacer = SizedBox(width: 8, height: elementHeight + 18);
 
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          aSpacer,
-          aSpacer,
+          spacer,
+          spacer,
           ADrillIcon(elementHeight: elementHeight, drillPicture: drillPicture),
           spaceBetween,
           SizedBox(
-            width: boxWidth[0],
+            width: boxWidths[0],
             height: elementHeight,
             child: ElevatedButton(
               style: theButtonStyle,
@@ -98,7 +95,7 @@ class DrillLine extends StatelessWidget {
           spaceBetween,
           SizedBox(
             height: elementHeight,
-            width: boxWidth[1] ,
+            width: boxWidths[1],
             child: ElevatedButton(
               style: theButtonStyle,
               onPressed: () {
@@ -127,7 +124,7 @@ class DrillLine extends StatelessWidget {
           spaceBetween,
           SizedBox(
             height: elementHeight,
-            width: boxWidth[2],
+            width: boxWidths[2],
             child: ElevatedButton(
               style: theButtonStyle,
               onPressed: () {
@@ -135,13 +132,10 @@ class DrillLine extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const TheResultChart(
-                      //numberOfDrill: aDrill.drillNo,
-                      // drillName: drillName,
-                      //  drillInputLength: inputDrillInput1,
-                      // test reasons
-                      numberOfDrill: 1,
-                      drillName: "something",
-                      drillInputLength: "beliebige Länge",
+                      numberOfDrill: 1, // Replace with actual drill number
+                      drillName: "something", // Replace with actual drill name
+                      drillInputLength:
+                          "beliebige Länge", // Replace with actual drill input length
                     ),
                   ),
                 );

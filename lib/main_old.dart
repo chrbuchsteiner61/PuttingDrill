@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:myapp/dev_area/test_screen.dart';
 import 'package:myapp/methods_and_helper/drills_initial_value.dart';
+//import 'package:myapp/methods_and_helper/initialize_drills.dart';
+
 import 'package:myapp/user_areas/the_info_drawer.dart';
 import 'package:myapp/methods_and_helper/language_helper.dart';
 import 'package:myapp/ui_elements/drill_line.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/methods_and_helper/theme_data.dart';
+
 import 'package:logger/logger.dart';
 
 var logger = Logger();
@@ -20,26 +24,20 @@ class PuttingDrillApp extends StatefulWidget {
   @override
   PuttingDrillAppState createState() => PuttingDrillAppState();
 
-  // Define the 'of' method to access state from context
+  // Define the 'of' method
   static PuttingDrillAppState? of(BuildContext context) {
     return context.findAncestorStateOfType<PuttingDrillAppState>();
   }
 }
 
 class PuttingDrillAppState extends State<PuttingDrillApp> {
-  final LanguageService languageService = LanguageService();
+  LanguageService languageService = LanguageService();
   Locale _locale = const Locale('en');
 
-  @override
-  void initState() {
-    super.initState();
-    initialLocale();
-  }
-
   Future<void> initialLocale() async {
-    String? languageKey = await languageService.loadLanguage();
+    String? aLanguageKey = await languageService.loadLanguage();
     setState(() {
-      _locale = Locale(languageKey ?? 'de');
+      _locale = Locale(aLanguageKey ?? 'de');
     });
   }
 
@@ -53,10 +51,11 @@ class PuttingDrillAppState extends State<PuttingDrillApp> {
 
   @override
   Widget build(BuildContext context) {
+    initialLocale();
     return MaterialApp(
       title: 'Putting Drill Diary',
       localizationsDelegates: const [
-        AppLocalizations.delegate,
+        AppLocalizations.delegate, // Add this line
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -66,7 +65,9 @@ class PuttingDrillAppState extends State<PuttingDrillApp> {
         Locale('de'),
         Locale('fr'),
         Locale('es'),
+        // Locale('it'),
         Locale('da'),
+        // Locale('sv'),
       ],
       debugShowCheckedModeBanner: false,
       theme: AppTheme.data,
@@ -95,7 +96,9 @@ class StartingPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(localizations!.page1Header),
+        title: Text(
+          localizations!.page1Header,
+        ),
       ),
       drawer: const Drawer(child: TheInfoDrawer()),
       body: Container(
@@ -112,6 +115,7 @@ class StartingPage extends StatelessWidget {
             children: <Widget>[
               for (int numberOfDrill = 1; numberOfDrill <= 5; numberOfDrill++)
                 DrillLine(
+                  // no 1
                   textForDrillLine: {
                     "inputAppBarText": localizations.inputAppBarText,
                     "inputButtonText": localizations.inputButtonText,
@@ -149,6 +153,8 @@ class StartingPage extends StatelessWidget {
                   inputDrillInput3: localizations
                       .getDrillTexts(numberOfDrill)["inputDrillInput3"]!,
                 ),
+
+              // kill for production
               const SizedBox(width: 10.0, height: 40.0),
               SizedBox(
                 width: 150.0,
@@ -166,6 +172,7 @@ class StartingPage extends StatelessWidget {
                   child: const Text('Manage Test Data'),
                 ),
               ),
+              //  const Text(version),
             ],
           ),
         ),
@@ -272,6 +279,6 @@ List<DrillsInitialValue> initializeDrills() {
     DrillDistancePutt(2, 0, 5, 5),
     DrillsInitialValue(3, 0, 5, 5),
     DrillsInitialValue(4, 0, 5, 5),
-    DrillsInitialValue(5, 0, 5, 5),
+    DrillsInitialValue(5, 0, 5, 5)
   ];
 }

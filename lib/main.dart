@@ -136,18 +136,20 @@ class StartingPage extends StatelessWidget {
                   aCountingText:
                       localizations.getDrillTexts(numberOfDrill)["counting"]!,
                   aTask: localizations.getDrillTexts(numberOfDrill)["task"]!,
-                  inputDrillCriteria1: localizations
-                      .getDrillTexts(numberOfDrill)["inputDrillCriteria1"]!,
-                  inputDrillCriteria2: localizations
-                      .getDrillTexts(numberOfDrill)["inputDrillCriteria2"]!,
-                  inputDrillCriteria3: localizations
-                      .getDrillTexts(numberOfDrill)["inputDrillCriteria3"]!,
-                  inputDrillInput1: localizations
-                      .getDrillTexts(numberOfDrill)["inputDrillInput1"]!,
-                  inputDrillInput2: localizations
-                      .getDrillTexts(numberOfDrill)["inputDrillInput2"]!,
-                  inputDrillInput3: localizations
-                      .getDrillTexts(numberOfDrill)["inputDrillInput3"]!,
+                  inputData: DrillInputData(
+                    criteria1: localizations
+                        .getDrillTexts(numberOfDrill)["inputDrillCriteria1"]!,
+                    criteria2: localizations
+                        .getDrillTexts(numberOfDrill)["inputDrillCriteria2"]!,
+                    criteria3: localizations
+                        .getDrillTexts(numberOfDrill)["inputDrillCriteria3"]!,
+                    input1: localizations
+                        .getDrillTexts(numberOfDrill)["inputDrillInput1"]!,
+                    input2: localizations
+                        .getDrillTexts(numberOfDrill)["inputDrillInput2"]!,
+                    input3: localizations
+                        .getDrillTexts(numberOfDrill)["inputDrillInput3"]!,
+                  ),
                 ),
               const SizedBox(width: 10.0, height: 40.0),
               SizedBox(

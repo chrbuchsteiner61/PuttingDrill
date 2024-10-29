@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const String version = '0.912/ 29.10.2024, 10:50';
+const String version = '0.913/ 29.10.2024, 14:00';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
@@ -39,4 +39,23 @@ class ParameterForChart {
       {required this.drillName,
       required this.drillNumber,
       required this.drillInputLength});
+}
+
+// Data class for input-related properties
+class DrillInputData {
+  final String criteria1;
+  final String criteria2;
+  final String criteria3;
+  final String input1;
+  final String input2;
+  final String input3;
+
+  const DrillInputData({
+    required this.criteria1,
+    required this.criteria2,
+    required this.criteria3,
+    required this.input1,
+    required this.input2,
+    required this.input3,
+  });
 }

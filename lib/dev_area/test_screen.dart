@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/user_areas/results_screen/the_result_chart.dart';
+import 'package:myapp/user_areas/results_screen/result_chart.dart';
 
 import 'package:myapp/dev_area/results_test.dart';
 import 'package:myapp/dev_area/test_chart.dart';
@@ -90,7 +90,7 @@ class TestScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const TheResultChart(
-                        numberOfDrill: 1,
+                        drillNumber: 1,
                         drillName: "Drill 1",
                         drillInputLength: "Club length",
                       ),

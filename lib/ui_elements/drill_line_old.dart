@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/user_areas/results_screen/the_result_chart.dart';
+import 'package:myapp/user_areas/results_screen/depr_the_result_chart.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';

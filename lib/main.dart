@@ -122,6 +122,7 @@ class StartingPage extends StatelessWidget {
                     "viewResults": localizations.viewResults,
                     "inputResults": localizations.inputResults,
                   },
+                  drillNumber: numberOfDrill,
                   drillPicture: "$iconPath$numberOfDrill.svg",
                   aPreparePic: "$preParePics$numberOfDrill.svg",
                   theClubLength: localizations.clubLength,

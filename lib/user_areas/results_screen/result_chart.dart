@@ -62,6 +62,8 @@ class _HistogramChartState extends State<HistogramChart> {
               onLineSelected: _updateSelectedLine,
               currentLine: selectedDrillLength,
             ),
+            spaceBetween,
+            Text(widget.drillInputLength),
           ],
         ),
         const SizedBox(height: 15.0),
@@ -152,7 +154,7 @@ class _HistogramChartState extends State<HistogramChart> {
 }
 
 class ResultChart extends StatelessWidget {
-  final String drillNumber;
+  final int drillNumber;
   final String drillName;
   final String drillInputLength;
 
@@ -183,7 +185,7 @@ class ResultChart extends StatelessWidget {
           final results = snapshot.data!;
           return HistogramChart(
             results: results,
-            drillNumber: int.parse(drillNumber),
+            drillNumber: drillNumber,
             drillName: drillName,
             drillInputLength: drillInputLength,
           );

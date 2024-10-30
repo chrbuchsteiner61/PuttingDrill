@@ -93,8 +93,7 @@ class SelectLinesState extends State<SelectLines> {
               ),
             ),
           ),
-          spaceBetween,
-          const Text("Club length"),
+          
         ],
       ),
     );

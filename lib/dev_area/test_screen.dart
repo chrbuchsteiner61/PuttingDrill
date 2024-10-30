@@ -91,7 +91,7 @@ class TestScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const ResultChart(
-                        drillNumber: "1",
+                        drillNumber: 1,
                         drillName: "Drill 1",
                         drillInputLength: "Club length",
                       ),

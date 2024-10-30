@@ -15,6 +15,7 @@ class DrillLine extends StatelessWidget {
   static const _elementHeight = 50.0;
   static const _spacer = SizedBox(width: 8, height: _elementHeight + 18);
 
+  final int drillNumber;
   final String drillName;
   final String thePurpose;
   final String aPreparationText;
@@ -30,6 +31,7 @@ class DrillLine extends StatelessWidget {
 
   const DrillLine({
     super.key,
+    required this.drillNumber,
     required this.drillName,
     required this.thePurpose,
     required this.aPreparationText,
@@ -46,7 +48,7 @@ class DrillLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    logger.d(aDrill.drillNumber);
+    
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -59,7 +61,7 @@ class DrillLine extends StatelessWidget {
           spaceBetween,
           _buildInputButton(context),
           spaceBetween,
-          _buildResultsButton(context, aDrill.drillNumber.toString()),
+          _buildResultsButton(context, drillNumber),
         ],
       ),
     );
@@ -86,7 +88,7 @@ class DrillLine extends StatelessWidget {
     );
   }
 
-  Widget _buildResultsButton(BuildContext context, String aDrillNumber) {
+  Widget _buildResultsButton(BuildContext context, int aDrillNumber) {
     logger.d(aDrillNumber);
     return _DrillButton(
       width: _boxWidths[2],
@@ -137,7 +139,7 @@ class DrillLine extends StatelessWidget {
     );
   }
 
-  void _navigateToResults(BuildContext context, String aDrillNumber) {
+  void _navigateToResults(BuildContext context, int aDrillNumber) {
     // receive data from database and send it to chart
 
     logger.d(aDrillNumber);
@@ -148,7 +150,7 @@ class DrillLine extends StatelessWidget {
           drillNumber: aDrillNumber,
           //numberOfDrill: 2,
           drillName: drillName,
-          drillInputLength: theClubLength,
+          drillInputLength: inputData.criteria3,
         ),
       ),
     );

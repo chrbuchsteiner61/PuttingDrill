@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/user_areas/results_screen/depr_the_result_chart.dart';
+import 'package:myapp/user_areas/results_screen/result_chart.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
 import 'package:myapp/user_areas/input_screen/input_screen.dart';
 import 'package:myapp/methods_and_helper/drills_initial_value.dart';
+
+import 'package:logger/logger.dart';
+
+var logger = Logger();
 
 class DrillLine extends StatelessWidget {
   static const _boxWidths = [130.0, 80.0, 80.0];
@@ -42,6 +46,7 @@ class DrillLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    logger.d(aDrill.drillNumber);
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -54,7 +59,7 @@ class DrillLine extends StatelessWidget {
           spaceBetween,
           _buildInputButton(context),
           spaceBetween,
-          _buildResultsButton(context),
+          _buildResultsButton(context, aDrill.drillNumber.toString()),
         ],
       ),
     );
@@ -81,12 +86,13 @@ class DrillLine extends StatelessWidget {
     );
   }
 
-  Widget _buildResultsButton(BuildContext context) {
+  Widget _buildResultsButton(BuildContext context, String aDrillNumber) {
+    logger.d(aDrillNumber);
     return _DrillButton(
       width: _boxWidths[2],
       height: _elementHeight,
       style: theButtonStyle,
-      onPressed: () => _navigateToResults(context),
+      onPressed: () => _navigateToResults(context, aDrillNumber),
       text: textForDrillLine["viewResults"]!,
     );
   }
@@ -131,12 +137,16 @@ class DrillLine extends StatelessWidget {
     );
   }
 
-  void _navigateToResults(BuildContext context) {
+  void _navigateToResults(BuildContext context, String aDrillNumber) {
+    // receive data from database and send it to chart
+
+    logger.d(aDrillNumber);
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => TheResultChart(
-          numberOfDrill: aDrill.drillNumber,
+        builder: (context) => ResultChart(
+          drillNumber: aDrillNumber,
+          //numberOfDrill: 2,
           drillName: drillName,
           drillInputLength: theClubLength,
         ),

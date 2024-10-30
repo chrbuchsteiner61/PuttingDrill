@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/user_areas/results_screen/result_chart.dart';
 
 import 'package:myapp/dev_area/results_test.dart';
+import 'package:myapp/dev_area/a_different_test_chart.dart';
 import 'package:myapp/dev_area/test_chart.dart';
 import 'package:myapp/dev_area/test_data.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
@@ -89,8 +90,8 @@ class TestScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const TheResultChart(
-                        drillNumber: 1,
+                      builder: (context) => const ResultChart(
+                        drillNumber: "1",
                         drillName: "Drill 1",
                         drillInputLength: "Club length",
                       ),
@@ -98,6 +99,28 @@ class TestScreen extends StatelessWidget {
                   );
                 },
                 child: const Text('Show histogram'),
+              ),
+            ),
+            spaceBetween,
+            SizedBox(
+              width: 150.0,
+              height: 45.0,
+              child: ElevatedButton(
+                style: appsButtonStyle,
+                onPressed: () {
+                  int drillNo = 1;
+                  List<PuttingResult> drillData = generateTestData(50);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ADifferentTestChart(
+                        aDrillNumber: drillNo,
+                        drillData: drillData[drillNo],
+                      ),
+                    ),
+                  );
+                },
+                child: const Text('Different approach'),
               ),
             ),
           ],

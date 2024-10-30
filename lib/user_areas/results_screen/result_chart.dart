@@ -151,12 +151,12 @@ class _HistogramChartState extends State<HistogramChart> {
   }
 }
 
-class TheResultChart extends StatelessWidget {
-  final int drillNumber;
+class ResultChart extends StatelessWidget {
+  final String drillNumber;
   final String drillName;
   final String drillInputLength;
 
-  const TheResultChart({
+  const ResultChart({
     super.key,
     required this.drillNumber,
     required this.drillInputLength,
@@ -183,7 +183,7 @@ class TheResultChart extends StatelessWidget {
           final results = snapshot.data!;
           return HistogramChart(
             results: results,
-            drillNumber: drillNumber,
+            drillNumber: int.parse(drillNumber),
             drillName: drillName,
             drillInputLength: drillInputLength,
           );

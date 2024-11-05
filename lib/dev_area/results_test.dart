@@ -58,7 +58,7 @@ class ResultsFromDB extends StatelessWidget {
     for (var result in results!) {
       dateInMillis =
           DateTime.parse(result.dateOfPractice).millisecondsSinceEpoch;
-      exceriseDateTime = DateFormat('MM/dd/yy, hh:mm a')
+      exceriseDateTime = DateFormat('MM/dd, hh:mm a')
           .format(DateTime.fromMillisecondsSinceEpoch(dateInMillis));
       drillNo = result.drillNo;
       criteria1 = result.criteria1;
@@ -73,7 +73,7 @@ class ResultsFromDB extends StatelessWidget {
         for (var i in someLines)
           Padding(
             padding: const EdgeInsets.all(3.0),
-            child: Text(i),
+            child: Text(i, style: const TextStyle(fontSize: 11)),
           ),
       ],
     );

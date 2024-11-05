@@ -26,7 +26,7 @@ class TestScreen extends StatelessWidget {
               child: ElevatedButton(
                 style: appsButtonStyle,
                 onPressed: () async {
-                  List<PuttingResult> resultsForTest = generateTestData(50);
+                  List<PuttingResult> resultsForTest = generateTestData(10);
                   for (var result in resultsForTest) {
                     await DatabaseHelper().insertResult(result);
                   }
@@ -109,7 +109,7 @@ class TestScreen extends StatelessWidget {
                 style: appsButtonStyle,
                 onPressed: () {
                   int drillNo = 1;
-                  List<PuttingResult> drillData = generateTestData(50);
+                  List<PuttingResult> drillData = generateTestData(10);
                   Navigator.push(
                     context,
                     MaterialPageRoute(

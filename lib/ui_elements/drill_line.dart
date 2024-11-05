@@ -140,7 +140,6 @@ class DrillLine extends StatelessWidget {
   }
 
   void _navigateToResults(BuildContext context, int aDrillNumber) {
-    // receive data from database and send it to chart
 
     logger.d(aDrillNumber);
     Navigator.push(

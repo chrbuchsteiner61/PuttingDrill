@@ -187,6 +187,10 @@ class InputScreenState extends State<InputScreen> {
                 ),
               ),
               spaceAfter,
+              Text((_successfulPutts.toDouble() / _putts.toDouble()*100.0).toString(),
+                  style: Theme.of(context).textTheme.bodyMedium!),
+              
+              
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Row(

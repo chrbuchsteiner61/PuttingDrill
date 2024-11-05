@@ -62,8 +62,6 @@ class _HistogramChartState extends State<HistogramChart> {
               onLineSelected: _updateSelectedLine,
               currentLine: selectedDrillLength,
             ),
-            spaceBetween,
-            Text(widget.drillInputLength),
           ],
         ),
         const SizedBox(height: 15.0),
@@ -90,7 +88,8 @@ class _HistogramChartState extends State<HistogramChart> {
                         if (index >= 0 && index < widget.results.length) {
                           return Text(
                             DateFormat('dd.MM.').format(DateTime.parse(
-                                drillResults[selectedDrillLength][index].dateOfPractice)),
+                                drillResults[selectedDrillLength][index]
+                                    .dateOfPractice)),
                             style: const TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.normal,
@@ -127,7 +126,10 @@ class _HistogramChartState extends State<HistogramChart> {
                   show: true,
                   border: Border.all(color: Colors.black, width: 1),
                 ),
-                barGroups: drillResults[selectedDrillLength].asMap().entries.map((entry) {
+                barGroups: drillResults[selectedDrillLength]
+                    .asMap()
+                    .entries
+                    .map((entry) {
                   final index = entry.key;
                   final chartData = entry.value;
 

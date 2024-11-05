@@ -9,7 +9,6 @@ class DrillsInitialValue {
   DrillsInitialValue(
       this.drillNo, this.criteria1, this.numberOfExercises, this.success);
 
-  get drillNumber => null;
 
   double calculateSuccessRate() {
     return (success / numberOfExercises.toDouble()) * perCent;

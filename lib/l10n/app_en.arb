@@ -84,6 +84,8 @@
   "inputDrill5Input2": "none",
   "inputDrill5Input3": "number of",
 
+  "success":"Success",
+
   "savedResult" : "saved successful",
 
   "viewResults": "Stats",

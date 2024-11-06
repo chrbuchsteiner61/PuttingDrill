@@ -21,6 +21,7 @@ class InputScreen extends StatefulWidget {
   final String drillInput3;
   final DrillsInitialValue aDrill;
   final String errorInputMessageNonEmptyNegativ;
+  final String success;
 
   const InputScreen({
     super.key,
@@ -34,6 +35,7 @@ class InputScreen extends StatefulWidget {
     required this.drillInput3,
     required this.aDrill,
     required this.errorInputMessageNonEmptyNegativ,
+    required this.success,
   });
 
   @override
@@ -187,10 +189,34 @@ class InputScreenState extends State<InputScreen> {
                 ),
               ),
               spaceAfter,
-              Text((_successfulPutts.toDouble() / _putts.toDouble()*100.0).toString(),
-                  style: Theme.of(context).textTheme.bodyMedium!),
-              
-              
+              InputRow(
+                child: Row(
+                  children: [
+                    spaceBetween,
+                    InputBoxNo1(
+                        columnWidth: col1, inputDrillCriteria1: widget.success),
+                    spaceBetween,
+                    SizedBox(
+                      width: col2,
+                      child: Text(
+                          (_successfulPutts.toDouble() /
+                                  _putts.toDouble() *
+                                  100.0)
+                              .toString(),
+                          style: Theme.of(context).textTheme.bodyMedium!),
+                    ),
+                    spaceBetween,
+                    SizedBox(
+                      width: col3,
+                      child: Text(
+                        "%",
+                        style: Theme.of(context).textTheme.bodyMedium!,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              spaceAfter,
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Row(
@@ -210,8 +236,8 @@ class InputScreenState extends State<InputScreen> {
                                 widget.aDrill.calculateSuccessRate();
                             PuttingResult newResult = PuttingResult(
                               drillNo: widget.aDrill.drillNo,
-                              criteria1: selectedDistance,
-                              criteria2: _putts,
+                              selectedDistance: selectedDistance,
+                              numberOfEfforts: _putts,
                               //unused criteria 3
                               criteria3: -99,
                               success: _successfulPutts.toDouble(),

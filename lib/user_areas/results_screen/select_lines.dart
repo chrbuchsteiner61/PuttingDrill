@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/methods_and_helper/constants.dart';
 
 class SelectLines extends StatefulWidget {
   final List<int> strokes;
@@ -25,11 +26,11 @@ class SelectLinesState extends State<SelectLines> {
       padding: const EdgeInsets.fromLTRB(30.0, 5.0, 1.0, 1.0),
       child: Row(
         children: [
-          _buildButton(0, Colors.yellow),
+          _buildButton(0, barColors[0]),
           spaceBetween,
-          _buildButton(1, Colors.red),
+          _buildButton(1, barColors[1]),
           spaceBetween,
-          _buildButton(2, Colors.blue),
+          _buildButton(2, barColors[2]),
         ],
       ),
     );
@@ -53,7 +54,8 @@ class SelectLinesState extends State<SelectLines> {
           alignment: Alignment.center,
           padding: WidgetStateProperty.all(const EdgeInsets.all(0.0)),
         ),
-        child: Text(widget.strokes[index].toString(), textAlign: TextAlign.center),
+        child:
+            Text(widget.strokes[index].toString(), textAlign: TextAlign.center),
       ),
     );
   }

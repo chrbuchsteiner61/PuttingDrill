@@ -60,7 +60,7 @@ class ChartFromDB extends StatelessWidget {
             .toDouble();
         exerciseTime.add(dateInMillis);
         exerciseTime2.add(((dateInMillis - justNow)) / factorForDays);
-        criteriaNo1.add(result.criteria1);
+        criteriaNo1.add(result.selectedDistance);
         successRate.add(result.successRate);
       }
     }

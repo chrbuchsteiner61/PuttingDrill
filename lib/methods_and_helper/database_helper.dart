@@ -5,8 +5,8 @@ import 'package:path/path.dart';
 class PuttingResult {
   final int? id;
   final int drillNo;
-  final int criteria1;
-  final int criteria2;
+  final int selectedDistance;
+  final int numberOfEfforts;
   final int criteria3;
   final double success;
   final double successRate;
@@ -15,8 +15,8 @@ class PuttingResult {
   PuttingResult({
     this.id,
     required this.drillNo,
-    required this.criteria1,
-    required this.criteria2,
+    required this.selectedDistance,
+    required this.numberOfEfforts,
     required this.criteria3,
     required this.success,
     required this.successRate,
@@ -27,8 +27,8 @@ class PuttingResult {
     return {
       'id': id,
       'drillNo': drillNo,
-      'criteria1': criteria1,
-      'criteria2': criteria2,
+      'criteria1': selectedDistance,
+      'criteria2': numberOfEfforts,
       'criteria3': criteria3,
       'success': success,
       'successRate': successRate,
@@ -45,7 +45,6 @@ class DatabaseHelper {
   DatabaseHelper._internal();
 
   Future<Database> get database async {
-    
     if (_database != null) return _database!;
     _database = await _initDatabase();
     return _database!;
@@ -77,8 +76,8 @@ class DatabaseHelper {
       return PuttingResult(
         id: maps[i]['id'],
         drillNo: maps[i]['drillNo'],
-        criteria1: maps[i]['criteria1'],
-        criteria2: maps[i]['criteria2'],
+        selectedDistance: maps[i]['criteria1'],
+        numberOfEfforts: maps[i]['criteria2'],
         criteria3: maps[i]['criteria3'],
         success: maps[i]['success'],
         successRate: maps[i]['successRate'],

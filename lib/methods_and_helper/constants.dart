@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const String version = '0.914/ 01.11.2024, 13:30';
+const String version = '0.92/ 06.11.2024, 12:30';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
@@ -40,6 +40,12 @@ class ParameterForChart {
       required this.drillNumber,
       required this.drillInputLength});
 }
+
+const List<Color> barColors = [
+      Colors.yellow,
+      Colors.red,
+      Colors.blue,
+    ];
 
 // Data class for input-related properties
 class DrillInputData {

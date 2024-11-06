@@ -47,8 +47,7 @@ class ResultsFromDB extends StatelessWidget {
     int drillNo = 0;
 
     int criteria1 = 0;
-
-    //int criteria3 = 0;
+    int criteria2 = 0;
     double successrate = 0;
 
     List<String> someLines = [];
@@ -61,11 +60,12 @@ class ResultsFromDB extends StatelessWidget {
       exceriseDateTime = DateFormat('MM/dd, hh:mm a')
           .format(DateTime.fromMillisecondsSinceEpoch(dateInMillis));
       drillNo = result.drillNo;
-      criteria1 = result.criteria1;
+      criteria1 = result.selectedDistance;
+      criteria2 = result.numberOfEfforts;
 
       successrate = result.successRate.roundToDouble();
       someLines.add(
-          "$exceriseDateTime Drill $drillNo Criteria1 $criteria1 Erfolg $successrate");
+          "$exceriseDateTime Drill $drillNo Criteria1 $criteria1 Criteria2 $criteria2 Erfolg $successrate");
     }
 
     return Column(

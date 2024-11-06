@@ -137,6 +137,7 @@ class StartingPage extends StatelessWidget {
                   aCountingText:
                       localizations.getDrillTexts(numberOfDrill)["counting"]!,
                   aTask: localizations.getDrillTexts(numberOfDrill)["task"]!,
+                  successWord: localizations.success,
                   inputData: DrillInputData(
                     criteria1: localizations
                         .getDrillTexts(numberOfDrill)["inputDrillCriteria1"]!,
@@ -150,6 +151,9 @@ class StartingPage extends StatelessWidget {
                         .getDrillTexts(numberOfDrill)["inputDrillInput2"]!,
                     input3: localizations
                         .getDrillTexts(numberOfDrill)["inputDrillInput3"]!,
+                    
+                
+                    
                   ),
                 ),
               const SizedBox(width: 10.0, height: 40.0),

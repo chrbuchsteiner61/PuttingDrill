@@ -28,6 +28,7 @@ class DrillLine extends StatelessWidget {
   final ButtonStyle theButtonStyle;
   final DrillsInitialValue aDrill;
   final Map<String, String> textForDrillLine;
+  final String successWord;
 
   const DrillLine({
     super.key,
@@ -44,11 +45,11 @@ class DrillLine extends StatelessWidget {
     required this.theButtonStyle,
     required this.aDrill,
     required this.textForDrillLine,
+    required this.successWord,
   });
 
   @override
   Widget build(BuildContext context) {
-    
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -131,6 +132,7 @@ class DrillLine extends StatelessWidget {
           drillInput1: inputData.input1,
           drillInput2: inputData.input2,
           drillInput3: inputData.input3,
+          success: successWord,
           aDrill: aDrill,
           errorInputMessageNonEmptyNegativ:
               textForDrillLine["errorInputMessageNonEmptyNegativ"]!,
@@ -140,7 +142,6 @@ class DrillLine extends StatelessWidget {
   }
 
   void _navigateToResults(BuildContext context, int aDrillNumber) {
-
     logger.d(aDrillNumber);
     Navigator.push(
       context,

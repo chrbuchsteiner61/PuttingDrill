@@ -7,6 +7,7 @@ import 'package:myapp/user_areas/input_screen/input_box1.dart';
 import 'package:myapp/user_areas/input_screen/input_drop_down_widget.dart';
 
 import 'package:logger/logger.dart';
+import 'package:myapp/user_areas/input_screen/show_ressult.dart';
 
 var logger = Logger();
 
@@ -56,6 +57,8 @@ class InputScreenState extends State<InputScreen> {
   List<int> numberOfExercise = [5, 6, 7, 8, 9, 10];
   int _putts = 5;
   int _successfulPutts = 5;
+
+  List<double> colPosition = [130, 60, 120];
   double col1 = 130;
   double col2 = 60;
   double col3 = 120;
@@ -189,33 +192,11 @@ class InputScreenState extends State<InputScreen> {
                 ),
               ),
               spaceAfter,
-              InputRow(
-                child: Row(
-                  children: [
-                    spaceBetween,
-                    InputBoxNo1(
-                        columnWidth: col1, inputDrillCriteria1: widget.success),
-                    spaceBetween,
-                    SizedBox(
-                      width: col2,
-                      child: Text(
-                          (_successfulPutts.toDouble() /
-                                  _putts.toDouble() *
-                                  100.0)
-                              .toString(),
-                          style: Theme.of(context).textTheme.bodyMedium!),
-                    ),
-                    spaceBetween,
-                    SizedBox(
-                      width: col3,
-                      child: Text(
-                        "%",
-                        style: Theme.of(context).textTheme.bodyMedium!,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              ShowRessult(
+                  successfulPutts: _successfulPutts,
+                  putts: _putts,
+                  success: widget.success,
+                  colPosition: colPosition),
               spaceAfter,
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),

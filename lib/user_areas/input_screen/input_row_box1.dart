@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class InputBoxNo1 extends StatelessWidget {
+class InputRowBox1 extends StatelessWidget {
   final double columnWidth;
   final String inputDrillCriteria1;
 
-  const InputBoxNo1(
+  const InputRowBox1(
       {super.key,
       required this.columnWidth,
       required this.inputDrillCriteria1});

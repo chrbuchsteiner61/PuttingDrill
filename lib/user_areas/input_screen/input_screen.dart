@@ -3,7 +3,8 @@ import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
 import 'package:myapp/methods_and_helper/drills_initial_value.dart';
-import 'package:myapp/user_areas/input_screen/input_box1.dart';
+import 'package:myapp/user_areas/input_screen/input_row_box1.dart';
+import 'package:myapp/user_areas/input_screen/input_row_2.dart';
 import 'package:myapp/user_areas/input_screen/input_drop_down_widget.dart';
 
 import 'package:logger/logger.dart';
@@ -54,7 +55,7 @@ class InputScreenState extends State<InputScreen> {
     selectedDistance = widget.aDrill.distances[0];
   }
 
-  List<int> numberOfExercise = [5, 6, 7, 8, 9, 10];
+  List<int> numberOfExercises = [5, 6, 7, 8, 9, 10];
   int _putts = 5;
   int _successfulPutts = 5;
 
@@ -63,12 +64,13 @@ class InputScreenState extends State<InputScreen> {
   double col2 = 60;
   double col3 = 120;
 
+  double rowHeight = 75;
+
   @override
   Widget build(BuildContext context) {
     Color selectAreaColor = Theme.of(context).scaffoldBackgroundColor;
     InputDecoration inputDecoration = InputDecoration(
         border: InputBorder.none, fillColor: selectAreaColor, filled: true);
-    //selectedDistance = widget.aDrill.distances[2];
 
     // Build the input screen
     return Scaffold(
@@ -80,14 +82,15 @@ class InputScreenState extends State<InputScreen> {
           child: Column(
             children: <Widget>[
               InputRow(
+                aHeight: rowHeight,
                 child: Row(
                   children: <Widget>[
                     spaceBetween,
-                    InputBoxNo1(
-                        columnWidth: col1,
+                    InputRowBox1(
+                        columnWidth: colPosition[0],
                         inputDrillCriteria1: widget.inputDrillCriteria1),
                     InputDropDownWidget(
-                      boxWidth: col2,
+                      boxWidth: colPosition[1],
                       inputDecoration: inputDecoration,
                       items: widget.aDrill.distances,
                       value: selectedDistance,
@@ -105,7 +108,7 @@ class InputScreenState extends State<InputScreen> {
                     ),
                     spaceBetween,
                     SizedBox(
-                      width: col3,
+                      width: colPosition[2],
                       child: Text(
                         widget.drillInput1,
                         style: Theme.of(context).textTheme.bodySmall!,
@@ -115,47 +118,30 @@ class InputScreenState extends State<InputScreen> {
                 ),
               ),
               spaceAfter,
-              InputRow(
-                child: Row(
-                  children: <Widget>[
-                    spaceBetween,
-                    InputBoxNo1(
-                        columnWidth: col1,
-                        inputDrillCriteria1: widget.inputDrillCriteria2),
-                    InputDropDownWidget(
-                      boxWidth: col2,
-                      inputDecoration: inputDecoration,
-                      items: numberOfExercise,
-                      value: _putts,
-                      onChanged: (value) {
-                        setState(() {
-                          _putts = value!;
-                        });
-                      },
-                      validator: (value) {
-                        if (value == null) {
-                          return widget.errorInputMessageNonEmptyNegativ;
-                        }
-                        return null;
-                      },
-                    ),
-                    spaceBetween,
-                    SizedBox(
-                      width: col3,
-                      child: Text(
-                        widget.drillInput2,
-                        style: Theme.of(context).textTheme.bodySmall!,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              // Replaced second InputRow with InputCriteria2
+              InputRow2(
+                rowHeight: rowHeight,
+                  inputDrillCriteria2: widget.inputDrillCriteria2,
+                  errorInputMessageNonEmptyNegativ:
+                      widget.errorInputMessageNonEmptyNegativ,
+                  drillInput2: widget.drillInput2,
+                  colPosition: colPosition,
+                  inputDecoration: inputDecoration,
+                  putts: _putts,
+                  numberOfExercises: numberOfExercises,
+                  onPuttsChanged: (value) {
+                    setState(() {
+                      _putts = value!;
+                    });
+                  }),
               spaceAfter,
+              // Third input row
               InputRow(
+                 aHeight: rowHeight,
                 child: Row(
                   children: <Widget>[
                     spaceBetween,
-                    InputBoxNo1(
+                    InputRowBox1(
                         columnWidth: col1,
                         inputDrillCriteria1: widget.inputDrillCriteria3),
                     SizedBox(
@@ -192,12 +178,15 @@ class InputScreenState extends State<InputScreen> {
                 ),
               ),
               spaceAfter,
+              // show results of row 2 and row 3
               ShowRessult(
+                rowHeight: rowHeight,
                   successfulPutts: _successfulPutts,
                   putts: _putts,
                   success: widget.success,
                   colPosition: colPosition),
               spaceAfter,
+              // button for save results
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Row(

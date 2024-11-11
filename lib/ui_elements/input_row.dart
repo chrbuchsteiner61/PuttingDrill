@@ -3,13 +3,14 @@ import 'package:myapp/methods_and_helper/constants.dart';
 
 class InputRow extends StatelessWidget {
   final Widget child;
+  final double aHeight;
 
-  const InputRow({super.key, required this.child});
+  const InputRow({super.key, required this.aHeight, required this.child});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 75,
+      height: aHeight,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: theBorderRadius,

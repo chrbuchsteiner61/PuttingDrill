@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
-import 'package:myapp/user_areas/input_screen/input_box1.dart';
+import 'package:myapp/user_areas/input_screen/input_row_box1.dart';
+import 'package:myapp/user_areas/input_screen/input_row_box3.dart';
 
 class ShowRessult extends StatefulWidget {
   final int successfulPutts;
   final int putts;
   final String success;
   final List<double> colPosition;
+  final double rowHeight;
 
   const ShowRessult({
     super.key,
@@ -15,6 +17,7 @@ class ShowRessult extends StatefulWidget {
     required this.putts,
     required this.success,
     required this.colPosition,
+    required this.rowHeight
   });
 
   @override
@@ -30,10 +33,13 @@ class _ShowResultState extends State<ShowRessult> {
   @override
   Widget build(BuildContext context) {
     return InputRow(
+      aHeight: widget.rowHeight,
       child: Row(
         children: [
           spaceBetween,
-          InputBoxNo1(columnWidth: widget.colPosition[0], inputDrillCriteria1: widget.success),
+          InputRowBox1(
+              columnWidth: widget.colPosition[0],
+              inputDrillCriteria1: widget.success),
           spaceBetween,
           SizedBox(
             width: widget.colPosition[1],
@@ -41,16 +47,14 @@ class _ShowResultState extends State<ShowRessult> {
                 (widget.successfulPutts.toDouble() /
                         widget.putts.toDouble() *
                         100.0)
-                    .toString(),
+                    .toStringAsFixed(2),
                 style: Theme.of(context).textTheme.bodyMedium!),
           ),
           spaceBetween,
-          SizedBox(
-            width: widget.colPosition[2],
-            child: Text(
-              "%",
-              style: Theme.of(context).textTheme.bodyMedium!,
-            ),
+          InputRowBox3(
+            rowHeight: widget.rowHeight,
+            colPosition: widget.colPosition[2],
+            drillInput: "%",
           ),
         ],
       ),

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
-import 'package:myapp/user_areas/input_screen/input_box1.dart';
+import 'package:myapp/user_areas/input_screen/input_row_box1.dart';
+import 'package:myapp/user_areas/input_screen/input_row_box3.dart';
 import 'package:myapp/user_areas/input_screen/input_drop_down_widget.dart';
 
-class InputCriteria3 extends StatefulWidget {
+class InputRow3 extends StatefulWidget {
   final String inputDrillCriteria3;
   final String drillInput3;
   final String errorInputMessageNonEmptyNegativ;
   final List<double> colPosition;
 
-  const InputCriteria3({
+  const InputRow3({
     super.key,
     required this.inputDrillCriteria3,
     required this.drillInput3,
@@ -19,11 +20,10 @@ class InputCriteria3 extends StatefulWidget {
   });
 
   @override
-  InputCriteria3State createState() => InputCriteria3State();
+  InputRow3State createState() => InputRow3State();
 }
 
-class InputCriteria3State extends State<InputCriteria3> {
-
+class InputRow3State extends State<InputRow3> {
   @override
   void initState() {
     super.initState();
@@ -35,9 +35,9 @@ class InputCriteria3State extends State<InputCriteria3> {
       child: Row(
         children: <Widget>[
           spaceBetween,
-          InputBoxNo1(
+          InputRowBox1(
               columnWidth: widget.colPosition[0],
-              inputDrillCriteria1: widget.inputDrillCriteria2),
+              inputDrillCriteria1: widget.inputDrillCriteria3),
           InputDropDownWidget(
             boxWidth: widget.colPosition[1],
             inputDecoration: inputDecoration,
@@ -56,12 +56,9 @@ class InputCriteria3State extends State<InputCriteria3> {
             },
           ),
           spaceBetween,
-          SizedBox(
-            width: widget.colPosition[2],
-            child: Text(
-              widget.drillInput2,
-              style: Theme.of(context).textTheme.bodySmall!,
-            ),
+          InputRowBox3(
+            drillInput: widget.drillInput3,
+            colPosition: widget.colPosition[2],
           ),
         ],
       ),

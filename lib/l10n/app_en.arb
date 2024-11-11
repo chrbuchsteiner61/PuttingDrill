@@ -48,7 +48,7 @@
   "inputDrill1Criteria3": "Successfull",
   
   "inputDrill1Input1": "club lengths",
-  "inputDrill1Input2": "none",
+  "inputDrill1Input2": "",
   "inputDrill1Input3": "number of",
 
 
@@ -57,7 +57,7 @@
   "inputDrill2Criteria3": "Sum of missing\ndistance",
   
   "inputDrill2Input1": "club lengths",
-  "inputDrill2Input2": "none",
+  "inputDrill2Input2": "",
   "inputDrill2Input3": "feet",
 
   "inputDrill3Criteria1": "Distance\nbetween the gates",
@@ -65,7 +65,7 @@
   "inputDrill3Criteria3": "Through\nboth gates",
   
   "inputDrill3Input1": "club lengths",
-  "inputDrill3Input2": "none",
+  "inputDrill3Input2": "",
   "inputDrill3Input3": "number of",
 
   "inputDrill4Criteria1": "Distance to\nthe target",
@@ -73,7 +73,7 @@
   "inputDrill4Criteria3": "Successfull",
   
   "inputDrill4Input1": "club lengths",
-  "inputDrill4Input2": "none",
+  "inputDrill4Input2": "",
   "inputDrill4Input3": "number of",
 
   "inputDrill5Criteria1": "Distance to\nthe target",
@@ -81,7 +81,7 @@
   "inputDrill5Criteria3": "Successfull",
   
   "inputDrill5Input1": "club lengths",
-  "inputDrill5Input2": "none",
+  "inputDrill5Input2": "",
   "inputDrill5Input3": "number of",
 
   "success":"Success",

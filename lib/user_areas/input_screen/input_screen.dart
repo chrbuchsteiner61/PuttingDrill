@@ -120,7 +120,7 @@ class InputScreenState extends State<InputScreen> {
               spaceAfter,
               // Replaced second InputRow with InputCriteria2
               InputRow2(
-                rowHeight: rowHeight,
+                  rowHeight: rowHeight,
                   inputDrillCriteria2: widget.inputDrillCriteria2,
                   errorInputMessageNonEmptyNegativ:
                       widget.errorInputMessageNonEmptyNegativ,
@@ -137,7 +137,7 @@ class InputScreenState extends State<InputScreen> {
               spaceAfter,
               // Third input row
               InputRow(
-                 aHeight: rowHeight,
+                aHeight: rowHeight,
                 child: Row(
                   children: <Widget>[
                     spaceBetween,
@@ -180,7 +180,7 @@ class InputScreenState extends State<InputScreen> {
               spaceAfter,
               // show results of row 2 and row 3
               ShowRessult(
-                rowHeight: rowHeight,
+                  rowHeight: rowHeight,
                   successfulPutts: _successfulPutts,
                   putts: _putts,
                   success: widget.success,

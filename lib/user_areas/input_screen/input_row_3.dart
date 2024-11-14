@@ -10,6 +10,7 @@ class InputRow3 extends StatefulWidget {
   final String drillInput3;
   final String errorInputMessageNonEmptyNegativ;
   final List<double> colPosition;
+  final double rowHeight;
 
   const InputRow3({
     super.key,
@@ -17,6 +18,7 @@ class InputRow3 extends StatefulWidget {
     required this.drillInput3,
     required this.errorInputMessageNonEmptyNegativ,
     required this.colPosition,
+    required this.rowHeight,
   });
 
   @override
@@ -32,6 +34,7 @@ class InputRow3State extends State<InputRow3> {
   @override
   Widget build(BuildContext context) {
     return InputRow(
+      aHeight: widget.rowHeight,
       child: Row(
         children: <Widget>[
           spaceBetween,
@@ -57,6 +60,7 @@ class InputRow3State extends State<InputRow3> {
           ),
           spaceBetween,
           InputRowBox3(
+            rowHeight: widget.rowHeight,
             drillInput: widget.drillInput3,
             colPosition: widget.colPosition[2],
           ),

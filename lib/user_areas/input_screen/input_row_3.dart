@@ -10,7 +10,11 @@ class InputRow3 extends StatefulWidget {
   final String drillInput3;
   final String errorInputMessageNonEmptyNegativ;
   final List<double> colPosition;
+  final InputDecoration inputDecoration;
   final double rowHeight;
+  final int putts;
+  final List<int> numberOfExercises;
+  final ValueChanged<int?> onExercisesChanged;
 
   const InputRow3({
     super.key,
@@ -18,7 +22,11 @@ class InputRow3 extends StatefulWidget {
     required this.drillInput3,
     required this.errorInputMessageNonEmptyNegativ,
     required this.colPosition,
+    required this.inputDecoration,
     required this.rowHeight,
+    required this.putts,
+    required this.numberOfExercises,
+    required this.onExercisesChanged,
   });
 
   @override
@@ -43,12 +51,12 @@ class InputRow3State extends State<InputRow3> {
               inputDrillCriteria1: widget.inputDrillCriteria3),
           InputDropDownWidget(
             boxWidth: widget.colPosition[1],
-            inputDecoration: inputDecoration,
-            items: numberOfExercise,
-            value: _putts,
+            inputDecoration: widget.inputDecoration,
+            items: widget.numberOfExercises,
+            value: widget.putts,
             onChanged: (value) {
               setState(() {
-                _putts = value!;
+                var putts = value!;
               });
             },
             validator: (value) {

@@ -3,6 +3,7 @@ import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
 import 'package:myapp/methods_and_helper/drills_initial_value.dart';
+import 'package:myapp/user_areas/input_screen/input_row_3.dart';
 import 'package:myapp/user_areas/input_screen/input_row_box1.dart';
 import 'package:myapp/user_areas/input_screen/input_row_2.dart';
 import 'package:myapp/user_areas/input_screen/input_drop_down_widget.dart';
@@ -136,46 +137,18 @@ class InputScreenState extends State<InputScreen> {
                   }),
               spaceAfter,
               // Third input row
-              InputRow(
-                aHeight: rowHeight,
-                child: Row(
-                  children: <Widget>[
-                    spaceBetween,
-                    InputRowBox1(
-                        columnWidth: col1,
-                        inputDrillCriteria1: widget.inputDrillCriteria3),
-                    SizedBox(
-                      width: col2,
-                      child: TextFormField(
-                        style: Theme.of(context).textTheme.headlineMedium!,
-                        decoration: inputDecoration,
-                        keyboardType: TextInputType.number,
-                        onSaved: (value) =>
-                            _successfulPutts = int.parse(value!),
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return widget.errorInputMessageNonEmptyNegativ;
-                          }
-                          if (_successfulPutts < 0) {
-                            return widget.errorInputMessageNonEmptyNegativ;
-                          }
-                          if (_successfulPutts > _putts) {
-                            return 'Number of successful putts cannot be more than number of putts';
-                          }
-                          return null;
-                        },
-                      ),
-                    ),
-                    spaceBetween,
-                    SizedBox(
-                      width: col3,
-                      child: Text(
-                        widget.drillInput3,
-                        style: Theme.of(context).textTheme.bodySmall!,
-                      ),
-                    ),
-                  ],
-                ),
+              InputRow3(
+                inputDrillCriteria3: widget.inputDrillCriteria3,
+                drillInput3: widget.drillInput3,
+                errorInputMessageNonEmptyNegativ:
+                    widget.errorInputMessageNonEmptyNegativ,
+                colPosition: colPosition,
+                rowHeight: rowHeight, inputDecoration: inputDecoration, putts: _putts, numberOfExercises: numberOfExercises, 
+                onExercisesChanged: (int? value) { 
+                  setState(() {
+                    _successfulPutts = value!;
+                  });
+                 },                
               ),
               spaceAfter,
               // show results of row 2 and row 3
@@ -217,10 +190,11 @@ class InputScreenState extends State<InputScreen> {
                             await DatabaseHelper().insertResult(newResult);
 
                             if (!mounted) return;
-
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text('Result saved!')),
-                            );
+                            if (mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Result saved!')),
+                              );
+                            }
                           }
                         },
                         child: Text(widget.buttonText),

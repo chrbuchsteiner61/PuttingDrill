@@ -1,55 +1,63 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
-import 'package:myapp/user_areas/input_screen/input_row_box1.dart';
-import 'package:myapp/user_areas/input_screen/input_row_box3.dart';
-import 'package:myapp/user_areas/input_screen/input_drop_down_widget.dart';
+import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';
+import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box3.dart';
+import 'package:myapp/user_areas/input_screen/input_rows/input_drop_down_widget.dart';
 
-class InputRow2 extends StatefulWidget {
-  final String inputDrillCriteria2;
+class InputSuccessInRow3 extends StatefulWidget {
+  final String inputDrillCriteria3;
+  final String drillInput3;
   final String errorInputMessageNonEmptyNegativ;
-  final String drillInput2;
   final List<double> colPosition;
   final InputDecoration inputDecoration;
-  final int putts;
-  final List<int> numberOfExercises;
-  final ValueChanged<int?> onPuttsChanged;
   final double rowHeight;
+  final int putts;
+  final ValueChanged<int?> onSuccessfulls;
 
-  const InputRow2({
+  const InputSuccessInRow3({
     super.key,
-    required this.inputDrillCriteria2,
+    required this.inputDrillCriteria3,
+    required this.drillInput3,
     required this.errorInputMessageNonEmptyNegativ,
-    required this.drillInput2,
     required this.colPosition,
     required this.inputDecoration,
-    required this.putts,
-    required this.numberOfExercises,
-    required this.onPuttsChanged,
     required this.rowHeight,
+    required this.putts,
+    required this.onSuccessfulls,
   });
 
   @override
-  State<InputRow2> createState() => _InputRow2State();
+  InputSuccessInRow3State createState() => InputSuccessInRow3State();
 }
 
-class _InputRow2State extends State<InputRow2> {
+class InputSuccessInRow3State extends State<InputSuccessInRow3> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    List<int> potentialSuccess = [];
+    for (var i = 0; i < widget.putts + 1; i++) {
+      potentialSuccess.add(i);
+    }
+
     return InputRow(
-       aHeight: widget.rowHeight,
+      aHeight: widget.rowHeight,
       child: Row(
         children: <Widget>[
           spaceBetween,
           InputRowBox1(
               columnWidth: widget.colPosition[0],
-              inputDrillCriteria1: widget.inputDrillCriteria2),
+              inputDrillCriteria1: widget.inputDrillCriteria3),
           InputDropDownWidget(
             boxWidth: widget.colPosition[1],
             inputDecoration: widget.inputDecoration,
-            items: widget.numberOfExercises,
+            items: potentialSuccess,
             value: widget.putts,
-            onChanged: widget.onPuttsChanged,
+            onChanged: widget.onSuccessfulls,
             validator: (value) {
               if (value == null) {
                 return widget.errorInputMessageNonEmptyNegativ;
@@ -60,7 +68,7 @@ class _InputRow2State extends State<InputRow2> {
           spaceBetween,
           InputRowBox3(
             rowHeight: widget.rowHeight,
-            drillInput: widget.drillInput2,
+            drillInput: widget.drillInput3,
             colPosition: widget.colPosition[2],
           ),
         ],

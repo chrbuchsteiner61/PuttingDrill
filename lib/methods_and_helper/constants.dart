@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+//import 'package:intl/intl.dart';
 
-String formattedDateNow = DateFormat('dd.MM.yyyy HH:mm').format(DateTime.now());
+//String formattedDateNow = DateFormat('dd.MM.yyyy HH:mm').format(DateTime.now());
 
-String version = '0.92 / $formattedDateNow';
+String version = '0.92 / 25.11.204, 10:25';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
@@ -45,10 +45,10 @@ class ParameterForChart {
 }
 
 const List<Color> barColors = [
-      Colors.yellow,
-      Colors.red,
-      Colors.blue,
-    ];
+  Colors.yellow,
+  Colors.red,
+  Colors.blue,
+];
 
 // Data class for input-related properties
 class DrillInputData {

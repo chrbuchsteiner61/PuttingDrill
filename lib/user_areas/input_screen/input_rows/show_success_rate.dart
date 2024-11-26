@@ -1,30 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
-import 'package:myapp/user_areas/input_screen/input_row_box1.dart';
-import 'package:myapp/user_areas/input_screen/input_row_box3.dart';
+import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';
+import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box3.dart';
 
-class ShowRessult extends StatefulWidget {
+class ShowSuccessRate extends StatefulWidget {
   final int successfulPutts;
   final int putts;
   final String success;
   final List<double> colPosition;
   final double rowHeight;
 
-  const ShowRessult({
-    super.key,
-    required this.successfulPutts,
-    required this.putts,
-    required this.success,
-    required this.colPosition,
-    required this.rowHeight
-  });
+  const ShowSuccessRate(
+      {super.key,
+      required this.successfulPutts,
+      required this.putts,
+      required this.success,
+      required this.colPosition,
+      required this.rowHeight});
 
   @override
-  State<ShowRessult> createState() => _ShowResultState();
+  State<ShowSuccessRate> createState() => _ShowResultState();
 }
 
-class _ShowResultState extends State<ShowRessult> {
+class _ShowResultState extends State<ShowSuccessRate> {
   @override
   void initState() {
     super.initState();

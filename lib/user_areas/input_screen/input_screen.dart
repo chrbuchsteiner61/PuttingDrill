@@ -3,13 +3,13 @@ import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
 import 'package:myapp/methods_and_helper/drills_initial_value.dart';
-import 'package:myapp/user_areas/input_screen/input_row_3.dart';
-import 'package:myapp/user_areas/input_screen/input_row_box1.dart';
-import 'package:myapp/user_areas/input_screen/input_row_2.dart';
-import 'package:myapp/user_areas/input_screen/input_drop_down_widget.dart';
+import 'package:myapp/user_areas/input_screen/input_rows/input_success_in_row_3.dart';
+import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';
+import 'package:myapp/user_areas/input_screen/input_rows/input_number_of_attemps_row_2.dart';
+import 'package:myapp/user_areas/input_screen/input_rows/input_drop_down_widget.dart';
 
 import 'package:logger/logger.dart';
-import 'package:myapp/user_areas/input_screen/show_ressult.dart';
+import 'package:myapp/user_areas/input_screen/input_rows/show_success_rate.dart';
 
 var logger = Logger();
 
@@ -54,6 +54,8 @@ class InputScreenState extends State<InputScreen> {
   void initState() {
     super.initState();
     selectedDistance = widget.aDrill.distances[0];
+    _putts = 5;
+    _successfulPutts = 0;
   }
 
   List<int> numberOfExercises = [5, 6, 7, 8, 9, 10];
@@ -120,7 +122,7 @@ class InputScreenState extends State<InputScreen> {
               ),
               spaceAfter,
               // Replaced second InputRow with InputCriteria2
-              InputRow2(
+              InputNumberOfAttemptsRow2(
                   rowHeight: rowHeight,
                   inputDrillCriteria2: widget.inputDrillCriteria2,
                   errorInputMessageNonEmptyNegativ:
@@ -137,22 +139,24 @@ class InputScreenState extends State<InputScreen> {
                   }),
               spaceAfter,
               // Third input row
-              InputRow3(
+              InputSuccessInRow3(
                 inputDrillCriteria3: widget.inputDrillCriteria3,
                 drillInput3: widget.drillInput3,
                 errorInputMessageNonEmptyNegativ:
                     widget.errorInputMessageNonEmptyNegativ,
                 colPosition: colPosition,
-                rowHeight: rowHeight, inputDecoration: inputDecoration, putts: _putts, numberOfExercises: numberOfExercises, 
-                onExercisesChanged: (int? value) { 
+                rowHeight: rowHeight,
+                inputDecoration: inputDecoration,
+                putts: _putts,
+                onSuccessfulls: (int? value) {
                   setState(() {
                     _successfulPutts = value!;
                   });
-                 },                
+                },
               ),
               spaceAfter,
               // show results of row 2 and row 3
-              ShowRessult(
+              ShowSuccessRate(
                   rowHeight: rowHeight,
                   successfulPutts: _successfulPutts,
                   putts: _putts,

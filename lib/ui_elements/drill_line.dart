@@ -4,7 +4,7 @@ import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
 import 'package:myapp/user_areas/input_screen/input_screen.dart';
-import 'package:myapp/methods_and_helper/drills_initial_value.dart';
+import 'package:myapp/methods_and_helper/drills_standard.dart';
 
 import 'package:logger/logger.dart';
 
@@ -26,7 +26,7 @@ class DrillLine extends StatelessWidget {
   final String drillPicture;
   final String theClubLength;
   final ButtonStyle theButtonStyle;
-  final DrillsInitialValue aDrill;
+  final DrillStandard aDrill;
   final Map<String, String> textForDrillLine;
   final String successWord;
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
+// import 'package:myapp/methods_and_helper/initialize_drills.dart';
 import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';
 import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box3.dart';
 
@@ -31,6 +32,7 @@ class _ShowResultState extends State<ShowSuccessRate> {
 
   @override
   Widget build(BuildContext context) {
+  //  double successRate = calculateSuccessRate();
     return InputRow(
       aHeight: widget.rowHeight,
       child: Row(

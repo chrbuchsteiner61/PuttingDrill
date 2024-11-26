@@ -1,4 +1,4 @@
-class DrillsInitialValue {
+class DrillStandard {
   final int drillNo;
   int criteria1;
   int numberOfExercises;
@@ -6,16 +6,15 @@ class DrillsInitialValue {
   final List<int> distances = [1, 2, 3];
   static const perCent = 100.0;
 
-  DrillsInitialValue(
+  DrillStandard(
       this.drillNo, this.criteria1, this.numberOfExercises, this.success);
-
 
   double calculateSuccessRate() {
     return (success / numberOfExercises.toDouble()) * perCent;
   }
 }
 
-class DrillDistancePutt extends DrillsInitialValue {
+class DrillDistancePutt extends DrillStandard {
   @override
   List<int> get distances => [6, 9, 12];
 
@@ -25,6 +24,6 @@ class DrillDistancePutt extends DrillsInitialValue {
   @override
   double calculateSuccessRate() {
     return (success / (numberOfExercises.toDouble() * criteria1.toDouble())) *
-        DrillsInitialValue.perCent;
+        DrillStandard.perCent;
   }
 }

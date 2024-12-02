@@ -28,7 +28,7 @@ class AppTheme {
               color: Colors.black,
               fontFamily: 'Noto-Sans'),
           bodyMedium: TextStyle(
-              fontSize: 18.0,
+              fontSize: 16.0,
               fontWeight: FontWeight.normal,
               color: Colors.black,
               fontFamily: 'Noto-Sans'),

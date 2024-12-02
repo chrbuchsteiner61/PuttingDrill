@@ -22,7 +22,7 @@ class InputScreen extends StatefulWidget {
   final String drillInput1;
   final String drillInput2;
   final String drillInput3;
-  final DrillStandard aDrill;
+  final DrillTheStandard aDrill;
   final String errorInputMessageNonEmptyNegativ;
   final String success;
 
@@ -48,21 +48,21 @@ class InputScreen extends StatefulWidget {
 class InputScreenState extends State<InputScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  late int selectedDistance;
+  late int _selectedDistance;
 
   @override
   void initState() {
     super.initState();
-    selectedDistance = widget.aDrill.distances[0];
+    _selectedDistance = widget.aDrill.distances[0];
     _putts = 5;
-    _successfulPutts = 0;
+    _successfulPutts = 5;
   }
 
   List<int> numberOfExercises = [5, 6, 7, 8, 9, 10];
   int _putts = 5;
   int _successfulPutts = 5;
 
-  List<double> colPosition = [130, 60, 120];
+  List<double> colPosition = [130, 80, 120];
   double col1 = 130;
   double col2 = 60;
   double col3 = 120;
@@ -96,10 +96,11 @@ class InputScreenState extends State<InputScreen> {
                       boxWidth: colPosition[1],
                       inputDecoration: inputDecoration,
                       items: widget.aDrill.distances,
-                      value: selectedDistance,
+                      value: _selectedDistance,
                       onChanged: (value) {
                         setState(() {
-                          selectedDistance = value!;
+                          _selectedDistance = value!;
+                          widget.aDrill.selectedDistance = _selectedDistance;
                         });
                       },
                       validator: (value) {
@@ -114,7 +115,7 @@ class InputScreenState extends State<InputScreen> {
                       width: colPosition[2],
                       child: Text(
                         widget.drillInput1,
-                        style: Theme.of(context).textTheme.bodySmall!,
+                        style: Theme.of(context).textTheme.bodyMedium!,
                       ),
                     ),
                   ],
@@ -135,6 +136,7 @@ class InputScreenState extends State<InputScreen> {
                   onPuttsChanged: (value) {
                     setState(() {
                       _putts = value!;
+                      widget.aDrill.numberOfExercises = _putts;
                     });
                   }),
               spaceAfter,
@@ -151,12 +153,14 @@ class InputScreenState extends State<InputScreen> {
                 onSuccessfulls: (int? value) {
                   setState(() {
                     _successfulPutts = value!;
+                    widget.aDrill.success = _successfulPutts.toDouble();
                   });
                 },
               ),
               spaceAfter,
               // show results of row 2 and row 3
               ShowSuccessRate(
+                  aDrill: widget.aDrill,
                   rowHeight: rowHeight,
                   successfulPutts: _successfulPutts,
                   putts: _putts,
@@ -176,14 +180,14 @@ class InputScreenState extends State<InputScreen> {
                         onPressed: () async {
                           if (_formKey.currentState!.validate()) {
                             _formKey.currentState!.save();
-                            widget.aDrill.criteria1 = selectedDistance;
+                            widget.aDrill.selectedDistance = _selectedDistance;
                             widget.aDrill.numberOfExercises = _putts;
                             widget.aDrill.success = _successfulPutts.toDouble();
                             double successRate =
                                 widget.aDrill.calculateSuccessRate();
                             PuttingResult newResult = PuttingResult(
                               drillNo: widget.aDrill.drillNo,
-                              selectedDistance: selectedDistance,
+                              selectedDistance: _selectedDistance,
                               numberOfEfforts: _putts,
                               //unused criteria 3
                               criteria3: -99,

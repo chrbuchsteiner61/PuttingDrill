@@ -83,7 +83,7 @@ class StartingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
 
-    List<DrillStandard> drillsInitials = initializeDrills();
+    List<DrillTheStandard> drillsInitials = initializeDrills();
 
     const String preParePics = "assets/pics/preparePics/thePreparePic";
     const String iconPath = "assets/pics/icons_page1/Drill";
@@ -270,12 +270,12 @@ extension on AppLocalizations {
   }
 }
 
-List<DrillStandard> initializeDrills() {
+List<DrillTheStandard> initializeDrills() {
   return [
-    DrillStandard(1, 0, 5, 5),
+    DrillTheStandard(1, 0, 5, 5),
     DrillDistancePutt(2, 0, 5, 5),
-    DrillStandard(3, 0, 5, 5),
-    DrillStandard(4, 0, 5, 5),
-    DrillStandard(5, 0, 5, 5),
+    DrillTheStandard(3, 0, 5, 5),
+    DrillTheStandard(4, 0, 5, 5),
+    DrillTheStandard(5, 0, 5, 5),
   ];
 }

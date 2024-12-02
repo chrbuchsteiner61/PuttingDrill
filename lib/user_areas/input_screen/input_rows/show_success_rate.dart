@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/methods_and_helper/drills_standard.dart';
 import 'package:myapp/ui_elements/input_row.dart';
 // import 'package:myapp/methods_and_helper/initialize_drills.dart';
 import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';
@@ -11,6 +12,7 @@ class ShowSuccessRate extends StatefulWidget {
   final String success;
   final List<double> colPosition;
   final double rowHeight;
+  final DrillTheStandard aDrill;
 
   const ShowSuccessRate(
       {super.key,
@@ -18,7 +20,8 @@ class ShowSuccessRate extends StatefulWidget {
       required this.putts,
       required this.success,
       required this.colPosition,
-      required this.rowHeight});
+      required this.rowHeight,
+      required this.aDrill});
 
   @override
   State<ShowSuccessRate> createState() => _ShowResultState();
@@ -32,7 +35,7 @@ class _ShowResultState extends State<ShowSuccessRate> {
 
   @override
   Widget build(BuildContext context) {
-  //  double successRate = calculateSuccessRate();
+    //  double successRate = calculateSuccessRate();
     return InputRow(
       aHeight: widget.rowHeight,
       child: Row(
@@ -45,10 +48,7 @@ class _ShowResultState extends State<ShowSuccessRate> {
           SizedBox(
             width: widget.colPosition[1],
             child: Text(
-                (widget.successfulPutts.toDouble() /
-                        widget.putts.toDouble() *
-                        100.0)
-                    .toStringAsFixed(2),
+                widget.aDrill.calculateSuccessRate().toStringAsFixed(2),
                 style: Theme.of(context).textTheme.bodyMedium!),
           ),
           spaceBetween,

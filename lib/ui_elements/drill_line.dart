@@ -6,9 +6,9 @@ import 'package:myapp/user_areas/explain_screen.dart';
 import 'package:myapp/user_areas/input_screen/input_screen.dart';
 import 'package:myapp/methods_and_helper/drills_standard.dart';
 
-import 'package:logger/logger.dart';
+//import 'package:logger/logger.dart';
 
-var logger = Logger();
+// var logger = Logger();
 
 class DrillLine extends StatelessWidget {
   static const _boxWidths = [130.0, 80.0, 80.0];
@@ -26,7 +26,7 @@ class DrillLine extends StatelessWidget {
   final String drillPicture;
   final String theClubLength;
   final ButtonStyle theButtonStyle;
-  final DrillStandard aDrill;
+  final DrillTheStandard aDrill;
   final Map<String, String> textForDrillLine;
   final String successWord;
 
@@ -90,7 +90,7 @@ class DrillLine extends StatelessWidget {
   }
 
   Widget _buildResultsButton(BuildContext context, int aDrillNumber) {
-    logger.d(aDrillNumber);
+    //logger.d(aDrillNumber);
     return _DrillButton(
       width: _boxWidths[2],
       height: _elementHeight,
@@ -142,7 +142,7 @@ class DrillLine extends StatelessWidget {
   }
 
   void _navigateToResults(BuildContext context, int aDrillNumber) {
-    logger.d(aDrillNumber);
+    //logger.d(aDrillNumber);
     Navigator.push(
       context,
       MaterialPageRoute(

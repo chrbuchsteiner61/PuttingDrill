@@ -1,4 +1,4 @@
-import 'package:myapp/methods_and_helper/drills_standard.dart';
+import 'package:myapp/methods_and_helper/drills_the_standard.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 List<DrillTheStandard> initializeDrills() {

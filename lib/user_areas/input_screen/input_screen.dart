@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/input_row.dart';
-import 'package:myapp/methods_and_helper/drills_standard.dart';
+import 'package:myapp/methods_and_helper/drills_the_standard.dart';
 import 'package:myapp/user_areas/input_screen/input_rows/input_success_in_row_3.dart';
 import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';
 import 'package:myapp/user_areas/input_screen/input_rows/input_number_of_attemps_row_2.dart';
@@ -142,6 +142,7 @@ class InputScreenState extends State<InputScreen> {
               spaceAfter,
               // Third input row
               InputSuccessInRow3(
+                aDrill: widget.aDrill,
                 inputDrillCriteria3: widget.inputDrillCriteria3,
                 drillInput3: widget.drillInput3,
                 errorInputMessageNonEmptyNegativ:

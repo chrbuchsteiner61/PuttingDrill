@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/methods_and_helper/drills_the_standard.dart';
 import 'package:myapp/ui_elements/input_row.dart';
 import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';
 import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box3.dart';
 import 'package:myapp/user_areas/input_screen/input_rows/input_drop_down_widget.dart';
 
 class InputSuccessInRow3 extends StatefulWidget {
+  final DrillTheStandard aDrill;
   final String inputDrillCriteria3;
   final String drillInput3;
   final String errorInputMessageNonEmptyNegativ;
@@ -17,6 +19,7 @@ class InputSuccessInRow3 extends StatefulWidget {
 
   const InputSuccessInRow3({
     super.key,
+    required this.aDrill,
     required this.inputDrillCriteria3,
     required this.drillInput3,
     required this.errorInputMessageNonEmptyNegativ,
@@ -40,9 +43,10 @@ class InputSuccessInRow3State extends State<InputSuccessInRow3> {
   @override
   Widget build(BuildContext context) {
     List<int> potentialSuccess = [];
-    for (var i = 0; i < widget.putts + 1; i++) {
-      potentialSuccess.add(i);
-    }
+    //for (var i = 0; i < widget.putts + 1; i++) {
+    //  potentialSuccess.add(i);
+    //}
+    potentialSuccess = widget.aDrill.calculatePotentialSuccess();
 
     return InputRow(
       aHeight: widget.rowHeight,

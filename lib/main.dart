@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:myapp/dev_area/test_screen.dart';
-import 'package:myapp/methods_and_helper/drills_standard.dart';
+import 'package:myapp/methods_and_helper/drills_the_standard.dart';
 import 'package:myapp/user_areas/the_info_drawer.dart';
 import 'package:myapp/methods_and_helper/language_helper.dart';
 import 'package:myapp/ui_elements/drill_line.dart';

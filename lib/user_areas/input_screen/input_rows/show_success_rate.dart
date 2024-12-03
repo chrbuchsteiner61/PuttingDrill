@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
-import 'package:myapp/methods_and_helper/drills_standard.dart';
+import 'package:myapp/methods_and_helper/drills_the_standard.dart';
 import 'package:myapp/ui_elements/input_row.dart';
 // import 'package:myapp/methods_and_helper/initialize_drills.dart';
 import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';

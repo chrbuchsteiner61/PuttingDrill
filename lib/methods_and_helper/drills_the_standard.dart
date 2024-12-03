@@ -16,6 +16,14 @@ class DrillTheStandard {
   double calculateSuccessRate() {
     return (success / numberOfExercises.toDouble()) * perCent;
   }
+
+  List<int> calculatePotentialSuccess() {
+    List<int> potentialSuccess = [];
+    for (var i = 0; i < numberOfExercises + 1; i++) {
+      potentialSuccess.add(i);
+    }
+    return potentialSuccess;
+  }
 }
 
 class DrillDistancePutt extends DrillTheStandard {
@@ -34,5 +42,14 @@ class DrillDistancePutt extends DrillTheStandard {
             DrillTheStandard.perCent;
     logger.d(aResult);
     return aResult;
+  }
+
+  @override
+  List<int> calculatePotentialSuccess() {
+    List<int> potentialSuccess = [];
+    for (var i = 0; i < numberOfExercises + 1; i++) {
+      potentialSuccess.add(i);
+    }
+    return potentialSuccess;
   }
 }

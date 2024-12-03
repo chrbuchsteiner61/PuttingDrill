@@ -36,20 +36,24 @@ class DrillDistancePutt extends DrillTheStandard {
 
   @override
   double calculateSuccessRate() {
-    double aResult = ( 1 -
-        ((success / clubFeetRatio) /
+
+    double aResult = (1 -
+            ((success / clubFeetRatio) /
                 (numberOfExercises.toDouble() * selectedDistance.toDouble()))) *
-            DrillTheStandard.perCent;
-    logger.d(aResult);
+        DrillTheStandard.perCent;
+
     return aResult;
   }
 
   @override
   List<int> calculatePotentialSuccess() {
     List<int> potentialSuccess = [];
+   
     for (var i = 0; i < numberOfExercises + 1; i++) {
+      
       potentialSuccess.add(i);
     }
+    logger.d(potentialSuccess);
     return potentialSuccess;
   }
 }

@@ -43,9 +43,6 @@ class InputSuccessInRow3State extends State<InputSuccessInRow3> {
   @override
   Widget build(BuildContext context) {
     List<int> potentialSuccess = [];
-    //for (var i = 0; i < widget.putts + 1; i++) {
-    //  potentialSuccess.add(i);
-    //}
     potentialSuccess = widget.aDrill.calculatePotentialSuccess();
 
     return InputRow(

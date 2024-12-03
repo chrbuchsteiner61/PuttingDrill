@@ -76,6 +76,8 @@ class InputScreenState extends State<InputScreen> {
         border: InputBorder.none, fillColor: selectAreaColor, filled: true);
 
     // Build the input screen
+    widget.aDrill.selectedDistance = widget.aDrill.distances[0];
+
     return Scaffold(
       appBar: AppBar(title: Text(widget.appBarText)),
       body: Padding(

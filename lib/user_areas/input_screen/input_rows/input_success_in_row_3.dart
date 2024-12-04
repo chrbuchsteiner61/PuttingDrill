@@ -53,19 +53,21 @@ class InputSuccessInRow3State extends State<InputSuccessInRow3> {
           InputRowBox1(
               columnWidth: widget.colPosition[0],
               inputDrillCriteria1: widget.inputDrillCriteria3),
-          InputDropDownWidget(
-            boxWidth: widget.colPosition[1],
-            inputDecoration: widget.inputDecoration,
-            items: potentialSuccess,
-            value: widget.putts,
-            onChanged: widget.onSuccessfulls,
-            validator: (value) {
-              if (value == null) {
-                return widget.errorInputMessageNonEmptyNegativ;
-              }
-              return null;
-            },
-          ),
+          (widget.aDrill.isDropDown)
+              ? InputDropDownWidget(
+                  boxWidth: widget.colPosition[1],
+                  inputDecoration: widget.inputDecoration,
+                  items: potentialSuccess,
+                  value: widget.putts,
+                  onChanged: widget.onSuccessfulls,
+                  validator: (value) {
+                    if (value == null) {
+                      return widget.errorInputMessageNonEmptyNegativ;
+                    }
+                    return null;
+                  },
+                )
+              : const Text('TextInput'),
           spaceBetween,
           InputRowBox3(
             rowHeight: widget.rowHeight,

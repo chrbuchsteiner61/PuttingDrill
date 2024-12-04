@@ -4,6 +4,7 @@ var logger = Logger();
 
 class DrillTheStandard {
   final int drillNo;
+  bool isDropDown = true;
   int selectedDistance;
   int numberOfExercises;
   double success;
@@ -28,6 +29,8 @@ class DrillTheStandard {
 
 class DrillDistancePutt extends DrillTheStandard {
   @override
+  bool get isDropDown => false;
+  @override
   List<int> get distances => [6, 9, 12];
   double clubFeetRatio = 2.9;
 
@@ -36,7 +39,6 @@ class DrillDistancePutt extends DrillTheStandard {
 
   @override
   double calculateSuccessRate() {
-
     double aResult = (1 -
             ((success / clubFeetRatio) /
                 (numberOfExercises.toDouble() * selectedDistance.toDouble()))) *
@@ -48,9 +50,8 @@ class DrillDistancePutt extends DrillTheStandard {
   @override
   List<int> calculatePotentialSuccess() {
     List<int> potentialSuccess = [];
-   
+
     for (var i = 0; i < numberOfExercises + 1; i++) {
-      
       potentialSuccess.add(i);
     }
     logger.d(potentialSuccess);

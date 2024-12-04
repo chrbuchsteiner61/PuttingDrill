@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:myapp/dev_area/test_screen.dart';
 import 'package:myapp/methods_and_helper/drills_the_standard.dart';
 import 'package:myapp/user_areas/the_info_drawer.dart';
@@ -98,81 +99,83 @@ class StartingPage extends StatelessWidget {
         title: Text(localizations!.page1Header),
       ),
       drawer: const Drawer(child: TheInfoDrawer()),
-      body: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          image: DecorationImage(
-            image: AssetImage("assets/pics/page1_background.png"),
-            fit: BoxFit.cover,
+      body: Stack(
+        children: <Widget>[
+          SvgPicture.asset(
+            'assets/pics/page1_background.svg',
+            fit: BoxFit.fill,
+            alignment: Alignment.center,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
           ),
-        ),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              for (int numberOfDrill = 1; numberOfDrill <= 5; numberOfDrill++)
-                DrillLine(
-                  textForDrillLine: {
-                    "inputAppBarText": localizations.inputAppBarText,
-                    "inputButtonText": localizations.inputButtonText,
-                    "preparationHeader": localizations.preparationHeader,
-                    "countingHeader": localizations.countingHeader,
-                    "errorInputMessageNonEmptyNegativ":
-                        localizations.errorInputMessageNonEmptyNegativ,
-                    "viewResults": localizations.viewResults,
-                    "inputResults": localizations.inputResults,
-                  },
-                  drillNumber: numberOfDrill,
-                  drillPicture: "$iconPath$numberOfDrill.svg",
-                  aPreparePic: "$preParePics$numberOfDrill.svg",
-                  theClubLength: localizations.clubLength,
-                  theButtonStyle: appsButtonStyle,
-                  aDrill: drillsInitials[numberOfDrill - 1],
-                  drillName:
-                      localizations.getDrillTexts(numberOfDrill)["drill"]!,
-                  thePurpose:
-                      localizations.getDrillTexts(numberOfDrill)["purpose"]!,
-                  aPreparationText: localizations
-                      .getDrillTexts(numberOfDrill)["preparation"]!,
-                  aCountingText:
-                      localizations.getDrillTexts(numberOfDrill)["counting"]!,
-                  aTask: localizations.getDrillTexts(numberOfDrill)["task"]!,
-                  successWord: localizations.success,
-                  inputData: DrillInputData(
-                    criteria1: localizations
-                        .getDrillTexts(numberOfDrill)["inputDrillCriteria1"]!,
-                    criteria2: localizations
-                        .getDrillTexts(numberOfDrill)["inputDrillCriteria2"]!,
-                    criteria3: localizations
-                        .getDrillTexts(numberOfDrill)["inputDrillCriteria3"]!,
-                    input1: localizations
-                        .getDrillTexts(numberOfDrill)["inputDrillInput1"]!,
-                    input2: localizations
-                        .getDrillTexts(numberOfDrill)["inputDrillInput2"]!,
-                    input3: localizations
-                        .getDrillTexts(numberOfDrill)["inputDrillInput3"]!,
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                for (int numberOfDrill = 1; numberOfDrill <= 5; numberOfDrill++)
+                  DrillLine(
+                    textForDrillLine: {
+                      "inputAppBarText": localizations.inputAppBarText,
+                      "inputButtonText": localizations.inputButtonText,
+                      "preparationHeader": localizations.preparationHeader,
+                      "countingHeader": localizations.countingHeader,
+                      "errorInputMessageNonEmptyNegativ":
+                          localizations.errorInputMessageNonEmptyNegativ,
+                      "viewResults": localizations.viewResults,
+                      "inputResults": localizations.inputResults,
+                    },
+                    drillNumber: numberOfDrill,
+                    drillPicture: "$iconPath$numberOfDrill.svg",
+                    aPreparePic: "$preParePics$numberOfDrill.svg",
+                    theClubLength: localizations.clubLength,
+                    theButtonStyle: appsButtonStyle,
+                    aDrill: drillsInitials[numberOfDrill - 1],
+                    drillName:
+                        localizations.getDrillTexts(numberOfDrill)["drill"]!,
+                    thePurpose:
+                        localizations.getDrillTexts(numberOfDrill)["purpose"]!,
+                    aPreparationText: localizations
+                        .getDrillTexts(numberOfDrill)["preparation"]!,
+                    aCountingText:
+                        localizations.getDrillTexts(numberOfDrill)["counting"]!,
+                    aTask: localizations.getDrillTexts(numberOfDrill)["task"]!,
+                    successWord: localizations.success,
+                    inputData: DrillInputData(
+                      criteria1: localizations
+                          .getDrillTexts(numberOfDrill)["inputDrillCriteria1"]!,
+                      criteria2: localizations
+                          .getDrillTexts(numberOfDrill)["inputDrillCriteria2"]!,
+                      criteria3: localizations
+                          .getDrillTexts(numberOfDrill)["inputDrillCriteria3"]!,
+                      input1: localizations
+                          .getDrillTexts(numberOfDrill)["inputDrillInput1"]!,
+                      input2: localizations
+                          .getDrillTexts(numberOfDrill)["inputDrillInput2"]!,
+                      input3: localizations
+                          .getDrillTexts(numberOfDrill)["inputDrillInput3"]!,
+                    ),
+                  ),
+                const SizedBox(width: 10.0, height: 40.0),
+                SizedBox(
+                  width: 150.0,
+                  height: 45.0,
+                  child: ElevatedButton(
+                    style: appsButtonStyle,
+                    onPressed: () async {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TestScreen(),
+                        ),
+                      );
+                    },
+                    child: const Text('Manage Test Data'),
                   ),
                 ),
-              const SizedBox(width: 10.0, height: 40.0),
-              SizedBox(
-                width: 150.0,
-                height: 45.0,
-                child: ElevatedButton(
-                  style: appsButtonStyle,
-                  onPressed: () async {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const TestScreen(),
-                      ),
-                    );
-                  },
-                  child: const Text('Manage Test Data'),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
+        ],
       ),
       bottomSheet: bottomText,
     );

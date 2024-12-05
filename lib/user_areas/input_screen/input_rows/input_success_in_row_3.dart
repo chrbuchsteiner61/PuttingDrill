@@ -5,6 +5,7 @@ import 'package:myapp/ui_elements/input_row.dart';
 import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';
 import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box3.dart';
 import 'package:myapp/user_areas/input_screen/input_rows/input_drop_down_widget.dart';
+import 'package:myapp/user_areas/input_screen/input_rows/input_text_widget.dart';
 
 class InputSuccessInRow3 extends StatefulWidget {
   final DrillTheStandard aDrill;
@@ -67,7 +68,18 @@ class InputSuccessInRow3State extends State<InputSuccessInRow3> {
                     return null;
                   },
                 )
-              : const Text('TextInput'),
+              : InputTextWidget(
+                  boxWidth: widget.colPosition[1],
+                  inputDecoration: widget.inputDecoration,
+                  value: 12,
+                  onChanged: widget.onSuccessfulls,
+                  validator: (value) {
+                    if (value == null) {
+                      return widget.errorInputMessageNonEmptyNegativ;
+                    }
+                    return null;
+                  },
+                ),
           spaceBetween,
           InputRowBox3(
             rowHeight: widget.rowHeight,

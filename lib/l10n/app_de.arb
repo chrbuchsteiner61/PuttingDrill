@@ -47,7 +47,7 @@
   "inputDrill1Criteria2": "Schläge",
   "inputDrill1Criteria3": "Erfolgreich",
 
-  "inputDrill1Input1": "Schlägerlängen",
+  "inputDrill1Input1": "Schläger\nlängen",
   "inputDrill1Input2": "",
   "inputDrill1Input3": "Anzahl",
 
@@ -55,7 +55,7 @@
   "inputDrill2Criteria2": "Schläge",
   "inputDrill2Criteria3": "Summe der fehlenden\nDistanz",
 
-  "inputDrill2Input1": "Schlägerlängen",
+  "inputDrill2Input1": "Schläger\nlängen",
   "inputDrill2Input2": "",
   "inputDrill2Input3": "Füße",
 
@@ -63,7 +63,7 @@
   "inputDrill3Criteria2": "Schläge",
   "inputDrill3Criteria3": "Durch\nbeide Tore",
 
-  "inputDrill3Input1": "Schlägerlängen",
+  "inputDrill3Input1": "Schläger\nlängen",
   "inputDrill3Input2": "",
   "inputDrill3Input3": "Anzahl",
 
@@ -71,7 +71,7 @@
   "inputDrill4Criteria2": "Schläge",
   "inputDrill4Criteria3": "Erfolgreich",
 
-  "inputDrill4Input1": "Schlägerlängen",
+  "inputDrill4Input1": "Schläger\nlängen",
   "inputDrill4Input2": "",
   "inputDrill4Input3": "Anzahl",
 
@@ -79,7 +79,7 @@
   "inputDrill5Criteria2": "Schläge",
   "inputDrill5Criteria3": "Erfolgreich",
 
-  "inputDrill5Input1": "Schlägerlängen",
+  "inputDrill5Input1": "Schläger\nlängen",
   "inputDrill5Input2": "",
   "inputDrill5Input3": "Anzahl",
 
@@ -87,7 +87,7 @@
 
   "savedResult" : "erfolgreich gespeichert",
 
-  "viewResults": "Statistiken",
+  "viewResults": "Daten",
 
   "drawerHeader": "Informationen",
   "privStHeader": "Datenschutz",

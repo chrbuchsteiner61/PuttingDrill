@@ -16,7 +16,8 @@ class InputSuccessInRow3 extends StatefulWidget {
   final InputDecoration inputDecoration;
   final double rowHeight;
   final int putts;
-  final ValueChanged<int?> onSuccessfulls;
+  final Function(int?) onSuccessfullPutts;
+  final Function(String?) onSuccessDistance;
 
   const InputSuccessInRow3({
     super.key,
@@ -28,7 +29,8 @@ class InputSuccessInRow3 extends StatefulWidget {
     required this.inputDecoration,
     required this.rowHeight,
     required this.putts,
-    required this.onSuccessfulls,
+    required this.onSuccessfullPutts,
+    required this.onSuccessDistance,
   });
 
   @override
@@ -60,7 +62,7 @@ class InputSuccessInRow3State extends State<InputSuccessInRow3> {
                   inputDecoration: widget.inputDecoration,
                   items: potentialSuccess,
                   value: widget.putts,
-                  onChanged: widget.onSuccessfulls,
+                  onChanged: widget.onSuccessfullPutts,
                   validator: (value) {
                     if (value == null) {
                       return widget.errorInputMessageNonEmptyNegativ;
@@ -71,8 +73,7 @@ class InputSuccessInRow3State extends State<InputSuccessInRow3> {
               : InputTextWidget(
                   boxWidth: widget.colPosition[1],
                   inputDecoration: widget.inputDecoration,
-                  value: 12,
-                  onChanged: widget.onSuccessfulls,
+                  onChanged: widget.onSuccessDistance,
                   validator: (value) {
                     if (value == null) {
                       return widget.errorInputMessageNonEmptyNegativ;

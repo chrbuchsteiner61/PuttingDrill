@@ -34,11 +34,15 @@ class DrillDistancePutt extends DrillTheStandard {
   List<int> get distances => [6, 9, 12];
   double clubFeetRatio = 2.9;
 
-  DrillDistancePutt(
-      super.drillNo, super.selectedDistance, super.success, super.criteria1);
+  DrillDistancePutt(super.drillNo, super.selectedDistance,
+      super.numberOfExercises, super.success);
 
   @override
   double calculateSuccessRate() {
+    logger.d(numberOfExercises);
+    logger.d(selectedDistance);
+    logger.d(success);
+
     double aResult = (1 -
             ((success / clubFeetRatio) /
                 (numberOfExercises.toDouble() * selectedDistance.toDouble()))) *

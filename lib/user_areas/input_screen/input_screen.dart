@@ -48,32 +48,32 @@ class InputScreen extends StatefulWidget {
 class InputScreenState extends State<InputScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  late int _selectedDistance;
-
   @override
   void initState() {
     super.initState();
     _selectedDistance = widget.aDrill.distances[0];
     _putts = 5;
     _successfulPutts = 5;
+    _missedDistanceFeet = 20.0;
   }
 
   List<int> numberOfExercises = [5, 6, 7, 8, 9, 10];
+  int _selectedDistance = 50;
   int _putts = 5;
   int _successfulPutts = 5;
-
+  double _missedDistanceFeet = 20.0;
+  
   List<double> colPosition = [130, 80, 120];
-  double col1 = 130;
-  double col2 = 60;
-  double col3 = 120;
-
   double rowHeight = 75;
 
   @override
   Widget build(BuildContext context) {
     Color selectAreaColor = Theme.of(context).scaffoldBackgroundColor;
     InputDecoration inputDecoration = InputDecoration(
-        border: InputBorder.none, fillColor: selectAreaColor, filled: true);
+        border: InputBorder.none,
+        fillColor: selectAreaColor,
+        filled: true,
+        hintText: _missedDistanceFeet.toString() );
 
     // Build the input screen
     widget.aDrill.selectedDistance = widget.aDrill.distances[0];
@@ -153,10 +153,16 @@ class InputScreenState extends State<InputScreen> {
                 rowHeight: rowHeight,
                 inputDecoration: inputDecoration,
                 putts: _putts,
-                onSuccessfulls: (int? value) {
+                onSuccessfullPutts: (int? value) {
                   setState(() {
                     _successfulPutts = value!;
                     widget.aDrill.success = _successfulPutts.toDouble();
+                  });
+                },
+                onSuccessDistance: (String? value) {
+                  setState(() {
+                    _missedDistanceFeet = double.parse(value!);
+                    widget.aDrill.success = _missedDistanceFeet;
                   });
                 },
               ),

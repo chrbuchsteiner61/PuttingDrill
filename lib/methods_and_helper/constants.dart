@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 //String formattedDateNow = DateFormat('dd.MM.yyyy HH:mm').format(DateTime.now());
 
-String version = '0.923 / 04.12.204, 12:05';
+String version = '0.923 / 06.12.204, 19:05';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 

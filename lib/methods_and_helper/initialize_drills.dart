@@ -4,7 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 List<DrillTheStandard> initializeDrills() {
   return [
     DrillTheStandard(1, 0, 5, 5),
-    DrillDistancePutt(2, 0, 5, 5),
+    DrillDistancePutt(2, 0, 5, 20),
     DrillTheStandard(3, 0, 5, 5),
     DrillTheStandard(4, 0, 5, 5),
     DrillTheStandard(5, 0, 5, 5)

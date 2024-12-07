@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/user_areas/input_screen/input_screen_new.dart';
 import 'package:myapp/user_areas/results_screen/result_chart.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen.dart';
-import 'package:myapp/user_areas/input_screen/input_screen.dart';
-import 'package:myapp/methods_and_helper/drills_the_standard.dart';
+// import 'package:myapp/user_areas/input_screen/input_screen.dart';
+import 'package:myapp/methods_and_helper/drill.dart';
 
 //import 'package:logger/logger.dart';
 
@@ -26,7 +27,7 @@ class DrillLine extends StatelessWidget {
   final String drillPicture;
   final String theClubLength;
   final ButtonStyle theButtonStyle;
-  final DrillTheStandard aDrill;
+  final Drill aDrill;
   final Map<String, String> textForDrillLine;
   final String successWord;
 
@@ -123,7 +124,7 @@ class DrillLine extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => InputScreen(
+        builder: (context) => InputScreenNew(
           appBarText: textForDrillLine["inputAppBarText"]!,
           buttonText: textForDrillLine["inputButtonText"]!,
           inputDrillCriteria1: inputData.criteria1,
@@ -132,7 +133,7 @@ class DrillLine extends StatelessWidget {
           drillInput1: inputData.input1,
           drillInput2: inputData.input2,
           drillInput3: inputData.input3,
-          success: successWord,
+          successText: successWord,
           aDrill: aDrill,
           errorInputMessageNonEmptyNegativ:
               textForDrillLine["errorInputMessageNonEmptyNegativ"]!,

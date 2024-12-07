@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 //String formattedDateNow = DateFormat('dd.MM.yyyy HH:mm').format(DateTime.now());
 
-String version = '0.923 / 06.12.204, 19:05';
+String version = '0.93 / 07.12.204, 22:05';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
@@ -32,6 +32,7 @@ const ButtonStyle appsButtonStyle = ButtonStyle(
     ),
   ),
 );
+
 
 class ParameterForChart {
   final String drillName;

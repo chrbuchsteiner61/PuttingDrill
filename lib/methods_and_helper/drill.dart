@@ -2,7 +2,7 @@ import 'package:logger/logger.dart';
 
 var logger = Logger();
 
-class DrillTheStandard {
+class Drill {
   final int drillNo;
   bool isDropDown = true;
   int selectedDistance;
@@ -11,7 +11,7 @@ class DrillTheStandard {
   final List<int> distances = [1, 2, 3];
   static const perCent = 100.0;
 
-  DrillTheStandard(this.drillNo, this.selectedDistance, this.numberOfExercises,
+  Drill(this.drillNo, this.selectedDistance, this.numberOfExercises,
       this.success);
 
   double calculateSuccessRate() {
@@ -27,7 +27,7 @@ class DrillTheStandard {
   }
 }
 
-class DrillDistancePutt extends DrillTheStandard {
+class DrillDistancePutt extends Drill {
   @override
   bool get isDropDown => false;
   @override
@@ -46,7 +46,7 @@ class DrillDistancePutt extends DrillTheStandard {
     double aResult = (1 -
             ((success / clubFeetRatio) /
                 (numberOfExercises.toDouble() * selectedDistance.toDouble()))) *
-        DrillTheStandard.perCent;
+        Drill.perCent;
 
     return aResult;
   }

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/methods_and_helper/constants.dart';
-import 'package:myapp/ui_elements/input_row.dart';
-import 'package:myapp/methods_and_helper/drills_the_standard.dart';
-import 'package:myapp/user_areas/input_screen/input_rows/input_success_in_row_3.dart';
-import 'package:myapp/user_areas/input_screen/helper_widgets/input_row_box1.dart';
-import 'package:myapp/user_areas/input_screen/input_rows/input_number_of_attemps_row_2.dart';
-import 'package:myapp/user_areas/input_screen/input_rows/input_drop_down_widget.dart';
+import 'package:myapp/user_areas/input_screen/input_widgets/input_row_wrap.dart';
+import 'package:myapp/methods_and_helper/drill.dart';
+import 'package:myapp/user_areas/input_screen/input_rows/input_success/input_success.dart';
+import 'package:myapp/user_areas/input_screen/input_widgets/input_row_box1.dart';
+import 'package:myapp/user_areas/input_screen/input_rows/input_attempts/input_attempts.dart';
+import 'package:myapp/user_areas/input_screen/input_widgets/input_drop_down_widget.dart';
 
 import 'package:logger/logger.dart';
-import 'package:myapp/user_areas/input_screen/input_rows/show_success_rate.dart';
+import 'package:myapp/user_areas/input_screen/input_rows/show_success_rate/show_success_rate.dart';
 
 var logger = Logger();
 
@@ -22,7 +22,7 @@ class InputScreen extends StatefulWidget {
   final String drillInput1;
   final String drillInput2;
   final String drillInput3;
-  final DrillTheStandard aDrill;
+  final Drill aDrill;
   final String errorInputMessageNonEmptyNegativ;
   final String success;
 
@@ -52,31 +52,28 @@ class InputScreenState extends State<InputScreen> {
   void initState() {
     super.initState();
     _selectedDistance = widget.aDrill.distances[0];
-    _putts = 5;
-    _successfulPutts = 5;
-    _missedDistanceFeet = 20.0;
+    _putts = widget.aDrill.numberOfExercises;
+    _successfulPutts = widget.aDrill.success.toInt();
+    _missedDistanceFeet = widget.aDrill.success;
   }
 
   List<int> numberOfExercises = [5, 6, 7, 8, 9, 10];
-  int _selectedDistance = 50;
-  int _putts = 5;
-  int _successfulPutts = 5;
-  double _missedDistanceFeet = 20.0;
-  
+  // initialize
+  int _selectedDistance = 99;
+  int _putts = 99;
+  int _successfulPutts = 99;
+  double _missedDistanceFeet = 99.9;
+  // ui
   List<double> colPosition = [130, 80, 120];
-  double rowHeight = 75;
 
   @override
   Widget build(BuildContext context) {
     Color selectAreaColor = Theme.of(context).scaffoldBackgroundColor;
     InputDecoration inputDecoration = InputDecoration(
-        border: InputBorder.none,
-        fillColor: selectAreaColor,
-        filled: true,
-        hintText: _missedDistanceFeet.toString() );
-
-    // Build the input screen
-    widget.aDrill.selectedDistance = widget.aDrill.distances[0];
+      border: InputBorder.none,
+      fillColor: selectAreaColor,
+      filled: true,
+    );
 
     return Scaffold(
       appBar: AppBar(title: Text(widget.appBarText)),
@@ -86,8 +83,7 @@ class InputScreenState extends State<InputScreen> {
           key: _formKey,
           child: Column(
             children: <Widget>[
-              InputRow(
-                aHeight: rowHeight,
+              InputRowWrap(
                 child: Row(
                   children: <Widget>[
                     spaceBetween,
@@ -125,8 +121,7 @@ class InputScreenState extends State<InputScreen> {
               ),
               spaceAfter,
               // Replaced second InputRow with InputCriteria2
-              InputNumberOfAttemptsRow2(
-                  rowHeight: rowHeight,
+              InputAttempts(
                   inputDrillCriteria2: widget.inputDrillCriteria2,
                   errorInputMessageNonEmptyNegativ:
                       widget.errorInputMessageNonEmptyNegativ,
@@ -143,7 +138,7 @@ class InputScreenState extends State<InputScreen> {
                   }),
               spaceAfter,
               // Third input row
-              InputSuccessInRow3(
+              InputSuccess(
                 aDrill: widget.aDrill,
                 inputDrillCriteria3: widget.inputDrillCriteria3,
                 drillInput3: widget.drillInput3,
@@ -171,9 +166,9 @@ class InputScreenState extends State<InputScreen> {
               ShowSuccessRate(
                   aDrill: widget.aDrill,
                   rowHeight: rowHeight,
-                  successfulPutts: _successfulPutts,
-                  putts: _putts,
-                  success: widget.success,
+                  //  successfulPutts: _successfulPutts,
+                  //  putts: _putts,
+                  successText: widget.success,
                   colPosition: colPosition),
               spaceAfter,
               // button for save results

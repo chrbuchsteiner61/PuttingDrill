@@ -3,7 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:myapp/dev_area/test_screen.dart';
-import 'package:myapp/methods_and_helper/drills_the_standard.dart';
+import 'package:myapp/methods_and_helper/drill.dart';
 import 'package:myapp/user_areas/the_info_drawer.dart';
 import 'package:myapp/methods_and_helper/language_helper.dart';
 import 'package:myapp/ui_elements/drill_line.dart';
@@ -84,7 +84,7 @@ class StartingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
 
-    List<DrillTheStandard> drillsInitials = initializeDrills();
+    List<Drill> drillsInitials = initializeDrills();
 
     const String preParePics = "assets/pics/preparePics/thePreparePic";
     const String iconPath = "assets/pics/icons_page1/Drill";
@@ -273,12 +273,12 @@ extension on AppLocalizations {
   }
 }
 
-List<DrillTheStandard> initializeDrills() {
+List<Drill> initializeDrills() {
   return [
-    DrillTheStandard(1, 0, 5, 5),
+    Drill(1, 0, 5, 5),
     DrillDistancePutt(2, 0, 5, 5),
-    DrillTheStandard(3, 0, 5, 5),
-    DrillTheStandard(4, 0, 5, 5),
-    DrillTheStandard(5, 0, 5, 5),
+    Drill(3, 0, 5, 5),
+    Drill(4, 0, 5, 5),
+    Drill(5, 0, 5, 5),
   ];
 }

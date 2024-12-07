@@ -1,13 +1,13 @@
-import 'package:myapp/methods_and_helper/drills_the_standard.dart';
+import 'package:myapp/methods_and_helper/drill.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-List<DrillTheStandard> initializeDrills() {
+List<Drill> initializeDrills() {
   return [
-    DrillTheStandard(1, 0, 5, 5),
+    Drill(1, 0, 5, 5),
     DrillDistancePutt(2, 0, 5, 20),
-    DrillTheStandard(3, 0, 5, 5),
-    DrillTheStandard(4, 0, 5, 5),
-    DrillTheStandard(5, 0, 5, 5)
+    Drill(3, 0, 5, 5),
+    Drill(4, 0, 5, 5),
+    Drill(5, 0, 5, 5)
   ];
 }
 

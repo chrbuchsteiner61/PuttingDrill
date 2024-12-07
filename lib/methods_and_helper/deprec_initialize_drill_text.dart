@@ -1,15 +1,4 @@
-import 'package:myapp/methods_and_helper/drill.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-List<Drill> initializeDrills() {
-  return [
-    Drill(1, 0, 5, 5),
-    DrillDistancePutt(2, 0, 5, 20),
-    Drill(3, 0, 5, 5),
-    Drill(4, 0, 5, 5),
-    Drill(5, 0, 5, 5)
-  ];
-}
 
 Map<String, String> getTextsForDrillLine(AppLocalizations? localizations) {
   return {

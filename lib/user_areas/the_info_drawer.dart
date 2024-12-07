@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:myapp/main.dart';
-import 'package:myapp/methods_and_helper/constants.dart';
-import 'package:myapp/methods_and_helper/languages.dart';
+import 'package:myapp/ui_definition/constants.dart';
+import 'package:myapp/language_helfer/languages.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AStatement extends StatelessWidget {

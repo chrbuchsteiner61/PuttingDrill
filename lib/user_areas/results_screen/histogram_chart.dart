@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:intl/intl.dart';
-import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/ui_definition/constants.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:myapp/user_areas/results_screen/select_lines.dart';
 import 'package:logger/logger.dart';

@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/ui_definition/constants.dart';
 
 class InputRowWrap extends StatelessWidget {
   final Widget box1;

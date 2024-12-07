@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/ui_definition/constants.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
-import 'package:myapp/methods_and_helper/drill.dart';
+import 'package:myapp/drills/drill.dart';
 
 class SaveButton extends StatefulWidget {
   final Drill aDrill;

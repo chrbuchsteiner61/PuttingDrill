@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:intl/intl.dart';
-
-//String formattedDateNow = DateFormat('dd.MM.yyyy HH:mm').format(DateTime.now());
 
 String version = '0.93 / 07.12.204, 22:05';
 

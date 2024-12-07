@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/methods_and_helper/drill.dart';
+import 'package:myapp/drills/drill.dart';
 import 'package:myapp/user_areas/input_screen/input_widgets/input_row_wrap.dart';
 import 'package:myapp/user_areas/input_screen/input_widgets/input_row_box1.dart';
 import 'package:myapp/user_areas/input_screen/input_widgets/input_row_box3.dart';

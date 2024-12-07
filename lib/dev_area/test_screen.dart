@@ -5,7 +5,7 @@ import 'package:myapp/dev_area/results_test.dart';
 import 'package:myapp/dev_area/a_different_test_chart.dart';
 import 'package:myapp/dev_area/test_chart.dart';
 import 'package:myapp/dev_area/test_data.dart';
-import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/ui_definition/constants.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
 
 class TestScreen extends StatelessWidget {

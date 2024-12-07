@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/user_areas/input_screen/input_screen_new.dart';
+import 'package:myapp/user_areas/input_screen/input_screen.dart';
 import 'package:myapp/user_areas/results_screen/result_chart.dart';
-import 'package:myapp/methods_and_helper/constants.dart';
+import 'package:myapp/ui_definition/constants.dart';
 import 'package:myapp/ui_elements/a_drill_icon.dart';
-import 'package:myapp/user_areas/explain_screen.dart';
-// import 'package:myapp/user_areas/input_screen/input_screen.dart';
-import 'package:myapp/methods_and_helper/drill.dart';
+import 'package:myapp/user_areas/explain_screen/explain_screen.dart';
+import 'package:myapp/drills/drill.dart';
 
 //import 'package:logger/logger.dart';
-
 // var logger = Logger();
 
 class DrillLine extends StatelessWidget {
@@ -124,7 +122,7 @@ class DrillLine extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => InputScreenNew(
+        builder: (context) => InputScreen(
           appBarText: textForDrillLine["inputAppBarText"]!,
           buttonText: textForDrillLine["inputButtonText"]!,
           inputDrillCriteria1: inputData.criteria1,

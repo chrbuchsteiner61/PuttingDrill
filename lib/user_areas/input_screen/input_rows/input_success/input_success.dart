@@ -42,6 +42,10 @@ class InputSuccessState extends State<InputSuccess> {
     List<int> potentialSuccess = [];
     potentialSuccess = widget.aDrill.calculatePotentialSuccess();
 
+    logger.d(widget.aDrill.numberOfExercises);
+    logger.d(widget.putts);
+    logger.d(potentialSuccess);
+    
     return InputRowWrap(
       box1: InputRowBox1(inputDrillCriteria1: widget.inputDrillCriteria3),
       box2: (widget.aDrill.isDropDown)

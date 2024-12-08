@@ -42,7 +42,7 @@ class InputScreenState extends State<InputScreen> {
   @override
   void initState() {
     super.initState();
-    // _selectedDistance = widget.aDrill.distances[0];
+   _selectedDistance = widget.aDrill.distances[0];
     _putts = widget.aDrill.numberOfExercises;
     _successfulPutts = widget.aDrill.success.toInt();
     _missedDistanceFeet = widget.aDrill.success;
@@ -50,14 +50,14 @@ class InputScreenState extends State<InputScreen> {
 
   List<int> numberOfExercises = [5, 6, 7, 8, 9, 10];
   // initialize
-  // int _selectedDistance = 99;
+  int _selectedDistance = 99;
   int _putts = 99;
   int _successfulPutts = 99;
   double _missedDistanceFeet = 99.9;
 
   @override
   Widget build(BuildContext context) {
-    const List<int> numberOfExercises = [5, 6, 7, 8, 9, 10];
+  
     return Scaffold(
       appBar: AppBar(title: Text(widget.appBarText)),
       body: Padding(
@@ -72,6 +72,13 @@ class InputScreenState extends State<InputScreen> {
                   drillInput1: widget.drillInput1,
                   errorInputMessageNonEmptyNegativ:
                       widget.errorInputMessageNonEmptyNegativ,
+                      onDistanceChanged: (value) {
+                    setState(() {
+                      _selectedDistance = value!;
+                      widget.aDrill.selectedDistance = _selectedDistance;
+                    });
+                  },
+                  selectedDistance: _selectedDistance,
                 ),
                 InputAttempts(
                     aDrill: widget.aDrill,
@@ -80,6 +87,7 @@ class InputScreenState extends State<InputScreen> {
                     errorInputMessageNonEmptyNegativ:
                         widget.errorInputMessageNonEmptyNegativ,
                     numberOfExercises: numberOfExercises,
+                    putts: _putts,
                     onPuttsChanged: (value) {
                       setState(() {
                         _putts = value!;

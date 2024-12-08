@@ -11,6 +11,7 @@ class InputAttempts extends StatefulWidget {
   final String errorInputMessageNonEmptyNegativ;
   final String drillInput2;
   final List<int> numberOfExercises;
+  final int putts;
   final ValueChanged<int?> onPuttsChanged;
 
   const InputAttempts({
@@ -20,6 +21,7 @@ class InputAttempts extends StatefulWidget {
     required this.errorInputMessageNonEmptyNegativ,
     required this.drillInput2,
     required this.numberOfExercises,
+    required this.putts,
     required this.onPuttsChanged,
   });
 
@@ -34,13 +36,8 @@ class _InputAttemptsState extends State<InputAttempts> {
       box1: InputRowBox1(inputDrillCriteria1: widget.inputDrillCriteria2),
       box2: InputDropDownWidget(
         items: widget.numberOfExercises,
-        value: widget.aDrill.numberOfExercises,
-        onChanged: (value) {
-                        setState(() {
-                         // _selectedDistance = value!;
-                          widget.aDrill.numberOfExercises = value!;
-                        });
-                      },
+        value: widget.putts,
+        onChanged: widget.onPuttsChanged,
         validator: (value) {
           if (value == null) {
             return widget.errorInputMessageNonEmptyNegativ;

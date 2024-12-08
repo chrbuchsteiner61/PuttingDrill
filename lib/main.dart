@@ -85,7 +85,7 @@ class StartingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
 
-    List<Drill> drillsInitials = initializeDrills();
+    List<Drill> initializedDrills = initializeDrills();
 
     const String preParePics = "assets/pics/preparePics/thePreparePic";
     const String iconPath = "assets/pics/icons_page1/Drill";
@@ -130,7 +130,7 @@ class StartingPage extends StatelessWidget {
                     aPreparePic: "$preParePics$numberOfDrill.svg",
                     theClubLength: localizations.clubLength,
                     theButtonStyle: appsButtonStyle,
-                    aDrill: drillsInitials[numberOfDrill - 1],
+                    aDrill: initializedDrills[numberOfDrill - 1],
                     drillName:
                         localizations.getDrillTexts(numberOfDrill)["drill"]!,
                     thePurpose:

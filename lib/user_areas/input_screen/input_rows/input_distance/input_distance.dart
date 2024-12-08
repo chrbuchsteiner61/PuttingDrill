@@ -10,6 +10,8 @@ class InputDistance extends StatefulWidget {
   final String inputDrillCriteria1;
   final String errorInputMessageNonEmptyNegativ;
   final String drillInput1;
+  final ValueChanged<int?> onDistanceChanged;
+  final int selectedDistance;
 
   const InputDistance({
     super.key,
@@ -17,6 +19,8 @@ class InputDistance extends StatefulWidget {
     required this.inputDrillCriteria1,
     required this.errorInputMessageNonEmptyNegativ,
     required this.drillInput1,
+    required this.onDistanceChanged,
+    required this.selectedDistance,
   });
 
   @override
@@ -35,12 +39,8 @@ class InputDistanceState extends State<InputDistance> {
       box1: InputRowBox1(inputDrillCriteria1: widget.inputDrillCriteria1),
       box2: InputDropDownWidget(
         items: widget.aDrill.distances,
-        value: widget.aDrill.selectedDistance,
-        onChanged: (value) {
-          setState(() {
-            widget.aDrill.selectedDistance = value!;
-          });
-        },
+        value: widget.selectedDistance,
+        onChanged: widget.onDistanceChanged,
         validator: (value) {
           if (value == null) {
             return widget.errorInputMessageNonEmptyNegativ;

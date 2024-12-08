@@ -5,11 +5,19 @@ import 'package:myapp/drills/drill.dart';
 
 class SaveButton extends StatefulWidget {
   final Drill aDrill;
+  final int selectedDistance;
+  final int putts;
+  final double successfulPutts;
+  final double missedDistanceFeet;
   final String buttonText;
 
   const SaveButton({
     super.key,
     required this.aDrill,
+    required this.selectedDistance,
+    required this.putts,
+    required this.successfulPutts,
+    required this.missedDistanceFeet,
     required this.buttonText,
   });
 
@@ -39,10 +47,12 @@ class _SaveButtonState extends State<SaveButton> {
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
-                  // widget.aDrill.selectedDistance = _selectedDistance;
-                  //  widget.aDrill.numberOfExercises = _putts;
-                  //  widget.aDrill.success = _successfulPutts.toDouble();
-                  double successRate = widget.aDrill.calculateSuccessRate();
+                  double successRate = widget.aDrill.calculateSuccessRate(
+                    widget.selectedDistance,
+                    widget.putts,
+                    widget.successfulPutts,
+                    widget.missedDistanceFeet,
+                  );
                   PuttingResult newResult = PuttingResult(
                     drillNo: widget.aDrill.drillNo,
                     selectedDistance: widget.aDrill.selectedDistance,

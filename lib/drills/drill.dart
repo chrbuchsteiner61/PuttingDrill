@@ -14,8 +14,12 @@ class Drill {
   Drill(this.drillNo, this.selectedDistance, this.numberOfExercises,
       this.success);
 
-  double calculateSuccessRate() {
-    return (success / numberOfExercises.toDouble()) * perCent;
+  double calculateSuccessRate(
+      int selectedDistancePara,
+      int numberOfExercisesPara,
+      double successPuttsPara,
+      double missedDistanceFeetPara) {
+    return (successPuttsPara / numberOfExercisesPara.toDouble()) * perCent;
   }
 
   List<int> calculatePotentialSuccess() {
@@ -38,14 +42,18 @@ class DrillDistancePutt extends Drill {
       super.numberOfExercises, super.success);
 
   @override
-  double calculateSuccessRate() {
-    logger.d(numberOfExercises);
-    logger.d(selectedDistance);
-    logger.d(success);
+  double calculateSuccessRate(
+      int selectedDistancePara,
+      int numberOfExercisesPara,
+      double successPuttsPara,
+      double missedDistanceFeetPara) {
+    logger.d(numberOfExercisesPara);
+    logger.d(selectedDistancePara);
 
     double aResult = (1 -
-            ((success / clubFeetRatio) /
-                (numberOfExercises.toDouble() * selectedDistance.toDouble()))) *
+            ((missedDistanceFeetPara / clubFeetRatio) /
+                (numberOfExercisesPara.toDouble() *
+                    selectedDistancePara.toDouble()))) *
         Drill.perCent;
 
     return aResult;

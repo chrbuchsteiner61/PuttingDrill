@@ -277,7 +277,7 @@ extension on AppLocalizations {
 List<Drill> initializeDrills() {
   return [
     Drill(1, 0, 5, 5),
-    DrillDistancePutt(2, 0, 5, 5),
+    DrillDistancePutt(2, 0, 5, 0),
     Drill(3, 0, 5, 5),
     Drill(4, 0, 5, 5),
     Drill(5, 0, 5, 5),

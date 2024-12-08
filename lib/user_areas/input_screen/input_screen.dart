@@ -42,9 +42,9 @@ class InputScreenState extends State<InputScreen> {
   @override
   void initState() {
     super.initState();
-   _selectedDistance = widget.aDrill.distances[0];
+    _selectedDistance = widget.aDrill.distances[0];
     _putts = widget.aDrill.numberOfExercises;
-    _successfulPutts = widget.aDrill.success.toInt();
+    _successfulPutts = widget.aDrill.success;
     _missedDistanceFeet = widget.aDrill.success;
   }
 
@@ -52,12 +52,11 @@ class InputScreenState extends State<InputScreen> {
   // initialize
   int _selectedDistance = 99;
   int _putts = 99;
-  int _successfulPutts = 99;
+  double _successfulPutts = 99.9;
   double _missedDistanceFeet = 99.9;
 
   @override
   Widget build(BuildContext context) {
-  
     return Scaffold(
       appBar: AppBar(title: Text(widget.appBarText)),
       body: Padding(
@@ -72,7 +71,7 @@ class InputScreenState extends State<InputScreen> {
                   drillInput1: widget.drillInput1,
                   errorInputMessageNonEmptyNegativ:
                       widget.errorInputMessageNonEmptyNegativ,
-                      onDistanceChanged: (value) {
+                  onDistanceChanged: (value) {
                     setState(() {
                       _selectedDistance = value!;
                       widget.aDrill.selectedDistance = _selectedDistance;
@@ -103,8 +102,8 @@ class InputScreenState extends State<InputScreen> {
                   putts: _putts,
                   onSuccessfullPutts: (int? value) {
                     setState(() {
-                      _successfulPutts = value!;
-                      widget.aDrill.success = _successfulPutts.toDouble();
+                      _successfulPutts = value!.toDouble();
+                      widget.aDrill.success = _successfulPutts;
                     });
                   },
                   onSuccessDistance: (String? value) {
@@ -116,9 +115,20 @@ class InputScreenState extends State<InputScreen> {
                 ),
                 ShowSuccessRate(
                   aDrill: widget.aDrill,
+                  putts: _putts,
+                  selectedDistance: _selectedDistance,
+                  successfulPutts: _successfulPutts,
+                  missedDistanceFeet: _missedDistanceFeet,
                   successText: widget.successText,
                 ),
-                SaveButton(aDrill: widget.aDrill, buttonText: widget.buttonText)
+                SaveButton(
+                  aDrill: widget.aDrill,
+                  buttonText: widget.buttonText,
+                  selectedDistance: _selectedDistance,
+                  putts: _putts,
+                  successfulPutts: _successfulPutts,
+                  missedDistanceFeet: _missedDistanceFeet,
+                )
               ]),
         ),
       ),

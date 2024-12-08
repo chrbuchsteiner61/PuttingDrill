@@ -9,9 +9,20 @@ class ShowSuccessRate extends StatefulWidget {
   final String successText;
 
   final Drill aDrill;
+  final int selectedDistance;
+  final int putts;
+  final double successfulPutts;
+  final double missedDistanceFeet;
 
-  const ShowSuccessRate(
-      {super.key, required this.successText, required this.aDrill});
+  const ShowSuccessRate({
+    super.key,
+    required this.successText,
+    required this.aDrill,
+    required this.selectedDistance,
+    required this.putts,
+    required this.successfulPutts,
+    required this.missedDistanceFeet,
+  });
 
   @override
   State<ShowSuccessRate> createState() => _ShowResultState();
@@ -28,7 +39,11 @@ class _ShowResultState extends State<ShowSuccessRate> {
     //  double successRate = calculateSuccessRate();
     return InputRowWrap(
       box1: InputRowBox1(inputDrillCriteria1: widget.successText),
-      box2: Text(widget.aDrill.calculateSuccessRate().toStringAsFixed(2),
+      box2: Text(
+          widget.aDrill
+              .calculateSuccessRate(widget.selectedDistance, widget.putts,
+                  widget.successfulPutts, widget.missedDistanceFeet)
+              .toStringAsFixed(2),
           style: Theme.of(context).textTheme.bodyMedium!),
       box3: const InputRowBox3(
         drillInput: "%",

@@ -36,7 +36,7 @@ class DrillDistancePutt extends Drill {
   bool get isDropDown => false;
   @override
   List<int> get distances => [6, 9, 12];
-  double clubFeetRatio = 2.9;
+  double clubFeetRatio = 2.83;
 
   DrillDistancePutt(super.drillNo, super.selectedDistance,
       super.numberOfExercises, super.success);

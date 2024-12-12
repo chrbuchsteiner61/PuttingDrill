@@ -56,6 +56,10 @@ class DrillDistancePutt extends Drill {
                     selectedDistancePara.toDouble()))) *
         Drill.perCent;
 
+    if (aResult < 0.0) {
+      aResult = 0.0;
+    }
+
     return aResult;
   }
 

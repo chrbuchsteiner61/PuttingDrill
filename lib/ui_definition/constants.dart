@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-String version = '0.93 / 07.12.204, 22:05';
+String version = '0.94 / 12.12.204, 09:25';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 

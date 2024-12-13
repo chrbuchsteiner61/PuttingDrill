@@ -8,7 +8,7 @@ class Drill {
   int selectedDistance;
   int numberOfExercises;
   double success;
-  final List<int> distances = [1, 2, 3];
+  final List<int> distances = [1, 2, 3, 4, 5];
   static const perCent = 100.0;
 
   Drill(this.drillNo, this.selectedDistance, this.numberOfExercises,
@@ -35,7 +35,7 @@ class DrillDistancePutt extends Drill {
   @override
   bool get isDropDown => false;
   @override
-  List<int> get distances => [6, 9, 12];
+  List<int> get distances => [6, 9, 12, 15];
   double clubFeetRatio = 2.83;
 
   DrillDistancePutt(super.drillNo, super.selectedDistance,

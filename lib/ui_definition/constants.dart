@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-String version = '0.94 / 12.12.204, 09:25';
+String version = '0.942 / 12.12.2024, 18:25';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
@@ -46,6 +46,8 @@ const List<Color> barColors = [
   Colors.yellow,
   Colors.red,
   Colors.blue,
+  Colors.green,
+  Colors.orange,
 ];
 
 // Data class for input-related properties

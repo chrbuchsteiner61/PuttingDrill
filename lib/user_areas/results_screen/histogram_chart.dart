@@ -116,7 +116,7 @@ class _HistogramChartState extends State<HistogramChart> {
                   logger.d(index);
                   final chartData = entry.value;
                   logger.d(entry.value.successRate);
-                  logger.d(entry.value.criteria3);
+                  // logger.d(entry.value.criteria3);
 
                   return BarChartGroupData(
                     x: index,

@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/ui_definition/constants.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
-import 'package:myapp/drills/drill.dart';
+//import 'package:myapp/drills/drill.dart';
 
 class SaveButton extends StatefulWidget {
-  final Drill aDrill;
+  final int numberOfDrill;
   final int selectedDistance;
-  final int putts;
-  final double successfulPutts;
-  final double missedDistanceFeet;
+ final int putts;
+//  final double successfulPutts;
+ // final double missedDistanceFeet;
+  final double successRate;
   final String buttonText;
 
   const SaveButton({
     super.key,
-    required this.aDrill,
+    required this.numberOfDrill,
     required this.selectedDistance,
     required this.putts,
-    required this.successfulPutts,
-    required this.missedDistanceFeet,
+ //   required this.successfulPutts,
+ //   required this.missedDistanceFeet,
+    required this.successRate,
     required this.buttonText,
   });
 
@@ -47,20 +49,15 @@ class _SaveButtonState extends State<SaveButton> {
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
-                  double successRate = widget.aDrill.calculateSuccessRate(
-                    widget.selectedDistance,
-                    widget.putts,
-                    widget.successfulPutts,
-                    widget.missedDistanceFeet,
-                  );
+                 
                   PuttingResult newResult = PuttingResult(
-                    drillNo: widget.aDrill.drillNo,
-                    selectedDistance: widget.aDrill.selectedDistance,
-                    numberOfEfforts: widget.aDrill.numberOfExercises,
+                    drillNo: widget.numberOfDrill,
+                    selectedDistance: widget.selectedDistance,
+                   numberOfEfforts: widget.putts,
                     //unused criteria 3
-                    criteria3: -99,
-                    success: widget.aDrill.success,
-                    successRate: successRate,
+                  //  criteria3: -99,
+                    
+                    successRate: widget.successRate,
                     dateOfPractice: DateTime.now().toIso8601String(),
                   );
                   await DatabaseHelper().insertResult(newResult);

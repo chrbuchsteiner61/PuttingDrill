@@ -122,12 +122,14 @@ class InputScreenState extends State<InputScreen> {
                   successText: widget.successText,
                 ),
                 SaveButton(
-                  aDrill: widget.aDrill,
+                  //aDrill: widget.aDrill,
                   buttonText: widget.buttonText,
                   selectedDistance: _selectedDistance,
                   putts: _putts,
-                  successfulPutts: _successfulPutts,
-                  missedDistanceFeet: _missedDistanceFeet,
+                 // successfulPutts: _successfulPutts,
+                 // missedDistanceFeet: _missedDistanceFeet,
+                  successRate: _successfulPutts,
+                  numberOfDrill: widget.aDrill.drillNo,
                 )
               ]),
         ),

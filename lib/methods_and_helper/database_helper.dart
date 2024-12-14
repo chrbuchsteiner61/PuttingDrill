@@ -6,9 +6,9 @@ class PuttingResult {
   final int? id;
   final int drillNo;
   final int selectedDistance;
-  final int numberOfEfforts;
-  final int criteria3;
-  final double success;
+ final int numberOfEfforts;
+ // final int criteria3;
+//  final double success;
   final double successRate;
   final String dateOfPractice;
 
@@ -16,9 +16,9 @@ class PuttingResult {
     this.id,
     required this.drillNo,
     required this.selectedDistance,
-    required this.numberOfEfforts,
-    required this.criteria3,
-    required this.success,
+  required this.numberOfEfforts,
+  //  required this.criteria3,
+  //  required this.success,
     required this.successRate,
     required this.dateOfPractice,
   });
@@ -28,9 +28,9 @@ class PuttingResult {
       'id': id,
       'drillNo': drillNo,
       'criteria1': selectedDistance,
-      'criteria2': numberOfEfforts,
-      'criteria3': criteria3,
-      'success': success,
+     // 'criteria2': numberOfEfforts,
+     // 'criteria3': criteria3,
+    //  'success': success,
       'successRate': successRate,
       'dateOfPractice': dateOfPractice,
     };
@@ -77,9 +77,9 @@ class DatabaseHelper {
         id: maps[i]['id'],
         drillNo: maps[i]['drillNo'],
         selectedDistance: maps[i]['criteria1'],
-        numberOfEfforts: maps[i]['criteria2'],
-        criteria3: maps[i]['criteria3'],
-        success: maps[i]['success'],
+       numberOfEfforts: maps[i]['criteria2'],
+      //  criteria3: maps[i]['criteria3'],
+      //  success: maps[i]['success'],
         successRate: maps[i]['successRate'],
         dateOfPractice: maps[i]['dateOfPractice'],
       );

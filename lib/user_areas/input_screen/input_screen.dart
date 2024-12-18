@@ -49,7 +49,7 @@ class InputScreenState extends State<InputScreen> {
   void initState() {
     super.initState();
     _selectedDistance = widget.aDrill.distances[0];
-    _putts = widget.aDrill.numberOfExercises;
+    _putts = widget.aDrill.putts;
     _successfulPutts = widget.aDrill.success;
     _missedDistanceFeet = widget.aDrill.success;
     _successRate = _successRate = widget.aDrill.calculateSuccessRate(
@@ -102,7 +102,7 @@ class InputScreenState extends State<InputScreen> {
                     onPuttsChanged: (value) {
                       setState(() {
                         _putts = value!;
-                        widget.aDrill.numberOfExercises = _putts;
+                        widget.aDrill.putts = _putts;
                         _successRate = widget.aDrill.calculateSuccessRate(
                             _selectedDistance,
                             _putts,
@@ -116,7 +116,7 @@ class InputScreenState extends State<InputScreen> {
                   drillInput3: widget.drillInput3,
                   errorInputMessageNonEmptyNegativ:
                       widget.errorInputMessageNonEmptyNegativ,
-                  putts: _putts,
+                  successfulPutts: _successfulPutts.toInt(),
                   onSuccessfullPutts: (int? value) {
                     setState(() {
                       _successfulPutts = value!.toDouble();

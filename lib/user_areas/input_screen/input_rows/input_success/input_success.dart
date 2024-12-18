@@ -12,7 +12,7 @@ class InputSuccess extends StatefulWidget {
   final String drillInput3;
   final String errorInputMessageNonEmptyNegativ;
 
-  final int putts;
+  final int successfulPutts;
   final Function(int?) onSuccessfullPutts;
   final Function(String?) onSuccessDistance;
 
@@ -22,7 +22,7 @@ class InputSuccess extends StatefulWidget {
     required this.inputDrillCriteria3,
     required this.drillInput3,
     required this.errorInputMessageNonEmptyNegativ,
-    required this.putts,
+    required this.successfulPutts,
     required this.onSuccessfullPutts,
     required this.onSuccessDistance,
   });
@@ -42,16 +42,16 @@ class InputSuccessState extends State<InputSuccess> {
     List<int> potentialSuccess = [];
     potentialSuccess = widget.aDrill.calculatePotentialSuccess();
 
-    logger.d(widget.aDrill.numberOfExercises);
-    logger.d(widget.putts);
+    logger.d(widget.aDrill.putts);
+    logger.d(widget.successfulPutts);
     logger.d(potentialSuccess);
-    
+
     return InputRowWrap(
       box1: InputRowBox1(inputDrillCriteria1: widget.inputDrillCriteria3),
       box2: (widget.aDrill.isDropDown)
           ? InputDropDownWidget(
               items: potentialSuccess,
-              value: widget.putts,
+              value: widget.successfulPutts,
               onChanged: widget.onSuccessfullPutts,
               validator: (value) {
                 if (value == null) {

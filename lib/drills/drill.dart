@@ -6,25 +6,24 @@ class Drill {
   final int drillNo;
   bool isDropDown = true;
   int selectedDistance;
-  int numberOfExercises;
+  int putts;
   double success;
   final List<int> distances = [1, 2, 3, 4, 5];
   static const perCent = 100.0;
 
-  Drill(this.drillNo, this.selectedDistance, this.numberOfExercises,
-      this.success);
+  Drill(this.drillNo, this.selectedDistance, this.putts, this.success);
 
   double calculateSuccessRate(
       int selectedDistancePara,
-      int numberOfExercisesPara,
+      int puttsPara,
       double successPuttsPara,
       double missedDistanceFeetPara) {
-    return (successPuttsPara / numberOfExercisesPara.toDouble()) * perCent;
+    return (successPuttsPara / puttsPara.toDouble()) * perCent;
   }
 
   List<int> calculatePotentialSuccess() {
     List<int> potentialSuccess = [];
-    for (var i = 0; i < numberOfExercises + 1; i++) {
+    for (var i = 0; i < putts + 1; i++) {
       potentialSuccess.add(i);
     }
     return potentialSuccess;
@@ -38,21 +37,21 @@ class DrillDistancePutt extends Drill {
   List<int> get distances => [6, 9, 12, 15];
   double clubFeetRatio = 2.83;
 
-  DrillDistancePutt(super.drillNo, super.selectedDistance,
-      super.numberOfExercises, super.success);
+  DrillDistancePutt(
+      super.drillNo, super.selectedDistance, super.putts, super.success);
 
   @override
   double calculateSuccessRate(
       int selectedDistancePara,
-      int numberOfExercisesPara,
+      int puttsPara,
       double successPuttsPara,
       double missedDistanceFeetPara) {
-    logger.d(numberOfExercisesPara);
+    logger.d(puttsPara);
     logger.d(selectedDistancePara);
 
     double aResult = (1 -
             ((missedDistanceFeetPara / clubFeetRatio) /
-                (numberOfExercisesPara.toDouble() *
+                (puttsPara.toDouble() *
                     selectedDistancePara.toDouble()))) *
         Drill.perCent;
 
@@ -67,7 +66,7 @@ class DrillDistancePutt extends Drill {
   List<int> calculatePotentialSuccess() {
     List<int> potentialSuccess = [];
 
-    for (var i = 0; i < numberOfExercises + 1; i++) {
+    for (var i = 0; i < putts + 1; i++) {
       potentialSuccess.add(i);
     }
     logger.d(potentialSuccess);

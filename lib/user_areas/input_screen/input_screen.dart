@@ -46,6 +46,7 @@ class InputScreenState extends State<InputScreen> {
     _putts = widget.aDrill.numberOfExercises;
     _successfulPutts = widget.aDrill.success;
     _missedDistanceFeet = widget.aDrill.success;
+    _successRate = 0.99;
   }
 
   List<int> numberOfExercises = [5, 6, 7, 8, 9, 10];
@@ -54,6 +55,7 @@ class InputScreenState extends State<InputScreen> {
   int _putts = 99;
   double _successfulPutts = 99.9;
   double _missedDistanceFeet = 99.9;
+  double _successRate = 0.99;
 
   @override
   Widget build(BuildContext context) {
@@ -123,13 +125,13 @@ class InputScreenState extends State<InputScreen> {
                 ),
                 SaveButton(
                   //aDrill: widget.aDrill,
+                  numberOfDrill: widget.aDrill.drillNo,
                   buttonText: widget.buttonText,
                   selectedDistance: _selectedDistance,
                   putts: _putts,
-                 // successfulPutts: _successfulPutts,
-                 // missedDistanceFeet: _missedDistanceFeet,
-                  successRate: _successfulPutts,
-                  numberOfDrill: widget.aDrill.drillNo,
+                  // successfulPutts: _successfulPutts,
+                  // missedDistanceFeet: _missedDistanceFeet,
+                  successRate: _successRate,
                 )
               ]),
         ),

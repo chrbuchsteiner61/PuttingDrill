@@ -6,9 +6,9 @@ import 'package:myapp/methods_and_helper/database_helper.dart';
 class SaveButton extends StatefulWidget {
   final int numberOfDrill;
   final int selectedDistance;
- final int putts;
+  final int putts;
 //  final double successfulPutts;
- // final double missedDistanceFeet;
+  // final double missedDistanceFeet;
   final double successRate;
   final String buttonText;
 
@@ -17,8 +17,8 @@ class SaveButton extends StatefulWidget {
     required this.numberOfDrill,
     required this.selectedDistance,
     required this.putts,
- //   required this.successfulPutts,
- //   required this.missedDistanceFeet,
+    //   required this.successfulPutts,
+    //   required this.missedDistanceFeet,
     required this.successRate,
     required this.buttonText,
   });
@@ -49,14 +49,14 @@ class _SaveButtonState extends State<SaveButton> {
               onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
-                 
+
                   PuttingResult newResult = PuttingResult(
                     drillNo: widget.numberOfDrill,
                     selectedDistance: widget.selectedDistance,
-                   numberOfEfforts: widget.putts,
+                    numberOfEfforts: widget.putts,
                     //unused criteria 3
-                  //  criteria3: -99,
-                    
+                    //  criteria3: -99,
+
                     successRate: widget.successRate,
                     dateOfPractice: DateTime.now().toIso8601String(),
                   );

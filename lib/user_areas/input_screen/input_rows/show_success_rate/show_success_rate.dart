@@ -36,14 +36,14 @@ class _ShowResultState extends State<ShowSuccessRate> {
 
   @override
   Widget build(BuildContext context) {
-    //  double successRate = calculateSuccessRate();
+    double successRate = 0.99;
+
+    successRate = widget.aDrill.calculateSuccessRate(widget.selectedDistance,
+        widget.putts, widget.successfulPutts, widget.missedDistanceFeet);
+
     return InputRowWrap(
       box1: InputRowBox1(inputDrillCriteria1: widget.successText),
-      box2: Text(
-          widget.aDrill
-              .calculateSuccessRate(widget.selectedDistance, widget.putts,
-                  widget.successfulPutts, widget.missedDistanceFeet)
-              .toStringAsFixed(2),
+      box2: Text(successRate.toStringAsFixed(2),
           style: Theme.of(context).textTheme.bodyMedium!),
       box3: const InputRowBox3(
         drillInput: "%",

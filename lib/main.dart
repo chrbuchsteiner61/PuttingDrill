@@ -71,6 +71,7 @@ class PuttingDrillAppState extends State<PuttingDrillApp> {
         Locale('da'),
         Locale('sv'),
         Locale('it'),
+        Locale('nl'),
       ],
       debugShowCheckedModeBanner: false,
       theme: AppTheme.data,

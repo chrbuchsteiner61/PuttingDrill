@@ -5,7 +5,8 @@ enum Language {
   spanish('es', 'ES', 'espanol'),
   italian('it', 'IT', 'italiano'),
   danish('da', 'DK', 'dansk'),
-  swedish('sv', 'SE', 'svenska');
+  swedish('sv', 'SE', 'svenska'),
+  dutch('nl', 'NL', 'nederlands');
 
   final String short;
   final String flag;

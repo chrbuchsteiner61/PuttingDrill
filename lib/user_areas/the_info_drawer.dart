@@ -171,6 +171,18 @@ class TheInfoDrawerState extends State<TheInfoDrawer> {
                   ),
                 ),
                 DropdownMenuItem(
+                  value: Language.italian.languageKey,
+                  child: Row(
+                    children: <Widget>[
+                      LanguageFlag(
+                        countryCode: Language.italian.flagKey,
+                      ),
+                      spaceBetween,
+                      Text(Language.italian.nameKey),
+                    ],
+                  ),
+                ),
+                DropdownMenuItem(
                   value: Language.danish.languageKey,
                   child: Row(
                     children: <Widget>[

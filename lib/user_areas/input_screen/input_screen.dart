@@ -39,6 +39,12 @@ class InputScreen extends StatefulWidget {
 }
 
 class InputScreenState extends State<InputScreen> {
+  int _selectedDistance = 99;
+  int _putts = 99;
+  double _successfulPutts = 99.9;
+  double _missedDistanceFeet = 99.9;
+  double _successRate = 0.99;
+
   @override
   void initState() {
     super.initState();
@@ -46,16 +52,15 @@ class InputScreenState extends State<InputScreen> {
     _putts = widget.aDrill.numberOfExercises;
     _successfulPutts = widget.aDrill.success;
     _missedDistanceFeet = widget.aDrill.success;
-    _successRate = 0.99;
+    _successRate = _successRate = widget.aDrill.calculateSuccessRate(
+        _selectedDistance,
+        _putts,
+        _successfulPutts,
+        _missedDistanceFeet); // Calculate the success rate;
   }
 
   List<int> numberOfExercises = [5, 6, 7, 8, 9, 10];
   // initialize
-  int _selectedDistance = 99;
-  int _putts = 99;
-  double _successfulPutts = 99.9;
-  double _missedDistanceFeet = 99.9;
-  double _successRate = 0.99;
 
   @override
   Widget build(BuildContext context) {
@@ -77,6 +82,11 @@ class InputScreenState extends State<InputScreen> {
                     setState(() {
                       _selectedDistance = value!;
                       widget.aDrill.selectedDistance = _selectedDistance;
+                      _successRate = widget.aDrill.calculateSuccessRate(
+                          _selectedDistance,
+                          _putts,
+                          _successfulPutts,
+                          _missedDistanceFeet); // Recalculate
                     });
                   },
                   selectedDistance: _selectedDistance,
@@ -93,6 +103,11 @@ class InputScreenState extends State<InputScreen> {
                       setState(() {
                         _putts = value!;
                         widget.aDrill.numberOfExercises = _putts;
+                        _successRate = widget.aDrill.calculateSuccessRate(
+                            _selectedDistance,
+                            _putts,
+                            _successfulPutts,
+                            _missedDistanceFeet); // Recalculate
                       });
                     }),
                 InputSuccess(
@@ -106,32 +121,35 @@ class InputScreenState extends State<InputScreen> {
                     setState(() {
                       _successfulPutts = value!.toDouble();
                       widget.aDrill.success = _successfulPutts;
+                      _successRate = widget.aDrill.calculateSuccessRate(
+                          _selectedDistance,
+                          _putts,
+                          _successfulPutts,
+                          _missedDistanceFeet); // Recalculate
                     });
                   },
                   onSuccessDistance: (String? value) {
                     setState(() {
                       _missedDistanceFeet = double.parse(value!);
                       widget.aDrill.success = _missedDistanceFeet;
+                      _successRate = widget.aDrill.calculateSuccessRate(
+                          _selectedDistance,
+                          _putts,
+                          _successfulPutts,
+                          _missedDistanceFeet); // Recalculate
                     });
                   },
                 ),
                 ShowSuccessRate(
-                  aDrill: widget.aDrill,
-                  putts: _putts,
-                  selectedDistance: _selectedDistance,
-                  successfulPutts: _successfulPutts,
-                  missedDistanceFeet: _missedDistanceFeet,
                   successText: widget.successText,
+                  successRate: _successRate,
                 ),
                 SaveButton(
-                  //aDrill: widget.aDrill,
                   numberOfDrill: widget.aDrill.drillNo,
                   buttonText: widget.buttonText,
                   selectedDistance: _selectedDistance,
                   putts: _putts,
-                  // successfulPutts: _successfulPutts,
-                  // missedDistanceFeet: _missedDistanceFeet,
-                  successRate: _successRate,
+                  successRate: _successRate, // Use the calculated success rate
                 )
               ]),
         ),

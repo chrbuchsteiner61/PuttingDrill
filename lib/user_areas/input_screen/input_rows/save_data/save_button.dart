@@ -23,7 +23,7 @@ class SaveButton extends StatefulWidget {
 }
 
 class _SaveButtonState extends State<SaveButton> {
-  final _formKey = GlobalKey<FormState>();
+ // final _formKey = GlobalKey<FormState>();
   @override
   void initState() {
     super.initState();
@@ -31,7 +31,6 @@ class _SaveButtonState extends State<SaveButton> {
 
   @override
   Widget build(BuildContext context) {
-    //  double successRate = calculateSuccessRate();
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: Row(
@@ -42,8 +41,8 @@ class _SaveButtonState extends State<SaveButton> {
             child: ElevatedButton(
               style: appsButtonStyle,
               onPressed: () async {
-                if (_formKey.currentState!.validate()) {
-                  _formKey.currentState!.save();
+              //  if (_formKey.currentState!.validate()) {
+               //   _formKey.currentState!.save();
 
                   PuttingResult newResult = PuttingResult(
                     drillNo: widget.numberOfDrill,
@@ -60,8 +59,8 @@ class _SaveButtonState extends State<SaveButton> {
                       const SnackBar(content: Text('Result saved!')),
                     );
                   }
-                }
-              },
+                },
+             // },
               child: Text(widget.buttonText),
             ),
           ),

@@ -45,7 +45,6 @@ class ResultsFromDB extends StatelessWidget {
     int dateInMillis = 0;
     var exceriseDateTime = "";
     int drillNo = 0;
-
     int criteria1 = 0;
     int criteria2 = 0;
     double successrate = 0;
@@ -61,7 +60,7 @@ class ResultsFromDB extends StatelessWidget {
           .format(DateTime.fromMillisecondsSinceEpoch(dateInMillis));
       drillNo = result.drillNo;
       criteria1 = result.selectedDistance;
-    //  criteria2 = result.numberOfEfforts;
+      criteria2 = result.numberOfEfforts;
 
       successrate = result.successRate.roundToDouble();
       someLines.add(

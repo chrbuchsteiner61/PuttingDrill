@@ -22,8 +22,6 @@ List<PuttingResult> generateTestData(int count) {
       drillNo: random.nextInt(4) + 1,
       selectedDistance: random.nextInt(3) + 1,
       numberOfEfforts: random.nextInt(9) + 1,
-    //  criteria3: 0,
-    //  success: random.nextDouble(),
       successRate: (successRate * 100),
       dateOfPractice: ofDates[i],
     );

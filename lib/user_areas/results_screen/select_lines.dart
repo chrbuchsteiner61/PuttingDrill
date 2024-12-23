@@ -26,11 +26,15 @@ class SelectLinesState extends State<SelectLines> {
       padding: const EdgeInsets.fromLTRB(30.0, 5.0, 1.0, 1.0),
       child: Row(
         children: [
+
+          
           _buildButton(0, barColors[0]),
           spaceBetween,
           _buildButton(1, barColors[1]),
           spaceBetween,
           _buildButton(2, barColors[2]),
+           spaceBetween,
+          _buildButton(3, barColors[3]), 
         ],
       ),
     );

@@ -43,10 +43,6 @@ class ResultChart extends StatelessWidget {
             }
           }
 
-          // logger.d(resultsOfADrill[0]);
-          // logger.d(resultsOfADrill[1]);
-          // logger.d(resultsOfADrill[2]);
-
           return HistogramChart(
             drillResults: resultsOfADrill,
             drillName: drillName,

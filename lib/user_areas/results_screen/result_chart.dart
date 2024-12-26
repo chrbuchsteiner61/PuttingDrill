@@ -3,15 +3,19 @@ import 'package:myapp/methods_and_helper/database_helper.dart';
 import 'package:logger/logger.dart';
 import 'package:myapp/user_areas/results_screen/histogram_chart.dart';
 
+import 'package:myapp/main.dart';
+
 var logger = Logger();
 
 class ResultChart extends StatelessWidget {
+  final DrillList initializedDrills;
   final int drillNumber;
   final String drillName;
   final String drillInputLength;
 
   const ResultChart({
     super.key,
+    required this.initializedDrills,
     required this.drillNumber,
     required this.drillInputLength,
     required this.drillName,
@@ -39,6 +43,7 @@ class ResultChart extends StatelessWidget {
           List<List<PuttingResult>> resultsOfADrill = [[], [], []];
           for (var result in results) {
             if (result.drillNo == drillNumber) {
+              // für 15m wird das 14.Array gesucht, was es nicht gibt
               resultsOfADrill[result.selectedDistance - 1].add(result);
             }
           }

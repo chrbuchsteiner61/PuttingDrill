@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/main.dart';
 import 'package:myapp/user_areas/input_screen/input_screen.dart';
 import 'package:myapp/user_areas/results_screen/result_chart.dart';
 import 'package:myapp/ui_definition/constants.dart';
@@ -14,6 +15,7 @@ class DrillLine extends StatelessWidget {
   static const _elementHeight = 50.0;
   static const _spacer = SizedBox(width: 8, height: _elementHeight + 18);
 
+  final DrillList initializedDrills;
   final int drillNumber;
   final String drillName;
   final String thePurpose;
@@ -31,6 +33,7 @@ class DrillLine extends StatelessWidget {
 
   const DrillLine({
     super.key,
+    required this.initializedDrills,
     required this.drillNumber,
     required this.drillName,
     required this.thePurpose,
@@ -146,8 +149,8 @@ class DrillLine extends StatelessWidget {
       context,
       MaterialPageRoute(
         builder: (context) => ResultChart(
+          initializedDrills: initializedDrills,
           drillNumber: aDrillNumber,
-          //numberOfDrill: 2,
           drillName: drillName,
           drillInputLength: inputData.criteria3,
         ),

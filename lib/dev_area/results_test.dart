@@ -64,7 +64,7 @@ class ResultsFromDB extends StatelessWidget {
 
       successrate = result.successRate.roundToDouble();
       someLines.add(
-          "$exceriseDateTime Drill $drillNo Criteria1 $criteria1 Criteria2 $criteria2 Erfolg $successrate");
+          "$exceriseDateTime Drill $drillNo Distance $criteria1 Efforts $criteria2 Erfolg $successrate");
     }
 
     return Column(

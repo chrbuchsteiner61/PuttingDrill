@@ -14,6 +14,8 @@ import 'package:logger/logger.dart';
 
 var logger = Logger();
 
+typedef DrillList = List<Drill>;
+
 void main() => runApp(const PuttingDrillApp());
 
 class PuttingDrillApp extends StatefulWidget {
@@ -88,7 +90,7 @@ class StartingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
 
-    List<Drill> initializedDrills = initializeDrills();
+    DrillList initializedDrills = initializeDrills();
 
     const String preParePics = "assets/pics/preparePics/thePreparePic";
     const String iconPath = "assets/pics/icons_page1/Drill";
@@ -128,6 +130,7 @@ class StartingPage extends StatelessWidget {
                       "viewResults": localizations.viewResults,
                       "inputResults": localizations.inputResults,
                     },
+                    initializedDrills: initializedDrills,
                     drillNumber: numberOfDrill,
                     drillPicture: "$iconPath$numberOfDrill.svg",
                     aPreparePic: "$preParePics$numberOfDrill.svg",
@@ -169,7 +172,9 @@ class StartingPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const TestScreen(),
+                          builder: (context) => TestScreen(
+                            initializedDrills: initializedDrills,
+                          ),
                         ),
                       );
                     },

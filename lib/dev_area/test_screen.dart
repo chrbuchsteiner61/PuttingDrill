@@ -7,9 +7,12 @@ import 'package:myapp/dev_area/test_chart.dart';
 import 'package:myapp/dev_area/test_data.dart';
 import 'package:myapp/ui_definition/constants.dart';
 import 'package:myapp/methods_and_helper/database_helper.dart';
+import 'package:myapp/main.dart';
 
 class TestScreen extends StatelessWidget {
-  const TestScreen({super.key});
+  final DrillList initializedDrills;
+
+  const TestScreen({super.key, required this.initializedDrills});
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +93,8 @@ class TestScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const ResultChart(
+                      builder: (context) => ResultChart(
+                        initializedDrills: initializedDrills,
                         drillNumber: 1,
                         drillName: "Drill 1",
                         drillInputLength: "Club length",

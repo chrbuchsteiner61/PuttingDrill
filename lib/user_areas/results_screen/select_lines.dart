@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:myapp/ui_definition/constants.dart';
 
 class SelectLines extends StatefulWidget {
-  final List<int> strokes;
+  final List<int> distancesToSelectFrom;
   final Function(int) onLineSelected; // Callback function
   final int currentLine; // Current line from parent
 
   const SelectLines({
     super.key,
-    required this.strokes,
+    required this.distancesToSelectFrom,
     required this.onLineSelected,
     required this.currentLine,
   });
@@ -26,15 +26,13 @@ class SelectLinesState extends State<SelectLines> {
       padding: const EdgeInsets.fromLTRB(30.0, 5.0, 1.0, 1.0),
       child: Row(
         children: [
-
-          
           _buildButton(0, barColors[0]),
           spaceBetween,
           _buildButton(1, barColors[1]),
           spaceBetween,
           _buildButton(2, barColors[2]),
-           spaceBetween,
-          _buildButton(3, barColors[3]), 
+          spaceBetween,
+          _buildButton(3, barColors[3]),
         ],
       ),
     );
@@ -58,8 +56,8 @@ class SelectLinesState extends State<SelectLines> {
           alignment: Alignment.center,
           padding: WidgetStateProperty.all(const EdgeInsets.all(0.0)),
         ),
-        child:
-            Text(widget.strokes[index].toString(), textAlign: TextAlign.center),
+        child: Text(widget.distancesToSelectFrom[index].toString(),
+            textAlign: TextAlign.center),
       ),
     );
   }

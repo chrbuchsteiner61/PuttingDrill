@@ -21,8 +21,13 @@ class ResultChart extends StatelessWidget {
     required this.drillName,
   });
 
-  @override
+  int findDistanceIndex(int distance, List<int> theDistanceOfTheDrill) {
+    return theDistanceOfTheDrill.indexOf(distance);
+  }
+
+      @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(title: const Text('Putting Results')),
       body: FutureBuilder<List<PuttingResult>>(
@@ -40,15 +45,27 @@ class ResultChart extends StatelessWidget {
 
           final results = snapshot.data!;
 
-          List<List<PuttingResult>> resultsOfADrill = [[], [], []];
+          final int numberOfDifferentDistances =
+              initializedDrills[drillNumber - 1].howManyDistancesOfADrill();
+
+          final List<int> theDistancesOfTheDrill =
+              initializedDrills[drillNumber - 1].distances;
+
+          List<List<PuttingResult>> resultsOfADrill = [[]];
+          for (int i = 1; i < numberOfDifferentDistances; i++) {
+            resultsOfADrill.add([]);
+          }
+
           for (var result in results) {
             if (result.drillNo == drillNumber) {
-              // für 15m wird das 14.Array gesucht, was es nicht gibt
-              resultsOfADrill[result.selectedDistance - 1].add(result);
+              int indexOfDistance = findDistanceIndex(result.selectedDistance, theDistancesOfTheDrill);
+              resultsOfADrill[indexOfDistance].add(result);
             }
           }
 
           return HistogramChart(
+            numberOfDifferentDistances: numberOfDifferentDistances,
+            theDistancesOfTheDrill: theDistancesOfTheDrill,
             drillResults: resultsOfADrill,
             drillName: drillName,
           );

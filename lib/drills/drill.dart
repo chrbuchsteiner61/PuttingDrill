@@ -13,11 +13,8 @@ class Drill {
 
   Drill(this.drillNo, this.selectedDistance, this.putts, this.success);
 
-  double calculateSuccessRate(
-      int selectedDistancePara,
-      int puttsPara,
-      double successPuttsPara,
-      double missedDistanceFeetPara) {
+  double calculateSuccessRate(int selectedDistancePara, int puttsPara,
+      double successPuttsPara, double missedDistanceFeetPara) {
     return (successPuttsPara / puttsPara.toDouble()) * perCent;
   }
 
@@ -27,6 +24,10 @@ class Drill {
       potentialSuccess.add(i);
     }
     return potentialSuccess;
+  }
+
+  int howManyDistancesOfADrill() {
+    return distances.length;
   }
 }
 
@@ -41,18 +42,14 @@ class DrillDistancePutt extends Drill {
       super.drillNo, super.selectedDistance, super.putts, super.success);
 
   @override
-  double calculateSuccessRate(
-      int selectedDistancePara,
-      int puttsPara,
-      double successPuttsPara,
-      double missedDistanceFeetPara) {
+  double calculateSuccessRate(int selectedDistancePara, int puttsPara,
+      double successPuttsPara, double missedDistanceFeetPara) {
     logger.d(puttsPara);
     logger.d(selectedDistancePara);
 
     double aResult = (1 -
             ((missedDistanceFeetPara / clubFeetRatio) /
-                (puttsPara.toDouble() *
-                    selectedDistancePara.toDouble()))) *
+                (puttsPara.toDouble() * selectedDistancePara.toDouble()))) *
         Drill.perCent;
 
     if (aResult < 0.0) {

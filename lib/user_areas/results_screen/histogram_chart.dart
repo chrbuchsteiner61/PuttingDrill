@@ -9,11 +9,15 @@ import 'package:logger/logger.dart';
 var logger = Logger();
 
 class HistogramChart extends StatefulWidget {
+  final int numberOfDifferentDistances;
+  final List<int> theDistancesOfTheDrill;
   final String drillName;
   final List<List<PuttingResult>> drillResults;
 
   const HistogramChart({
     super.key,
+    required this.numberOfDifferentDistances,
+    required this.theDistancesOfTheDrill,
     required this.drillName,
     required this.drillResults,
   });
@@ -40,7 +44,7 @@ class _HistogramChartState extends State<HistogramChart> {
             spaceBetween,
             Text(widget.drillName),
             SelectLines(
-              strokes: const [1, 2, 3],
+              distancesToSelectFrom: const [1, 2, 3],
               onLineSelected: _updateSelectedLine,
               currentLine: selectedDrillLength,
             ),
@@ -116,7 +120,6 @@ class _HistogramChartState extends State<HistogramChart> {
                   logger.d(index);
                   final chartData = entry.value;
                   logger.d(entry.value.successRate);
-                  // logger.d(entry.value.criteria3);
 
                   return BarChartGroupData(
                     x: index,

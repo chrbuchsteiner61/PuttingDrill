@@ -44,7 +44,7 @@ class _HistogramChartState extends State<HistogramChart> {
             spaceBetween,
             Text(widget.drillName),
             SelectLines(
-              distancesToSelectFrom: const [1, 2, 3],
+              distancesToSelectFrom: widget.theDistancesOfTheDrill,
               onLineSelected: _updateSelectedLine,
               currentLine: selectedDrillLength,
             ),

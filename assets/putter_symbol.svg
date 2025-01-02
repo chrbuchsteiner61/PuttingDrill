@@ -1,4 +1,4 @@
-svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
     <!-- Putter shaft -->
     <rect x="97" y="32" transform= "rotate(13, -5, 92)" width="2" height="49" fill="white" />
 

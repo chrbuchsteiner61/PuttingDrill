@@ -59,7 +59,6 @@ flutter:
         weight: 700
 
   assets:
-    - assets/pics/page1_background.png
     - assets/pics/page1_background.svg
     - assets/pics/icons_page1/Drill1.svg
     - assets/pics/icons_page1/Drill2.svg 

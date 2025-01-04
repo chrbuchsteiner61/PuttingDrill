@@ -8,15 +8,15 @@ const SizedBox spaceBetween = SizedBox(width: 8);
 const SizedBox spaceAfter = SizedBox(height: 16);
 const double theMargin = 8.0;
 const double thePadding = 6.0;
-const BorderRadius theBorderRadius = BorderRadius.all(Radius.circular(6.0));
-const double theElevation = 10.0;
+const BorderRadius theBorderRadius = BorderRadius.all(Radius.circular(4.0));
+const double theElevation = 20.0;
 
 const ButtonStyle appsButtonStyle = ButtonStyle(
   padding: WidgetStatePropertyAll(EdgeInsets.all(thePadding)),
   shape: WidgetStatePropertyAll(
     RoundedRectangleBorder(
       borderRadius: theBorderRadius,
-      side: BorderSide(color: Colors.white, width: 3),
+      side: BorderSide(color: Colors.white, width: 2),
     ),
   ),
   backgroundColor: WidgetStatePropertyAll(Colors.green),

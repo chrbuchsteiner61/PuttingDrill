@@ -58,8 +58,8 @@ class DrillLine extends StatelessWidget {
         children: [
           _spacer,
           _spacer,
-        //  ADrillIcon(elementHeight: _elementHeight, drillPicture: drillPicture),
-        //  spaceBetween,
+          //  ADrillIcon(elementHeight: _elementHeight, drillPicture: drillPicture),
+          //  spaceBetween,
           _buildExplainButton(context),
           spaceBetween,
           _buildInputButton(context),

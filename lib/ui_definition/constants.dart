@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-String version = '0.97 / 04.01.2025, 17:40';
+String version = '\nVersion:\n0.975 / 05.01.2025, 13:40';
 
 const infoDrawerBackgroundColor = Colors.lightBlue;
 
@@ -25,6 +25,25 @@ const ButtonStyle appsButtonStyle = ButtonStyle(
   textStyle: WidgetStatePropertyAll(
     TextStyle(
       fontSize: 15,
+      fontWeight: FontWeight.bold,
+    ),
+  ),
+);
+
+const ButtonStyle appsDrillButtonStyle = ButtonStyle(
+  padding: WidgetStatePropertyAll(EdgeInsets.all(thePadding)),
+  shape: WidgetStatePropertyAll(
+    RoundedRectangleBorder(
+      borderRadius: theBorderRadius,
+      side: BorderSide(color: Colors.white, width: 3),
+    ),
+  ),
+  backgroundColor: WidgetStatePropertyAll(Colors.green),
+  foregroundColor: WidgetStatePropertyAll(Colors.white),
+  elevation: WidgetStatePropertyAll(theElevation),
+  textStyle: WidgetStatePropertyAll(
+    TextStyle(
+      fontSize: 16,
       fontWeight: FontWeight.bold,
     ),
   ),

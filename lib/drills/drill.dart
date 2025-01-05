@@ -44,8 +44,8 @@ class DrillDistancePutt extends Drill {
   @override
   double calculateSuccessRate(int selectedDistancePara, int puttsPara,
       double successPuttsPara, double missedDistanceFeetPara) {
-    logger.d(puttsPara);
-    logger.d(selectedDistancePara);
+    //logger.d(puttsPara);
+    //logger.d(selectedDistancePara);
 
     double aResult = (1 -
             ((missedDistanceFeetPara / clubFeetRatio) /

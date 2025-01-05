@@ -12,13 +12,15 @@ class AStatement extends StatelessWidget {
   final String aStLine1;
   final String aStLine2;
   final String aStLine3;
+  final Widget versionText;
 
   const AStatement(
       {super.key,
       required this.aStHeader,
       required this.aStLine1,
       required this.aStLine2,
-      required this.aStLine3});
+      required this.aStLine3,
+      required this.versionText});
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +38,7 @@ class AStatement extends StatelessWidget {
           Text(aStLine1),
           Text(aStLine2),
           Text(aStLine3),
+          versionText,
           const SizedBox(height: 8),
         ],
       ),
@@ -59,7 +62,8 @@ class LanguageFlag extends StatelessWidget {
 }
 
 class TheInfoDrawer extends StatefulWidget {
-  const TheInfoDrawer({super.key});
+  final Widget versionText;
+  const TheInfoDrawer({super.key, required this.versionText});
 
   @override
   TheInfoDrawerState createState() => TheInfoDrawerState();
@@ -78,8 +82,7 @@ class TheInfoDrawerState extends State<TheInfoDrawer> {
   Future<void> _changeLanguage(String? languageCode) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('languageKey', languageCode!);
-    // logger.d('in Speichern $languageCode');
-    // Trigger a rebuild of the app with the new locale
+
     if (mounted) {
       PuttingDrillApp.of(context)!.setLocale(languageCode);
       setState(() {
@@ -91,6 +94,9 @@ class TheInfoDrawerState extends State<TheInfoDrawer> {
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
+    const Widget emptyLine = Text(
+      '',
+    );
 
     return Drawer(
       child: ListView(
@@ -216,6 +222,7 @@ class TheInfoDrawerState extends State<TheInfoDrawer> {
                 aStLine1: localizations.privStLine1,
                 aStLine2: localizations.privStLine2,
                 aStLine3: localizations.privStLine3,
+                versionText: emptyLine,
               )),
           const SizedBox(
             width: 40,
@@ -227,6 +234,7 @@ class TheInfoDrawerState extends State<TheInfoDrawer> {
               aStLine1: 'Christian Buchsteiner',
               aStLine2: 'christian@buchsteinerconsulting.de',
               aStLine3: 'Wacholderweg 15a, D-61440 Oberursel',
+              versionText: widget.versionText,
             ),
           ),
         ],

@@ -95,16 +95,19 @@ class StartingPage extends StatelessWidget {
     const String preParePics = "assets/pics/preparePics/thePreparePic";
     const String iconPath = "assets/pics/icons_page1/Drill";
 
-    Text bottomText = Text(
+    Text versionText = Text(
       version,
-      style: Theme.of(context).textTheme.bodyMedium,
+      style: Theme.of(context).textTheme.bodySmall,
     );
 
     return Scaffold(
       appBar: AppBar(
         title: Text(localizations!.page1Header),
       ),
-      drawer: const Drawer(child: TheInfoDrawer()),
+      drawer: Drawer(
+          child: TheInfoDrawer(
+        versionText: versionText,
+      )),
       body: Stack(
         children: <Widget>[
           SvgPicture.asset(
@@ -136,6 +139,7 @@ class StartingPage extends StatelessWidget {
                     aPreparePic: "$preParePics$numberOfDrill.svg",
                     theClubLength: localizations.clubLength,
                     theButtonStyle: appsButtonStyle,
+                    theDrillButtonStyle: appsDrillButtonStyle,
                     aDrill: initializedDrills[numberOfDrill - 1],
                     drillName:
                         localizations.getDrillTexts(numberOfDrill)["drill"]!,
@@ -186,7 +190,7 @@ class StartingPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomSheet: bottomText,
+      // bottomSheet: bottomText,
     );
   }
 }
@@ -290,5 +294,4 @@ List<Drill> initializeDrills() {
     Drill(4, 0, 5, 5),
     Drill(5, 0, 5, 5),
   ];
-
 }

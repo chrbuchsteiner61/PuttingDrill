@@ -6,12 +6,10 @@ import 'package:myapp/ui_definition/constants.dart';
 // import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen/explain_screen.dart';
 import 'package:myapp/drills/drill.dart';
-
-//import 'package:logger/logger.dart';
-// var logger = Logger();
+import 'package:myapp/ui_elements/drill_button.dart';
 
 class DrillLine extends StatelessWidget {
-  static const _boxWidths = [130.0, 80.0, 100.0];
+  static const _boxWidths = [140.0, 80.0, 100.0];
   static const _elementHeight = 50.0;
   static const _spacer = SizedBox(width: 8, height: _elementHeight + 18);
 
@@ -27,6 +25,7 @@ class DrillLine extends StatelessWidget {
   final String drillPicture;
   final String theClubLength;
   final ButtonStyle theButtonStyle;
+  final ButtonStyle theDrillButtonStyle;
   final Drill aDrill;
   final Map<String, String> textForDrillLine;
   final String successWord;
@@ -45,6 +44,7 @@ class DrillLine extends StatelessWidget {
     required this.theClubLength,
     required this.aPreparePic,
     required this.theButtonStyle,
+    required this.theDrillButtonStyle,
     required this.aDrill,
     required this.textForDrillLine,
     required this.successWord,
@@ -53,28 +53,29 @@ class DrillLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          _spacer,
-          _spacer,
-          //  ADrillIcon(elementHeight: _elementHeight, drillPicture: drillPicture),
-          //  spaceBetween,
-          _buildExplainButton(context),
-          spaceBetween,
-          _buildInputButton(context),
-          spaceBetween,
-          _buildResultsButton(context, drillNumber),
-        ],
+      child: Align(
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            _spacer,
+            _spacer,
+            _buildExplainButton(context),
+            spaceBetween,
+            _buildInputButton(context),
+            spaceBetween,
+            _buildResultsButton(context, drillNumber),
+          ],
+        ),
       ),
     );
   }
 
   Widget _buildExplainButton(BuildContext context) {
-    return _DrillButton(
+    return DrillButton(
       width: _boxWidths[0],
       height: _elementHeight,
-      style: theButtonStyle,
+      style: theDrillButtonStyle,
       onPressed: () => _navigateToExplain(context),
       alignment: Alignment.centerLeft,
       text: drillName,
@@ -82,7 +83,7 @@ class DrillLine extends StatelessWidget {
   }
 
   Widget _buildInputButton(BuildContext context) {
-    return _DrillButton(
+    return DrillButton(
       width: _boxWidths[1],
       height: _elementHeight,
       style: theButtonStyle,
@@ -93,7 +94,7 @@ class DrillLine extends StatelessWidget {
 
   Widget _buildResultsButton(BuildContext context, int aDrillNumber) {
     //logger.d(aDrillNumber);
-    return _DrillButton(
+    return DrillButton(
       width: _boxWidths[2],
       height: _elementHeight,
       style: theButtonStyle,
@@ -154,43 +155,6 @@ class DrillLine extends StatelessWidget {
           drillName: drillName,
           drillInputLength: inputData.criteria3,
         ),
-      ),
-    );
-  }
-}
-
-// Reusable button widget
-class _DrillButton extends StatelessWidget {
-  final double width;
-  final double height;
-  final ButtonStyle style;
-  final VoidCallback onPressed;
-  final String text;
-  final Alignment? alignment;
-
-  const _DrillButton({
-    required this.width,
-    required this.height,
-    required this.style,
-    required this.onPressed,
-    required this.text,
-    this.alignment,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: ElevatedButton(
-        style: style,
-        onPressed: onPressed,
-        child: alignment != null
-            ? Align(
-                alignment: alignment!,
-                child: Text(text),
-              )
-            : Text(text),
       ),
     );
   }

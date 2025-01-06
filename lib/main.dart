@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:myapp/dev_area/test_screen.dart';
 import 'package:myapp/drills/drill.dart';
 import 'package:myapp/user_areas/the_info_drawer.dart';

@@ -56,7 +56,7 @@ class DrillLine extends StatelessWidget {
       child: Align(
         alignment: Alignment.center,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _spacer,
             _spacer,

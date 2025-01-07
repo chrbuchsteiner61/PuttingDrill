@@ -18,11 +18,11 @@ List<PuttingResult> generateTestData(int count) {
   for (int i = 0; i < count; i++) {
     final successRate = random.nextDouble();
     int aDrillNo = random.nextInt(4) + 1;
-    int aSelectedDistance = random.nextInt(3) + 1;
+    int aSelectedDistance = random.nextInt(4) + 1;
 
     List<int> distancesOfDrillTwo = [6, 9, 12, 15];
     if (aDrillNo == 2) {
-      aSelectedDistance = distancesOfDrillTwo[random.nextInt(3)];
+      aSelectedDistance = distancesOfDrillTwo[random.nextInt(4)];
     }
 
     PuttingResult puttingResult = PuttingResult(

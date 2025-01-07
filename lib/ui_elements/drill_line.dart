@@ -3,7 +3,6 @@ import 'package:myapp/main.dart';
 import 'package:myapp/user_areas/input_screen/input_screen.dart';
 import 'package:myapp/user_areas/results_screen/result_chart.dart';
 import 'package:myapp/ui_definition/constants.dart';
-// import 'package:myapp/ui_elements/a_drill_icon.dart';
 import 'package:myapp/user_areas/explain_screen/explain_screen.dart';
 import 'package:myapp/drills/drill.dart';
 import 'package:myapp/ui_elements/drill_button.dart';

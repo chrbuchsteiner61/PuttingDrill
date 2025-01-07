@@ -9,7 +9,7 @@ List<PuttingResult> generateTestData(int count) {
 
   for (int i = 0; i < count; i++) {
     ofDates.add(DateTime.now()
-        .subtract(Duration(days: random.nextInt(30)))
+        .subtract(Duration(days: random.nextInt(1000)))
         .toIso8601String());
   }
 

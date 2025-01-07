@@ -60,11 +60,6 @@ flutter:
 
   assets:
     - assets/pics/page1_background.svg
-    - assets/pics/icons_page1/Drill1.svg
-    - assets/pics/icons_page1/Drill2.svg 
-    - assets/pics/icons_page1/Drill3.svg
-    - assets/pics/icons_page1/Drill4.svg
-    - assets/pics/icons_page1/Drill5.svg
     - assets/pics/preparePics/thePreparePic1.svg
     - assets/pics/preparePics/thePreparePic2.svg
     - assets/pics/preparePics/thePreparePic3.svg

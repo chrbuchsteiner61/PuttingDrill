@@ -8,7 +8,7 @@ import 'package:myapp/drills/drill.dart';
 import 'package:myapp/ui_elements/drill_button.dart';
 
 class DrillLine extends StatelessWidget {
-  static const _boxWidths = [140.0, 80.0, 100.0];
+  static const _boxWidths = [140.0, 100.0, 100.0];
   static const _elementHeight = 50.0;
   static const _spacer = SizedBox(width: 8, height: _elementHeight + 18);
 

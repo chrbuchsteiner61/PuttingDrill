@@ -1,0 +1,101 @@
+{
+   "@@locale": "sv", 
+   
+  "page1Header" : "Din Putting-Övningsdagbok",
+
+  "drillName1": "Korta puttar",
+  "drillName2": "Distansputtar",
+  "drillName3": "Genom portarna",
+  "drillName4": "På en kuperad green",
+  "drillName5": "Nedförsputtar",
+
+  "preparationHeader": "Förberedelse",
+  "countingHeader": "Räkning",
+
+  "purpose1": "Förbättra dina korta puttar",
+  "purpose2": "Komma närmare hålet",
+  "purpose3": "Förbättra linjen",
+  "purpose4": "Läsa linjen",
+  "purpose5": "Känna hastigheten",
+
+  "task1": "Puttat bollen i hålet.\nSlå fem eller fler bollar från kort avstånd.",
+  "task2": "Komma närmast hålet.\nSlå fem eller fler bollar från långt avstånd.",
+  "task3": "Puttat genom portarna.\nSlå fem eller fler bollar genom båda portarna.",
+  "task4": "Puttat på en kuperad green mot ett mål.\nSlå fem eller fler bollar",
+  "task5": "Puttat nedför mot ett mål.\nSlå fem eller fler bollar.",
+
+  "thePreparation_1": "På en plan green välj en distans för övningen från en, två eller tre klubblängder. Se exemplet för en distans på två klubblängder.",
+  "thePreparation_2": "På en plan green välj en distans för övningen från sex, nio eller 12 klubblängder. Se exemplet för en distans på sex klubblängder.", 
+  "thePreparation_3": "Ta fyra tees. Bygg två portar på en plan green, bredden av ett klubbhuvud.\nVälj ett avstånd mellan portarna på en, två eller tre klubblängder. Se exemplet för en distans på två klubblängder.", 
+  "thePreparation_4": "På en kuperad green välj en distans för övningen från en, två eller tre klubblängder. Definiera ditt mål med en tee. Se exemplet för en distans på två klubblängder.",
+  "thePreparation_5": "Från en upphöjd position välj en distans för övningen från en, två eller tre klubblängder. Definiera ditt mål med en tee. Se exemplet för en distans på två klubblängder.",
+  "clubLength": "Om din putter är ungefär 34 tum lång, motsvarar det 0,86 m eller 2,83 fot.",
+  
+  "theExplainCounting_1": "Räkna dina slag och \nräkna de lyckade puttarna.",
+  "theExplainCounting_2": "Räkna dina slag, \nmät avståndet från bollarnas position till hålet \nmed dina fötter och summera.",
+  "theExplainCounting_3": "Räkna varje slag och \nräkna varje boll som går genom båda portarna.",
+  "theExplainCounting_4": "Räkna dina slag och \nräkna de lyckade puttarna.",
+  "theExplainCounting_5": "Räkna dina slag och \nräkna de lyckade puttarna.",
+
+  "inputResults": "Ange resultat",
+  "inputAppBarText": "Ange resultaten av övningen",
+  "inputButtonText": "Spara resultat",
+
+  "errorInputMessageNonEmptyNegativ": "Ange ett giltigt icke-negativt tal",
+  
+  "inputDrill1Criteria1": "Avstånd till\nhålet",
+  "inputDrill1Criteria2": "Slag",
+  "inputDrill1Criteria3": "Lyckade",
+  
+  "inputDrill1Input1": "klubblängder",
+  "inputDrill1Input2": "",
+  "inputDrill1Input3": "antal",
+
+  "inputDrill2Criteria1": "Avstånd till\nhålet",
+  "inputDrill2Criteria2": "Slag",
+  "inputDrill2Criteria3": "Summa av\nmissat avstånd",
+  
+  "inputDrill2Input1": "klubblängder",
+  "inputDrill2Input2": "",
+  "inputDrill2Input3": "fot",
+
+  "inputDrill3Criteria1": "Avstånd\nmellan portarna",
+  "inputDrill3Criteria2": "Slag",
+  "inputDrill3Criteria3": "Genom\nbåda portarna",
+  
+  "inputDrill3Input1": "klubblängder",
+  "inputDrill3Input2": "",
+  "inputDrill3Input3": "antal",
+
+  "inputDrill4Criteria1": "Avstånd till\nmålet",
+  "inputDrill4Criteria2": "Slag",
+  "inputDrill4Criteria3": "Lyckade",
+  
+  "inputDrill4Input1": "klubblängder",
+  "inputDrill4Input2": "",
+  "inputDrill4Input3": "antal",
+
+  "inputDrill5Criteria1": "Avstånd till\nmålet",
+  "inputDrill5Criteria2": "Slag",
+  "inputDrill5Criteria3": "Lyckade",
+  
+  "inputDrill5Input1": "klubblängder",
+  "inputDrill5Input2": "",
+  "inputDrill5Input3": "antal",
+
+  "success":"Framgång",
+
+  "savedResult" : "Sparat framgångsrikt",
+
+  "viewResults": "Statistik",
+
+  "drawerHeader": "Information",
+  "privStHeader": "Dataskydd",
+  "privStLine1": "Den här appen sparar det språk du väljer på din enhet.",
+  "privStLine2": "Alla data du har matat in sparas på din enhet.",
+  "privStLine3": "Inga av dina data kommer att överföras. De kommer heller inte att göras tillgängliga för tredje part. Det kommer inte att ske någon ytterligare behandling.",
+  "kontakt": "Kontakt",
+  "language": "Språk",
+
+  "error": "fel"
+}

@@ -1,0 +1,101 @@
+{
+   "@@locale": "es", 
+   
+  "page1Header" : "Tu Diario de Ejercicios de Putting",
+
+  "drillName1": "Putts cortos",
+  "drillName2": "Putts de distancia",
+  "drillName3": "A través de las puertas",
+  "drillName4": "En un green ondulado",
+  "drillName5": "Putts cuesta abajo",
+
+  "preparationHeader": "Preparación",
+  "countingHeader": "Conteo",
+
+  "purpose1": "Mejorar tus putts cortos",
+  "purpose2": "Acercarse al hoyo",
+  "purpose3": "Mejorar la línea",
+  "purpose4": "Leer la línea",
+  "purpose5": "Sentir la velocidad",
+
+  "task1": "Meter la bola en el hoyo.\nGolpear cinco o más bolas desde una distancia corta.",
+  "task2": "Acercar la bola al hoyo.\nGolpear cinco o más bolas desde una distancia larga.",
+  "task3": "Pasar las bolas por las puertas.\nGolpear cinco o más bolas pasando por ambas puertas.",
+  "task4": "Puttear en un green ondulado hacia un objetivo.\nGolpear cinco o más bolas",
+  "task5": "Puttear cuesta abajo hacia un objetivo.\nGolpear cinco o más bolas.",
+
+  "thePreparation_1": "En un green plano, elija una distancia para el ejercicio de una, dos o tres longitudes de palo. Consulte el ejemplo para una distancia de dos palos.",
+  "thePreparation_2": "En un green plano, elija una distancia para el ejercicio de seis, nueve o 12 longitudes de palo. Consulte el ejemplo para una distancia de seis palos.", 
+  "thePreparation_3": "Tome cuatro tees. Construya dos puertas en un green plano, del ancho de la cabeza de un palo.\nElija una distancia entre las puertas de una, dos o tres longitudes de palo. Consulte el ejemplo para una distancia de dos palos.", 
+  "thePreparation_4": "En un green ondulado, elija una distancia para el ejercicio de una, dos o tres longitudes de palo. Defina su objetivo con un tee. Consulte el ejemplo para una distancia de dos palos.",
+  "thePreparation_5": "Desde una posición elevada, elija una distancia para el ejercicio de una, dos o tres longitudes de palo. Defina su objetivo con un tee. Consulte el ejemplo para una distancia de dos palos.",
+  "clubLength": "Si su putter mide aproximadamente 34 pulgadas, esto equivale a 0,86 m o 2,83 pies.",
+  
+  "theExplainCounting_1": "Cuente sus golpes y \ncuente los putts logrados.",
+  "theExplainCounting_2": "Cuente sus golpes, \nmida la distancia desde la posición de las bolas hasta el hoyo \ncon sus pies y sume.",
+  "theExplainCounting_3": "Cuente cada golpe y \ncuente cada bola que pase por ambas puertas.",
+  "theExplainCounting_4": "Cuente sus golpes y \ncuente los putts logrados.",
+  "theExplainCounting_5": "Cuente sus golpes y \ncuente los putts logrados.",
+
+  "inputResults": "Ingresar resultado",
+  "inputAppBarText": "Introduzca los resultados del ejercicio",
+  "inputButtonText": "Guardar resultados",
+
+  "errorInputMessageNonEmptyNegativ": "Por favor, introduzca un número válido no negativo",
+  
+  "inputDrill1Criteria1": "Distancia al\nhoyo",
+  "inputDrill1Criteria2": "Golpes",
+  "inputDrill1Criteria3": "Logrados",
+  
+  "inputDrill1Input1": "longitudes de palo",
+  "inputDrill1Input2": "",
+  "inputDrill1Input3": "número de",
+
+  "inputDrill2Criteria1": "Distancia al\nhoyo",
+  "inputDrill2Criteria2": "Golpes",
+  "inputDrill2Criteria3": "Suma de distancia\nfaltante",
+  
+  "inputDrill2Input1": "longitudes de palo",
+  "inputDrill2Input2": "",
+  "inputDrill2Input3": "pies",
+
+  "inputDrill3Criteria1": "Distancia\nentre puertas",
+  "inputDrill3Criteria2": "Golpes",
+  "inputDrill3Criteria3": "Por\nambas puertas",
+  
+  "inputDrill3Input1": "longitudes de palo",
+  "inputDrill3Input2": "",
+  "inputDrill3Input3": "número de",
+
+  "inputDrill4Criteria1": "Distancia al\nobjetivo",
+  "inputDrill4Criteria2": "Golpes",
+  "inputDrill4Criteria3": "Logrados",
+  
+  "inputDrill4Input1": "longitudes de palo",
+  "inputDrill4Input2": "",
+  "inputDrill4Input3": "número de",
+
+  "inputDrill5Criteria1": "Distancia al\nobjetivo",
+  "inputDrill5Criteria2": "Golpes",
+  "inputDrill5Criteria3": "Logrados",
+  
+  "inputDrill5Input1": "longitudes de palo",
+  "inputDrill5Input2": "",
+  "inputDrill5Input3": "número de",
+
+  "success":"Éxito",
+
+  "savedResult" : "Guardado con éxito",
+
+  "viewResults": "Estadísticas",
+
+  "drawerHeader": "Información",
+  "privStHeader": "Protección de datos",
+  "privStLine1": "Esta aplicación guarda el idioma que elija en su dispositivo.",
+  "privStLine2": "Todos los datos que ha introducido se almacenan en su dispositivo.",
+  "privStLine3": "Ninguno de sus datos será transferido. Tampoco se pondrá a disposición de terceros. No habrá ningún otro procesamiento.",
+  "kontakt": "Contacto",
+  "language": "Idioma",
+
+  "error": "error"
+}

@@ -1,0 +1,101 @@
+{
+   "@@locale": "fr", 
+   
+  "page1Header" : "Votre Journal des Exercices de Putting",
+
+  "drillName1": "Putts courts",
+  "drillName2": "Putts de distance",
+  "drillName3": "Par les portes",
+  "drillName4": "Sur un green ondulé",
+  "drillName5": "Putts en descente",
+
+  "preparationHeader": "Préparation",
+  "countingHeader": "Comptage",
+
+  "purpose1": "Améliorer vos putts courts",
+  "purpose2": "Se rapprocher du trou",
+  "purpose3": "Améliorer la ligne",
+  "purpose4": "Lire la ligne",
+  "purpose5": "Sentir la vitesse",
+
+  "task1": "Mettre la balle dans le trou.\nFrappe de cinq balles ou plus à courte distance.",
+  "task2": "Mettre le plus près du trou.\nFrappe de cinq balles ou plus à longue distance.",
+  "task3": "Passer les balles entre les portes.\nFrappe de cinq balles ou plus en passant par les deux portes.",
+  "task4": "Putter sur un green ondulé vers une cible.\nFrappe de cinq balles ou plus",
+  "task5": "Putter en descente vers une cible.\nFrappe de cinq balles ou plus.",
+
+  "thePreparation_1": "Sur un green plat, choisissez une distance pour l'exercice à partir d'une, deux ou trois longueurs de club. Référez-vous à l'exemple pour une distance de deux clubs.",
+  "thePreparation_2": "Sur un green plat, choisissez une distance pour l'exercice à partir de six, neuf ou 12 longueurs de club. Référez-vous à l'exemple pour une distance de six clubs.", 
+  "thePreparation_3": "Prenez quatre tees. Construisez deux portes sur un green plat, à la largeur d'une tête de club.\nChoisissez une distance entre les portes d'une, deux ou trois longueurs de club. Référez-vous à l'exemple pour une distance de deux clubs.", 
+  "thePreparation_4": "Sur un green ondulé, choisissez une distance pour l'exercice à partir d'une, deux ou trois longueurs de club. Définissez votre cible avec un tee. Référez-vous à l'exemple pour une distance de deux clubs.",
+  "thePreparation_5": "Depuis une position surélevée, choisissez une distance pour l'exercice à partir d'une, deux ou trois longueurs de club. Définissez votre cible avec un tee. Référez-vous à l'exemple pour une distance de deux clubs.",
+  "clubLength": "Si votre putter fait environ 34 pouces, cela équivaut à 0,86 m ou 2,83 pieds.",
+  
+  "theExplainCounting_1": "Comptez vos coups et \ncomptez les putts réussis.",
+  "theExplainCounting_2": "Comptez vos coups, \nmesurer la distance des balles au trou \navec vos pieds et additionnez.",
+  "theExplainCounting_3": "Comptez chaque coup et \ncomptez chaque balle passant par les deux portes.",
+  "theExplainCounting_4": "Comptez vos coups et \ncomptez les putts réussis.",
+  "theExplainCounting_5": "Comptez vos coups et \ncomptez les putts réussis.",
+
+  "inputResults": "Saisir le résultat",
+  "inputAppBarText": "Entrez les résultats de l'exercice",
+  "inputButtonText": "Enregistrer vos résultats",
+
+  "errorInputMessageNonEmptyNegativ": "Veuillez entrer un nombre valide non négatif",
+  
+  "inputDrill1Criteria1": "Distance du\ntrou",
+  "inputDrill1Criteria2": "Coups",
+  "inputDrill1Criteria3": "Réussis",
+  
+  "inputDrill1Input1": "longueurs de club",
+  "inputDrill1Input2": "",
+  "inputDrill1Input3": "nombre de",
+
+  "inputDrill2Criteria1": "Distance du\ntrou",
+  "inputDrill2Criteria2": "Coups",
+  "inputDrill2Criteria3": "Somme de la\ndistance manquante",
+  
+  "inputDrill2Input1": "longueurs de club",
+  "inputDrill2Input2": "",
+  "inputDrill2Input3": "pieds",
+
+  "inputDrill3Criteria1": "Distance\nentre les portes",
+  "inputDrill3Criteria2": "Coups",
+  "inputDrill3Criteria3": "Par\nles deux portes",
+  
+  "inputDrill3Input1": "longueurs de club",
+  "inputDrill3Input2": "",
+  "inputDrill3Input3": "nombre de",
+
+  "inputDrill4Criteria1": "Distance à\nla cible",
+  "inputDrill4Criteria2": "Coups",
+  "inputDrill4Criteria3": "Réussis",
+  
+  "inputDrill4Input1": "longueurs de club",
+  "inputDrill4Input2": "",
+  "inputDrill4Input3": "nombre de",
+
+  "inputDrill5Criteria1": "Distance à\nla cible",
+  "inputDrill5Criteria2": "Coups",
+  "inputDrill5Criteria3": "Réussis",
+  
+  "inputDrill5Input1": "longueurs de club",
+  "inputDrill5Input2": "",
+  "inputDrill5Input3": "nombre de",
+
+  "success":"Succès",
+
+  "savedResult" : "Enregistré avec succès",
+
+  "viewResults": "Statistiques",
+
+  "drawerHeader": "Informations",
+  "privStHeader": "Protection des données",
+  "privStLine1": "Cette application enregistre la langue que vous choisissez sur votre appareil.",
+  "privStLine2": "Toutes les données que vous avez saisies sont stockées sur votre appareil.",
+  "privStLine3": "Aucune de vos données ne sera transférée. Elles ne seront pas non plus mises à disposition de tiers. Il n'y aura aucun autre traitement.",
+  "kontakt": "Contact",
+  "language": "Langue",
+
+  "error": "erreur"
+}

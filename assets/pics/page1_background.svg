@@ -1,0 +1,7 @@
+<svg width="250" height="250">
+  <rect style="fill:#2e7c60;stroke-width:0.3" id="rect1" width="250" height="250" x="0" y="0"/>
+  <ellipse style="fill:#00c44a;stroke-width:0.3;" id="green" cx="60.0" cy="202.0" rx="180.0" ry="60.0"/>
+  <ellipse style="fill:#a05a2c;stroke-width:0.3" id="hole" cx="100.66272" cy="202.21991" rx="5.8450184" ry="2.9225092"/>
+  <rect style="fill:#ffffff" id="rect2" width="2.5571957" height="145.76015" x="108.2101" y="51.761116" transform="rotate(2.6)"/>
+  <rect style="fill:#ffff00" id="rect3" width="17.169741" height="15.343174" x="110.03667" y="52.126427" transform="rotate(2.6)"/>
+</svg>

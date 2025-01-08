@@ -1,0 +1,101 @@
+{
+   "@@locale": "it", 
+   
+  "page1Header" : "Il Tuo Diario degli Esercizi di Putting",
+
+  "drillName1": "Putt corti",
+  "drillName2": "Putt di distanza",
+  "drillName3": "Attraverso i cancelli",
+  "drillName4": "Su un green ondulato",
+  "drillName5": "Putt in discesa",
+
+  "preparationHeader": "Preparazione",
+  "countingHeader": "Conteggio",
+
+  "purpose1": "Migliorare i putt corti",
+  "purpose2": "Avvicinarsi alla buca",
+  "purpose3": "Migliorare la linea",
+  "purpose4": "Leggere la linea",
+  "purpose5": "Sentire la velocità",
+
+  "task1": "Inserire la palla nella buca.\nColpire cinque o più palline da una distanza ravvicinata.",
+  "task2": "Avvicinare la palla alla buca.\nColpire cinque o più palline da una lunga distanza.",
+  "task3": "Passare le palline attraverso i cancelli.\nColpire cinque o più palline passando attraverso entrambi i cancelli.",
+  "task4": "Effettuare putt su un green ondulato verso un obiettivo.\nColpire cinque o più palline",
+  "task5": "Effettuare putt in discesa verso un obiettivo.\nColpire cinque o più palline.",
+
+  "thePreparation_1": "Su un green pianeggiante, scegli una distanza per l'esercizio da uno, due o tre bastoni. Guarda l'esempio per una distanza di due bastoni.",
+  "thePreparation_2": "Su un green pianeggiante, scegli una distanza per l'esercizio da sei, nove o 12 bastoni. Guarda l'esempio per una distanza di sei bastoni.", 
+  "thePreparation_3": "Prendi quattro tee. Costruisci due cancelli su un green pianeggiante, della larghezza della testa di un bastone.\nScegli una distanza tra i cancelli da uno, due o tre bastoni. Guarda l'esempio per una distanza di due bastoni.", 
+  "thePreparation_4": "Su un green ondulato, scegli una distanza per l'esercizio da uno, due o tre bastoni. Definisci il tuo obiettivo con un tee. Guarda l'esempio per una distanza di due bastoni.",
+  "thePreparation_5": "Da una posizione sopraelevata, scegli una distanza per l'esercizio da uno, due o tre bastoni. Definisci il tuo obiettivo con un tee. Guarda l'esempio per una distanza di due bastoni.",
+  "clubLength": "Se il tuo putter è lungo circa 34 pollici, corrisponde a 0,86 m o 2,83 piedi.",
+  
+  "theExplainCounting_1": "Conta i tuoi colpi e \nconta i putt riusciti.",
+  "theExplainCounting_2": "Conta i tuoi colpi, \nmisurata la distanza dalla posizione delle palline alla buca \ncon i tuoi piedi e sommala.",
+  "theExplainCounting_3": "Conta ogni colpo e \nconta ogni palla che passa attraverso entrambi i cancelli.",
+  "theExplainCounting_4": "Conta i tuoi colpi e \nconta i putt riusciti.",
+  "theExplainCounting_5": "Conta i tuoi colpi e \nconta i putt riusciti.",
+
+  "inputResults": "Inserisci risultato",
+  "inputAppBarText": "Inserisci i risultati dell'esercizio",
+  "inputButtonText": "Salva i risultati",
+
+  "errorInputMessageNonEmptyNegativ": "Inserisci un numero valido non negativo",
+  
+  "inputDrill1Criteria1": "Distanza\ndalla buca",
+  "inputDrill1Criteria2": "Colpi",
+  "inputDrill1Criteria3": "Riusciti",
+  
+  "inputDrill1Input1": "lunghezze di bastone",
+  "inputDrill1Input2": "",
+  "inputDrill1Input3": "numero di",
+
+  "inputDrill2Criteria1": "Distanza\ndalla buca",
+  "inputDrill2Criteria2": "Colpi",
+  "inputDrill2Criteria3": "Somma distanza\nmancante",
+  
+  "inputDrill2Input1": "lunghezze di bastone",
+  "inputDrill2Input2": "",
+  "inputDrill2Input3": "piedi",
+
+  "inputDrill3Criteria1": "Distanza\ntra i cancelli",
+  "inputDrill3Criteria2": "Colpi",
+  "inputDrill3Criteria3": "Attraverso\nentrambi i cancelli",
+  
+  "inputDrill3Input1": "lunghezze di bastone",
+  "inputDrill3Input2": "",
+  "inputDrill3Input3": "numero di",
+
+  "inputDrill4Criteria1": "Distanza\nall'obiettivo",
+  "inputDrill4Criteria2": "Colpi",
+  "inputDrill4Criteria3": "Riusciti",
+  
+  "inputDrill4Input1": "lunghezze di bastone",
+  "inputDrill4Input2": "",
+  "inputDrill4Input3": "numero di",
+
+  "inputDrill5Criteria1": "Distanza\nall'obiettivo",
+  "inputDrill5Criteria2": "Colpi",
+  "inputDrill5Criteria3": "Riusciti",
+  
+  "inputDrill5Input1": "lunghezze di bastone",
+  "inputDrill5Input2": "",
+  "inputDrill5Input3": "numero di",
+
+  "success":"Successo",
+
+  "savedResult" : "Salvato con successo",
+
+  "viewResults": "Statistiche",
+
+  "drawerHeader": "Informazioni",
+  "privStHeader": "Protezione dei dati",
+  "privStLine1": "Questa app salva la lingua che scegli sul tuo dispositivo.",
+  "privStLine2": "Tutti i dati che hai inserito sono memorizzati sul tuo dispositivo.",
+  "privStLine3": "Nessuno dei tuoi dati verrà trasferito. Non saranno nemmeno resi disponibili a terze parti. Non ci sarà alcun ulteriore trattamento.",
+  "kontakt": "Contatto",
+  "language": "Lingua",
+
+  "error": "errore"
+}

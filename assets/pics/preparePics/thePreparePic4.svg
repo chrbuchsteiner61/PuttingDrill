@@ -1,0 +1,39 @@
+<svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="40%" stop-color="darkgreen"/>
+      <stop offset="100%" stop-color="green"/>
+    </radialGradient>
+  </defs>
+  <rect width="300" height="150" fill="green"/>
+<!--uneven-->
+  <polygon points="105,75 120,60 125,50 130,50 180,70 200,90 180,110 140,115 130,110 105,75" fill="url(#grad1)"/>
+<!--golfballs-->
+  <circle cx="60" cy="85" r="5" fill="white"/>
+<!--tee-->
+  <g id="tee" transform="translate(120 -20)">
+    <circle cx="105" cy="100" r="2" fill="yellow"/>
+    <line x1="105" x2="105" y1="100" y2="108" stroke-width="2" stroke="yellow"/>
+  </g>
+<!--Putter 1-->
+  <g fill="white" transform="scale (1.4 1.4) rotate(75, 55, 55) translate (-50 10)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+<!--Putter 2-->
+  <g fill="white" transform="scale (1.4 1.4) rotate(75, 105, 95) translate(-38 35)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+  <text x="20" y="40" fill="white" stroke="white" font-size="18">2 x</text>
+<!--line-->
+  <path d="M63 95  Q170 160 ,220 95" stroke="yellow" stroke-width="3" fill="none" stroke-dasharray="5,5"/>
+</svg>

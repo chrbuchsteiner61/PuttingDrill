@@ -1,0 +1,32 @@
+<svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="150" fill="green"/>
+<!--the hole-->
+  <circle cx="214" cy="44" r="7" fill="white"/>
+<!--golfballs-->
+  <circle cx="100" cy="140" r="4" fill="white"/>
+  <circle cx="91" cy="132" r="4" fill="white"/>
+  <circle cx="83" cy="125" r="4" fill="white"/>
+  <circle cx="74" cy="116" r="4" fill="white"/>
+  <circle cx="64" cy="108" r="4" fill="white"/>
+
+   <g fill="white" transform="scale (1.2 1.2) rotate(40, 90, 90)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+  
+  <g fill="white" transform="scale (1.2 1.2) rotate(40, 90, 90)">
+<!--Putter shaft-->
+    <rect x="97" y="32" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="54" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="90" y="102" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+
+  <text x="120" y="60" fill="white" stroke="white" font-size="24">2 x</text>
+  
+</svg>

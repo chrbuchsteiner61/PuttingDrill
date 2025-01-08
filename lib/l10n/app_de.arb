@@ -1,0 +1,101 @@
+{
+  "@@locale": "de",
+
+  "page1Header" : "Dein Putt-Übungstagebuch",
+
+  "drillName1": "Kurze Putts",
+  "drillName2": "Distanzputts",
+  "drillName3": "Gerade Putts",
+  "drillName4": "Putts auf \nwelligem Grün",
+  "drillName5": "Abwärtsputts",
+
+  "preparationHeader": "Vorbereitung",
+  "countingHeader": "Zählen",
+
+  "purpose1": "Verbessere deine kurzen Putts",
+  "purpose2": "Nähere dich dem Loch",
+  "purpose3": "Finde eine bessere Linie",
+  "purpose4": "Lies die Linie",
+  "purpose5": "Spüre die Geschwindigkeit",
+
+  "task1": "Putte ins Loch.\nSchlage fünf oder mehr Bälle aus kurzer Distanz.",
+  "task2": "Putte so nah wie möglich ans Loch.\nSchlage fünf oder mehr Bälle aus großer Distanz.",
+  "task3": "Putte durch die Tore.\nSchlage fünf oder mehr Bälle durch beide Tore.",
+  "task4": "Putte auf einem welligen Grün zu einem Ziel.\nSchlage fünf oder mehr Bälle.",
+  "task5": "Putte abwärts zu einem Ziel.\nSchlage fünf oder mehr Bälle.",
+
+  "thePreparation_1": "Wähle auf einem ebenen Grün eine Distanz für die Übung von einer, zwei oder drei Schlägerlängen. Sieh dir das Beispiel für eine Distanz von zwei Schlägern an.",
+  "thePreparation_2": "Wähle auf einem ebenen Grün eine Distanz von sechs, neun oder zwölf Schlägerlängen. Sieh dir das Beispiel für eine Distanz von sechs Schlägern an.", 
+  "thePreparation_3": "Nimm vier Tees. Baue zwei Tore auf einem ebenen Grün, Schlägerkopfbreit.\nWähle eine Distanz zwischen den Toren von einer, zwei oder drei Schlägerlängen. Sieh dir das Beispiel für eine Distanz von zwei Schlägern an.", 
+  "thePreparation_4": "Wähle auf einem welligen Grün eine Distanz von einer, zwei oder drei Schlägerlängen. Definiere dein Ziel mit einem Tee. Sieh dir das Beispiel für eine Distanz von zwei Schlägern an.",
+  "thePreparation_5": "Wähle von einer erhöhten Position eine Distanz von einer, zwei oder drei Schlägerlängen. Definiere dein Ziel mit einem Tee. Sieh dir das Beispiel für eine Distanz von zwei Schlägern an.",
+  "clubLength": "Wenn dein Putter etwa 34 Zoll lang ist, entspricht das 0,86m oder 2,83ft.",
+
+  "theExplainCounting_1": "Zähle deine Schläge und \nzähle deine erfolgreichen Putts.",
+  "theExplainCounting_2": "Zähle deine Schläge, \nmess die Distanz von der Position der Bälle bis zum Loch \nmit deinen Füßen und summiere.",
+  "theExplainCounting_3": "Zähle jeden Schlag und \nzähle jeden Ball, der durch beide Tore geht.",
+  "theExplainCounting_4": "Zähle deine Schläge und \nzähle deine erfolgreichen Putts.",
+  "theExplainCounting_5": "Zähle deine Schläge und \nzähle deine erfolgreichen Putts.",
+
+  "inputResults": "Ergebnis eingeben",
+  "inputAppBarText": "Gib deine Ergebnisse der Übung ein",
+  "inputButtonText": "Speichere deine Ergebnisse",
+
+  "errorInputMessageNonEmptyNegativ": "Bitte gib eine gültige, nicht negative Zahl ein",
+
+  "inputDrill1Criteria1": "Distanz zum\nLoch",
+  "inputDrill1Criteria2": "Schläge",
+  "inputDrill1Criteria3": "Erfolgreich",
+
+  "inputDrill1Input1": "Schläger\nlängen",
+  "inputDrill1Input2": "",
+  "inputDrill1Input3": "Anzahl",
+
+  "inputDrill2Criteria1": "Distanz zum\nLoch",
+  "inputDrill2Criteria2": "Schläge",
+  "inputDrill2Criteria3": "Summe der fehlenden\nDistanz",
+
+  "inputDrill2Input1": "Schläger\nlängen",
+  "inputDrill2Input2": "",
+  "inputDrill2Input3": "Füße",
+
+  "inputDrill3Criteria1": "Distanz\nzwischen den Toren",
+  "inputDrill3Criteria2": "Schläge",
+  "inputDrill3Criteria3": "Durch\nbeide Tore",
+
+  "inputDrill3Input1": "Schläger\nlängen",
+  "inputDrill3Input2": "",
+  "inputDrill3Input3": "Anzahl",
+
+  "inputDrill4Criteria1": "Distanz zum\nZiel",
+  "inputDrill4Criteria2": "Schläge",
+  "inputDrill4Criteria3": "Erfolgreich",
+
+  "inputDrill4Input1": "Schläger\nlängen",
+  "inputDrill4Input2": "",
+  "inputDrill4Input3": "Anzahl",
+
+  "inputDrill5Criteria1": "Distanz zum\nZiel",
+  "inputDrill5Criteria2": "Schläge",
+  "inputDrill5Criteria3": "Erfolgreich",
+
+  "inputDrill5Input1": "Schläger\nlängen",
+  "inputDrill5Input2": "",
+  "inputDrill5Input3": "Anzahl",
+
+  "success": "Erfolg",
+
+  "savedResult" : "erfolgreich gespeichert",
+
+  "viewResults": "Daten",
+
+  "drawerHeader": "Informationen",
+  "privStHeader": "Datenschutz",
+  "privStLine1": "Diese App speichert die von dir gewählte Sprache auf deinem Gerät.",
+  "privStLine2": "Alle eingegebenen Daten werden auf deinem Gerät gespeichert.",
+  "privStLine3": "Keine deiner Daten werden übertragen. Sie werden auch Dritten nicht zugänglich gemacht. Es erfolgt keine weitere Verarbeitung.",
+  "kontakt": "Kontakt",
+  "language": "Sprache",
+
+  "error": "Fehler"
+}

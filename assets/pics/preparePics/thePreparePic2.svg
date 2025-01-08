@@ -1,0 +1,74 @@
+<svg width="300" height="150" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="150" fill="green"/>
+<!--the hole-->
+  <circle cx="270" cy="30" r="5" fill="white"/>
+<!--golfballs-->
+  <circle cx="230" cy="40" r="3" fill="white"/>
+  <circle cx="210" cy="90" r="3" fill="white"/>
+  <circle cx="190" cy="30" r="3" fill="white"/>
+  <circle cx="140" cy="50" r="3" fill="white"/>
+  <circle cx="230" cy="90" r="3" fill="white"/>
+<!--start line-->
+  <line x1="80" y1="110" x2="95" y2="135" style="stroke:white;stroke-width:3" stroke-dasharray="5,5"/>
+<!--line to the hole-->
+  <line x1="230" y1="40" x2="270" y2="30" style="stroke:white;stroke-width:2" stroke-dasharray="2,4"/>
+  <line x1="210" y1="90" x2="270" y2="30" style="stroke:white;stroke-width:2" stroke-dasharray="2,4"/>
+  <line x1="190" y1="30" x2="270" y2="30" style="stroke:white;stroke-width:2" stroke-dasharray="2,4"/>
+  <line x1="140" y1="50" x2="270" y2="30" style="stroke:white;stroke-width:2" stroke-dasharray="2,4"/>
+  <line x1="230" y1="90" x2="270" y2="30" style="stroke:white;stroke-width:2" stroke-dasharray="2,4"/>
+<!--Putter 1-->
+  <g fill="white" transform="scale (0.6 0.6) rotate(50, 220, 370)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+<!--Putter 2-->
+  <g fill="white" transform="scale (0.6 0.6) rotate(50, 170, 330)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+<!--Putter 3-->
+  <g fill="white" transform="scale (0.6 0.6) rotate(50, 120, 290)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+<!--Putter 4-->
+  <g fill="white" transform="scale (0.6 0.6) rotate(50, 70, 250)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+<!--Putter 5-->
+  <g fill="white" transform="scale (0.6 0.6) rotate(50, 20, 210)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+<!--Putter 6-->
+  <g fill="white" transform="scale (0.6 0.6) rotate(50, -30, 170)">
+<!--Putter shaft-->
+    <rect x="97" y="-24" transform="rotate(13, -5, 92)" width="2" height="49" fill="white"/>
+<!--Putter grip-->
+    <rect x="97" y="-2" transform="rotate(13,95, 100)" width="3" height="15" fill="white"/>
+<!--Putter head-->
+    <rect x="102" y="48" width="11" height="3" rx="1" ry="1" fill="white"/>
+  </g>
+  <text x="20" y="40" fill="white" stroke="white" font-size="18">6 x</text>
+</svg>

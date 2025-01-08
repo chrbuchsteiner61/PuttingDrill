@@ -1,0 +1,102 @@
+{
+   "@@locale": "en", 
+   
+  "page1Header" : "Your Putting Drill Diary",
+
+  "drillName1": "Short putts",
+  "drillName2": "Distance putts",
+  "drillName3": "Strait puttes",
+  "drillName4": "Putts on an undulating green",
+  "drillName5": "Downhill putts",
+
+  "preparationHeader": "Preparation",
+  "countingHeader": "Counting",
+
+  "purpose1": "Better your short putting",
+  "purpose2": "Come closer to the hole",
+  "purpose3": "Get a better line",
+  "purpose4": "Read the line",
+  "purpose5": "Feel the speed",
+
+  "task1": "Putt into the hole.\nHit five or more balls from a short distance.",
+  "task2": "Putt at nearest to the hole.\nHit five or more balls from a long distance.",
+  "task3": "Putt through the gates.\nHit five or more balls through both gates.",
+  "task4": "Putt on an undulating green to a target.\nHit five or more balls",
+  "task5": "Putt downhill to a target.\nHit five or more balls.",
+
+  "thePreparation_1": "On an even green choose a distance for the exercise from one, two or three club lengths. Look at the example for a distance of two clubs.",
+  "thePreparation_2": "On an even green choose a distance for the exercise from six, nine or 12 club lengths. Look at the example for a distance of six clubs.", 
+  "thePreparation_3": "Take four tees. Build two gates on an even green, clubhead width.\nChoose a distance between the gates of one, two or three club lengths. Look at the example for a distance of two clubs.", 
+  "thePreparation_4": "On an undulating green choose a distance for the exercise from one, two or three club lengths. Define your target with a tee. Look at the example for a distance of two clubs.",
+  "thePreparation_5": "From a elevated position choose a distance for the exercise from one, two or three club lengths. Define your target with a tee. Look at the example for a distance of two clubs.",
+  "clubLength": "If your putter is about 34 inches long, this is 0.86m or 2.83ft.",
+  
+  "theExplainCounting_1": "Count your strokes and \ncount your made putts.",
+  "theExplainCounting_2": "Count your strokes, \nmeassure the distance from the position of the balls to the hole \nwith your feet and sum up.",
+  "theExplainCounting_3": "Count every stroke and \ncount every ball going through both gates.",
+  "theExplainCounting_4": "Count your strokes and \ncount your made putts.",
+  "theExplainCounting_5": "Count your strokes and \ncount your made putts.",
+
+  "inputResults": "Input result",
+  "inputAppBarText": "Put in your results of the drill",
+  "inputButtonText": "Save your results",
+
+  "errorInputMessageNonEmptyNegativ": "Please enter a valid non-negativ number",
+  
+  "inputDrill1Criteria1": "Distance to\nthe hole",
+  "inputDrill1Criteria2": "Strokes",
+  "inputDrill1Criteria3": "Successfull",
+  
+  "inputDrill1Input1": "club lengths",
+  "inputDrill1Input2": "",
+  "inputDrill1Input3": "number of",
+
+
+  "inputDrill2Criteria1": "Distance to\nthe hole",
+  "inputDrill2Criteria2": "Strokes",
+  "inputDrill2Criteria3": "Sum of missing\ndistance",
+  
+  "inputDrill2Input1": "club lengths",
+  "inputDrill2Input2": "",
+  "inputDrill2Input3": "feet",
+
+  "inputDrill3Criteria1": "Distance\nbetween the gates",
+  "inputDrill3Criteria2": "Strokes",
+  "inputDrill3Criteria3": "Through\nboth gates",
+  
+  "inputDrill3Input1": "club lengths",
+  "inputDrill3Input2": "",
+  "inputDrill3Input3": "number of",
+
+  "inputDrill4Criteria1": "Distance to\nthe target",
+  "inputDrill4Criteria2": "Strokes",
+  "inputDrill4Criteria3": "Successfull",
+  
+  "inputDrill4Input1": "club lengths",
+  "inputDrill4Input2": "",
+  "inputDrill4Input3": "number of",
+
+  "inputDrill5Criteria1": "Distance to\nthe target",
+  "inputDrill5Criteria2": "Strokes",
+  "inputDrill5Criteria3": "Successfull",
+  
+  "inputDrill5Input1": "club lengths",
+  "inputDrill5Input2": "",
+  "inputDrill5Input3": "number of",
+
+  "success":"Success",
+
+  "savedResult" : "saved successful",
+
+  "viewResults": "Stats",
+
+  "drawerHeader": "Informations",
+  "privStHeader": "Data protection",
+  "privStLine1": "This app saves the language you choose on your device.",
+  "privStLine2": "All data you entered is stored on your device.",
+  "privStLine3": "None of your data will be transfered. Nor will it be made available to third parties. There is no further processing.",
+  "kontakt": "Contact",
+  "language": "Language",
+
+  "error": "error"
+}

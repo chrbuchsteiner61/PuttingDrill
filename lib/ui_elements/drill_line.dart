@@ -10,7 +10,7 @@ import 'package:myapp/ui_elements/drill_button.dart';
 class DrillLine extends StatelessWidget {
   static const _boxWidths = [140.0, 100.0, 100.0];
   static const _elementHeight = 50.0;
-  static const _spacer = SizedBox(width: 8, height: _elementHeight + 18);
+  static const _spacer = SizedBox(width: 1, height: _elementHeight + 18);
 
   final DrillList initializedDrills;
   final int drillNumber;
@@ -57,13 +57,14 @@ class DrillLine extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _spacer,
+            //_spacer,
             _spacer,
             _buildExplainButton(context),
             spaceBetween,
             _buildInputButton(context),
             spaceBetween,
             _buildResultsButton(context, drillNumber),
+            _spacer,
           ],
         ),
       ),

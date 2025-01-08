@@ -27,6 +27,8 @@ class ResultChart extends StatelessWidget {
 
       @override
   Widget build(BuildContext context) {
+
+    const maximumNumberOfResultsPerDistance = 2;
     
     return Scaffold(
       appBar: AppBar(title: const Text('Putting Results')),
@@ -46,7 +48,7 @@ class ResultChart extends StatelessWidget {
           final results = snapshot.data!;
 
           final int numberOfDifferentDistances =
-              initializedDrills[drillNumber - 1].howManyDistancesOfADrill();
+          initializedDrills[drillNumber - 1].howManyDistancesOfADrill();
 
           final List<int> theDistancesOfTheDrill =
               initializedDrills[drillNumber - 1].distances;
@@ -58,18 +60,31 @@ class ResultChart extends StatelessWidget {
 
           for (var result in results) {
             if (result.drillNo == drillNumber) {
-              int indexOfDistance = findDistanceIndex(result.selectedDistance, theDistancesOfTheDrill);
+              int indexOfDistance = findDistanceIndex(
+                  result.selectedDistance, theDistancesOfTheDrill);
               resultsOfADrill[indexOfDistance].add(result);
             }
           }
 
+          // deliver max number of results per distance to the chart
+          List<PuttingResult> distanceList = [];
+          for (int i = 0; i < resultsOfADrill[i].length; i++) {
+            distanceList = resultsOfADrill[i];
+            logger.d(distanceList.length);
+            if (distanceList.length > maximumNumberOfResultsPerDistance) {
+              distanceList = distanceList.sublist(
+                  distanceList.length - maximumNumberOfResultsPerDistance);
+              logger.d(distanceList.length);
+              resultsOfADrill[i] = distanceList;
+            }
+          }
           return HistogramChart(
             numberOfDifferentDistances: numberOfDifferentDistances,
             theDistancesOfTheDrill: theDistancesOfTheDrill,
             drillResults: resultsOfADrill,
             drillName: drillName,
           );
-        },
+        }
       ),
     );
   }

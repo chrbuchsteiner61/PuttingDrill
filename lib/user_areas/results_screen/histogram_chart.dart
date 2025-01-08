@@ -117,9 +117,7 @@ class _HistogramChartState extends State<HistogramChart> {
                     .entries
                     .map((entry) {
                   final index = entry.key;
-                  logger.d(index);
                   final chartData = entry.value;
-                  logger.d(entry.value.successRate);
 
                   return BarChartGroupData(
                     x: index,

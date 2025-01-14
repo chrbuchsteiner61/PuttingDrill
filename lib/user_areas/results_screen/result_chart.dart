@@ -28,7 +28,7 @@ class ResultChart extends StatelessWidget {
       @override
   Widget build(BuildContext context) {
 
-    const maximumNumberOfResultsPerDistance = 25;
+    const maximumNumberOfResultsPerDistance = 30;
     
     return Scaffold(
       appBar: AppBar(title: const Text('Putting Results')),
@@ -73,6 +73,8 @@ class ResultChart extends StatelessWidget {
             if (distanceList.length > maximumNumberOfResultsPerDistance) {
               resultsOfADrill[i] = distanceList.sublist(
                   distanceList.length - maximumNumberOfResultsPerDistance);
+              logger.d("i " + i.toString());
+              logger.d(distanceList);
             }
           }
           return HistogramChart(

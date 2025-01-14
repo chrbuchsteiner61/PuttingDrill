@@ -29,7 +29,7 @@ class TestScreen extends StatelessWidget {
               child: ElevatedButton(
                 style: appsButtonStyle,
                 onPressed: () async {
-                  List<PuttingResult> resultsForTest = generateTestData(5000);
+                  List<PuttingResult> resultsForTest = generateTestData(100);
                   for (var result in resultsForTest) {
                     await DatabaseHelper().insertResult(result);
                   }

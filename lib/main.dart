@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:myapp/dev_area/test_screen.dart';
 import 'package:myapp/drills/drill.dart';
 import 'package:myapp/user_areas/the_info_drawer.dart';
 import 'package:myapp/language_helper/language_helper.dart';
@@ -165,8 +164,8 @@ class StartingPage extends StatelessWidget {
                           .getDrillTexts(numberOfDrill)["inputDrillInput3"]!,
                     ),
                   ),
-                const SizedBox(width: 10.0, height: 40.0),
-                SizedBox(
+            /**    const SizedBox(width: 10.0, height: 40.0),
+               SizedBox(
                   width: 150.0,
                   height: 45.0,
                   child: ElevatedButton(
@@ -184,6 +183,7 @@ class StartingPage extends StatelessWidget {
                     child: const Text('Manage Test Data'),
                   ),
                 ),
+                **/
               ],
             ),
           ),

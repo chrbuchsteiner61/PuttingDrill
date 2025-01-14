@@ -8,9 +8,11 @@ So that you don't need a measuring tape, the scale is your putter length and you
 
 # Dein Putt-Übungstagebuch
 
-## Werde ein besserer Putter durch Training und verfolge Deine Fortschritte
+## Putte erfolgreicher durch Training und verfolge Deine Fortschritte
 
-Die App bietet Dir Übungen an, die Dir helfen sollen, besser zu putten. Die Ergebnisse des Trainings gibst Du in die App ein. Sie wird dadurch zu einem Trainingstagebuch. Damit kannst Du einen graphischen Überblick über Deine Leistungen im Training erzeugen. Deine Trainingsdaten werden auf deinem Handy gespeichert.
+Die App bietet Dir Übungen an, die Dir helfen sollen, besser zu putten. Die Ergebnisse Deines Trainings gibst Du in die App ein. Dadurch wird die App Dein Trainingstagebuch. Du kannst Dir eine Graphik Deiner Trainingsleistungen anzeigen.
+Deine Trainingsdaten werden auf deinem Handy gespeichert.
 Die Übungen werden erklärt und mit unterschiedlicher Distanz angeboten.
 Damit Du kein Metermaß brauchst, ist der Maßstab Deine Putterlänge und Deine Fußlänge.
+
 

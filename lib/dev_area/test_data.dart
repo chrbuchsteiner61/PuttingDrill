@@ -22,7 +22,7 @@ List<PuttingResult> generateTestData(int count) {
 
     List<int> distancesOfDrillTwo = [6, 9, 12, 15];
     if (aDrillNo == 2) {
-      aSelectedDistance = distancesOfDrillTwo[random.nextInt(4)];
+      aSelectedDistance = distancesOfDrillTwo[random.nextInt(3)+1];
     }
 
     PuttingResult puttingResult = PuttingResult(

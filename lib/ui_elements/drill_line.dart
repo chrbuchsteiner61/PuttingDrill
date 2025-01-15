@@ -28,6 +28,7 @@ class DrillLine extends StatelessWidget {
   final Drill aDrill;
   final Map<String, String> textForDrillLine;
   final String successWord;
+  final String numberOfResultsText;
 
   const DrillLine({
     super.key,
@@ -47,6 +48,7 @@ class DrillLine extends StatelessWidget {
     required this.aDrill,
     required this.textForDrillLine,
     required this.successWord,
+    required this.numberOfResultsText,
   });
 
   @override
@@ -154,6 +156,7 @@ class DrillLine extends StatelessWidget {
           drillNumber: aDrillNumber,
           drillName: drillName,
           drillInputLength: inputData.criteria3,
+          numberOfResultsText: numberOfResultsText,
         ),
       ),
     );

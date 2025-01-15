@@ -98,5 +98,7 @@
   "kontakt": "Contact",
   "language": "Language",
 
+  "chartShows": "The last 30 results",
+
   "error": "error"
 }

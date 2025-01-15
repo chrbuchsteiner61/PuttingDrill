@@ -149,6 +149,7 @@ class StartingPage extends StatelessWidget {
                         localizations.getDrillTexts(numberOfDrill)["counting"]!,
                     aTask: localizations.getDrillTexts(numberOfDrill)["task"]!,
                     successWord: localizations.success,
+                    numberOfResultsText: localizations.chartShows,
                     inputData: DrillInputData(
                       criteria1: localizations
                           .getDrillTexts(numberOfDrill)["inputDrillCriteria1"]!,

@@ -98,6 +98,7 @@ class TestScreen extends StatelessWidget {
                         drillNumber: 1,
                         drillName: "Drill 1",
                         drillInputLength: "Club length",
+                        numberOfResultsText: "30 Ergebnisse",
                       ),
                     ),
                   );

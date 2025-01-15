@@ -13,14 +13,15 @@ class HistogramChart extends StatefulWidget {
   final List<int> theDistancesOfTheDrill;
   final String drillName;
   final List<List<PuttingResult>> drillResults;
+  final String numberOfResultsText;
 
-  const HistogramChart({
-    super.key,
-    required this.numberOfDifferentDistances,
-    required this.theDistancesOfTheDrill,
-    required this.drillName,
-    required this.drillResults,
-  });
+  const HistogramChart(
+      {super.key,
+      required this.numberOfDifferentDistances,
+      required this.theDistancesOfTheDrill,
+      required this.drillName,
+      required this.drillResults,
+      required this.numberOfResultsText});
 
   @override
   State<HistogramChart> createState() => _HistogramChartState();
@@ -47,7 +48,7 @@ class _HistogramChartState extends State<HistogramChart> {
               distancesToSelectFrom: widget.theDistancesOfTheDrill,
               onLineSelected: _updateSelectedLine,
               currentLine: selectedDrillLength,
-            ),
+            )
           ],
         ),
         const SizedBox(height: 15.0),
@@ -136,6 +137,11 @@ class _HistogramChartState extends State<HistogramChart> {
             ),
           ),
         ),
+        Align(
+          alignment: Alignment.topLeft,
+          child:
+              SizedBox(height: 40.0, child: Text("  " + widget.numberOfResultsText)),
+        )
       ],
     );
   }

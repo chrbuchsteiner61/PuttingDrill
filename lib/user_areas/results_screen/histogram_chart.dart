@@ -72,7 +72,7 @@ class _HistogramChartState extends State<HistogramChart> {
                       showTitles: true,
                       getTitlesWidget: (double value, TitleMeta meta) {
                         int index = value.toInt();
-                        if (index >= 0 && index < widget.drillResults.length) {
+                        if (index >= 0 && index < widget.drillResults[selectedDrillLength].length) {
                           return Text(
                             DateFormat('dd.MM.').format(DateTime.parse(widget
                                 .drillResults[selectedDrillLength][index]
